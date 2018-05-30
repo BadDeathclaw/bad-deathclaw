@@ -1,0 +1,44 @@
+//BYOND\\
+cd /var
+mkdir www
+cd www
+wget http://www.byond.com/download/build/511/511.1385_byond_linux.zip
+wget http://www.byond.com/download/build/gcc/libstdc++-libc6.2-2.so.3
+wget http://www.byond.com/download/build/gcc/libstdc++.so.5
+cp libstdc++-libc6.2-2.so.3 /usr/local/lib/
+cp libstdc++.so.5 /usr/local/lib/
+dpkg --add-architecture i386
+apt-get install make
+apt-get install unzip
+apt-get install lib32z1
+apt-get install lib32stdc++6
+ufw allow 1942
+unzip 511.1385_byond_linux.zip
+cd byond
+make install
+DreamDaemon -version
+cd ..
+
+//CODE\\
+git clone https://TinkeringTurian@bitbucket.org/TinkeringTurian/bad-deathclaw.git
+cd bad-deathclaw
+
+//DATABASE\\
+find . -maxdepth 1 -iregex ".*libmysql.*" -exec cp {} /usr/lib32/ \;
+find . -maxdepth 1 -iregex ".*libmaria.*" -exec cp {} /usr/lib32/ \;
+apt-get install mariadb-server
+mysql_secure_installation
+systemctl start mysql
+systemctl enable mysql
+ln -s /var/run/mysqld/mysqld.sock /tmp/mysql.sock
+mysql -u root
+CREATE DATABASE feedback;
+source SQL/tgstation_schema_prefixed.sql
+exit
+// Default port: 3306 
+nano config/dbconfig.txt
+// Enable SQL, set ADDRESS to localhost (NOT 127.0.0.1), enter password, user is root
+
+//SERVER\\
+DreamMaker fallout13.dme
+DreamDaemon fallout13.dmb 1942 -trusted -private
