@@ -1,0 +1,13 @@
+<!-- Most valid html will work in here, excluding images. -->
+
+<h1>Welcome to Bad Deathclaw!</h1>
+
+<i><b>This is a relaxed-rules server meaning you're free to do things such as kidnap and rape but please remember you're not the only person trying to have fun, don't be a huge dick. Remember to read the rules anyway.
+
+For general questions regarding the server, contact Lucario#5887 or Smells#6121 on our Discord.
+Development is active, we are running on a modified version of the F13 Legacy code and we are always looking for more developers.
+
+Discord: https://discord.gg/yg244vN
+Github: https://bitbucket.org/TinkeringTurian/bad-deathclaw
+
+This server takes place before the Second Battle of Hoover Dam, in Nevada.</i></b>
