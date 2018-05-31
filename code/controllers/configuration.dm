@@ -65,14 +65,14 @@
 	var/sec_start_brig = 0				//makes sec start in brig or dept sec posts
 
 	var/server
-	var/banappeals = "https://discord.gg/yg244vN"
+	var/banappeals = "https://discord.gg/pY33Q8c"
 	var/wikiurl = "http://www.fallss.esy.es/wiki/doku.php?id=ru:start" // default wiki link
 	var/forumurl = "https://fallout13.us/" // default forums
 	var/rulesurl = "https://fallout13.us/viewtopic.php?f=12&t=128&sid=3e22d9ba8496594efce8d590d3260e21" // default rules
-	var/githuburl = "https://bitbucket.org/TinkeringTurian/bad-deathclaw" //default github
-	var/issueurl = "https://bitbucket.org/TinkeringTurian/bad-deathclaw/issues/new"
-	var/changelogurl = "https://bitbucket.org/TinkeringTurian/bad-deathclaw/pull-requests/?state=MERGED"
-	var/discordurl = "https://discord.gg/yg244vN"
+	var/githuburl = "https://bitbucket.org/Digdugxx/bad-deathclaw" //default github
+	var/issueurl = "https://bitbucket.org/Digdugxx/bad-deathclaw/issues/new"
+	var/changelogurl = "https://bitbucket.org/Digdugxx/bad-deathclaw/pull-requests/?state=MERGED"
+	var/discordurl = "https://discord.gg/pY33Q8c"
 	var/forbid_singulo_possession = 0
 	var/useircbot = 0
 
