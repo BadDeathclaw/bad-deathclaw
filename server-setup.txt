@@ -20,7 +20,7 @@ DreamDaemon -version
 cd ..
 
 //CODE\\
-git clone https://TinkeringTurian@bitbucket.org/TinkeringTurian/bad-deathclaw.git
+git clone https://Digdugxx@bitbucket.org/Digdugxx/bad-deathclaw.git
 cd bad-deathclaw
 
 //DATABASE\\
