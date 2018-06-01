@@ -49,7 +49,7 @@ var/global/list/rockTurfEdgeCache
 	return
 
 /turf/simulated/mineral/New()
-	/*if(!rockTurfEdgeCache || !rockTurfEdgeCache.len)
+	if(!rockTurfEdgeCache || !rockTurfEdgeCache.len)
 		rockTurfEdgeCache = list()
 		rockTurfEdgeCache.len = 4
 		rockTurfEdgeCache[NORTH_EDGING] = image('icons/turf/mining.dmi', "rock_side_n", layer = 6)
@@ -59,22 +59,22 @@ var/global/list/rockTurfEdgeCache
 
 	spawn(1)
 		var/turf/T
-		if((istype(get_step(src, NORTH), /turf/simulated/floor)) || (istype(get_step(src, NORTH), /turf/space) || istype(get_step(src, NORTH),/turf/ground)))
+		if((istype(get_step(src, NORTH), /turf/simulated/floor)) || (istype(get_step(src, NORTH), /turf/space)))
 			T = get_step(src, NORTH)
 			if (T)
 				T.overlays += rockTurfEdgeCache[SOUTH_EDGING]
-		if((istype(get_step(src, SOUTH), /turf/simulated/floor)) || (istype(get_step(src, SOUTH), /turf/space) || istype(get_step(src, SOUTH),/turf/ground)))
+		if((istype(get_step(src, SOUTH), /turf/simulated/floor)) || (istype(get_step(src, SOUTH), /turf/space)))
 			T = get_step(src, SOUTH)
 			if (T)
 				T.overlays += rockTurfEdgeCache[NORTH_EDGING]
-		if((istype(get_step(src, EAST), /turf/simulated/floor)) || (istype(get_step(src, EAST), /turf/space) || istype(get_step(src, EAST),/turf/ground)))
+		if((istype(get_step(src, EAST), /turf/simulated/floor)) || (istype(get_step(src, EAST), /turf/space)))
 			T = get_step(src, EAST)
 			if (T)
 				T.overlays += rockTurfEdgeCache[WEST_EDGING]
-		if((istype(get_step(src, WEST), /turf/simulated/floor)) || (istype(get_step(src, WEST), /turf/space) || istype(get_step(src, WEST),/turf/ground)))
+		if((istype(get_step(src, WEST), /turf/simulated/floor)) || (istype(get_step(src, WEST), /turf/space)))
 			T = get_step(src, WEST)
 			if (T)
-				T.overlays += rockTurfEdgeCache[EAST_EDGING]*/
+				T.overlays += rockTurfEdgeCache[EAST_EDGING]
 
 	if (mineralType && mineralAmt && spread && spreadChance)
 		for(var/dir in cardinal)
@@ -83,7 +83,7 @@ var/global/list/rockTurfEdgeCache
 				if(istype(T, /turf/simulated/mineral/random))
 					Spread(T)
 
-	//HideRock()
+	HideRock()
 	return
 
 /turf/simulated/mineral/proc/HideRock()
