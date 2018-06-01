@@ -76,8 +76,11 @@ var/list/teleportlocs = list()
 
 /*-----------------------------------------------------------------------------*/
 
+/area/enclave/enclavedungeon
+	name = "Enclave dungeon1"
+	icon_state = "security"
 /area/enclave/base1
-	name = "Enclave Upper Base"
+	name = "Enclave dungeon1"
 	icon_state = "security"
 /area/city1
 	name = "Sunny Dale"
