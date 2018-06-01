@@ -320,7 +320,7 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	if (config && config.server_name)
 		s += "<b>[config.server_name]</b> &#8212; "
 
-	s += "<b>[station_name()]</b>";
+	s += "Unofficial Server: <b>Bad Deathclaw</b>";
 	s += " ("
 	s += "<a href=[config.discordurl]>" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
@@ -328,7 +328,7 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	s += "</a>"
 	s += ")<br>"
 	s += "<img src='http://i.imgur.com/bwkdv8N.gif'><br>"
-	s += "Hosted by KING <b>[config.hostedby]</b>"
+	s += "Hosted by KING <b>degenerates</b>"
 /*
 	var/list/features = list()
 	if(!ticker)
