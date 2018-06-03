@@ -188,6 +188,11 @@
 	cooked_type = /obj/item/weapon/reagent_containers/food/snacks/meat/steak/molerat
 	slice_path = null
 
+/obj/item/weapon/reagent_containers/food/snacks/meat/slab/mutant/ghoul
+	icon_state = "flymeat"
+	desc = "Nothing says tasty like necrotic, radioactive mutant flesh"
+	list_reagents = list("nutriment" = 3, "uranium" = 3)
+
 /obj/item/weapon/reagent_containers/food/snacks/meat/slab/deathclaw
 	name = "deathclaw meat"
 	desc = "A slab of deathclaw meat."
