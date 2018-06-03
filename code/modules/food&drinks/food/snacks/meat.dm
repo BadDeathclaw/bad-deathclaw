@@ -252,6 +252,12 @@
 /obj/item/weapon/reagent_containers/food/snacks/meat/steak/molerat
 	name = "molerat steak"
 
+/obj/item/weapon/reagent_containers/food/snacks/meat/steak/ghoul
+	name = "ghoul steak"
+	desc = "Why would you even cook this?"
+	list_reagents = list("nutriment" = 3)
+	bonus_reagents = list("uranium" = 2)
+
 /obj/item/weapon/reagent_containers/food/snacks/meat/steak/deathclaw
 	name = "deathclaw steak"
 	desc = "A piece of hot spicy meat, eaten by only the most worthy hunters - or the most rich clients."
