@@ -188,7 +188,7 @@
 	cooked_type = /obj/item/weapon/reagent_containers/food/snacks/meat/steak/molerat
 	slice_path = null
 
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/mutant/ghoul
+/obj/item/weapon/reagent_containers/food/snacks/meat/slab/ghoul
 	name = "ghoul meat"
 	icon_state = "flymeat"
 	desc = "Nothing says tasty like necrotic, radioactive mutant flesh"
@@ -255,8 +255,8 @@
 /obj/item/weapon/reagent_containers/food/snacks/meat/steak/ghoul
 	name = "ghoul steak"
 	desc = "Why would you even cook this?"
-	list_reagents = list("nutriment" = 3)
-	bonus_reagents = list("uranium" = 2)
+	list_reagents = list("nutriment" = 4)
+	bonus_reagents = list("uranium" = 3)
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/steak/deathclaw
 	name = "deathclaw steak"
