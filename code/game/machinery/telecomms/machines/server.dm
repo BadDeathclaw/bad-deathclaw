@@ -143,7 +143,7 @@
 
 /obj/machinery/telecomms/server/presets/medical
 	id = "Medical Server"
-	freq_listening = list(MED_FREQ, ENCL_FREQ)
+	freq_listening = list(MED_FREQ, ENCL_FREQ, BOS_FREQ)
 	autolinkers = list("medical")
 
 /obj/machinery/telecomms/server/presets/supply
