@@ -19,6 +19,7 @@ var/list/freqtospan = list(
 	"1305" = "ncrradio",
 	"1307" = "denradio",
 	"1309" = "enclradio",
+	"1311" = "bosradio"
 	)
 
 /atom/movable/proc/say(message)

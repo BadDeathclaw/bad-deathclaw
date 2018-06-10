@@ -12,7 +12,7 @@
 	chamber_sound = 'sound/effects/wep_magazines/smg_chamber.ogg'
 
 /obj/item/weapon/gun/projectile/automatic/proto
-	name = "/improper SABR SG-T"
+	name = "\improper SABR SG-T"
 	desc = "A prototype three-round burst 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors."
 	icon_state = "saber"
 	mag_type = /obj/item/ammo_box/magazine/smgm9mm
