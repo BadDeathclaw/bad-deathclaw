@@ -25,7 +25,7 @@ var/list/department_radio_keys = list(
 	  ":v" = "Vault",		"#v" = "Vault",			".v" = "Vault",
 	  ":d" = "Den",			"#d" = "Den",			".d" = "Den",
 	  ":q" = "Enclave",		"#q" = "Enclave",		".q" = "Enclave",
-
+	  ":p" = "Brotherhood",	"#p" = "Brotherhood",	".p" = "Brotherhood",
 	  ":ñ" = "NCR",			"#ñ" = "NCR",			".ñ" = "NCR",
 	  ":ó" = "Legion",		"#ó" = "Legion",		".ó" = "Legion",
 	  ":ì" = "Vault",		"#ì" = "Vault",			".ì" = "Vault",

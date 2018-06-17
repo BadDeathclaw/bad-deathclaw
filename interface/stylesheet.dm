@@ -40,6 +40,7 @@ em						{font-style: normal;	font-weight: bold;}
 
 .vltradio				{color: #005A20;}
 .enclradio				{color: #505050;}
+.bosradio				{color: #505050;}
 .denradio				{color: #804B00;}
 .ncrradio				{color: #020080;}
 .legradio				{color: #C24D44;}

@@ -145,7 +145,8 @@ var/list/radiochannels = list(
 	"Legion" = 1303,
 	"NCR" = 1305,
 	"Den" = 1307,
-	"Enclave" = 1309
+	"Enclave" = 1309,
+	"Brotherhood" = 1311
 )
 
 var/list/radiochannelsreverse = list(

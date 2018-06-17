@@ -70,7 +70,7 @@
 /obj/machinery/telecomms/bus/preset_one
 	id = "Bus 1"
 	network = "tcommsat"
-	freq_listening = list(SCI_FREQ, MED_FREQ, VLT_FREQ, ENCL_FREQ)
+	freq_listening = list(SCI_FREQ, MED_FREQ, VLT_FREQ, ENCL_FREQ, BOS_FREQ)
 	autolinkers = list("processor1", "science", "medical")
 
 /obj/machinery/telecomms/bus/preset_two
