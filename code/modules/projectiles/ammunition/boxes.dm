@@ -78,6 +78,13 @@
 	ammo_type = /obj/item/ammo_casing/c45
 	max_ammo = 20
 
+/obj/item/ammo_box/c45/surplus
+	name = "ammo box (.45 Surplus)"
+	icon_state = "45box"
+	origin_tech = "combat=2"
+	ammo_type = /obj/item/ammo_casing/c45/surplus
+	max_ammo = 20
+
 /obj/item/ammo_box/a40mm
 	name = "ammo box (40mm grenades)"
 	icon_state = "40mm"
