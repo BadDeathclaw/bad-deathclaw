@@ -17,6 +17,10 @@
 	damage = 40
 	armour_penetration = -10
 
+/obj/item/projectile/bullet/magnum/surplus //44 surplus
+	damage = 30
+	armour_peneration = -10
+
 /obj/item/projectile/bullet/mag357 //357
 	damage = 42
 	armour_penetration = -10
