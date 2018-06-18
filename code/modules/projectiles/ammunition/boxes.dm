@@ -1,3 +1,10 @@
+/obj/item/ammo_box/c22/surplus
+	name = "Ammo box (.22 Surplus)
+	icon_state = "44"
+	ammo_type = /obj/item/ammo_casing/c22/surplus
+	max_ammo = 20
+	multiple_sprites = 1
+
 /obj/item/ammo_box/m44
 	name = "speed loader (.44)"
 	icon_state = "44"
