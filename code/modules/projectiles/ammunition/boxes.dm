@@ -12,6 +12,13 @@
 	max_ammo = 6
 	multiple_sprites = 1
 
+/obj/item/ammo_box/c357/surplus
+	name = "speed loader (.357 Surplus)"
+	icon_state = "38"
+	ammo_type = /obj/item/ammo_casing/c357/surplus
+	max_ammo = 6
+	multiple_sprites = 1
+
 /obj/item/ammo_box/c357
 	name = "speed loader (.357)"
 	icon_state = "38"
@@ -23,6 +30,11 @@
 	name = "speed loader (.38)"
 	icon_state = "38"
 	ammo_type = /obj/item/ammo_casing/c357/lowpower
+
+/obj/item/ammo_box/c357/c38/surplus
+	name = "speed loader (.38 Surplus)"
+	icon_state = "38"
+	ammo_type = /obj/item/ammo_casing/c357/lowpower/surplus
 
 /obj/item/ammo_box/c4570
 	name = "speed loader (.45-70 Gov't)"
@@ -38,11 +50,18 @@
 	ammo_type = /obj/item/ammo_casing/c9mm
 	max_ammo = 30
 
-/obj/item/ammo_box/c10mm
-	name = "ammo box (10mm)"
+/obj/item/ammo_box/c9mm/surplus
+	name = "ammo box (9mm Surplus)"
+	icon_state = "9mmbox"
+	origin_tech = "combat=2"
+	ammo_type = /obj/item/ammo_casing/c9mm/surplus
+	max_ammo = 30
+
+/obj/item/ammo_box/c10mm/surplus
+	name = "ammo box (10mm Surplus)"
 	icon_state = "10mmbox"
 	origin_tech = "combat=2"
-	ammo_type = /obj/item/ammo_casing/c10mm
+	ammo_type = /obj/item/ammo_casing/c10mm/surplus
 	max_ammo = 20
 
 /obj/item/ammo_box/c45
