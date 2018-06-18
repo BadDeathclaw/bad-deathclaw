@@ -3,6 +3,11 @@
 	caliber = "44"
 	projectile_type = /obj/item/projectile/bullet/magnum
 
+/obj/item/ammo_casing/m44/surplus
+	desc = "A surplus .44 Magnum bullet casing."
+	caliber = "44"
+	projectile_type = /obj/item/projectile/bullet/magnum/surplus
+
 /obj/item/ammo_casing/a50
 	desc = "A .50AE bullet casing."
 	caliber = ".50"
