@@ -100,6 +100,14 @@
 	max_ammo = 5
 	multiple_sprites = 1
 
+/obj/item/ammo_box/a762/surplus
+	name = "stripper clip (7.62mm Surplus)"
+	desc = "A stripper clip."
+	icon_state = "762"
+	ammo_type = /obj/item/ammo_casing/a762/surplus
+	max_ammo = 5
+	multiple_sprites = 1
+
 /obj/item/ammo_box/needler
 	name = "stripper clip (hypodermic needles)"
 	desc = "A stripper clip."
