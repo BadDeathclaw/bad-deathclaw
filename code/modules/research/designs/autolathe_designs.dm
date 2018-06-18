@@ -548,11 +548,11 @@
 	category = list("hacked", "Security")
 
 /datum/design/a762
-	name = "Stripper clip (7.62)"
+	name = "Stripper clip (7.62 Surplus)"
 	id = "a762"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 5000)
-	build_path = /obj/item/ammo_box/a762
+	build_path = /obj/item/ammo_box/a762/surplus
 	category = list("hacked", "Security")
 
 /datum/design/a357
