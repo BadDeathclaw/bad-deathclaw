@@ -177,7 +177,9 @@ var/global/cow_count = 0
 /mob/living/simple_animal/cow/Life()
 	. = ..()
 	if(stat == CONSCIOUS)
-		fedAmount = round(0.99 * fedAmount) //CRYOSTASIS COWS, INFINITE COW BREEDING
+		fedAmount = fedAmount -= 1 //CRYOSTASIS COWS, INFINITE COW BREEDING
+		if(fedAmount < 0)
+			fedAmount = 0
 		if(getFedState() >= 2)
 			cowbabies()
 		udder.generateMilk(getFedState())
