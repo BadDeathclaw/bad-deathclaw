@@ -12,6 +12,13 @@
 	max_ammo = 6
 	multiple_sprites = 1
 
+/obj/item/ammo_box/m44/surplus
+	name = "speed loader (.44 Surplus)"
+	icon_state = "44"
+	ammo_type = /obj/item/ammo_casing/m44/surplus
+	max_ammo = 6
+	multiple_sprites = 1
+
 /obj/item/ammo_box/c357/surplus
 	name = "speed loader (.357 Surplus)"
 	icon_state = "38"
