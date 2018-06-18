@@ -40,6 +40,10 @@
 	damage = 10
 	armour_penetration = -10
 
+/obj/item/projectile/bullet/c22surplus //22lr surplus
+	damge = 7
+	armour_penetration = -10
+
 /obj/item/projectile/bullet/toxinbullet //9mmtox
 	damage = 15
 	damage_type = TOX
