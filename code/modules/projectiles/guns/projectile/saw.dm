@@ -67,6 +67,10 @@
 	damage = 45
 	armour_penetration = 10
 
+/obj/item/projectile/bullet/saw/surplus
+	damage = 33
+	armour_penetration = 10
+
 /obj/item/projectile/bullet/saw/bleeding
 	damage = 15
 	armour_penetration = 0
