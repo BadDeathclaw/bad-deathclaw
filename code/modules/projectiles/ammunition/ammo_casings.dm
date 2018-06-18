@@ -13,19 +13,38 @@
 	caliber = "38"
 	projectile_type = /obj/item/projectile/bullet/mag357
 
+/obj/item/ammo_casing/c357/surplus
+	desc = "A Surplus .357 bullet casing."
+	caliber = "38"
+	projectile_type = /obj/item/projectile/bullet/mag357/surplus
+
 /obj/item/ammo_casing/c357/lowpower
 	desc = "A .38 bullet casing."
 	projectile_type = /obj/item/projectile/bullet/weakbullet2
+	
+/obj/item/ammo_casing/c357/lowpower/surplus
+	desc = "A Surplus .38 bullet casing."
+	projectile_type = /obj/item/projectile/bullet/weakbullet2/surplus
 
 /obj/item/ammo_casing/c10mm
 	desc = "A 10mm bullet casing."
 	caliber = "10mm"
 	projectile_type = /obj/item/projectile/bullet/midbullet3
 
+/obj/item/ammo_casing/c10mm/surplus
+	desc = "A Surplus 10mm bullet casing."
+	caliber = "10mm"
+	projectile_type = /obj/item/projectile/bullet/midbullet3/surplus
+
 /obj/item/ammo_casing/c9mm
 	desc = "A 9mm bullet casing."
 	caliber = "9mm"
 	projectile_type = /obj/item/projectile/bullet/weakbullet3
+
+/obj/item/ammo_casing/c9mm/surplus
+	desc = "A Surplus 9mm bullet casing."
+	caliber = "9mm"
+	projectile_type = /obj/item/projectile/bullet/weakbullet3/surplus
 
 /obj/item/ammo_casing/c9mmap
 	desc = "A 9mm bullet casing."
