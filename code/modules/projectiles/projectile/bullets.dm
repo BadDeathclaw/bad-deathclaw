@@ -84,6 +84,9 @@
 
 /obj/item/projectile/bullet/midbullet //45
 	damage = 33
+	
+/obj/item/projectile/bullet/midbullet/surplus //45 surplus
+	damage = 24
 
 /obj/item/projectile/bullet/midbullet2 //unused
 	damage = 25
