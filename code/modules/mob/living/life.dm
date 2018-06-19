@@ -29,9 +29,6 @@
 			
 			for(var/obj/item/weapon/grab/G in src)
 				G.process()
-	else
-		if(istype(src, /mob/living/simple_animal/hostile))
-			
 
 		. = 1
 	var/datum/gas_mixture/environment = loc.return_air()

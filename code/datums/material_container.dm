@@ -84,20 +84,26 @@
 	if(istype(I,/obj/item/stack))
 		var/obj/item/stack/S = I
 		return insert_stack(I, S.amount)
-	if(istype(I,/obj/item/ammo_box)
+	if(istype(I,/obj/item/ammo_box))
 		ismagazine = 1
 	var/material_amount = get_item_material_amount(I)
 	if(!material_amount || !has_space(material_amount))
 		return 0
+	var/counter = 0
 	if(ismagazine)
-		var/counter = 0
-		for(obj/item/A in I.stored_ammo)
-			if(!BB)
-				continue
-			counter += 1
-		var/anumber = max(((counter / I.max_ammo) - 0.5), 0)//Percentage of ammo left inside
-	insert_materials(I, anumber)
-	material_amount = (material_amount * anumber)
+		var/anumber = 1
+		if(istype(I, /obj/item/ammo_box))
+			var/obj/item/ammo_box/box = I
+			for(var/obj/item/ammo_casing/A in box.stored_ammo)
+				if(!A.BB)
+					continue
+				counter += 1
+			anumber = max(((counter / box.max_ammo) - 0.5), 0)//Percentage of ammo left inside
+		insert_materials(I, anumber)
+		material_amount = (material_amount * anumber)
+	else
+		insert_materials(I, multiplier)
+		material_amount = (material_amount * multiplier)
 	return material_amount
 
 /datum/material_container/proc/insert_materials(obj/item/I, multiplier = 1) //for internal usage only

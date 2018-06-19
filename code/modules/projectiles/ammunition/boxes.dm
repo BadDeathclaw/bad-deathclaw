@@ -1,5 +1,5 @@
 /obj/item/ammo_box/c22/surplus
-	name = "Ammo box (.22 Surplus)
+	name = "Ammo box (.22 Surplus)"
 	icon_state = "44"
 	ammo_type = /obj/item/ammo_casing/c22/surplus
 	max_ammo = 20

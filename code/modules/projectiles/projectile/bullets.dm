@@ -19,7 +19,7 @@
 
 /obj/item/projectile/bullet/magnum/surplus //44 surplus
 	damage = 30
-	armour_peneration = -10
+	armour_penetration = -10
 
 /obj/item/projectile/bullet/mag357 //357
 	damage = 42
@@ -40,7 +40,7 @@
 /obj/item/projectile/bullet/weakbullet2 //38
 	damage = 33 //4 hit crit
 
-/obj/item/proejctile/bullet/weakbullet2/surplus //38 surplus
+/obj/item/projectile/bullet/weakbullet2/surplus //38 surplus
 	damage = 24 //5 hit crit
 
 /obj/item/projectile/bullet/weakbullet3 //9mm
@@ -56,7 +56,7 @@
 	armour_penetration = -10
 
 /obj/item/projectile/bullet/c22surplus //22lr surplus
-	damge = 7
+	damage = 7
 	armour_penetration = -10
 
 /obj/item/projectile/bullet/toxinbullet //9mmtox
