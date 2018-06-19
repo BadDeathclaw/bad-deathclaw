@@ -92,11 +92,11 @@
 	var/counter = 0
 	if(ismagazine)
 		if(istype(I, /obj/item/ammo_box))
-		var/obj/item/ammo_box/box = I
-		for(var/obj/item/ammo_casing/A in box.stored_ammo)
-			if(!A.BB)
-				continue
-			counter += 1
+			var/obj/item/ammo_box/box = I
+			for(var/obj/item/ammo_casing/A in box.stored_ammo)
+				if(!A.BB)
+					continue
+				counter += 1
 		var/anumber = max(((counter / box.max_ammo) - 0.5), 0)//Percentage of ammo left inside
 		insert_materials(I, anumber)
 		material_amount = (material_amount * anumber)
