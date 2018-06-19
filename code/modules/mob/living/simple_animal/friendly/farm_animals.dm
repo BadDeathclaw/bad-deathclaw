@@ -168,16 +168,18 @@ var/global/cow_count = 0
 			return
 		if(istype(O, /obj/item/stack/hay))
 			var/obj/item/stack/hay/H = O
-			if(H.use(1))
-				fedAmount += 15
-				user.visible_message("<span class='notice'>[user] feeds the [src] a yummy [H].</span>","<span class='notice'>You feed the [src] a yummy [H].</span>")
+			var/amounttofeed = (H.amount * 15)
+			fedAmount += amounttofeed
+			user.visible_message("<span class='notice'>[user] feeds the [src] a yummy [H].</span>","<span class='notice'>You feed the [src] a yummy [H].</span>")
 			return
 	..()
 
 /mob/living/simple_animal/cow/Life()
 	. = ..()
 	if(stat == CONSCIOUS)
-		fedAmount = round(0.99 * fedAmount) //CRYOSTASIS COWS, INFINITE COW BREEDING
+		fedAmount = fedAmount -= 1 //CRYOSTASIS COWS, INFINITE COW BREEDING
+		if(fedAmount < 0)
+			fedAmount = 0
 		if(getFedState() >= 2)
 			cowbabies()
 		udder.generateMilk(getFedState())

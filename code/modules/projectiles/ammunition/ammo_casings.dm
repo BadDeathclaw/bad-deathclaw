@@ -3,6 +3,11 @@
 	caliber = "44"
 	projectile_type = /obj/item/projectile/bullet/magnum
 
+/obj/item/ammo_casing/m44/surplus
+	desc = "A surplus .44 Magnum bullet casing."
+	caliber = "44"
+	projectile_type = /obj/item/projectile/bullet/magnum/surplus
+
 /obj/item/ammo_casing/a50
 	desc = "A .50AE bullet casing."
 	caliber = ".50"
@@ -13,19 +18,38 @@
 	caliber = "38"
 	projectile_type = /obj/item/projectile/bullet/mag357
 
+/obj/item/ammo_casing/c357/surplus
+	desc = "A Surplus .357 bullet casing."
+	caliber = "38"
+	projectile_type = /obj/item/projectile/bullet/mag357/surplus
+
 /obj/item/ammo_casing/c357/lowpower
 	desc = "A .38 bullet casing."
 	projectile_type = /obj/item/projectile/bullet/weakbullet2
+	
+/obj/item/ammo_casing/c357/lowpower/surplus
+	desc = "A Surplus .38 bullet casing."
+	projectile_type = /obj/item/projectile/bullet/weakbullet2/surplus
 
 /obj/item/ammo_casing/c10mm
 	desc = "A 10mm bullet casing."
 	caliber = "10mm"
 	projectile_type = /obj/item/projectile/bullet/midbullet3
 
+/obj/item/ammo_casing/c10mm/surplus
+	desc = "A Surplus 10mm bullet casing."
+	caliber = "10mm"
+	projectile_type = /obj/item/projectile/bullet/midbullet3/surplus
+
 /obj/item/ammo_casing/c9mm
 	desc = "A 9mm bullet casing."
 	caliber = "9mm"
 	projectile_type = /obj/item/projectile/bullet/weakbullet3
+
+/obj/item/ammo_casing/c9mm/surplus
+	desc = "A Surplus 9mm bullet casing."
+	caliber = "9mm"
+	projectile_type = /obj/item/projectile/bullet/weakbullet3/surplus
 
 /obj/item/ammo_casing/c9mmap
 	desc = "A 9mm bullet casing."
@@ -66,6 +90,11 @@
 	desc = "A .45 bullet casing."
 	caliber = ".45"
 	projectile_type = /obj/item/projectile/bullet/midbullet
+	
+/obj/item/ammo_casing/c45/surplus
+	desc = "A Surplus .45 bullet casing."
+	caliber = ".45"
+	projectile_type = /obj/item/projectile/bullet/midbullet/surplus
 
 /obj/item/ammo_casing/c45nostamina
 	desc = "A .45 bullet casing."
@@ -360,6 +389,10 @@
 /obj/item/ammo_casing/c22
 	caliber = "22"
 	projectile_type = /obj/item/projectile/bullet/weakbullet4
+	
+/obj/item/ammo_casing/c22/surplus
+	caliber = "22"
+	projectile_type = /obj/item/projectile/bullet/c22surplus
 
 /obj/item/ammo_casing/c2mm
 	caliber = "2mm"

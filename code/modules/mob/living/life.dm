@@ -11,21 +11,27 @@
 		return
 
 	if(stat != DEAD)
+		if(client)
+			//Breathing, if applicable
+			handle_breathing()
 
-		//Breathing, if applicable
-		handle_breathing()
+			//Mutations and radiation
+			handle_mutations_and_radiation()
 
-		//Mutations and radiation
-		handle_mutations_and_radiation()
+			//Random events (vomiting etc)
+			handle_random_events()
 
-		//Chemicals in the body
-		handle_chemicals_in_body()
+			handle_stomach()
 
-		//Blud
-		handle_blood()
+			update_gravity(mob_has_gravity())
 
-		//Random events (vomiting etc)
-		handle_random_events()
+			update_pulling()
+			
+			for(var/obj/item/weapon/grab/G in src)
+				G.process()
+	else
+		if(istype(src, /mob/living/simple_animal/hostile))
+			
 
 		. = 1
 	var/datum/gas_mixture/environment = loc.return_air()
@@ -33,21 +39,23 @@
 	if(environment)
 		handle_environment(environment)
 
+	//Chemicals in the body
+	handle_chemicals_in_body()
+
+	//Blud
+	handle_blood()
+
 	handle_fire()
 
 	//stuff in the stomach
-	handle_stomach()
+	//handle_stomach()
 
-	update_gravity(mob_has_gravity())
+	//update_gravity(mob_has_gravity())
 
-	update_pulling()
+	//update_pulling()
 
-	for(var/obj/item/weapon/grab/G in src)
-		G.process()
-
-	if(handle_regular_status_updates()) // Status & health update, are we dead or alive etc.
-		handle_disabilities() // eye, ear, brain damages
-		handle_status_effects() //all special effects, stunned, weakened, jitteryness, hallucination, sleeping, etc
+	//for(var/obj/item/weapon/grab/G in src)
+		//G.process()
 
 	handle_actions()
 
@@ -56,6 +64,11 @@
 	if(client)
 		handle_regular_hud_updates()
 
+	if(handle_regular_status_updates()) // Status & health update, are we dead or alive etc.
+		if((istype(src, /mob/living/simple_animal/hostile)) && !client)
+			return
+		handle_disabilities() // eye, ear, brain damages
+		handle_status_effects() //all special effects, stunned, weakened, jitteryness, hallucination, sleeping, etc
 
 
 /mob/living/proc/handle_breathing()

@@ -17,8 +17,16 @@
 	damage = 40
 	armour_penetration = -10
 
+/obj/item/projectile/bullet/magnum/surplus //44 surplus
+	damage = 30
+	armour_peneration = -10
+
 /obj/item/projectile/bullet/mag357 //357
-	damage = 35
+	damage = 42
+	armour_penetration = -10
+
+/obj/item/projectile/bullet/mag357/surplus //357 surplus
+	damage = 34
 	armour_penetration = -10
 
 /obj/item/projectile/bullet/slug //slug
@@ -30,14 +38,25 @@
 	stamina = 80
 
 /obj/item/projectile/bullet/weakbullet2 //38
-	damage = 25
+	damage = 33 //4 hit crit
+
+/obj/item/proejctile/bullet/weakbullet2/surplus //38 surplus
+	damage = 24 //5 hit crit
 
 /obj/item/projectile/bullet/weakbullet3 //9mm
 	damage = 30
 	armour_penetration = 10
 
+/obj/item/projectile/bullet/weakbullet3/surplus //9mm surplus
+	damage = 20
+	armour_penetration = 0
+
 /obj/item/projectile/bullet/weakbullet4 //22lr
 	damage = 10
+	armour_penetration = -10
+
+/obj/item/projectile/bullet/c22surplus //22lr surplus
+	damge = 7
 	armour_penetration = -10
 
 /obj/item/projectile/bullet/toxinbullet //9mmtox
@@ -65,7 +84,9 @@
 
 /obj/item/projectile/bullet/midbullet //45
 	damage = 33
-	armour_penetration = -10
+	
+/obj/item/projectile/bullet/midbullet/surplus //45 surplus
+	damage = 24
 
 /obj/item/projectile/bullet/midbullet2 //unused
 	damage = 25
@@ -73,6 +94,10 @@
 /obj/item/projectile/bullet/midbullet3 //10mm
 	damage = 30
 	armour_penetration = -10
+	
+/obj/item/projectile/bullet/midbullet3/surplus
+	damage = 20
+	armour_penetration = -15
 
 /obj/item/projectile/bullet/heavybullet //5.56
 	damage = 35
