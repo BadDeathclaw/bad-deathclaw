@@ -12,6 +12,15 @@
 	build_path = /obj/item/device/firing_pin/test_range
 	category = list("Firing Pins")
 
+/datum/design/pin_weapon
+	name = "Weapon firing pin"
+	id = "pin_weapon"
+	req_tech = list("combat" = 5, "materials" = 6, "powerstorage" = 3)
+	build_type = PROTOLATHE
+	materials = list(MAT_SILVER = 4000, MAT_URANIUM = 200)
+	build_path = /obj/item/device/firing_pin/implant/pindicate
+	category = list("Firing Pins")
+
 /datum/design/pin_loyalty
 	name = "loyalty firing pin"
 	desc = "This is a security firing pin which only authorizes users who are loyalty-implanted."
