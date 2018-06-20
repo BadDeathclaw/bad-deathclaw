@@ -41,6 +41,26 @@
 	build_path = /obj/item/weapon/gun/projectile/automatic/shotgun/bulldog
 	category = list("Weapons")
 
+/datum/design/smg
+	name = "Advanced SMG"
+	desc = "An Advanced SMG that uses Advanced magazines. Can be suggessed."
+	id = "bulldog"
+	req_tech = list("combat" = 6, "materials" = 7, "syndicate" = 5)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 50000, MAT_SILVER = 15000, MAT_GOLD = 15000, MAT_URANIUM = 15000)
+	build_path = /obj/item/weapon/gun/projectile/automatic/wt550
+	category = list("Weapons")
+
+/datum/design/assaultrifle
+	name = "Advanced Assault Rifle"
+	desc = "An advanced assault rifle that uses 556."
+	id = "bulldog"
+	req_tech = list("combat" = 6, "materials" = 7, "syndicate" = 5)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 75000, MAT_SILVER = 20000, MAT_GOLD = 20000, MAT_URANIUM = 20000)
+	build_path = /obj/item/weapon/gun/projectile/automatic/ar
+	category = list("Weapons")
+
 /datum/design/tele_shield
 	name = "Telescopic Riot Shield"
 	desc = "An advanced riot shield made of lightweight materials that collapses for easy storage."
@@ -60,7 +80,7 @@
 	materials = list(MAT_METAL = 10000, MAT_GLASS = 2000, MAT_DIAMOND = 2000)
 	build_path = /obj/item/weapon/gun/energy/lasercannon
 	category = list("Weapons")
-
+/*
 /datum/design/decloner
 	name = "Decloner"
 	desc = "Your opponent will bubble into a messy pile of goop."
@@ -71,7 +91,7 @@
 	reagents = list("mutagen" = 40)
 	build_path = /obj/item/weapon/gun/energy/decloner
 	category = list("Weapons")
-
+*/
 /datum/design/rapidsyringe
 	name = "Rapid Syringe Gun"
 	desc = "A gun that fires many syringes."
@@ -81,7 +101,7 @@
 	materials = list(MAT_METAL = 5000, MAT_GLASS = 1000)
 	build_path = /obj/item/weapon/gun/syringe/rapidsyringe
 	category = list("Weapons")
-
+/*
 /datum/design/largecrossbow
 	name = "Energy Crossbow"
 	desc = "A reverse-engineered energy crossbow favored by syndicate infiltration teams and carp hunters."
@@ -92,7 +112,7 @@
 	build_path = /obj/item/weapon/gun/energy/kinetic_accelerator/crossbow/large
 	category = list("Weapons")
 	reliability = 76
-
+*/
 /datum/design/temp_gun
 	name = "Temperature Gun"
 	desc = "A gun that shoots temperature bullet energythings to change temperature."//Change it if you want
@@ -124,7 +144,7 @@
 	reliability = 79
 	build_path = /obj/item/weapon/grenade/chem_grenade/large
 	category = list("Weapons")
-
+/*
 /datum/design/smg
 	name = "NanoTrasen Saber SMG"
 	desc = "A prototype advancment over the WT-550 auto rifle made using lightweight materials on a traditional frame, designed to fire standard 9mm rounds."
@@ -134,7 +154,7 @@
 	materials = list(MAT_METAL = 8000, MAT_SILVER = 2000, MAT_DIAMOND = 1000)
 	build_path = /obj/item/weapon/gun/projectile/automatic/proto
 	category = list("Weapons")
-/*
+
 /datum/design/xray
 	name = "Xray Laser Gun"
 	desc = "Not quite as menacing as it sounds"
@@ -201,10 +221,9 @@
 	category = list("Ammo")
 
 //WT550 Mags
-/*
 /datum/design/mag_oldsmg
-	name = "WT-550 Auto Gun Magazine (4.6×30mm)"
-	desc = "A 20 round magazine for the out of date security WT-550 Auto Rifle"
+	name = "Advanced SMG Magazine (4.6×30mm)"
+	desc = "A 20 round magazine for the Advanced SMG"
 	id = "mag_oldsmg"
 	req_tech = list("combat" = 1, "materials" = 1)
 	build_type = PROTOLATHE
@@ -213,26 +232,25 @@
 	category = list("Ammo")
 
 /datum/design/mag_oldsmg/ap_mag
-	name = "WT-550 Auto Gun Armour Piercing Magazine (4.6×30mm AP)"
-	desc = "A 20 round armour piercing magazine for the out of date security WT-550 Auto Rifle"
+	name = "Advanced SMG Armour Piercing Magazine (4.6×30mm AP)"
 	id = "mag_oldsmg_ap"
 	materials = list(MAT_METAL = 6000, MAT_SILVER = 600)
 	build_path = /obj/item/ammo_box/magazine/wt550m9/wtap
 
 /datum/design/mag_oldsmg/ic_mag
-	name = "WT-550 Auto Gun Incendiary Magazine (4.6×30mm IC)"
+	name = "Advanced SMG Incendiary Magazine (4.6×30mm IC)"
 	desc = "A 20 round armour piercing magazine for the out of date security WT-550 Auto Rifle"
 	id = "mag_oldsmg_ic"
 	materials = list(MAT_METAL = 6000, MAT_SILVER = 600, MAT_GLASS = 1000)
 	build_path = /obj/item/ammo_box/magazine/wt550m9/wtic
 
 /datum/design/mag_oldsmg/tx_mag
-	name = "WT-550 Auto Gun Urnaium Magazine (4.6×30mm TX)"
+	name = "Advanced SMG Urnaium Magazine (4.6×30mm TX)"
 	desc = "A 20 round urnaium tipped magazine for the out of date security WT-550 Auto Rifle"
 	id = "mag_oldsmg_tx"
 	materials = list(MAT_METAL = 6000, MAT_SILVER = 600, MAT_URANIUM = 2000)
 	build_path = /obj/item/ammo_box/magazine/wt550m9/wttx
-*/
+	
 /datum/design/mag_oldsmg
 	name = "ammo (5.56 Match)"
 	desc = "A box of 20 5.56 match grade ammo."
@@ -271,7 +289,7 @@
 	req_tech = list("combat" = 6, "engineering" = 5, "syndicate" = 3)
 	materials = list (MAT_METAL = 6000, MAT_SILVER = 600, MAT_URANIUM = 2000, MAT_DIAMOND = 1000)
 	build_path = /obj/item/ammo_box/a556/bleed
-
+/*
 /datum/design/mag_oldsmge/sleep_mag
 	name = "experimental ammo sleeping (5.56 sopoforic)"
 	desc = "a box of 20 sleeping 5.56 ammo"
@@ -279,7 +297,6 @@
 	req_tech = list("combat" = 6, "engineering" = 5, "syndicate" = 3)
 	materials = list (MAT_METAL = 6000, MAT_SILVER = 600, MAT_URANIUM = 2000, MAT_DIAMOND = 1000, MAT_GOLD = 800)
 	build_path = /obj/item/ammo_box/a556/sopoforic
-
 /datum/design/mag_oldsmge/pen_mag
 	name = "experimental ammo penetrator (5.56 penetrator)"
 	desc = "a box of 20 penetrator 5.56 ammo"
@@ -288,7 +305,6 @@
 	materials = list (MAT_METAL = 6000, MAT_SILVER = 600, MAT_URANIUM = 2000, MAT_DIAMOND = 2000)
 	build_path = /obj/item/ammo_box/a556/penetrator
 //SABR Mags
-
 /datum/design/mag_smg
 	name = "SABR SMG Magazine (9mm)"
 	desc = "A 30-round magazine for the prototype submachine gun."
@@ -339,7 +355,7 @@
 	materials = list(MAT_METAL = 1000, MAT_GLASS = 200)
 	build_path = /obj/item/ammo_casing/shotgun/techshell
 	category = list("Ammo")
-
+*/
 /datum/design/suppressor
 	name = "Universal Suppressor"
 	desc = "A reverse-engineered universal suppressor that fits on most small arms with threaded barrels."
