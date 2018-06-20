@@ -113,6 +113,19 @@
 /datum/interaction/lewd/facefuck/display_interaction(var/mob/user, var/mob/target)
 	user.do_facefuck(target)
 
+/datum/interaction/lewd/throatfuck
+	command = "throatfuck"
+	description = "Fuck their throat|Does oxy damage."
+	interaction_sound = null
+	require_user_penis = 1
+	require_target_mouth = 1
+	user_not_tired = 1
+	require_user_naked = 1
+	max_distance = 0
+
+/datum/interaction/lewd/throatfuck/display_interaction(var/mob/user, var/mob/target)
+	user.do_throatfuck(target)
+
 /datum/interaction/lewd/handjob
 	command = "handjob"
 	description = "Jerk them off."
