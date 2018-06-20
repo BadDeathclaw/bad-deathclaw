@@ -98,7 +98,7 @@
 				if(!A.BB)
 					continue
 				counter += 1
-			anumber = max(((counter / box.max_ammo) - 0.5), 0)//Percentage of ammo left inside
+			anumber = max((counter / box.max_ammo), 0)//Percentage of ammo left inside
 		insert_materials(I, anumber)
 		material_amount = (material_amount * anumber)
 	else
