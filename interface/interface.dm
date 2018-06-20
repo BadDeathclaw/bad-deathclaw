@@ -58,11 +58,11 @@
 	set desc = "See change history"
 	set hidden = 1
 	if(config.changelogurl)
-		if(alert("This will open the BitBucket pull history in your browser. Are you sure?",,"Yes","No")=="No")
+		if(alert("This will open the Github pull history in your browser. Are you sure?",,"Yes","No")=="No")
 			return
 		src << link("[config.changelogurl]")
 	else
-		src << "<span class='danger'>The BitBucket URL is not set in the server configuration.</span>"
+		src << "<span class='danger'>The Github URL is not set in the server configuration.</span>"
 	return
 
 /client/verb/reportissue()
@@ -70,11 +70,23 @@
 	set desc = "Report an issue"
 	set hidden = 1
 	if(config.issueurl)
-		if(alert("This will open the BitBucket issue reporter in your browser. Are you sure?",,"Yes","No")=="No")
+		if(alert("This will open the Github issue reporter in your browser. Are you sure?",,"Yes","No")=="No")
 			return
 		src << link("[config.issueurl]")
 	else
-		src << "<span class='danger'>The BitBucket URL is not set in the server configuration.</span>"
+		src << "<span class='danger'>The Github URL is not set in the server configuration.</span>"
+	return
+
+/client/verb/donate()
+	set name = "Donate"
+	set desc = "Donate to support the server!"
+	set hidden = 1
+	if(config.issueurl)
+		if(alert("This will open Patreon in your browser. Are you sure?",,"Yes","No")=="No")
+			return
+		src << link("[config.donateurl]")
+	else
+		src << "<span class='danger'>The Patreon is not set in the server configuration.</span>"
 	return
 
 /client/verb/hotkeys_help()
