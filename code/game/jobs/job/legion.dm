@@ -77,7 +77,7 @@ Legion
 	uniform = pick(/obj/item/clothing/under/pants/f13/caravan)
 	shoes = /obj/item/clothing/shoes/legionleather
 	gloves = /obj/item/clothing/gloves/f13/legion
-	suit = /obj/item/clothing/suit/armor/f13/legrecruit
+	suit = /obj/item/clothing/suit/armor/f13/legrecruit/vet
 	head = /obj/item/clothing/head/helmet/f13/legdecan
 	glasses = /obj/item/clothing/glasses/sunglasses/legion
 	mask = /obj/item/clothing/mask/bandana/legdecan
