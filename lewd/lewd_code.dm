@@ -83,10 +83,10 @@
 		add_logs(partner, src, "came on")
 
 	if(multiorgasms > (sexual_potency/3))
-		refactory_period = 3 //sex cooldown
+		refactory_period = 1 //sex cooldown
 		druggy = 30
 	else
-		refactory_period = rand(2, 3)
+		refactory_period = 1
 		druggy = 6
 
 /mob/living/carbon/human/cum(var/mob/partner, var/target_orifice)
