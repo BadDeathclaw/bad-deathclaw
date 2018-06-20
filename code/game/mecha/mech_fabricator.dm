@@ -240,7 +240,7 @@
 		output += "</ol>"
 		output += "\[<a href='?src=\ref[src];process_queue=1'>Process queue</a> | <a href='?src=\ref[src];clear_queue=1'>Clear queue</a>\]"
 	return output
-
+/*
 /obj/machinery/mecha_part_fabricator/proc/update_tech()
 	if(!files)
 		return
@@ -262,7 +262,7 @@
 						time_coeff_tech = diff
 						output+="Production routines updated.<br>"
 	return output
-
+*/
 
 /obj/machinery/mecha_part_fabricator/proc/sync()
 	temp = "Updating local R&D database..."
@@ -279,7 +279,7 @@
 		files.RefreshResearch()
 		temp = "Processed equipment designs.<br>"
 		//check if the tech coefficients have changed
-		temp += update_tech()
+		//temp += update_tech()
 		temp += "<a href='?src=\ref[src];clear_temp=1'>Return</a>"
 
 		updateUsrDialog()
