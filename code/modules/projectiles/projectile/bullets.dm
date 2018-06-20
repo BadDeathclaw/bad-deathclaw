@@ -67,8 +67,8 @@
 	damage = 10
 
 /obj/item/projectile/bullet/armourpiercing //9mmap
-	damage = 25
-	armour_penetration = 10
+	damage = 15
+	armour_penetration = 25
 
 /obj/item/projectile/bullet/pellet //shotgunpellet
 	name = "pellet"
