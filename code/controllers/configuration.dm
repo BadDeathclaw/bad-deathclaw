@@ -52,7 +52,7 @@
 	var/min_sunlight = 0.3
 	var/time_of_day_rate = 18000
 
-	var/hostedby = "Xarvox"
+	var/hostedby = "Degenerates"
 	var/respawn = 1
 	var/guest_jobban = 1
 	var/usewhitelist = 0
@@ -69,9 +69,10 @@
 	var/wikiurl = "http://www.fallss.esy.es/wiki/doku.php?id=ru:start" // default wiki link
 	var/forumurl = "https://fallout13.us/" // default forums
 	var/rulesurl = "https://fallout13.us/viewtopic.php?f=12&t=128&sid=3e22d9ba8496594efce8d590d3260e21" // default rules
-	var/githuburl = "https://bitbucket.org/Digdugxx/bad-deathclaw" //default github
-	var/issueurl = "https://bitbucket.org/Digdugxx/bad-deathclaw/issues/new"
-	var/changelogurl = "https://bitbucket.org/Digdugxx/bad-deathclaw/pull-requests/?state=MERGED"
+	var/githuburl = "https://github.com/Digdugxx/bad-deathclaw" //default github
+	var/issueurl = "https://github.com/Digdugxx/bad-deathclaw/issues/new"
+	var/changelogurl = "https://github.com/Digdugxx/bad-deathclaw/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Amerged+"
+	var/donateurl = "https://www.patreon.com/baddeathclaw"
 	var/discordurl = "https://discord.gg/pY33Q8c"
 	var/forbid_singulo_possession = 0
 	var/useircbot = 0

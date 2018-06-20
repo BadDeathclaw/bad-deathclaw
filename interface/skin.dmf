@@ -911,6 +911,17 @@ window "rpane"
 		saved-params = "splitter"
 		right = "outputwindow"
 		is-vert = false
+	elem "donate"
+		type = BUTTON
+		pos = 502,0
+		size = 67x16
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "Donate"
+		command = "donate"
+		group = "rpanemode"
 	elem "reportissueb"
 		type = BUTTON
 		pos = 429,0

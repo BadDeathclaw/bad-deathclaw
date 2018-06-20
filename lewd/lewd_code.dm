@@ -33,6 +33,12 @@
 					partner.reagents.add_reagent("cum", 10)
 				else
 					message = "cums on \the [partner]'s face."
+			if(CUM_TARGET_THROAT)
+				if(partner.has_mouth() && partner.mouth_is_free())
+					message = "shoves deep into \the [partner]'s throat and cums."
+					partner.reagents.add_reagent("cum", 10)
+				else
+					message = "cums on \the [partner]'s face."
 			if(CUM_TARGET_VAGINA)
 				if(partner.is_nude() && partner.has_vagina())
 					message = "cums in \the [partner]'s pussy."
@@ -77,10 +83,10 @@
 		add_logs(partner, src, "came on")
 
 	if(multiorgasms > (sexual_potency/3))
-		refactory_period = 10 //sex cooldown
+		refactory_period = 1 //sex cooldown
 		druggy = 30
 	else
-		refactory_period = rand(5, 10)
+		refactory_period = 1
 		druggy = 6
 
 /mob/living/carbon/human/cum(var/mob/partner, var/target_orifice)
@@ -141,14 +147,17 @@
 		if(has_vagina())
 			message = "grinds their pussy into \the [partner]'s face."
 		else if(has_penis())
-			message = "roughly fucks \the [partner]'s throat."
+			message = "roughly fucks \the [partner]'s mouth."
 		else
 			message = "grinds against \the [partner]\s face."
 	else
 		if(has_vagina())
 			message = "forces \the [partner]'s face into their pussy."
 		else if(has_penis())
-			message = "forces their dick deep into \the [partner]'s throat"
+			if(is_fucking(partner, CUM_TARGET_THROAT))
+				message = "retracts their dick from \the [partner]'s throat"
+			else
+				message = "shoves their dick deep into \the [partner]'s mouth"
 		else
 			message = "shoves their crotch into \the [partner]'s face."
 		set_is_fucking(partner , CUM_TARGET_MOUTH)
@@ -156,6 +165,28 @@
 	playsound(loc, "honk/sound/interactions/oral[rand(1, 2)].ogg", 70, 1, -1)
 	visible_message("<b>\The [src]</b> [message]")
 	handle_post_sex(lust_increase, CUM_TARGET_MOUTH, partner)
+	partner.dir = get_dir(partner,src)
+	do_fucking_animation(get_dir(src, partner))
+
+/mob/proc/do_throatfuck(var/mob/partner)
+	var/message
+	var/lust_increase = 10
+
+	if(is_fucking(partner, CUM_TARGET_THROAT))
+		message = "[pick(list("brutally fucks \the [partner]'s throat.", "chokes \the [partner] on their dick."))]</span>"
+		if(rand(3))
+			partner.emote("chokes on \The [src]")
+			partner.losebreath = 5
+	else if(is_fucking(partner, CUM_TARGET_MOUTH))
+		message = "thrusts deeper into \the [partner]'s mouth and down their throat."
+
+	else
+		message = "forces their dick deep down \the [partner]'s throat"
+		set_is_fucking(partner , CUM_TARGET_THROAT)
+
+	playsound(loc, "honk/sound/interactions/oral[rand(1, 2)].ogg", 70, 1, -1)
+	visible_message("<b>\The [src]</b> [message]")
+	handle_post_sex(lust_increase, CUM_TARGET_THROAT, partner)
 	partner.dir = get_dir(partner,src)
 	do_fucking_animation(get_dir(src, partner))
 

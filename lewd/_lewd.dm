@@ -102,11 +102,11 @@
 	if(user.stat == DEAD) return
 
 #define CUM_TARGET_MOUTH "mouth"
-#define CUM_TARGET_THROAT "throat"//
+#define CUM_TARGET_THROAT "throat"
 #define CUM_TARGET_VAGINA "vagina"
 #define CUM_TARGET_ANUS "anus"
 #define CUM_TARGET_HAND "hand"
 #define CUM_TARGET_BREASTS "breasts"
-#define GRINDING_FACE_WITH_ANUS "faceanus"//
-#define GRINDING_FACE_WITH_FEET "facefeet"//
-#define GRINDING_MOUTH_WITH_FEET "mouthfeet"//
+#define GRINDING_FACE_WITH_ANUS "faceanus"
+#define GRINDING_FACE_WITH_FEET "facefeet"
+#define GRINDING_MOUTH_WITH_FEET "mouthfeet"
