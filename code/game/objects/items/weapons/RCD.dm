@@ -522,7 +522,7 @@ RCD
 	if(istype(W, /obj/item/weapon/circuitboard))
 		if(!circuit)
 			user << "You insert the [W.name] into the [src]."
-			W.loc = src
+			W.forceMove(src)
 			src.circuit = W
 
 /obj/item/weapon/circuitboardthing/afterattack(atom/A, mob/user, proximity)
