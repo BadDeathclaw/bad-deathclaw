@@ -177,7 +177,7 @@
 			synthesizing = 0
 	if(owner.water && isupgraded && owner.water <= 350)
 		synthesizing = 1
-		owner << "<span class='notice'>You feel less thirst...</span>"
+		owner << "<span class='notice'>You feel less dry in the mouth...</span>"
 		owner.water += 50
 		spawn(50)
 			synthesizing = 0
