@@ -242,6 +242,15 @@
 	build_path = /obj/item/organ/internal/cyberimp/chest/reviver
 	category = list("Misc", "Medical Designs")
 
+/datum/design/autoimplant
+	name = "Auto Implanter"
+	id = "autoimplant"
+	req_tech = list("materials" = 6, "programming" = 4, "biotech" = 7, "syndicate" = 4)
+	build_type = PROTOLATHE | MECHFAB
+	construction_time = 60
+	materials = list(MAT_METAL = 20000, MAT_GLASS = 20000, MAT_GOLD = 10000, MAT_URANIUM = 10000, MAT_DIAMOND = 5000)
+	build_path = /obj/item/device/autosurgeon
+	category = list("Misc", "Medical Designs")
 
 /////////////////////////////////////////
 ////////////Regular Implants/////////////
