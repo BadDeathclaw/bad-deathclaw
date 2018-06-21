@@ -128,6 +128,15 @@
 	build_path = /obj/item/weapon/gun/medbeam
 	category = list("Medical Designs")
 
+/datum/design/combathypo
+	name = "Combat Hypospray"
+	id = "combathypo"
+	req_tech = list("combat" = 6, "materials" = 7, "powerstorage" = 8, "programming" = 6, "biotech" = 6)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 2000, MAT_GLASS = 2000, MAT_URANIUM = 2000)
+	build_path = /obj/item/weapon/reagent_containers/hypospray/combat/nanites
+	category = list("Medical Designs")
+	
 /////////////////////////////////////////
 //////////Cybernetic Implants////////////
 /////////////////////////////////////////
