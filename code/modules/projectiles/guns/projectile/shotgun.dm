@@ -113,6 +113,15 @@
 		if(W.active)
 			sawoff(user)
 
+//Barman's shotgun
+/obj/item/weapon/gun/projectile/shotgun/sc_pump
+
+/obj/item/weapon/gun/projectile/shotgun/sc_pump/New()
+	..()
+	for(var/ammo in magazine.stored_ammo)
+		if(prob(95)) //95% chance
+			magazine.stored_ammo -= ammo
+
 ///////////////////////
 // BOLT ACTION RIFLE //
 ///////////////////////
@@ -431,4 +440,5 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction
 	w_class = 4
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+
 
