@@ -180,7 +180,7 @@
 
 			if(!is_stack && (multiplier > 1))
 				return
-			if (!(multiplier in list(1,10,25,max_multiplier))) //"enough materials ?" is checked further down
+			if (!(multiplier in list(1,5,10,25,max_multiplier))) //"enough materials ?" is checked further down
 				return
 			/////////////////
 
