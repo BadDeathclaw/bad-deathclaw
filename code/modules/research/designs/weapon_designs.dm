@@ -304,13 +304,13 @@
 	build_path = /obj/item/ammo_box/magazine/wt550m9/wttx
 	
 /datum/design/mag_oldsmg
-	name = "ammo (5.56 Match)"
-	desc = "A box of 20 5.56 match grade ammo."
+	name = "Extended Magazine (5.56 Match)"
+	desc = "A magazine of 30 5.56 match grade ammo."
 	id = "mag_oldsmg"
 	req_tech = list("combat" = 1, "materials" = 1)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 4000)
-	build_path = /obj/item/ammo_box/a556
+	build_path = /obj/item/ammo_box/magazine/m556
 	category = list("Ammo")
 
 /datum/design/mag_oldsmg/ap_mag
