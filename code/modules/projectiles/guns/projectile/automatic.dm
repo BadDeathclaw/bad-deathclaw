@@ -231,8 +231,8 @@
 	fire_delay = 1
 
 /obj/item/weapon/gun/projectile/automatic/ar
-	name = "\improper NT-ARG 'Boarder'"
-	desc = "A robust assault rile used by Nanotrasen fighting forces."
+	name = "Advanced Assault Rifle"
+	desc = "An advanced assault rile that uses 556 caliber ammunition."
 	icon_state = "arg"
 	item_state = "arg"
 	slot_flags = 0
