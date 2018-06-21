@@ -406,7 +406,7 @@
 	build_type = MECHFAB
 	req_tech = list("combat" = 7)
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/pulse
-	materials = list(MAT_METAL=10000)
+	materials = list(MAT_METAL=30000,MAT_GOLD=20000,MAT_PLASMA=25000,MAT_SILVER=20000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
 
