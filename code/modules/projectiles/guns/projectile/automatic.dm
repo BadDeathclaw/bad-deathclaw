@@ -22,7 +22,7 @@
 //over here
 
 /obj/item/weapon/gun/projectile/automatic/proto
-	name = "\improper SABR SG-T"
+	name = "SABR SG-T"
 	desc = "A prototype three-round burst 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors."
 	icon_state = "saber"
 	mag_type = /obj/item/ammo_box/magazine/smgm9mm
@@ -127,8 +127,8 @@
 	return
 
 /obj/item/weapon/gun/projectile/automatic/wt550
-	name = "/improper General Arms SDW"
-	desc = "A light weight tactical SMG. Uses 4.6x30mm rounds and is designated as a self defense weapon. Has a GA logo stamped into the reciever."
+	name = "Advanced SMG"
+	desc = "A light weight tactical SMG. Uses 4.6x30mm rounds and is designated as a self defense weapon. Seems to be of a very advanced design."
 	icon_state = "wt550"
 	item_state = "arg"
 	mag_type = /obj/item/ammo_box/magazine/wt550m9
@@ -241,8 +241,8 @@
 	fire_delay = 1
 
 /obj/item/weapon/gun/projectile/automatic/ar
-	name = "\improper NT-ARG 'Boarder'"
-	desc = "A robust assault rile used by Nanotrasen fighting forces."
+	name = "Advanced Assault Rifle"
+	desc = "An advanced assault rile that uses 556 caliber ammunition."
 	icon_state = "arg"
 	item_state = "arg"
 	slot_flags = 0

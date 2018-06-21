@@ -42,7 +42,7 @@
 				spread = round((rand() - 0.5) * variance)
 			else
 				spread = round((i / projectiles_per_shot - 0.5) * variance)
-		A.preparePixelProjectile(targloc, chassis.occupant, params, spread)
+		A.preparePixelProjectile(target, targloc, params, spread)
 
 		A.fire()
 		playsound(chassis, fire_sound, 50, 1)

@@ -171,6 +171,7 @@ var/global/cow_count = 0
 			var/amounttofeed = (H.amount * 15)
 			fedAmount += amounttofeed
 			user.visible_message("<span class='notice'>[user] feeds the [src] a yummy [H].</span>","<span class='notice'>You feed the [src] a yummy [H].</span>")
+			H.use(H.amount)
 			return
 	..()
 

@@ -189,7 +189,7 @@ research holder datum.
 	var/name = "name"					//Name of the technology.
 	var/desc = "description"			//General description of what it does and what it makes.
 	var/id = "id"						//An easily referenced ID. Must be alphanumeric, lower-case, and no symbols.
-	var/level = 1						//A simple number scale of the research level. Level 0 = Secret tech.
+	var/level = 9						//A simple number scale of the research level. Level 0 = Secret tech.
 	var/rare = 1						//How much CentCom wants to get that tech. Used in supply shuttle tech cost calculation.
 	var/list/req_tech = list()			//List of ids associated values of techs required to research this tech. "id" = #
 
