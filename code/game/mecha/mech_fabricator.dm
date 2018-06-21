@@ -68,13 +68,13 @@
 	res_max_amount = (187000+(T * 37500))
 
 	//ressources adjustment coefficient (1 -> 0.88 -> 0.75)
-	T = -1
+	T = 0
 	for(var/obj/item/weapon/stock_parts/micro_laser/Ma in component_parts)
 		T += (Ma.rating * 0.1)
 	resource_coeff = round(initial(resource_coeff) - T,0.01)
 
 	//building time adjustment coefficient (1 -> 0.8 -> 0.6)
-	T = -1
+	T = 0
 	for(var/obj/item/weapon/stock_parts/manipulator/Ml in component_parts)
 		T += (Ml.rating * 0.1)
 	time_coeff = round(initial(time_coeff) - T,0.01)
