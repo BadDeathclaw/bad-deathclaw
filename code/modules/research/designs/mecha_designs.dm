@@ -232,6 +232,7 @@
 	construction_time = 100
 	category = list("Exosuit Equipment")
 
+/*
 /datum/design/mech_missile_rack
 	name = "Exosuit Weapon (SRM-8 Missile Rack)"
 	desc = "Allows for the construction of SRM-8 Missile Rack."
@@ -242,6 +243,7 @@
 	materials = list(MAT_METAL=22000,MAT_GOLD=6000,MAT_SILVER=8000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
+*/
 
 /datum/design/clusterbang_launcher
 	name = "Exosuit Module (SOB-3 Clusterbang Launcher)"
