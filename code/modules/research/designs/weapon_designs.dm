@@ -44,7 +44,7 @@
 /datum/design/smg
 	name = "Advanced SMG"
 	desc = "An Advanced SMG that uses Advanced magazines. Can be suggessed."
-	id = "bulldog"
+	id = "smg"
 	req_tech = list("combat" = 6, "materials" = 7, "syndicate" = 5)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 50000, MAT_SILVER = 15000, MAT_GOLD = 15000, MAT_URANIUM = 15000)
@@ -54,7 +54,7 @@
 /datum/design/assaultrifle
 	name = "Advanced Assault Rifle"
 	desc = "An advanced assault rifle that uses 556."
-	id = "bulldog"
+	id = "assaultrifle"
 	req_tech = list("combat" = 6, "materials" = 7, "syndicate" = 5)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 75000, MAT_SILVER = 20000, MAT_GOLD = 20000, MAT_URANIUM = 20000)
@@ -273,33 +273,33 @@
 	category = list("Ammo")
 
 //WT550 Mags
-/datum/design/mag_oldsmg
-	name = "Advanced SMG Magazine (4.6×30mm)"
+/datum/design/advmag
+	name = "Advanced SMG Magazine (4.6Ã—30mm)"
 	desc = "A 20 round magazine for the Advanced SMG"
-	id = "mag_oldsmg"
+	id = "advmag"
 	req_tech = list("combat" = 1, "materials" = 1)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 4000)
 	build_path = /obj/item/ammo_box/magazine/wt550m9
 	category = list("Ammo")
 
-/datum/design/mag_oldsmg/ap_mag
-	name = "Advanced SMG Armour Piercing Magazine (4.6×30mm AP)"
-	id = "mag_oldsmg_ap"
+/datum/design/mag_oldsmg/advmagap
+	name = "Advanced SMG Armour Piercing Magazine (4.6Ã—30mm AP)"
+	id = "advmagap"
 	materials = list(MAT_METAL = 6000, MAT_SILVER = 600)
 	build_path = /obj/item/ammo_box/magazine/wt550m9/wtap
 
-/datum/design/mag_oldsmg/ic_mag
-	name = "Advanced SMG Incendiary Magazine (4.6×30mm IC)"
+/datum/design/mag_oldsmg/advmagic
+	name = "Advanced SMG Incendiary Magazine (4.6Ã—30mm IC)"
 	desc = "A 20 round armour piercing magazine for the out of date security WT-550 Auto Rifle"
-	id = "mag_oldsmg_ic"
+	id = "advmagic"
 	materials = list(MAT_METAL = 6000, MAT_SILVER = 600, MAT_GLASS = 1000)
 	build_path = /obj/item/ammo_box/magazine/wt550m9/wtic
 
-/datum/design/mag_oldsmg/tx_mag
-	name = "Advanced SMG Urnaium Magazine (4.6×30mm TX)"
+/datum/design/mag_oldsmg/advmagtx
+	name = "Advanced SMG Urnaium Magazine (4.6Ã—30mm TX)"
 	desc = "A 20 round urnaium tipped magazine for the out of date security WT-550 Auto Rifle"
-	id = "mag_oldsmg_tx"
+	id = "advmagtx"
 	materials = list(MAT_METAL = 6000, MAT_SILVER = 600, MAT_URANIUM = 2000)
 	build_path = /obj/item/ammo_box/magazine/wt550m9/wttx
 	
