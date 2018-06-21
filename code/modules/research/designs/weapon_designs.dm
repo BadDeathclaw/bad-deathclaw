@@ -71,15 +71,67 @@
 	build_path = /obj/item/weapon/shield/riot/tele
 	category = list("Weapons")
 
-/datum/design/lasercannon
-	name = "Laser Cannon"
-	desc = "A heavy duty laser cannon."
+/datum/design/armorvest
+	name = "Armor Vest"
+	id = "armorvest"
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL=30000)
+	build_path = /obj/item/clothing/suit/armor/vest
+	category = list("Weapons")
+
+/datum/design/armorhelm
+	name = "Armor Helmet"
+	id = "armorhelm"
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL=20000)
+	build_path = /obj/item/clothing/head/helmet
+	category = list("Weapons")
+	
+/datum/design/bulletvest
+	name = "Bulletproof Vest"
+	id = "bulletvest"
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL=30000)
+	build_path = /obj/item/clothing/suit/armor/bulletproof
+	category = list("Weapons")
+
+/datum/design/bullethelmet
+	name = "Bulletproof Helmet"
+	id = "bullethelmet"
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL=20000)
+	build_path = /obj/item/clothing/head/helmet/alt
+	category = list("Weapons")
+
+/datum/design/laserrifle
+	name = "Laser Rifle"
+	desc = "A Laser Rifle."
 	id = "lasercannon"
 	req_tech = list("combat" = 4, "materials" = 3, "powerstorage" = 3)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 10000, MAT_GLASS = 2000, MAT_DIAMOND = 2000)
-	build_path = /obj/item/weapon/gun/energy/lasercannon
+	build_path = /obj/item/weapon/gun/energy/laser
 	category = list("Weapons")
+	
+
+/datum/design/mfc
+	name = "Microfusion Cell"
+	id = "mfc"
+	req_tech = list("combat" = 4, "materials" = 3, "powerstorage" = 3)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 10000, MAT_GLASS = 2000)
+	build_path =/obj/item/weapon/stock_parts/cell/ammo/mfc
+	category = list("Weapons")
+
+/datum/design/ecp
+	name = "Electron Charge Pack"
+	id = "ecp"
+	req_tech = list("combat" = 4, "materials" = 3, "powerstorage" = 3)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 10000, MAT_GLASS = 2000, MAT_DIAMOND = 2000)
+	build_path = /obj/item/weapon/stock_parts/cell/ammo/ecp
+	category = list("Weapons")
+
 /*
 /datum/design/decloner
 	name = "Decloner"
