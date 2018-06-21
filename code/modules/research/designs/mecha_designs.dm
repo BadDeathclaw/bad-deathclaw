@@ -396,6 +396,17 @@
 	materials = list(MAT_METAL=10000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
+	
+/datum/design/mech_pulse
+	name = "Exosuit Weapon (\"Pulse\" Laser)"
+	desc = "A weapon for combat exosuits. Shoots a heavy pulse laser."
+	id = "mech_lmg"
+	build_type = MECHFAB
+	req_tech = list("combat" = 7)
+	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/pulse
+	materials = list(MAT_METAL=10000)
+	construction_time = 100
+	category = list("Exosuit Equipment")
 
 /datum/design/mech_sleeper
 	name = "Exosuit Medical Equipment (Mounted Sleeper)"
