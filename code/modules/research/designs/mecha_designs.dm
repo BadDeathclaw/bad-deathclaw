@@ -402,7 +402,7 @@
 /datum/design/mech_pulse
 	name = "Exosuit Weapon (\"Pulse\" Laser)"
 	desc = "A weapon for combat exosuits. Shoots a heavy pulse laser."
-	id = "mech_lmg"
+	id = "mech_pulse"
 	build_type = MECHFAB
 	req_tech = list("combat" = 7)
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/pulse
