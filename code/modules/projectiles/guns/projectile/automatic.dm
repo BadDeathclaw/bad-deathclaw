@@ -11,6 +11,16 @@
 	mag_unload_sound = 'sound/effects/wep_magazines/smg_unload.ogg'
 	chamber_sound = 'sound/effects/wep_magazines/smg_chamber.ogg'
 
+//Syndicate sub-machine guns.
+/obj/item/weapon/gun/projectile/automatic/c20r/sc_c20r
+
+/obj/item/weapon/gun/projectile/automatic/c20r/sc_c20r/New()
+	..()
+	for(var/ammo in magazine.stored_ammo)
+		if(prob(95)) //95% chance
+			magazine.stored_ammo -= ammo
+//over here
+
 /obj/item/weapon/gun/projectile/automatic/proto
 	name = "\improper SABR SG-T"
 	desc = "A prototype three-round burst 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors."

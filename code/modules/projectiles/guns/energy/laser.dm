@@ -19,6 +19,19 @@
 	needs_permit = 0
 	cell_type = /obj/item/weapon/stock_parts/cell/ammo/mfc
 
+/obj/item/weapon/gun/energy/laser/practice/sc_laser
+	name = "Old laser"
+	desc = "A once potent weapon, years of dust have collected in the chamber and lens of this weapon, weakening the beam significantly."
+	clumsy_check = 0
+
+//Captain's retro laser - Fires practice laser shots instead.
+obj/item/weapon/gun/energy/laser/retro/sc_retro
+	name ="retro laser"
+	icon_state = "retro"
+	desc = "An older model of the basic lasergun, no longer used by Nanotrasen's security or military forces."
+//	projectile_type = "/obj/item/projectile/practice"
+	clumsy_check = 0 //No sense in having a harmless gun blow up in the clowns face
+
 /obj/item/weapon/gun/energy/laser/pistol
 	name = "laser pistol"
 	desc = "A basic energy-based laser gun that fires concentrated beams of light which pass through glass and thin metal."
