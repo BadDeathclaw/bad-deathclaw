@@ -510,3 +510,27 @@ RCD
 	origin_tech = "materials=4"
 	materials = list(MAT_METAL=12000, MAT_GLASS=8000)
 	ammoamt = 160
+
+/obj/item/weapon/circuitboardthing
+	name = "Advanced Machine Builder"
+	desc = "Takes circuit boards and makes machines out of them quickly."
+	icon = 'icons/obj/items.dmi'
+	icon_state = "rcd"
+	var/circuit = 0
+
+/obj/item/weapon/circuitboardthing/attackby(obj/item/weapon/W, mob/user, params)
+	if(istype(W, /obj/item/weapon/circuitboard))
+		if(!circuit)
+			user << "You insert the [W.name] into the [src]."
+			W.forceMove(src)
+			src.circuit = W
+
+/obj/item/weapon/circuitboardthing/afterattack(atom/A, mob/user, proximity)
+	if(!proximity)
+		return 0
+	if(circuit)
+		var/obj/item/weapon/circuitboard/circuitthing = src.circuit
+		var/obj/item/weapon/circuitboard/thingtospawn = circuitthing.build_path
+		new thingtospawn(A)
+		qdel(circuit)
+		circuit = 0
