@@ -5,10 +5,10 @@ SERVERNAME [ENG] Bad Deathclaw: Unofficial Fallout13 Server.
 STATIONNAME Bad Deathclaw
 
 # Lobby time: This is the amount of time between rounds that players have to setup their characters and be ready.
-LOBBY_COUNTDOWN 120
+LOBBY_COUNTDOWN 220
 
 # Round End Time: This is the amount of time after the round ends that players have to murder death kill each other.
-ROUND_END_COUNTDOWN 90
+ROUND_END_COUNTDOWN 60
 
 ## Unhash this entry to have certain jobs require your account to be at least a certain number of days old to select. You can configure the exact age requirement for different jobs by editing
 ## the minimal_player_age variable in the files in folder /code/game/jobs/job/.. for the job you want to edit. Set minimal_player_age to 0 to disable age requirement for that job.
@@ -69,7 +69,7 @@ ALLOW_ADMIN_OOCCOLOR
 ALLOW_METADATA
 
 ## allow players to initiate a restart vote
-ALLOW_VOTE_RESTART
+#ALLOW_VOTE_RESTART
 
 ## allow players to initate a mode-change start
 #ALLOW_VOTE_MODE
@@ -78,7 +78,7 @@ ALLOW_VOTE_RESTART
 VOTE_DELAY 6000
 
 ## time period (deciseconds) which voting session will last (default 1 minute)
-VOTE_PERIOD 6000
+VOTE_PERIOD 1000
 
 ## prevents dead players from voting or starting votes
 # NO_DEAD_VOTE
@@ -93,7 +93,7 @@ VOTE_PERIOD 6000
 # DONT_DEL_NEWMOB
 
 ## set a hosted by name for unix platforms
-HOSTEDBY ASS BLASTER
+HOSTEDBY DEGENERATES
 
 ## Set to jobban "Guest-" accounts from Captain, HoS, HoP, CE, RD, CMO, Warden, Security, Detective, and AI positions.
 ## Set to 1 to jobban them from those positions, set to 0 to allow them.
@@ -128,13 +128,13 @@ SERVER 92.222.238.93:4738
 # RULESURL 
 
 ##Github address
-GITHUBURL https://bitbucket.org/TinkeringTurian/bad-deathclaw
+GITHUBURL https://github.com/Digdugxx/bad-deathclaw
 
 ##Changelog address (temp until I figure out how to present it ingame)
-CHANGELOGURL https://bitbucket.org/TinkeringTurian/bad-deathclaw/pull-requests/?state=MERGED
+CHANGELOGURL https://github.com/Digdugxx/bad-deathclaw/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Amerged
 
 ##Issue report address
-ISSUEURL https://bitbucket.org/TinkeringTurian/bad-deathclaw/issues/new
+ISSUEURL https://github.com/Digdugxx/bad-deathclaw/issues/new
 
 ## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
 # BANAPPEALS https://discord.gg/yg244vN
@@ -171,7 +171,7 @@ TICKLAG 0.3
 ##Note: all population caps can be used with each other if desired.
 
 ## Uncomment for 'soft' population caps, players will be warned while joining if the living crew exceeds the listed number.
-#SOFT_POPCAP 100
+SOFT_POPCAP 90
 
 ## Message for soft cap
 SOFT_POPCAP_MESSAGE Be warned that the server is currently serving a high number of users, consider using alternative game servers.
