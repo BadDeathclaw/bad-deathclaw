@@ -23,7 +23,7 @@
 		return 0
 
 	var/turf/curloc = get_turf(chassis)
-	var/turf/targloc = get_turf(target)
+	var/atom/targloc = get_turf(target)
 	if (!targloc || !istype(targloc) || !curloc)
 		return 0
 	if (targloc == curloc)
@@ -35,14 +35,13 @@
 		A.firer = chassis.occupant
 		A.original = target
 		A.current = curloc
-
 		var/spread = 0
 		if(variance)
 			if(randomspread)
 				spread = round((rand() - 0.5) * variance)
 			else
 				spread = round((i / projectiles_per_shot - 0.5) * variance)
-		A.preparePixelProjectile(target, targloc, params, spread)
+		A.preparePixelProjectile(target, targloc, src, params, spread)
 
 		A.fire()
 		playsound(chassis, fire_sound, 50, 1)
