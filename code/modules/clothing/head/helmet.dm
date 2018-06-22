@@ -515,6 +515,7 @@
 	icon_state = "advhelmet1"
 	item_state = "advhelmet1"
 	armor = list(melee = 80, bullet = 70, laser = 70, energy = 70, bomb = 70, bio = 100, rad = 80)
+	flags = BLOCKHAIR
 
 /obj/item/clothing/head/helmet/power_armor/f13/advanced/mk2
 	name = "Advanced power helmet MK2"
@@ -522,7 +523,7 @@
 	icon_state = "advhelmet2"
 	item_state = "advhelmet2"
 	armor = list(melee = 90, bullet = 80, laser = 80, energy = 80, bomb = 80, bio = 100, rad = 90)
-
+	flags = BLOCKHAIR
 
 /obj/item/clothing/head/helmet/power_armor/f13/tesla
 	name = "tesla power helmet"
@@ -531,7 +532,7 @@
 	item_state = "tesla"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
 	armor = list(melee = 50, bullet = 30, laser = 80, energy = 80, bomb = 30, bio = 100, rad = 80)
-
+	flags = BLOCKHAIR
 
 /obj/item/clothing/head/helmet/power_armor/f13/t51b
 	name = "T-51b power helmet"
