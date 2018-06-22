@@ -520,7 +520,7 @@
 	id = "m44"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 3500)
-	build_path = /obj/item/ammo_box/m44/surplus
+	build_path = /obj/item/ammo_box/m44
 	category = list("hacked", "Security")
 
 /datum/design/c10mm
@@ -528,7 +528,7 @@
 	id = "c10mm"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 10000)
-	build_path = /obj/item/ammo_box/c10mm/surplus
+	build_path = /obj/item/ammo_box/c10mm
 	category = list("hacked", "Security")
 
 /datum/design/c45
@@ -536,7 +536,7 @@
 	id = "c45"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 10000)
-	build_path = /obj/item/ammo_box/c45/surplus
+	build_path = /obj/item/ammo_box/c45
 	category = list("hacked", "Security")
 
 /datum/design/c9mm
@@ -544,7 +544,7 @@
 	id = "c9mm"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 10000)
-	build_path = /obj/item/ammo_box/c9mm/surplus
+	build_path = /obj/item/ammo_box/c9mm
 	category = list("hacked", "Security")
 
 /datum/design/a762
@@ -552,7 +552,7 @@
 	id = "a762"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 2500)
-	build_path = /obj/item/ammo_box/a762/surplus
+	build_path = /obj/item/ammo_box/a762
 	category = list("hacked", "Security")
 
 /datum/design/a357
@@ -560,7 +560,7 @@
 	id = "a357"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 3500)
-	build_path = /obj/item/ammo_box/c357/surplus
+	build_path = /obj/item/ammo_box/c357
 	category = list("hacked", "Security")
 
 /datum/design/aneedle
@@ -576,7 +576,7 @@
 	id = "a556"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 10000)
-	build_path = /obj/item/ammo_box/a556/surplus
+	build_path = /obj/item/ammo_box/a556
 	category = list("hacked", "Security")
 
 

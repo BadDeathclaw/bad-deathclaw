@@ -143,13 +143,7 @@
 	desc = "A 7.62mm bullet casing."
 	icon_state = "762-casing"
 	caliber = "a762"
-	projectile_type = /obj/item/projectile/bullet/saw
-	
-/obj/item/ammo_casing/a762/surplus
-	desc = "A Surplus 7.62mm bullet casing."
-	icon_state = "762-casing"
-	caliber = "a762"
-	projectile_type = /obj/item/projectile/bullet/saw/surplus
+	projectile_type = /obj/item/projectile/bullet/midbullet2
 
 /obj/item/ammo_casing/a762/bleeding
 	desc = "A 7.62mm bullet casing with specialized inner-casing, that when it makes contact with a target, release tiny shrapnel to induce internal bleeding."

@@ -15,7 +15,7 @@
 	icon_state = "armor"
 	item_state = "armor"
 	blood_overlay_type = "armor"
-	armor = list(melee = 30, bullet = 25, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 30, bullet = 25, laser = 16, energy = 16, bomb = 16, bio = 0, rad = 0)
 
 /obj/item/clothing/suit/armor/hos
 	name = "armored greatcoat"
@@ -332,7 +332,7 @@
 	item_state = "jensencoat"
 	flags = THICKMATERIAL
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	armor = list(melee = 50, bullet = 10, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 20, bullet = 16, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	unacidable = 1
 	put_on_delay = 10
 	strip_delay = 30
@@ -366,8 +366,8 @@
 	desc = "Separate armor parts you can wear over the clothing to get the most basic protection from the dangers of wasteland.<br>It is unable to reflect laser beams and probably won't shield you from a random bullet, but it sure is better than going into the battle without any armor at all."
 	icon_state = "armorkit"
 	item_state = "armorkit"
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 30, bullet = 20, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+	body_parts_covered = CHEST|GROIN
+	armor = list(melee = 30, bullet = 16, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	put_on_delay = 30
 	strip_delay = 30
 
@@ -377,32 +377,29 @@
 	icon_state = "supafly"
 	item_state = "supafly"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 50, bullet = 20, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0)
-	flags_inv = HIDEJUMPSUIT
+	armor = list(melee = 30, bullet = 16, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	put_on_delay = 20
 	strip_delay = 40
 
 /obj/item/clothing/suit/armor/f13/raider/sadist
-	name = "raider sadist armor"
+	name = "sadist raider armor"
 	icon_state = "sadist"
-	flags_inv = HIDEJUMPSUIT
+	body_parts_covered = GROIN|LEGS|ARMS
 
 /obj/item/clothing/suit/armor/f13/raider/blastmaster
-	name = "raider blastmaster armor"
+	name = "blastmaster raider armor"
 	icon_state = "blastmaster"
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
 	burn_state = FIRE_PROOF
 	flash_protect = 2
-	flags_inv = HIDEJUMPSUIT
+	body_parts_covered = CHEST|GROIN|LEGS
 
 /obj/item/clothing/suit/armor/f13/raider/yankee
 	name = "yankee raider armor"
 	desc = "A set of armor made from football player protective wear. Together we play."
 	icon_state = "yankee"
 	item_state = "yankee"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 60, bullet = 30, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 0)
-	flags_inv = HIDEJUMPSUIT
+	body_parts_covered = CHEST|GROIN|LEGS
 	put_on_delay = 40
 	strip_delay = 40
 
@@ -412,7 +409,7 @@
 	icon_state = "leatherarmor"
 	item_state = "leatherarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 60, bullet = 40, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 0)
+	armor = list(melee = 20, bullet = 16, laser = 0, energy = 0, bomb = 0, bio = 50, rad = 0)
 	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 40
 	strip_delay = 40

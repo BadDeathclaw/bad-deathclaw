@@ -61,7 +61,7 @@
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	name = "d-tiv revolver cylinder"
-	ammo_type = /obj/item/ammo_casing/c357/lowpower
+	ammo_type = /obj/item/ammo_casing/c357
 	caliber = "38"
 	max_ammo = 6
 
@@ -265,7 +265,7 @@
 	icon_state = "uzi9mm-32"
 	ammo_type = /obj/item/ammo_casing/c9mm
 	caliber = "9mm"
-	max_ammo = 32
+	max_ammo = 18
 
 /obj/item/ammo_box/magazine/uzim9mm/update_icon()
 	..()
@@ -303,17 +303,17 @@
 	icon_state = "c20r45-[round(ammo_count(),2)]"
 
 /obj/item/ammo_box/magazine/tommygunm45
-	name = "drum magazine (.45)"
+	name = "drum magazine (.45 auto)"
 	icon_state = "drum45"
 	ammo_type = /obj/item/ammo_casing/c45
 	caliber = ".45"
 	max_ammo = 50
 
 /obj/item/ammo_box/magazine/stick45
-	name = "stick magazine (.45)"
+	name = "stick magazine (9mm parabellum)"
 	icon_state = "grease"
-	ammo_type = /obj/item/ammo_casing/c45
-	caliber = ".45"
+	ammo_type = /obj/item/ammo_casing/c9mm
+	caliber = "9mm"
 	max_ammo = 30
 	multiple_sprites = 1
 
@@ -326,6 +326,15 @@
 	max_ammo = 7
 	multiple_sprites = 1
 
+obj/item/ammo_box/magazine/m762
+	name = "colt rangemaster magazine (7.62mm)"
+	icon_state = "75"
+	ammo_type = /obj/item/ammo_casing/a762
+	caliber = "7.62mm"
+	multiple_sprites = 1
+	max_ammo = 10
+
+
 /obj/item/ammo_box/magazine/m75
 	name = "specialized magazine (.75)"
 	icon_state = "75"
@@ -335,12 +344,12 @@
 	max_ammo = 8
 
 /obj/item/ammo_box/magazine/m556
-	name = "5.56 magazine extended (5.56x45mm)"
+	name = "5.56 assault magazine (5.56x45mm)"
 	icon_state = "5.56m"
 	origin_tech = "combat=5;syndicate=1"
 	ammo_type = /obj/item/ammo_casing/a556
 	caliber = "a556"
-	max_ammo = 30
+	max_ammo = 24
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/m556/r20

@@ -2,7 +2,8 @@
 	name = "laser"
 	icon_state = "laser"
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
-	damage = 30
+	damage = 34
+	armour_penetration = -9
 	damage_type = BURN
 	hitsound = 'sound/f13weapons/sear.ogg'
 	hitsound_wall = 'sound/f13weapons/sear_wall.ogg'
@@ -15,10 +16,10 @@
 	nodamage = 1
 
 /obj/item/projectile/beam/pistol
-	damage = 20
+	damage = 25
 
 /obj/item/projectile/beam/scatter
-	damage = 12
+	damage = 15
 
 /obj/item/projectile/beam/heavylaser
 	name = "heavy laser"
@@ -31,7 +32,7 @@
 /obj/item/projectile/beam/xray
 	name = "xray beam"
 	icon_state = "xray"
-	damage = 20
+	damage = 60
 	irradiate = 30
 	range = 15
 	forcedodge = 1
@@ -39,17 +40,18 @@
 /obj/item/projectile/beam/plasma
 	name = "plasma beam"
 	icon_state = "plasma_beam"
-	damage = 50
+	damage = 60
 	hitsound = 'sound/f13weapons/plasmarifle.ogg'
 	hitsound_wall = 'sound/f13weapons/plasmaout.ogg'
 	speed = 1
 
 /obj/item/projectile/beam/plasma/scatter
 	name = "plasma scatter"
-	damage = 18
+	damage = 22
 
 /obj/item/projectile/beam/plasma/pistol
-	damage = 30
+	damage = 34
+	armour_penetration = -9
 
 /obj/item/projectile/beam/plasma/turbo
 	name = "turbo plasma beam"

@@ -257,7 +257,7 @@
 	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
 
 /obj/item/weapon/gun/projectile/automatic/smg10mm
-	name = "10mm submarine gun"
+	name = "10mm submachine gun"
 	desc = "A select fire open bolt 10mm submachine gun. The serial number and manufactuer markings have been scratched off."
 	icon_state = "smg10mm"
 	item_state = "smg10mm"
@@ -440,8 +440,8 @@
 	return
 
 /obj/item/weapon/gun/projectile/automatic/greasegun
-	name = "M3A1 grease gun"
-	desc = "A mass-produced .45 caliber sub machine gun used in World War II. Slow fire rate means less waste of ammo and controllable bursts."
+	name = "9mm submachine gun"
+	desc = "A mass-produced 9mm sub machine gun. Slow fire rate means less waste of ammo and controllable bursts."
 	icon_state = "grease_gun"
 	item_state = "arg"
 	slot_flags = 0

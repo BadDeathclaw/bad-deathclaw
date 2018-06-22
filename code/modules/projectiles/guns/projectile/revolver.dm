@@ -169,7 +169,7 @@
 
 /obj/item/weapon/gun/projectile/revolver/police
 	name = "S&W Model 36"
-	desc = "A .38 caliber police pistol which can also accept .357 rounds."
+	desc = "A .38 caliber police pistol."
 	icon_state = "police"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	origin_tech = "combat=2;materials=2"

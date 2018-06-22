@@ -157,8 +157,8 @@
 
 /obj/item/projectile/bullet/sniper/gauss
 	icon_state = "ion"
-	damage = 80
-	armour_penetration = 60
+	damage = 60
+	armour_penetration = 0
 	forcedodge = 1
 	breakthings = FALSE
 	range = 20
