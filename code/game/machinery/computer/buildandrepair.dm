@@ -236,10 +236,6 @@
 	name = "circuit board (Library Visitor Console)"
 	build_path = /obj/machinery/computer/libraryconsole
 	origin_tech = "programming=1"
-/obj/item/weapon/circuitboard/virusmaker
-	name = "circuit board (Virus Maker)"
-	build_path = /obj/machinery/computer/virusmaker
-	origin_tech = "programming=1"
 
 /obj/item/weapon/circuitboard/card/minor/attackby(obj/item/I, mob/user, params)
 	if(istype(I,/obj/item/device/multitool))
