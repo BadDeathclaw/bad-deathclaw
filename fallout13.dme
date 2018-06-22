@@ -410,7 +410,6 @@
 #include "code\game\jobs\job\newlegion.dm"
 #include "code\game\jobs\job\newncr.dm"
 #include "code\game\jobs\job\raider.dm"
-#include "code\game\jobs\job\remnants.dm"
 #include "code\game\jobs\job\silicon.dm"
 #include "code\game\jobs\job\vault.dm"
 #include "code\game\jobs\job\wastelander.dm"

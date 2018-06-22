@@ -343,18 +343,3 @@
 	item_state = "fedora"
 	desc = "Home, home on the wastes,<br>Where the mole rat and the fire gecko play.<br>Where seldom is heard a discouraging word,<br>And my skin is not glowing all day."
 	flags = BLOCKHAIR
-
-//Enclave
-
-/obj/item/clothing/head/f13/enclave
-	name = "officer hat"
-	desc = "A standard-issue Enclave officer's cap."
-	icon_state = "enclave"
-	item_state = "dethat"
-	flags_inv = BLOCKHAIR
-
-/obj/item/clothing/head/f13/tan
-	name = "tan utility cover"
-	icon_state = "utility_t"
-	item_state = "dethat"
-	flags_inv = BLOCKHAIR

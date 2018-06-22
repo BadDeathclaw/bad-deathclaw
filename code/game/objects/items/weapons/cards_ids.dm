@@ -273,9 +273,3 @@ update_label("John Doe", "Clowny")
 	name = "agent card"
 	access = list(access_maint_tunnels, access_syndicate)
 	origin_tech = "syndicate=3"
-
-/obj/item/weapon/card/id/remnants
-	name = "Remnants Holotags"
-	desc = "A pair of Remnant holotags."
-	icon_state = "enclavetags"
-	item_state = "gold_id"
