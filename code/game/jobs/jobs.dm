@@ -45,13 +45,13 @@ var/const/RAIDER			=(1<<3)
 var/const/PUSHER			=(1<<4)
 var/const/PREACHER			=(1<<5)
 
-var/const/REMNANTS		=(1<<6)
+var/const/ENCLAVE		=(1<<6)
 var/const/USCOMMANDER	=(1<<0)
 var/const/USMEDIC		=(1<<1)
 var/const/USPRIVATE		=(1<<2)
 var/const/USSCIENTIST	=(1<<3)
 var/const/USENGINEER	=(1<<4)
-//var/const/USCOLONIST	=(1<<5)
+var/const/USCOLONIST	=(1<<5)
 /*var/const/ENGSEC			=(1<<0)
 
 var/const/CAPTAIN			=(1<<0)
@@ -191,13 +191,8 @@ var/list/den_occupations = list(
 	"Settler"
 )
 
-var/list/remnants_occupations = list(
-	"US Medic",
-	"US Private",
-	"US Scientist",
-	"US Engineer",
-	"US Commander"
-)
+var/list/enclave_occupations = list()
+
 var/list/command_positions = list()
 
 
