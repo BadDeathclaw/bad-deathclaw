@@ -39,6 +39,7 @@ var/list/latejoinn = list()
 var/list/latejoinw = list()
 var/list/latejoind = list()
 var/list/latejoinb = list()
+var/list/latejoinr = list()
 var/list/prisonwarp = list()	//prisoners go to these
 var/list/holdingfacility = list()	//captured people go here
 var/list/xeno_spawn = list()//Aliens spawn at these.
