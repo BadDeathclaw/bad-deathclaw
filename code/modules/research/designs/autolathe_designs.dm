@@ -579,6 +579,8 @@
 	build_path = /obj/item/ammo_box/a556/surplus
 	category = list("hacked", "Security")
 
+
+
 /datum/design/spraycan
 	name = "Spraycan"
 	id = "spraycan"
