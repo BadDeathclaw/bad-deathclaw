@@ -58,7 +58,7 @@
 		else if(job_vault_high)
 			highDeptFlag = VAULT
 		else if(job_enclave_high)
-			highDeptFlag = ENCLAVE
+			highDeptFlag = REMNANTS
 		for(var/datum/job/job in SSjob.occupations)
 			if(job.flag == highRankFlag && job.department_flag == highDeptFlag)
 				previewJob = job

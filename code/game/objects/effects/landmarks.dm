@@ -51,6 +51,10 @@
 			latejoinw += loc
 			qdel(src)
 			return
+		if("JoinLateRemnants")
+			latejoinr += loc
+			qdel(src)
+			return
 		if("prisonwarp")
 			prisonwarp += loc
 			qdel(src)
@@ -296,3 +300,5 @@
 	name = "JoinLateBOS"
 /obj/effect/landmark/latejoinw
 	name = "JoinLateWasteland"
+/obj/effect/landmark/latejoinr
+	name = "JoinLateRemnants"
