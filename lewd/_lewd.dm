@@ -22,11 +22,6 @@
 		dat += "<br>...are clothed."
 	return dat
 
-/mob/living/Life()
-	if(refactory_period)
-		refactory_period--
-	return ..()
-
 // If I could have gotten away with using a tilde in the type path, I would have.
 /datum/interaction/lewd
 	command = "assslap"
