@@ -861,17 +861,7 @@
 	item_color = "dbdu"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
-	can_adjust = 0
-
-/obj/item/clothing/under/f13/enclave_officer
-	name = "officer uniform"
-	desc = "A standard Enclave officer uniform.<br>The outer layer is made of a sturdy material designed to withstand the harsh conditions of the wasteland."
-	icon_state = "enclave_o"
-	item_state = "bl_suit"
-	item_color = "enclave_o"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 15, bullet = 15, laser = 15, energy = 15, bomb = 5, bio = 5, rad = 5)
-	can_adjust = 0
+	can_adjust = 1
 
 /obj/item/clothing/under/f13/shiny //Firefly, yay!
 	name = "shiny outfit"
