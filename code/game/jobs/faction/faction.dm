@@ -220,17 +220,3 @@ datum/f13_faction/BOS
 2. You value advanced military hardware above almost anything else, and would be difficult to persuade in pursuing anything else.<br>\
 3. The Brotherhood of Steel rarely recruits outsiders, however, they are in fairly desperate times. Who knows what they might do in order to survive?.<br>"
 	craft_recipes = list(/datum/table_recipe/ncr_combat_armor, /datum/table_recipe/ncr_encryption_key, /datum/table_recipe/paholodisk)
-
-
-datum/f13_faction/remnants
-	name = "Remnants"
-	first_spawn = 1
-	late_join = 0
-	color = "#DD2D00"
-	head_status = "US Commander"
-	verbs = list(/mob/proc/begin_head_voting)
-	welcome_text = "Tips for playing Enclave:<br>\
-1. As a member of the Enclave Remnants your job is to maintain secrecy & US Reconnaisance in the area.<br>\
-2. You value your pure genetics as you are the last known unmutated faction in the area.<br>\
-3. The Enclave abducts wastelanders and tests on them with FEV for their experiments..<br>"
-	craft_recipes = list(/datum/table_recipe/paholodisk)
