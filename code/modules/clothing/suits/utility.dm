@@ -57,7 +57,7 @@
 	desc = "Use in case of bomb."
 	icon_state = "bombsuit"
 	flags = BLOCKHAIR|THICKMATERIAL
-	armor = list(melee = 20, bullet = 0, laser = 20,energy = 10, bomb = 100, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 25, laser = 16,energy = 16, bomb = 100, bio = 0, rad = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES
 	cold_protection = HEAD
 	min_cold_protection_temperature = HELMET_MIN_TEMP_PROTECT

@@ -824,9 +824,3 @@ obj
 								lb3.loc=src.loc
 								del src
 								return
-
-
-
-
-
-

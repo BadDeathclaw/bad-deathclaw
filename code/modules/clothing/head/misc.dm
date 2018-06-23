@@ -280,7 +280,7 @@
 	desc = "There's only one man who can sniff out the dirty stench of crime, and he's likely wearing this black hat."
 	icon_state = "detectivealt"
 	item_state = "fedora"
-	armor = list(melee = 30, bullet = 25, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 20, bullet = 16, laser = 0, energy = 0, bomb = 16, bio = 0, rad = 0)
 
 /obj/item/clothing/head/fluff/trilby
 	name = "feather trilby"
@@ -320,7 +320,7 @@
 	icon_state = "battlecruiser"
 	item_state = "battlecruiser"
 	desc = "The Yamato is loaded. And so am I."
-	armor = list(melee = 30, bullet = 25, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 20, bullet = 16, laser = 0, energy = 0, bomb = 16, bio = 0, rad = 0)
 
 //Fallout 13
 
