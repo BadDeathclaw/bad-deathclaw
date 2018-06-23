@@ -148,9 +148,13 @@ Frequency:
 				L["[get_area(com.target)] (Active)"] = com.target
 			else
 				L["[get_area(com.target)] (Inactive)"] = com.target
-	for(var/obj/item/device/radio/beacon/bea in world) //tacticool
-		if(bea)
-			L["[get_area(bea.loc)] (Active Tracking Beacon at [get_area(bea.loc])"] = bea.loc
+	for(var/obj/item/device/radio/beacon/R in world)
+		var/turf/T = get_turf(R)
+		if (!T)
+			continue
+		if(T.z == ZLEVEL_CENTCOM || T.z > ZLEVEL_SPACEMAX)
+			continue
+		L["[get_area(R)] (Beacon)"] = R
 	var/list/turfs = list(	)
 	for(var/turf/T in ultra_range(10, orange=1))
 		if(T.x>world.maxx-8 || T.x<8)	continue	//putting them at the edge is dumb
