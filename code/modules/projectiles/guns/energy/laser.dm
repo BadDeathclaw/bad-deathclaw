@@ -2,7 +2,7 @@
 	name = "AER9 laser rifle"
 	desc = "A basic energy-based laser gun that fires concentrated beams of light which pass through glass and thin metal."
 	icon_state = "laser"
-	item_state = "laser"
+	item_state = "laser-rifle9"
 	w_class = 4
 	materials = list(MAT_METAL=2000)
 	origin_tech = "combat=3;magnets=2"
@@ -36,7 +36,7 @@ obj/item/weapon/gun/energy/laser/retro/sc_retro
 	name = "AEP7 laser pistol"
 	desc = "A basic energy-based laser gun that fires concentrated beams of light which pass through glass and thin metal."
 	icon_state = "AEP7"
-	item_state = "pistol"
+	item_state = "laser-pistol"
 	w_class = 2
 	fire_delay = 0
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol)
@@ -71,7 +71,7 @@ obj/item/weapon/gun/energy/laser/retro/sc_retro
 	name = "prototype AER14 laser rifle"
 	desc = "A prototype laser rifle that has it's wiring exposed and extra circuitry taped to the stock. Only few prototypes of these were manufactured and distributed for testing."
 	icon_state = "aer14"
-	item_state = "laser"
+	item_state = "laer"
 	origin_tech = "combat=5;materials=3;magnets=2;syndicate=2"
 	ammo_type = list(/obj/item/ammo_casing/energy/xray)
 	ammo_x_offset = 3
@@ -88,7 +88,7 @@ obj/item/weapon/gun/energy/laser/retro/sc_retro
 
 /obj/item/weapon/gun/energy/laser/plasma/scatter
 	name = "multiplas rifle"
-	item_state = "plasma"
+	item_state = "multiplas"
 	icon_state = "multiplas"
 	desc = "A plasma rifle designed to fire multiple shots."
 	burst_size = 3
@@ -98,6 +98,7 @@ obj/item/weapon/gun/energy/laser/retro/sc_retro
 
 /obj/item/weapon/gun/energy/laser/plasma/pistol
 	name ="plasma pistol"
+	item_state = "plasma-pistol"
 	icon_state = "plasma_pistol"
 	desc = "An energy sidearm that fires heated plasma clots."
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol)

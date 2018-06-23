@@ -117,14 +117,20 @@
 /obj/item/weapon/gun/projectile/revolver/m29
 	name = "\improper S&W Model 29"
 	desc = "Being that this is the most powerful handgun in the world, and can blow your head clean-off, you've got to ask yourself one question. Do I feel lucky? Well, do ya punk? "
+	item_state = "model29"
 	icon_state = "m29"
 	origin_tech = "combat=4;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	fire_sound = 'sound/f13weapons/44mag.ogg'
 
+/obj/item/weapon/gun/projectile/revolver/m29/alt
+	item_state = "44magnum"
+	icon_state = "mysterious_m29"
+
 /obj/item/weapon/gun/projectile/revolver/m29/police
 	name = "S&W Model 29 Stubby"
 	desc = "The 4inch short barrel alternative to the regular M29."
+	item_state = "p38"
 	icon_state = "police"
 	fire_sound = 'sound/f13weapons/policepistol.ogg'
 
