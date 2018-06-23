@@ -53,8 +53,9 @@
 
 /obj/item/weapon/reagent_containers/hypospray/combat/nanites
 	desc = "A modified air-needle autoinjector for use in combat situations. Prefilled with expensive medical nanites for rapid healing."
+	amount_per_transfer_from_this = 25
 	volume = 100
-	list_reagents = list("nanites" = 80, "synaptizine" = 20)
+	list_reagents = list("nanites" = 100)
 
 //MediPens
 

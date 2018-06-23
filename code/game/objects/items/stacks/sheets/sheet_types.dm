@@ -186,6 +186,19 @@ var/global/list/datum/stack_recipe/wood_recipes = list ( \
 	origin_tech = "materials=2"
 	burn_state = FLAMMABLE
 
+var/global/list/datum/stack_recipe/cloth_recipes = list ( \
+	new/datum/stack_recipe("Vault 113 jumpsuit", /obj/item/clothing/under/f13/vault/v13), \
+	new/datum/stack_recipe("Vault no number jumpsuit", /obj/item/clothing/under/f13/vault), \
+	new/datum/stack_recipe("Male Doctor jumpsuit", /obj/item/clothing/under/f13/doctor), \
+	new/datum/stack_recipe("Female Doctor jumpsuit", /obj/item/clothing/under/f13/female/doctor), \
+	new/datum/stack_recipe("Male Brahmin jumpsuit", /obj/item/clothing/under/f13/brahmin), \
+	new/datum/stack_recipe("Female Brahmin jumpsuit", /obj/item/clothing/under/f13/female/brahmin), \
+	new/datum/stack_recipe("Settler underclothing", /obj/item/clothing/under/f13/settler), \
+	new/datum/stack_recipe("Workman uniform", /obj/item/clothing/under/f13/machinist), \
+	new/datum/stack_recipe("Caravaneer outfit", /obj/item/clothing/under/f13/caravaneer), \
+	new/datum/stack_recipe("Roving Trader outfit", /obj/item/clothing/under/f13/roving), \
+)
+
 /*
  * Cardboard
  */
