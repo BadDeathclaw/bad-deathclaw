@@ -346,3 +346,25 @@
 			user << "<span class='notice'>You insert the flash into the eye socket.</span>"
 	return
 
+/obj/item/robot_parts/robot_suit/complete
+	name = "cyborg endoskeleton"
+	desc = "A complex metal backbone with standard limb sockets and pseudomuscle anchors."
+	icon_state = "robo_suit"
+	var/obj/item/robot_parts/l_arm/l_arm = new obj/item/robot_parts/l_arm
+	var/obj/item/robot_parts/r_arm/r_arm = new obj/item/robot_parts/r_arm
+	var/obj/item/robot_parts/l_leg/l_leg = new obj/item/robot_parts/l_leg
+	var/obj/item/robot_parts/r_leg/r_leg = new obj/item/robot_parts/r_leg 
+	var/obj/item/robot_parts/chest/chest = new obj/item/robot_parts/chest
+	var/obj/item/robot_parts/head/head = new obj/item/robot_parts/head
+
+	var/created_name = ""
+	var/mob/living/silicon/ai/forced_ai
+	var/locomotion = 1
+	var/lawsync = 1
+	var/aisync = 1
+	var/panel_locked = 1
+
+/obj/item/robot_parts/robot_suit/New()
+	..()
+	chest.cell = new /obj/item/weapon/stock_parts/cell/bluespace
+	src.updateicon()
