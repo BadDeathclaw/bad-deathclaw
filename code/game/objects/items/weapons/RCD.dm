@@ -323,7 +323,7 @@ RCD
 						F.ChangeTurf(/turf/simulated/wall)
 						return 1
 				return 0
-			if(istype(A, /turf/simulated/wall)
+			if(istype(A, /turf/simulated/wall))
 				var/turf/simulated/wall/Wa = A
 				if(checkResource(wallcost,user) && canRturf)
 					user << "<span class='notice'>You start reinforcing the wall...</span>"
