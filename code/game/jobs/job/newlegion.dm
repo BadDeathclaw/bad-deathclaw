@@ -35,7 +35,7 @@ Legion
 	head = /obj/item/clothing/head/helmet/f13/legrecruit
 	glasses = /obj/item/clothing/glasses/sunglasses/legion
 	mask = /obj/item/clothing/mask/bandana/legrecruit
-	suit_store = /obj/item/weapon/gun/projectile/revolver/police
+	suit_store = /obj/item/weapon/gun/projectile/revolver/m29/police
 	back = /obj/item/weapon/storage/backpack
 	backpack = /obj/item/weapon/storage/backpack
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
@@ -44,7 +44,7 @@ Legion
 	/obj/item/stack/coin/random/low = 2, \
 	/obj/item/weapon/machete = 1, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder=1, \
-	/obj/item/ammo_box/c357/c38=2, \
+	/obj/item/ammo_box/m44=2, \
 	/obj/item/device/flashlight/flare/torch=1)
 
 /datum/outfit/job/legrecruit/post_equip(mob/living/carbon/human/H)
@@ -83,17 +83,16 @@ datum/job/legprime
 	head = /obj/item/clothing/head/helmet/f13/legveteran
 	glasses = /obj/item/clothing/glasses/sunglasses/legion
 	mask = /obj/item/clothing/mask/bandana/legvet
-	suit_store = /obj/item/weapon/gun/projectile/revolver/police
+	suit_store = /obj/item/weapon/gun/projectile/revolver/m29/police
 	back = /obj/item/weapon/storage/backpack
 	backpack = /obj/item/weapon/storage/backpack
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/restraints/legcuffs/bola=1, \
 	/obj/item/stack/spear/bundle=1, \
 	/obj/item/stack/coin/random/low = 2, \
-	/obj/item/ammo_box/c357/c38=1, \
+	/obj/item/ammo_box/m44=1, \
 	/obj/item/weapon/machete = 1, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder=1, \
-	/obj/item/ammo_box/c357/c38=2, \
 	/obj/item/device/flashlight/flare/torch=1)
 
 /datum/outfit/job/legrecruit/post_equip(mob/living/carbon/human/H)

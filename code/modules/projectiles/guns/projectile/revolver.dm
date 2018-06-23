@@ -122,6 +122,12 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	fire_sound = 'sound/f13weapons/44mag.ogg'
 
+/obj/item/weapon/gun/projectile/revolver/m29/police
+	name = "S&W Model 29 Stubby"
+	desc = "The 4inch short barrel alternative to the regular M29."
+	icon_state = "police"
+	fire_sound = 'sound/f13weapons/policepistol.ogg'
+
 /obj/item/weapon/gun/projectile/revolver/m29/scoped
 	name = "\improper Scoped S&W Model 29"
 	icon_state = "scoped_m29"
@@ -131,7 +137,7 @@
 
 /obj/item/weapon/gun/projectile/revolver/m29/bigiron
 	name = "Big Iron"
-	desc = "There before them lay the body of the outlaw on the ground. Oh, he might have went on livin' but he made one fatal slip, when he tried to match the ranger with the big iron on his hip"
+	desc = "There before them lay the body of the outlaw on the ground. Oh, he might have went on livin' but he made one fatal slip, when he tried to match the man with the big iron on his hip"
 	icon_state = "mysterious_m29"
 	damageG=9999
 	damageA=9999
@@ -166,14 +172,6 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 	origin_tech = "combat=2;materials=2"
 	fire_sound = 'sound/f13weapons/sequoia.ogg'
-
-/obj/item/weapon/gun/projectile/revolver/police
-	name = "S&W Model 36"
-	desc = "A .38 caliber police pistol."
-	icon_state = "police"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
-	origin_tech = "combat=2;materials=2"
-	fire_sound = 'sound/f13weapons/policepistol.ogg'
 
 /obj/item/weapon/gun/projectile/revolver/needler
 	name = "needler pistol"

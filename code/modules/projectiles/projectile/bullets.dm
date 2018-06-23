@@ -18,8 +18,8 @@
 	armour_penetration = -9
 
 /obj/item/projectile/bullet/mag357 //unused
-	damage = 42
-	armour_penetration = -10
+	damage = 34
+	armour_penetration = -9
 
 /obj/item/projectile/bullet/slug //slug
 	damage = 60

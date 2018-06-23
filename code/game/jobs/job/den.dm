@@ -29,7 +29,7 @@
 	suit = /obj/item/clothing/suit/armor/vest/det_suit
 	head = /obj/item/clothing/head/fluff/cowboy
 	suit_store = pick(/obj/item/weapon/gun/projectile/automatic/pistol/m1911,\
-	/obj/item/weapon/gun/projectile/revolver/police,\
+	/obj/item/weapon/gun/projectile/revolver/m29/police,\
 	/obj/item/weapon/gun/projectile/revolver/colt6250,\
 	/obj/item/weapon/gun/projectile/revolver/that_gun,\
 	/obj/item/weapon/gun/projectile/revolver/m29)

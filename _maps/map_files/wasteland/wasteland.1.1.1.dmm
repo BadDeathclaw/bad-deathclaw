@@ -2361,7 +2361,7 @@
 "aTu" = (/turf/simulated/floor/plasteel{icon_state = "hydrofloor"},/area/city3)
 "aTv" = (/obj/machinery/shower{icon_state = "shower"; dir = 8},/turf/simulated/floor/plasteel{icon_state = "hydrofloor"},/area/city3)
 "aTw" = (/obj/structure/table/wood/settler,/obj/item/weapon/paper_bin,/obj/item/weapon/pen,/turf/simulated/floor/wood{tag = "icon-housewood1"; icon = 'icons/turf/floors3.dmi'; icon_state = "housewood1"},/area/city3)
-"aTx" = (/obj/structure/table/wood/settler,/obj/item/weapon/gun/projectile/revolver/police,/turf/simulated/floor/wood{tag = "icon-housewood1"; icon = 'icons/turf/floors3.dmi'; icon_state = "housewood1"},/area/city3)
+"aTx" = (/obj/structure/table/wood/settler,/obj/item/weapon/gun/projectile/revolver/m29/police,/turf/simulated/floor/wood{tag = "icon-housewood1"; icon = 'icons/turf/floors3.dmi'; icon_state = "housewood1"},/area/city3)
 "aTy" = (/obj/item/weapon/newspaper,/turf/ground/road{tag = "icon-verticaloutermain2"; name = "concrete road"; icon = 'icons/turf/floors3.dmi'; icon_state = "verticaloutermain2"; dir = 2},/area/space)
 "aTz" = (/obj/structure/flora/bush{tag = "icon-barrel_cactus_fruit"; name = "grass"; icon = 'icons/obj/flora/wasteland.dmi'; icon_state = "barrel_cactus_fruit"},/turf/ground/desert,/area/space)
 "aTA" = (/obj/structure/table/wood,/obj/item/trash/can{tag = "icon-dr_gibb"; icon_state = "dr_gibb"},/obj/item/weapon/paper,/obj/item/weapon/pen,/turf/simulated/floor/wood{tag = "icon-housewood1"; icon = 'icons/turf/floors3.dmi'; icon_state = "housewood1"},/area/city1)

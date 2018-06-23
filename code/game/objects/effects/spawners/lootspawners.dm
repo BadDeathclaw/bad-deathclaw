@@ -159,7 +159,7 @@ obj
 									lb.loc=src.loc
 									del src
 								if(7)
-									var/obj/item/weapon/gun/projectile/revolver/police/lb = new
+									var/obj/item/weapon/gun/projectile/revolver/m29/police/lb = new
 									lb.loc=src.loc
 									del src
 								if(8)
@@ -357,7 +357,7 @@ obj
 							New()
 								switch(rand(1,4))
 									if(1)
-										var/obj/item/ammo_box/c357/c38/lb = new
+										var/obj/item/ammo_box/m44/lb = new
 										lb.loc=src.loc
 										del src
 									if(2)

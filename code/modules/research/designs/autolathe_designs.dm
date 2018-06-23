@@ -290,14 +290,6 @@
 	build_path = /obj/item/ammo_casing/shotgun/rubbershot
 	category = list("initial", "Security")
 
-/datum/design/c38
-	name = "Speed loader (.38)"
-	id = "c38"
-	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 30000)
-	build_path = /obj/item/ammo_box/c357/c38
-	category = list("initial", "Security")
-
 /datum/design/recorder
 	name = "Universal recorder"
 	id = "recorder"
@@ -516,7 +508,7 @@
 	category = list("hacked", "Security")
 
 /datum/design/m44
-	name = "Speedloader (.44 Magnum Surplus)"
+	name = "Speedloader (.44 Magnum)"
 	id = "m44"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 3500)
