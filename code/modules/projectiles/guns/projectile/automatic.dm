@@ -150,7 +150,7 @@
 	icon_state = "mini-uzi"
 	origin_tech = "combat=5;materials=2;syndicate=8"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
-	burst_size = 2
+	burst_size = 3
 
 /obj/item/weapon/gun/projectile/automatic/m90
 	name = "\improper M-90gl Carbine"
@@ -276,7 +276,7 @@
 	item_state = "assault_rifle"
 	slot_flags = 0
 	origin_tech = "combat=6;materials=1"
-	mag_type = /obj/item/ammo_box/magazine/m556
+	mag_type = /obj/item/ammo_box/magazine/m556/r20
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	can_suppress = 0
 	burst_size = 3
@@ -317,7 +317,7 @@
 	slot_flags = 0
 	w_class = 4
 	origin_tech = "combat=6;materials=1"
-	mag_type = /obj/item/ammo_box/magazine/m556
+	mag_type = /obj/item/ammo_box/magazine/m556/r20
 	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
 	can_suppress = 0
 	burst_size = 1//Setting it to 0 is dumb. Just set it to one.
@@ -345,6 +345,7 @@
 	icon_state = "service_rifle"
 	item_state = "assault_rifle"
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
+	mag_type = /obj/item/ammo_box/magazine/m556/r20
 	zoomable = FALSE
 	heavy_weapon = 1
 

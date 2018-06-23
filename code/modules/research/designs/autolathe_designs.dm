@@ -524,7 +524,7 @@
 	category = list("hacked", "Security")
 
 /datum/design/c10mm
-	name = "Ammo box (10mm Surplus)"
+	name = "Ammo box (10mm)"
 	id = "c10mm"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 10000)
@@ -532,7 +532,7 @@
 	category = list("hacked", "Security")
 
 /datum/design/c45
-	name = "Ammo box (.45 Surplus)"
+	name = "Ammo box (.45)"
 	id = "c45"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 10000)
@@ -540,7 +540,7 @@
 	category = list("hacked", "Security")
 
 /datum/design/c9mm
-	name = "Ammo box (9mm Surplus)"
+	name = "Ammo box (9mm Parabellum)"
 	id = "c9mm"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 10000)
@@ -548,15 +548,23 @@
 	category = list("hacked", "Security")
 
 /datum/design/a762
-	name = "Stripper clip (7.62 Surplus)"
+	name = "Stripper clip (7.62mm)"
 	id = "a762"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 2500)
 	build_path = /obj/item/ammo_box/a762
 	category = list("hacked", "Security")
 
+/datum/design/a762a
+	name = "Rangermaster stripper clip (7.62mm)"
+	id = "a762a"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 5500)
+	build_path = /obj/item/ammo_box/a762a
+	category = list("hacked", "Security")
+
 /datum/design/a357
-	name = "speed loader (.357 Surplus)"
+	name = "speed loader (.357)"
 	id = "a357"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 3500)
@@ -572,7 +580,7 @@
 	category = list("hacked", "Security")
 
 /datum/design/a556
-	name = "ammo box (5.56x45mm Surplus)"
+	name = "ammo box (5.56x45mm)"
 	id = "a556"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 10000)

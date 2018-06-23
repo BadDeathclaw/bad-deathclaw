@@ -415,7 +415,7 @@
 	desc = "A resistant, tan trenchcoat, typically worn by pre-War generals."
 	icon_state = "autumn"
 	item_state = "autumn"
-	body_parts_covered = CHEST|LEGS|FEET|ARMS
+	body_parts_covered = CHEST|LEGS|ARMS
 	armor = list(melee = 20, bullet = 16, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 80) //Reference to colonel not dying from radiation where anyone else dies.
 	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun/energy,/obj/item/weapon/gun/projectile,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/scalpel,/obj/item/weapon/surgical_drapes,/obj/item/weapon/cautery,/obj/item/weapon/hemostat,/obj/item/weapon/retractor)
 

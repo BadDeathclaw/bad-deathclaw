@@ -79,7 +79,7 @@
 	flags = THICKMATERIAL
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	slowdown = 2
-	armor = list(melee = 20, bullet = 0, laser = 20,energy = 10, bomb = 100, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 25, laser = 16,energy = 16, bomb = 100, bio = 0, rad = 0)
 	flags_inv = HIDEJUMPSUIT
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT

@@ -67,6 +67,14 @@
 	max_ammo = 5
 	multiple_sprites = 1
 
+/obj/item/ammo_box/a762a
+	name = "double stacked stripper clip (7.62mm)"
+	desc = "A double stacked stripper clip."
+	icon_state = "762a"
+	ammo_type = /obj/item/ammo_casing/a762
+	max_ammo = 10
+	multiple_sprites = 1
+
 /obj/item/ammo_box/needler
 	name = "stripper clip (hypodermic needles)"
 	desc = "A stripper clip."

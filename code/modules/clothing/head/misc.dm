@@ -206,7 +206,7 @@
 	name = "shamebrero"
 	icon_state = "shamebrero"
 	item_state = "shamebrero"
-	desc = "Once it's on, it never comes off."
+	desc = "Forced to live on your shameful acting as a fake Mexican, you and your poncho have grown inseperable. Literally.."
 	flags = NODROP
 
 /obj/item/clothing/head/cone
@@ -329,6 +329,7 @@
 	desc = "It's the police hat of dark blue in color with a silver colored badge on the frontside.<br>The badge is inscripted with the words SPECIAL and POLICE."
 	icon_state = "retropolice"
 	item_state = "fedora"
+	armor = list(melee = 20, bullet = 16, laser = 0, energy = 0, bomb = 25, bio = 0, rad = 0)
 
 /obj/item/clothing/head/f13/safari //Referencing the Jebediah from Mad Max III
 	name = "pith helmet"

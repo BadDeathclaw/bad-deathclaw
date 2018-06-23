@@ -1,5 +1,5 @@
 /obj/item/weapon/gun/energy/laser
-	name = "laser rifle"
+	name = "AER9 laser rifle"
 	desc = "A basic energy-based laser gun that fires concentrated beams of light which pass through glass and thin metal."
 	icon_state = "laser"
 	item_state = "laser"
@@ -33,7 +33,7 @@ obj/item/weapon/gun/energy/laser/retro/sc_retro
 	clumsy_check = 0 //No sense in having a harmless gun blow up in the clowns face
 
 /obj/item/weapon/gun/energy/laser/pistol
-	name = "laser pistol"
+	name = "AEP7 laser pistol"
 	desc = "A basic energy-based laser gun that fires concentrated beams of light which pass through glass and thin metal."
 	icon_state = "AEP7"
 	item_state = "pistol"

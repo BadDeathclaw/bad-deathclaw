@@ -128,10 +128,12 @@ obj
 					tier3
 					tier4
 					tier5
+
+
 				gun
 					tier1
 						New()
-							switch(rand(1,6))
+							switch(rand(1,9))
 								if(1)
 									var/obj/item/weapon/gun/projectile/revolver/single_shotgun/lb = new
 									lb.loc=src.loc
@@ -156,50 +158,43 @@ obj
 									var/obj/item/weapon/gun/projectile/automatic/pistol/silenced22/lb = new
 									lb.loc=src.loc
 									del src
+								if(7)
+									var/obj/item/weapon/gun/projectile/revolver/police/lb = new
+									lb.loc=src.loc
+									del src
+								if(8)
+									var/obj/item/weapon/gun/projectile/automatic/pistol/n99/lb = new
+									lb.loc=src.loc
+									del src
+								if(9)
+									var/obj/item/weapon/gun/projectile/automatic/pistol/m1911/lb = new
+									lb.loc=src.loc
+									del src
+								if(9)
+									var/obj/item/weapon/gun/projectile/automatic/pistol/ninemil/lb = new
+									lb.loc=src.loc
+									del src
+
+
+
+
 					tier2
 						New()
-							switch(rand(1,6))
+							switch(rand(1,9))
 								if(1)
 									var/obj/item/weapon/gun/projectile/revolver/max_sawn_off/lb = new
 									lb.loc=src.loc
 									del src
 								if(2)
-									var/obj/item/weapon/gun/projectile/revolver/police/lb = new
-									lb.loc=src.loc
-									del src
-								if(3)
-									var/obj/item/weapon/gun/projectile/automatic/pistol/m1911/lb = new
-									lb.loc=src.loc
-									del src
-								if(4)
-									var/obj/item/weapon/gun/projectile/automatic/pistol/n99/lb = new
-									lb.loc=src.loc
-									del src
-								if(5)
 									var/obj/item/weapon/gun/projectile/shotgun/hunting/lb = new
 									lb.loc=src.loc
 									del src
-								if(6)
-									var/obj/item/weapon/gun/projectile/shotgun/automatic/hunting/lb = new
-									lb.loc=src.loc
-									del src
-					tier3
-						New()
-							switch(rand(1,14))
-								if(1)
-									var/obj/item/weapon/gun/projectile/revolver/that_gun/lb = new
-									lb.loc=src.loc
-									del src
-								if(2)
+								if(3)
 									var/obj/item/weapon/gun/projectile/revolver/m29/lb = new
 									lb.loc=src.loc
 									del src
-								if(3)
-									var/obj/item/weapon/gun/projectile/automatic/mini_uzi/lb = new
-									lb.loc=src.loc
-									del src
 								if(4)
-									var/obj/item/weapon/gun/projectile/automatic/marksman/servicerifle/lb = new
+									var/obj/item/weapon/gun/projectile/revolver/that_gun/lb = new
 									lb.loc=src.loc
 									del src
 								if(5)
@@ -207,40 +202,67 @@ obj
 									lb.loc=src.loc
 									del src
 								if(6)
-									var/obj/item/weapon/gun/projectile/shotgun/riot/lb = new
-									lb.loc=src.loc
-									del src
-								if(7)
-									var/obj/item/weapon/gun/energy/laser/pistol/lb = new
-									lb.loc=src.loc
-									del src
-								if(8)
-									var/obj/item/weapon/gun/projectile/automatic/mini_uzi/lb = new
-									lb.loc=src.loc
-									del src
-								if(9)
 									var/obj/item/weapon/gun/projectile/shotgun/boltaction/scoped/lb = new
 									lb.loc=src.loc
 									del src
-								if(10)
+								if(7)
 									var/obj/item/weapon/gun/projectile/revolver/colt6250/lb = new
 									lb.loc=src.loc
 									del src
-								if(11)
+								if(8)
 									var/obj/item/weapon/gun/projectile/automatic/american180/lb = new
 									lb.loc=src.loc
 									del src
-								if(12)
-									var/obj/item/weapon/gun/projectile/automatic/greasegun/lb = new
-									lb.loc=src.loc
-									del src
-								if(13)
+								if(9)
 									var/obj/item/weapon/gun/projectile/revolver/m29/scoped/lb = new
 									lb.loc=src.loc
 									del src
+
+
+					tier3
+						New()
+							switch(rand(1,9))
+								if(1)
+									var/obj/item/weapon/gun/projectile/shotgun/automatic/hunting/lb = new
+									lb.loc=src.loc
+									del src
+								if(2)
+									var/obj/item/weapon/gun/projectile/automatic/mini_uzi/lb = new
+									lb.loc=src.loc
+									del src
+								if(3)
+									var/obj/item/weapon/gun/projectile/automatic/marksman/servicerifle/lb = new
+									lb.loc=src.loc
+									del src
+								if(4)
+									var/obj/item/weapon/gun/projectile/automatic/marksman/servicerifle/lb = new
+									lb.loc=src.loc
+									del src
+								if(5)
+									var/obj/item/weapon/gun/projectile/automatic/marksman/servicerifle/lb = new
+									lb.loc=src.loc
+									del src
+								if(6)
+									var/obj/item/weapon/gun/projectile/automatic/greasegun/lb = new
+									lb.loc=src.loc
+									del src
+								if(7)
+									var/obj/item/weapon/gun/projectile/automatic/greasegun/lb = new
+									lb.loc=src.loc
+									del src
+								if(8)
+									var/obj/item/weapon/gun/projectile/shotgun/riot/lb = new
+									lb.loc=src.loc
+									del src
+								if(9)
+									var/obj/item/weapon/gun/energy/laser/pistol/lb = new
+									lb.loc=src.loc
+									del src
+
+
 					tier4
 						New()
-							switch(rand(1,6))
+							switch(rand(1,9))
 								if(1)
 									var/obj/item/weapon/gun/projectile/automatic/assault_rifle/lb = new
 									lb.loc=src.loc
@@ -265,9 +287,23 @@ obj
 									var/obj/item/weapon/gun/projectile/revolver/needler/lb = new
 									lb.loc=src.loc
 									del src
+								if(7)
+									var/obj/item/weapon/gun/energy/laser/lb = new
+									lb.loc=src.loc
+									del src
+								if(8)
+									var/obj/item/weapon/gun/projectile/automatic/tommygun/lb = new
+									lb.loc=src.loc
+									del src
+								if(9)
+									var/obj/item/weapon/gun/projectile/automatic/assault_rifle/infiltrator/lb = new
+									lb.loc=src.loc
+									del src
+
+
 					tier5
 						New()
-							switch(rand(1,12))
+							switch(rand(1,10))
 								if(1)
 									var/obj/item/weapon/gun/energy/laser/plasma/lb = new
 									lb.loc=src.loc
@@ -293,26 +329,18 @@ obj
 									lb.loc=src.loc
 									del src
 								if(7)
-									var/obj/item/weapon/gun/projectile/automatic/tommygun/lb = new
-									lb.loc=src.loc
-									del src
-								if(8)
 									var/obj/item/weapon/gun/energy/stunrevolver/pin/lb = new
 									lb.loc=src.loc
 									del src
-								if(9)
+								if(8)
 									var/obj/item/weapon/gun/energy/xray/lb = new
 									lb.loc=src.loc
 									del src
-								if(10)
-									var/obj/item/weapon/gun/projectile/automatic/assault_rifle/infiltrator/lb = new
-									lb.loc=src.loc
-									del src
-								if(11)
+								if(9)
 									var/obj/item/weapon/gun/projectile/automatic/bozar/lb = new
 									lb.loc=src.loc
 									del src
-								if(12)
+								if(10)
 									var/obj/item/weapon/gun/syringe/syringer/lb = new
 									var/obj/item/weapon/reagent_containers/syringe/bioterror/lb2 = new
 									var/obj/item/weapon/reagent_containers/syringe/bioterror/lb3 = new
@@ -322,6 +350,8 @@ obj
 									lb3.loc=src.loc
 									lb4.loc=src
 									del src
+
+
 					ammo
 						tier1
 							New()
@@ -342,9 +372,11 @@ obj
 										var/obj/item/ammo_box/magazine/m22/lb = new
 										lb.loc=src.loc
 										del src
+
+
 						tier2
 							New()
-								switch(rand(1,6))
+								switch(rand(1,7))
 									if(1)
 										var/obj/item/ammo_box/magazine/m45/lb = new
 										lb.loc=src.loc
@@ -369,6 +401,12 @@ obj
 										var/obj/item/ammo_box/magazine/m9mm/lb = new
 										lb.loc=src.loc
 										del src
+									if(7)
+										var/obj/item/ammo_box/magazine/tommygunm45/lb = new
+										lb.loc=src.loc
+										del src
+
+
 						tier3
 							New()
 								switch(rand(1,10))
@@ -412,48 +450,40 @@ obj
 										var/obj/item/ammo_box/magazine/stick45/lb = new
 										lb.loc=src.loc
 										del src
+
+
 						tier4
 							New()
-								switch(rand(1,10))
+								switch(rand(1,6))
 									if(1)
 										var/obj/item/ammo_box/magazine/d12g/lb = new
 										lb.loc=src.loc
 										del src
 									if(2)
-										var/obj/item/ammo_box/a556/inc/lb = new
-										lb.loc=src.loc
-										del src
-									if(3)
-										var/obj/item/ammo_box/a556/ap/lb = new
-										lb.loc=src.loc
-										del src
-									if(4)
-										var/obj/item/ammo_box/a556/tox/lb = new
-										lb.loc=src.loc
-										del src
-									if(5)
 										var/obj/item/ammo_box/magazine/m50/lb = new
 										lb.loc=src.loc
 										del src
-									if(6)
-										var/obj/item/ammo_box/magazine/m556/lb = new
+									if(3)
+										var/obj/item/ammo_box/magazine/m556/r20/lb = new
 										lb.loc=src.loc
 										del src
-									if(7)
+									if(4)
 										var/obj/item/weapon/storage/box/lasershot/lb = new
 										lb.loc=src.loc
 										del src
-									if(8)
+									if(5)
 										var/obj/item/weapon/storage/box/incenshot/lb = new
 										lb.loc=src.loc
 										del src
-									if(9)
+									if(6)
 										var/obj/item/weapon/stock_parts/cell/ammo/mfc/lb = new
 										lb.loc=src.loc
 										del src
+
+
 						tier5
 							New()
-								switch(rand(1,16))
+								switch(rand(1,14))
 									if(1)
 										var/obj/item/ammo_box/magazine/sniper_rounds/lb = new
 										lb.loc=src.loc
@@ -471,7 +501,7 @@ obj
 										lb.loc=src.loc
 										del src
 									if(5)
-										var/obj/item/ammo_box/magazine/tommygunm45/lb = new
+										var/obj/item/weapon/stock_parts/cell/ammo/ecp/lb = new
 										lb.loc=src.loc
 										del src
 									if(6)
@@ -483,45 +513,38 @@ obj
 										lb.loc=src.loc
 										del src
 									if(8)
-										var/obj/item/ammo_box/magazine/m762/ap/lb = new
-										lb.loc=src.loc
-										del src
-									if(9)
-										var/obj/item/ammo_box/magazine/m762/bleeding/lb = new
-										lb.loc=src.loc
-										del src
-									if(10)
 										var/obj/item/ammo_box/magazine/m762/hollow/lb = new
 										lb.loc=src.loc
 										del src
-									if(11)
+									if(9)
 										var/obj/item/ammo_box/magazine/m762/incen/lb = new
 										lb.loc=src.loc
 										del src
-									if(12)
+									if(10)
 										var/obj/item/weapon/storage/box/pulseshot/lb = new
 										lb.loc=src.loc
 										del src
-									if(13)
+									if(11)
 										var/obj/item/weapon/storage/box/dragonshot/lb = new
 										lb.loc=src.loc
 										del src
-									if(14)
+									if(12)
 										var/obj/item/weapon/storage/box/fragshot/lb = new
 										lb.loc=src.loc
 										del src
-									if(15)
+									if(13)
 										var/obj/item/weapon/suppressor/lb = new
 										lb.loc=src.loc
 										del src
-									if(16)
-										var/obj/item/weapon/stock_parts/cell/ammo/ecp/lb = new
+									if(14)
+										var/obj/item/ammo_box/magazine/m762/ap/lb = new
 										lb.loc=src.loc
 										del src
+
 			armorspawners //1.8
 				tier1
 					New()
-						switch(rand(1,9))
+						switch(rand(1,17))
 							if(1)
 								var/obj/item/clothing/suit/armor/vest/lb = new
 								var/obj/item/clothing/head/helmet/riot/vaultsec/lb2 = new
@@ -530,10 +553,6 @@ obj
 								del src
 							if(2)
 								var/obj/item/clothing/suit/armor/vest/det_suit/lb = new
-								lb.loc=src.loc
-								del src
-							if(3)
-								var/obj/item/clothing/suit/armor/f13/bmetalarmor/lb = new
 								lb.loc=src.loc
 								del src
 							if(4)
@@ -572,9 +591,39 @@ obj
 								var/obj/item/clothing/suit/f13/mfp/lb = new
 								lb.loc=src.loc
 								del src
+							if(11)
+								var/obj/item/clothing/suit/fluff/cowboybvest/lb = new
+								lb.loc=src.loc
+								del src
+							if(12)
+								var/obj/item/clothing/suit/fluff/cowboygvest/lb = new
+								lb.loc=src.loc
+								del src
+							if(13)
+								var/obj/item/clothing/suit/fluff/battlecruiser/lb = new
+								lb.loc=src.loc
+								del src
+							if(14)
+								var/obj/item/clothing/suit/fluff/vest/lb = new
+								lb.loc=src.loc
+								del src
+							if(15)
+								var/obj/item/clothing/suit/f13/veteran/lb = new
+								lb.loc=src.loc
+								del src
+							if(16)
+								var/obj/item/clothing/suit/f13/duster/lb = new
+								lb.loc=src.loc
+								del src
+							if(17)
+								var/obj/item/clothing/suit/f13/autumn/lb = new
+								lb.loc=src.loc
+								del src
+
+
 				tier2
 					New()
-						switch(rand(1,2))
+						switch(rand(1,6))
 							if(1)
 								var/obj/item/clothing/suit/armor/fluff/chestplate/lb = new
 								var/obj/item/clothing/head/helmet/f13/metalmask/lb2 = new
@@ -582,12 +631,6 @@ obj
 								lb2.loc=src.loc
 								del src
 							if(2)
-								var/obj/item/clothing/head/helmet/swat/lb = new
-								var/obj/item/clothing/suit/armor/bulletproof/lb2 = new
-								lb.loc=src.loc
-								lb2.loc=src.loc
-								del src
-							if(3)
 								var/obj/item/clothing/suit/armor/f13/combat/lb = new
 								var/obj/item/clothing/head/helmet/f13/combat/lb2 = new
 								var/obj/item/weapon/storage/backpack/combat_ruck/lb3 = new
@@ -595,14 +638,42 @@ obj
 								lb2.loc=src.loc
 								lb3.loc=src.loc
 								del src
-				tier3
-					New()
-						switch(rand(1,2))
-							if(1)
-								var/obj/item/clothing/suit/armor/fluff/chestplate/mk2/lb = new
-								var/obj/item/clothing/head/helmet/f13/metalmask/mk2/lb2 = new
+							if(3)
+								var/obj/item/clothing/suit/armor/f13/bmetalarmor/lb = new
+								var/obj/item/clothing/head/helmet/f13/eyebot/lb2 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
+								del src
+							if(4)
+								var/obj/item/clothing/suit/armor/fluff/chestplate/lb = new
+								lb.loc=src.loc
+								del src
+							if(5)
+								var/obj/item/clothing/suit/armor/fluff/chestplate/lb = new
+								var/obj/item/clothing/head/helmet/f13/eyebot/lb2 = new
+								lb.loc=src.loc
+								lb2.loc=src.loc
+								del src
+							if(6)
+								var/obj/item/clothing/suit/armor/f13/combat/lb = new
+								var/obj/item/clothing/head/helmet/f13/combat/lb2 = new
+								var/obj/item/weapon/storage/backpack/combat_ruck/lb3 = new
+								lb.loc=src.loc
+								lb2.loc=src.loc
+								lb3.loc=src.loc
+								del src
+
+
+				tier3
+					New()
+						switch(rand(1,5))
+							if(1)
+								var/obj/item/clothing/suit/armor/f13/combat/mk2/lb = new
+								var/obj/item/clothing/head/helmet/f13/combat/mk2/lb2 = new
+								var/obj/item/weapon/storage/backpack/combat_ruck/lb3 = new
+								lb.loc=src.loc
+								lb2.loc=src.loc
+								lb3.loc=src.loc
 								del src
 							if(2)
 								var/obj/item/clothing/suit/armor/f13/combat/mk2/lb = new
@@ -612,21 +683,6 @@ obj
 								lb2.loc=src.loc
 								lb3.loc=src.loc
 								del src
-				tier4
-					New()
-						switch(rand(1,3))
-							if(1)
-								var/obj/item/clothing/suit/armor/f13/rangercombat/lb = new
-								var/obj/item/clothing/head/helmet/f13/rangercombat/lb2 = new
-								lb.loc=src.loc
-								lb2.loc=src.loc
-								del src
-							if(2)
-								var/obj/item/clothing/suit/armor/f13/combat/brotherhood/lb = new
-								var/obj/item/clothing/head/helmet/f13/combat/brotherhood/lb2 = new
-								lb.loc=src.loc
-								lb2.loc=src.loc
-								del src
 							if(3)
 								var/obj/item/clothing/suit/armor/f13/brokenpa/t45b/lb = new
 								var/obj/item/clothing/head/helmet/f13/brokenpa/t45b/lb2 = new
@@ -635,6 +691,76 @@ obj
 								lb2.loc=src.loc
 								lb3.loc=src.loc
 								del src
+							if(4)
+								var/obj/item/clothing/suit/armor/f13/combat/mk2/lb = new
+								var/obj/item/clothing/head/helmet/f13/combat/mk2/lb2 = new
+								var/obj/item/weapon/storage/backpack/combat_ruck/lb3 = new
+								lb.loc=src.loc
+								lb2.loc=src.loc
+								lb3.loc=src.loc
+								del src
+							if(5)
+								var/obj/item/clothing/suit/armor/f13/rangercombat/lb = new
+								var/obj/item/clothing/head/helmet/f13/rangercombat/lb2 = new
+								lb.loc=src.loc
+								lb2.loc=src.loc
+								del src
+
+
+
+				tier4
+					New()
+						switch(rand(1,8))
+							if(1)
+								var/obj/item/clothing/suit/armor/fluff/chestplate/mk2/lb = new
+								var/obj/item/clothing/head/helmet/f13/metalmask/mk2/lb2 = new
+								lb.loc=src.loc
+								lb2.loc=src.loc
+								del src
+							if(2)
+								var/obj/item/clothing/suit/armor/f13/ibmetalarmor/lb = new
+								lb.loc=src.loc
+								del src
+							if(3)
+								var/obj/item/clothing/head/helmet/swat/lb = new
+								var/obj/item/clothing/suit/armor/bulletproof/lb2 = new
+								lb.loc=src.loc
+								lb2.loc=src.loc
+								del src
+							if(4)
+								var/obj/item/clothing/suit/armor/laserproof/lb = new
+								var/obj/item/clothing/head/helmet/f13/tesla/lb2 = new
+								lb.loc=src.loc
+								lb2.loc=src.loc
+								del src
+							if(5)
+								var/obj/item/clothing/suit/armor/f13/rangercombat/desert/lb = new
+								var/obj/item/clothing/head/helmet/f13/rangercombat/desert/lb2 = new
+								lb.loc=src.loc
+								lb2.loc=src.loc
+								del src
+							if(6)
+								var/obj/item/clothing/suit/armor/fluff/chestplate/mk2/lb = new
+								var/obj/item/clothing/head/helmet/f13/metalmask/mk2/lb2 = new
+								lb.loc=src.loc
+								lb2.loc=src.loc
+								del src
+							if(7)
+								var/obj/item/clothing/suit/armor/f13/ibmetalarmor/lb = new
+								lb.loc=src.loc
+								del src
+							if(8)
+								var/obj/item/clothing/head/helmet/f13/brokenpa/t45b/lb = new
+								var/obj/item/clothing/suit/armor/f13/brokenpa/t45b/lb2 = new
+								lb.loc=src.loc
+								lb2.loc=src.loc
+								del src
+
+
+
+
+
+
 				tier5
 					New()
 						switch(rand(1,8))
@@ -645,33 +771,39 @@ obj
 								lb2.loc=src.loc
 								del src
 							if(2)
-								var/obj/item/clothing/suit/armor/laserproof/lb = new
-								var/obj/item/clothing/head/helmet/f13/tesla/lb2 = new
-								lb.loc=src.loc
-								lb2.loc=src.loc
-								del src
-							if(3)
-								var/obj/item/clothing/suit/armor/f13/rangercombat/desert/lb = new
-								var/obj/item/clothing/head/helmet/f13/rangercombat/desert/lb2 = new
-								lb.loc=src.loc
-								lb2.loc=src.loc
-								del src
-							if(4)
 								var/obj/item/clothing/suit/armor/f13/power_armor/advanced/mk2/lb = new
 								var/obj/item/clothing/head/helmet/power_armor/f13/advanced/mk2/lb2 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
 								del src
 								return
-							if(5)
+							if(3)
 								var/obj/item/weapon/storage/belt/webbing/lb = new
 								lb.loc=src.loc
 								del src
-							if(6)
+							if(4)
 								var/obj/item/clothing/suit/armor/f13/power_armor/tesla/lb = new
 								var/obj/item/clothing/head/helmet/power_armor/f13/tesla/lb2 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
+								del src
+								return
+							if(5)
+								var/obj/item/clothing/suit/armor/f13/power_armor/t45d/lb = new
+								var/obj/item/clothing/head/helmet/power_armor/f13/t45d/lb2 = new
+								var/obj/item/clothing/under/f13/recon/lb3 = new
+								lb.loc=src.loc
+								lb2.loc=src.loc
+								lb3.loc=src.loc
+								del src
+								return
+							if(6)
+								var/obj/item/clothing/suit/armor/f13/power_armor/t51b/lb = new
+								var/obj/item/clothing/head/helmet/power_armor/f13/t51b/lb2 = new
+								var/obj/item/clothing/under/f13/recon/lb3 = new
+								lb.loc=src.loc
+								lb2.loc=src.loc
+								lb3.loc=src.loc
 								del src
 								return
 							if(7)
@@ -684,11 +816,17 @@ obj
 								del src
 								return
 							if(8)
-								var/obj/item/clothing/suit/armor/f13/power_armor/t51b/lb = new
-								var/obj/item/clothing/head/helmet/power_armor/f13/t51b/lb2 = new
+								var/obj/item/clothing/suit/armor/f13/power_armor/t45d/lb = new
+								var/obj/item/clothing/head/helmet/power_armor/f13/t45d/lb2 = new
 								var/obj/item/clothing/under/f13/recon/lb3 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
 								lb3.loc=src.loc
 								del src
 								return
+
+
+
+
+
+

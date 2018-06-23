@@ -13,9 +13,9 @@
 /obj/item/projectile/bullet/deagleAE //heavy - .50 deagle
 	damage = 60
 
-/obj/item/projectile/bullet/magnum //unused
-	damage = 40
-	armour_penetration = -10
+/obj/item/projectile/bullet/magnum //m29
+	damage = 34
+	armour_penetration = -9
 
 /obj/item/projectile/bullet/mag357 //unused
 	damage = 42

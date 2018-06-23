@@ -16,7 +16,8 @@ var/const/LEGCENTURION		=(1<<1)
 var/const/LEGVEX			=(1<<2)
 var/const/LEGDECAN			=(1<<3)
 var/const/LEGVET			=(1<<4)
-var/const/LEGIONARY			=(1<<5)
+var/const/PRIME	    		=(1<<5)
+var/const/LEGIONARY			=(1<<6)
 
 var/const/BOS				=(1<<2)
 var/const/PALADIN			=(1<<0)
@@ -155,6 +156,7 @@ var/list/legion_positions = list(
 	"Legion Vexillarius",
 	"Legion Decanus",
 	"Veteran Legionnaire",
+	"Prime Legionnaire",
 	"Legionnaire Recruit"
 )
 

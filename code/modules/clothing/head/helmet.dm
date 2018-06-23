@@ -4,7 +4,7 @@
 	icon_state = "helmet"
 	flags = HEADBANGPROTECT
 	item_state = "helmet"
-	armor = list(melee = 40, bullet = 25, laser = 25,energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 25, laser = 16,energy = 16, bomb = 25, bio = 0, rad = 0)
 	flags_inv = HIDEEARS|HIDEEYES
 	cold_protection = HEAD
 	min_cold_protection_temperature = HELMET_MIN_TEMP_PROTECT
@@ -29,7 +29,7 @@
 	desc = "A bulletproof combat helmet that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent."
 	icon_state = "helmetalt"
 	item_state = "helmetalt"
-	armor = list(melee = 15, bullet = 60, laser = 10, energy = 10, bomb = 40, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 25, laser = 16, energy = 16, bomb = 25, bio = 0, rad = 0)
 
 /obj/item/clothing/head/helmet/riot
 	name = "riot helmet"
@@ -40,7 +40,7 @@
 	alt_toggle_message = "You push the visor up on"
 	can_toggle = 1
 	flags = HEADBANGPROTECT
-	armor = list(melee = 60, bullet = 15, laser = 5,energy = 5, bomb = 5, bio = 2, rad = 0)
+	armor = list(melee = 85, bullet = 25, laser = 25,energy = 25, bomb = 25, bio = 2, rad = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	strip_delay = 80
 	action_button_name = "Toggle Helmet Visor"
@@ -97,7 +97,7 @@
 	desc = "A decent helmet providing head protection"
 	icon_state = "swatsyndie"
 	item_state = "swatsyndie"
-	armor = list(melee = 40, bullet = 20, laser = 25,energy = 15, bomb = 20, bio = 10, rad = 0)
+	armor = list(melee = 65, bullet = 39, laser = 25,energy = 25, bomb = 65, bio = 30, rad = 30)
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
@@ -133,7 +133,7 @@
 	name = "roman helmet"
 	desc = "An ancient helmet made of bronze and leather."
 	flags_cover = HEADCOVERSEYES
-	armor = list(melee = 25, bullet = 0, laser = 25, energy = 10, bomb = 10, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 16, laser = 0, energy = 0, bomb = 16, bio = 0, rad = 0)
 	icon_state = "roman"
 	item_state = "roman"
 	strip_delay = 100
@@ -159,7 +159,7 @@
 	icon_state = "redtaghelm"
 	flags_cover = HEADCOVERSEYES
 	item_state = "redtaghelm"
-	armor = list(melee = 15, bullet = 10, laser = 20,energy = 10, bomb = 20, bio = 0, rad = 0)
+	armor = list(melee = 20, bullet = 0, laser = 16,energy = 16, bomb = 0, bio = 0, rad = 0)
 	// Offer about the same protection as a hardhat.
 	flags_inv = HIDEEARS|HIDEEYES
 
@@ -169,7 +169,7 @@
 	icon_state = "bluetaghelm"
 	flags_cover = HEADCOVERSEYES
 	item_state = "bluetaghelm"
-	armor = list(melee = 15, bullet = 10, laser = 20,energy = 10, bomb = 20, bio = 0, rad = 0)
+	armor = list(melee = 20, bullet = 0, laser = 16,energy = 16, bomb = 0, bio = 0, rad = 0)
 	// Offer about the same protection as a hardhat.
 	flags_inv = HIDEEARS|HIDEEYES
 
@@ -218,7 +218,7 @@
 /obj/item/clothing/head/helmet/riot/vaultsec
 	name = "security helmet"
 	desc = "A standard issue vault security helmet, pretty robust."
-	armor = list(melee = 60, bullet = 20, laser = 25,energy = 10, bomb = 25, bio = 2, rad = 0)
+	armor = list(melee = 85, bullet = 25, laser = 25,energy = 25, bomb = 25, bio = 2, rad = 0)
 
 //Raider
 /obj/item/clothing/head/helmet/f13/raider
@@ -227,7 +227,7 @@
 	icon_state = "supafly"
 	item_state = "supafly"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | BLOCKHAIR
-	armor = list(melee = 20, bullet = 10, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 20, bullet = 16, laser = 0,energy = 0, bomb = 16, bio = 0, rad = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 
 /obj/item/clothing/head/helmet/f13/raider/arclight
@@ -236,14 +236,12 @@
 	icon_state = "arclight"
 	item_state = "arclight"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list(melee = 30, bullet = 15, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0)
 
 /obj/item/clothing/head/helmet/f13/raider/blastmaster
 	name = "raider blastmaster helmet"
 	icon_state = "blastmaster"
 	item_state = "blastmaster"
 	burn_state = FIRE_PROOF
-	armor = list(melee = 30, bullet = 10, laser = 0,energy = 0, bomb = 10, bio = 50, rad = 30)
 
 /obj/item/clothing/head/helmet/f13/raider/yankee
 	name = "yankee raider helmet"
@@ -251,7 +249,6 @@
 	icon_state = "yankee"
 	item_state = "yankee"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | BLOCKHAIR
-	armor = list(melee = 50, bullet = 20, laser = 0,energy = 0, bomb = 10, bio = 0, rad = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 
 /obj/item/clothing/head/helmet/f13/eyebot
@@ -269,10 +266,10 @@
 //Combat armor
 /obj/item/clothing/head/helmet/f13/combat
 	name = "combat helmet"
-	desc = "An old combat helmet, out of use around the time of the war."
+	desc = "An old military grade pre-war combat helmet."
 	icon_state = "combat_helmet"
 	item_state = "combat_helmet"
-	armor = list(melee = 38, bullet = 40, laser = 15,energy = 20, bomb = 10, bio = 0, rad = 20)
+	armor = list(melee = 40, bullet = 25, laser = 16,energy = 16, bomb = 25, bio = 0, rad = 0)
 	flags_inv = HIDEEARS
 	flags = BLOCKHAIR
 	put_on_delay = 10
@@ -282,25 +279,25 @@
 	tint = 0
 
 /obj/item/clothing/head/helmet/f13/combat/mk2
-	name = "combat helmet mk2"
-	desc = "An improved combat helmet based off the original pre-war model."
+	name = "reinforced combat helmet"
+	desc = "An reinforced combat helmet based off the original pre-war model."
 	icon_state = "combat_helmet_mk2"
 	item_state = "combat_helmet_mk2"
-	armor = list(melee = 50, bullet = 45, laser = 25,energy = 25, bomb = 20, bio = 0, rad = 50)
+	armor = list(melee = 65, bullet = 39, laser = 25,energy = 25, bomb = 39, bio = 0, rad = 50)
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood
 	name = "brotherhood combat helmet"
 	desc = "An improved combat helmet, seen commonly worn on initiates"
 	icon_state = "brotherhood_helmet"
 	item_state = "brotherhood_helmet"
-	armor = list(melee = 55, bullet = 55, laser = 35,energy = 30, bomb = 30, bio = 0, rad = 75)
+	armor = list(melee = 65, bullet = 39, laser = 25,energy = 25, bomb = 39, bio = 0, rad = 50)
 
 /obj/item/clothing/head/helmet/f13/combat/enclave
 	name = "enclave combat helmet"
 	desc = "An intimidating helmet that is issued with it's corresponding suit."
 	icon_state = "enclave_helmet"
 	item_state = "enclave_helmet"
-	armor = list(melee = 70, bullet = 65, laser = 50,energy = 50, bomb = 50, bio = 0, rad = 100)
+	armor = list(melee = 65, bullet = 39, laser = 25,energy = 25, bomb = 39, bio = 0, rad = 50)
 
 //Legion
 /obj/item/clothing/head/helmet/f13/legrecruit
@@ -308,7 +305,7 @@
 	desc = "It's leather legion recruit helmet."
 	icon_state = "legrecruit"
 	item_state = "legrecruit"
-	armor = list(melee = 35, bullet = 30, laser = 10,energy = 0, bomb = 30, bio = 0, rad = 0)
+	armor = list(melee = 20, bullet = 16, laser = 0,energy = 0, bomb = 16, bio = 0, rad = 0)
 	flags_inv = HIDEEARS
 	flags = BLOCKHAIR
 	put_on_delay = 10
@@ -320,7 +317,7 @@
 	desc = "It's a metal legion veteran helmet, looks pretty sturdy."
 	icon_state = "legvet"
 	item_state = "legvet"
-	armor = list(melee = 40, bullet = 35, laser = 10,energy = 0, bomb = 30, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 25, laser = 16,energy = 16, bomb = 25, bio = 0, rad = 0)
 	flags_inv = HIDEEARS
 	flags = BLOCKHAIR
 	put_on_delay = 10
@@ -332,7 +329,7 @@
 	desc = "It's leather legion vexillarius helmet."
 	icon_state = "legvexil"
 	item_state = "legvexil"
-	armor = list(melee = 40, bullet = 35, laser = 10,energy = 0, bomb = 30, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 25, laser = 16,energy = 16, bomb = 25, bio = 0, rad = 0)
 	flags_inv = HIDEEARS
 	flags = BLOCKHAIR
 	put_on_delay = 10
@@ -340,11 +337,11 @@
 	burn_state = FIRE_PROOF
 
 /obj/item/clothing/head/helmet/f13/legdecan
-	name = "legion decan helmet"
+	name = "legion decanus helmet"
 	desc = "It's leather legion decan helmet."
 	icon_state = "legdecan"
 	item_state = "legdecan"
-	armor = list(melee = 45, bullet = 35, laser = 10,energy = 0, bomb = 30, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 25, laser = 16,energy = 16, bomb = 25, bio = 0, rad = 0)
 	flags_inv = HIDEEARS
 	flags = BLOCKHAIR
 	put_on_delay = 10
@@ -364,7 +361,7 @@
 	burn_state = FIRE_PROOF
 
 /obj/item/clothing/head/helmet/f13/leglegat
-	name = "legion legat helmet"
+	name = "legion legate helmet"
 	desc = "It's metal legion legat helmet."
 	icon_state = "leglegat"
 	item_state = "leglegat"
@@ -381,7 +378,7 @@
 	desc = "An old combat helmet, out of use around the time of the war."
 	icon_state = "ranger"
 	item_state = "ranger"
-	armor = list(melee = 70, bullet = 60, laser = 40, energy = 40, bomb = 40, bio = 0, rad = 80)
+	armor = list(melee = 65, bullet = 39, laser = 25, energy = 25, bomb = 39, bio = 0, rad = 80)
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | BLOCKHAIR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	put_on_delay = 10
@@ -397,14 +394,14 @@
 	desc = "An U.S Marine Corps helmet, used by the legendary Desert Rangers."
 	icon_state = "desert_ranger"
 	item_state = "desert_ranger"
-	armor = list(melee = 65, bullet = 60, laser = 45,energy = 35, bomb = 20, bio = 0, rad = 100)
+	armor = list(melee = 65, bullet = 48, laser = 25,energy = 25, bomb = 48, bio = 0, rad = 100)
 
 /obj/item/clothing/head/helmet/f13/rangercombat/eliteriot
 	name = "elite riot gear helmet"
 	desc = "An old combat helmet seen in the divide, repurposed for higher ranking Rangers."
 	icon_state = "elite_riot"
 	item_state = "elite_riot"
-	armor = list(melee = 75, bullet = 68, laser = 50,energy = 50, bomb = 45, bio = 0, rad = 100)
+	armor = list(melee = 65, bullet = 48, laser = 25,energy = 25, bomb = 48, bio = 0, rad = 100)
 
 //Metal masks
 /obj/item/clothing/head/helmet/f13/metalmask
@@ -412,27 +409,27 @@
 	desc = "A crudely formed metal hockey mask."
 	icon_state = "metal_mask"
 	item_state = "metal_mask"
-	armor = list(melee = 30, bullet = 15, laser = 20,energy = 15, bomb = 5, bio = 2, rad = 0)
+	armor = list(melee = 40, bullet = 25, laser = 16,energy = 16, bomb = 25, bio = 2, rad = 0)
 	flags_inv = HIDEMASK|HIDEEYES|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 80
 
 /obj/item/clothing/head/helmet/f13/metalmask/mk2
-	name = "metal mask mk2"
-	desc = "A finely formed metal hockey mask."
+	name = "reflective metal mask"
+	desc = "A reflective metal hockey mask."
 	icon_state = "metal_mask2"
 	item_state = "metal_mask2"
-	armor = list(melee = 35, bullet = 20, laser = 25,energy = 20, bomb = 10, bio = 2, rad = 0)
+	armor = list(melee = 40, bullet = 25, laser = 48,energy = 48, bomb = 25, bio = 2, rad = 0)
 	flags_inv = HIDEMASK|HIDEEYES|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 80
 
 /obj/item/clothing/head/helmet/f13/tesla
 	name = "tesla helmet"
-	desc = "A prewar armor design by Nikola Tesla before being confinscated by the U.S. government. Provides the best energy weapons resistance."
+	desc = "A prewar armor design by Nikola Tesla before being confinscated by the U.S. government. Provides the high energy weapons resistance."
 	icon_state = "tesla_helmet"
 	item_state = "tesla_helmet"
-	armor = list(melee = 35, bullet = 20, laser = 50, energy = 40, bomb = 10, bio = 0, rad = 5)
+	armor = list(melee = 40, bullet = 25, laser = 48, energy = 48, bomb = 25, bio = 0, rad = 0)
 	var/hit_reflect_chance = 70
 	put_on_delay = 30
 	strip_delay = 10
@@ -462,10 +459,10 @@
 
 /obj/item/clothing/head/helmet/f13/brokenpa/t45d
 	name = "broken T-45d power helmet"
-	desc = "This power armor helmet is so decrepit and battle-worn that it have ceased it's primary function of protecting the wearer from harm.<br>It still can provide some very basic protection though."
+	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm, no longer acting as a power helmet it is no more than a heavy metal helmet."
 	icon_state = "brokenhelmet"
 	item_state = "brokenhelmet"
-	armor = list(melee = 30, bullet = 20, laser = 0,energy = 0, bomb = 10, bio = 0, rad = 10)
+	armor = list(melee = 65, bullet = 39, laser = 25,energy = 25, bomb = 39, bio = 0, rad = 50)
 	flash_protect = 0
 
 /obj/item/clothing/head/helmet/f13/brokenpa/t45b
@@ -473,7 +470,7 @@
 	desc = "It's a pre-War power armor helmet, recovered and maintained by NCR engineers."
 	icon_state = "t45bhelmet"
 	item_state = "t45bhelmet"
-	armor = list(melee = 70, bullet = 50, laser = 50,energy = 50, bomb = 30, bio = 100, rad = 20)
+	armor = list(melee = 40, bullet = 48, laser = 25,energy = 25, bomb = 48, bio = 100, rad = 50)
 	flash_protect = 0
 
 //Power armor helmets
@@ -503,25 +500,25 @@
 	return ..()
 
 /obj/item/clothing/head/helmet/power_armor/f13/t45b
-	name = "T-45b power helmet"
+	name = "Salvaged T-45b helmet"
 	desc = "It's a pre-War power armor helmet, recovered and maintained by NCR engineers."
 	icon_state = "t45bhelmet"
 	item_state = "t45bhelmet"
-	armor = list(melee = 70, bullet = 60, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 60)
+	armor = list(melee = 40, bullet = 48, laser = 25,energy = 25, bomb = 48, bio = 100, rad = 50)
 
 /obj/item/clothing/head/helmet/power_armor/f13/advanced
 	name = "Advanced power helmet"
 	desc = "It's an advanced power armor Mk I helmet, typically used by the Enclave. It looks somewhat threatening."
 	icon_state = "advhelmet1"
 	item_state = "advhelmet1"
-	armor = list(melee = 80, bullet = 70, laser = 70, energy = 70, bomb = 70, bio = 100, rad = 80)
+	armor = list(melee = 85, bullet = 72, laser = 48, energy = 48, bomb = 72, bio = 100, rad = 100)
 
 /obj/item/clothing/head/helmet/power_armor/f13/advanced/mk2
 	name = "Advanced power helmet MK2"
 	desc = "It's an improved model of advanced power armor used exclusively by the Enclave military forces, developed after the Great War.<br>Like its older brother, the standard advanced power armor, it's matte black with a menacing appearance, but with a few significant differences - it appears to be composed entirely of lightweight ceramic composites rather than the usual combination of metal and ceramic plates.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "advhelmet2"
 	item_state = "advhelmet2"
-	armor = list(melee = 90, bullet = 80, laser = 80, energy = 80, bomb = 80, bio = 100, rad = 90)
+	armor = list(melee = 85, bullet = 72, laser = 48, energy = 48, bomb = 72, bio = 100, rad = 100)
 
 
 /obj/item/clothing/head/helmet/power_armor/f13/tesla
@@ -530,7 +527,7 @@
 	icon_state = "tesla"
 	item_state = "tesla"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
-	armor = list(melee = 50, bullet = 30, laser = 80, energy = 80, bomb = 30, bio = 100, rad = 80)
+	armor = list(melee = 85, bullet = 62, laser = 80, energy = 80, bomb = 62, bio = 100, rad = 100)
 
 
 /obj/item/clothing/head/helmet/power_armor/f13/t51b
@@ -538,14 +535,14 @@
 	desc = "It's a t51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
 	icon_state = "t51bhelmet"
 	item_state = "t51bhelmet"
-	armor = list(melee = 80, bullet = 60, laser = 60,energy = 60, bomb = 40, bio = 100, rad = 60)
+	armor = list(melee = 75, bullet = 62, laser = 39,energy = 39, bomb = 62, bio = 100, rad = 100)
 
 /obj/item/clothing/head/helmet/power_armor/f13/t45d
 	name = "T-45d power helmet"
 	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
 	icon_state = "t45dhelmet"
 	item_state = "t45dhelmet"
-	armor = list(melee = 70, bullet = 60, laser = 60, energy = 60, bomb = 60, bio = 100, rad = 70)
+	armor = list(melee = 75, bullet = 62, laser = 39, energy = 39, bomb = 62, bio = 100, rad = 60)
 	action_button_name = "Toggle Helmet Light"
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
