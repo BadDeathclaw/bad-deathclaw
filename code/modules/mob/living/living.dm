@@ -237,7 +237,8 @@ Sorry Giacom. Please don't be mad :(
 	if(status_flags & GODMODE)	return 0
 	bruteloss = min(max(bruteloss + amount, 0),(maxHealth*2))
 	handle_regular_status_updates() //we update our health right away.
-	update_canmove(
+	update_canmove()
+	handle_hud_icons_health()
 
 /mob/living/proc/getOxyLoss()
 	return oxyloss
@@ -246,13 +247,15 @@ Sorry Giacom. Please don't be mad :(
 	if(status_flags & GODMODE)	return 0
 	oxyloss = min(max(oxyloss + amount, 0),(maxHealth*2))
 	handle_regular_status_updates()
-	update_canmove(
+	update_canmove()
+	handle_hud_icons_health()
 
 /mob/living/proc/setOxyLoss(amount)
 	if(status_flags & GODMODE)	return 0
 	oxyloss = amount
 	handle_regular_status_updates()
-	update_canmove(
+	update_canmove()
+	handle_hud_icons_health()
 
 /mob/living/proc/getToxLoss()
 	return toxloss
@@ -261,13 +264,15 @@ Sorry Giacom. Please don't be mad :(
 	if(status_flags & GODMODE)	return 0
 	toxloss = min(max(toxloss + amount, 0),(maxHealth*2))
 	handle_regular_status_updates()
-	update_canmove(
+	update_canmove()
+	handle_hud_icons_health()
 
 /mob/living/proc/setToxLoss(amount)
 	if(status_flags & GODMODE)	return 0
 	toxloss = amount
 	handle_regular_status_updates()
-	update_canmove(
+	update_canmove()
+	handle_hud_icons_health()
 
 /mob/living/proc/getFireLoss()
 	return fireloss
@@ -276,7 +281,8 @@ Sorry Giacom. Please don't be mad :(
 	if(status_flags & GODMODE)	return 0
 	fireloss = min(max(fireloss + amount, 0),(maxHealth*2))
 	handle_regular_status_updates() //we update our health right away.
-	update_canmove(
+	update_canmove()
+	handle_hud_icons_health()
 
 /mob/living/proc/getCloneLoss()
 	return cloneloss
@@ -285,13 +291,15 @@ Sorry Giacom. Please don't be mad :(
 	if(status_flags & GODMODE)	return 0
 	cloneloss = min(max(cloneloss + amount, 0),(maxHealth*2))
 	handle_regular_status_updates()
-	update_canmove(
+	update_canmove()
+	handle_hud_icons_health()
 
 /mob/living/proc/setCloneLoss(amount)
 	if(status_flags & GODMODE)	return 0
 	cloneloss = amount
 	handle_regular_status_updates()
-	update_canmove(
+	update_canmove()
+	handle_hud_icons_health()
 
 /mob/living/proc/getBrainLoss()
 	return brainloss
@@ -300,13 +308,15 @@ Sorry Giacom. Please don't be mad :(
 	if(status_flags & GODMODE)	return 0
 	brainloss = min(max(brainloss + amount, 0),(maxHealth*2))
 	handle_regular_status_updates()
-	update_canmove(
+	update_canmove()
+	handle_hud_icons_health()
 
 /mob/living/proc/setBrainLoss(amount)
 	if(status_flags & GODMODE)	return 0
 	brainloss = amount
 	handle_regular_status_updates() //we update our health right away.
-	update_canmove(
+	update_canmove()
+	handle_hud_icons_health()
 
 /mob/living/proc/getStaminaLoss()
 	return staminaloss
@@ -314,12 +324,14 @@ Sorry Giacom. Please don't be mad :(
 /mob/living/proc/adjustStaminaLoss(amount)
 	if(status_flags & GODMODE)	return 0
 	staminaloss = min(max(staminaloss + amount, 0),(maxHealth*2))
-	update_canmove(
+	update_canmove()
+	handle_hud_icons_health()
 
 /mob/living/proc/setStaminaLoss(amount)
 	if(status_flags & GODMODE)	return 0
 	staminaloss = amount
-	update_canmove(
+	update_canmove()
+	handle_hud_icons_health()
 
 /mob/living/proc/getMaxHealth()
 	return maxHealth
