@@ -9,7 +9,6 @@
 	var/gundamageapplied=0
 
 
-
 /obj/item/projectile/bullet/deagleAE //heavy - .50 deagle
 	damage = 60
 
