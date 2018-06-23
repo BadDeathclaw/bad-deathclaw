@@ -426,24 +426,36 @@ Sorry Giacom. Please don't be mad :(
 	adjustBruteLoss(-brute)
 	adjustFireLoss(-burn)
 	src.updatehealth()
+	update_canmove()
+	handle_hud_icons_health()
+
 
 // damage ONE external organ, organ gets randomly selected from damaged ones.
 /mob/living/proc/take_organ_damage(brute, burn)
 	adjustBruteLoss(brute)
 	adjustFireLoss(burn)
 	src.updatehealth()
+	update_canmove()
+	handle_hud_icons_health()
+
 
 // heal MANY external organs, in random order
 /mob/living/proc/heal_overall_damage(brute, burn)
 	adjustBruteLoss(-brute)
 	adjustFireLoss(-burn)
 	src.updatehealth()
+	update_canmove()
+	handle_hud_icons_health()
+
 
 // damage MANY external organs, in random order
 /mob/living/proc/take_overall_damage(brute, burn)
 	adjustBruteLoss(brute)
 	adjustFireLoss(burn)
 	src.updatehealth()
+	update_canmove()
+	handle_hud_icons_health()
+
 
 /mob/living/proc/revive()
 	setToxLoss(0)
