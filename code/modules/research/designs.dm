@@ -266,6 +266,15 @@ other types of metals and chemistry for reagents).
 	build_path = /obj/item/weapon/storage/bag/ore/holding
 	category = list("Bluespace Designs")
 
+/datum/design/handtele
+	name = "Hand Teleporter"
+	id = "handtele"
+	req_tech = list("bluespace" = 3, "materials" = 4)
+	build_type = PROTOLATHE
+	materials = list(MAT_GOLD = 250, MAT_URANIUM = 500)
+	reliability = 100
+	build_path = /obj/item/weapon/hand_tele
+	category = list("Bluespace Designs")
 
 /////////////////////////////////////////
 /////////////////HUDs////////////////////
@@ -437,6 +446,15 @@ datum/design/diagnostic_hud_night
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 250, MAT_GLASS = 300)
 	build_path = /obj/item/clothing/glasses/science
+	category = list("Equipment")
+
+/datum/design/combatrcd
+	name = "Combat RCD"
+	id = "combatrcd"
+	req_tech = list("materials" = 3, "magnets" = 3, "engineering" = 2)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 20000, MAT_GLASS = 20000)
+	build_path = /obj/item/weapon/rcd/combat
 	category = list("Equipment")
 
 /////////////////////////////////////////

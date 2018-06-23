@@ -103,16 +103,15 @@
 	build_path = /obj/item/clothing/head/helmet/alt
 	category = list("Weapons")
 
-/datum/design/laserrifle
-	name = "Laser Rifle"
-	desc = "A Laser Rifle."
+/datum/design/lasercannon
+	name = "Laser Cannon"
+	desc = "A laser cannon."
 	id = "lasercannon"
 	req_tech = list("combat" = 4, "materials" = 3, "powerstorage" = 3)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 10000, MAT_GLASS = 2000, MAT_DIAMOND = 2000)
-	build_path = /obj/item/weapon/gun/energy/laser
+	build_path = /obj/item/weapon/gun/energy/lasercannon
 	category = list("Weapons")
-	
 
 /datum/design/mfc
 	name = "Microfusion Cell"

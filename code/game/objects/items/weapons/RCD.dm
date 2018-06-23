@@ -323,6 +323,16 @@ RCD
 						F.ChangeTurf(/turf/simulated/wall)
 						return 1
 				return 0
+			if(istype(A, /turf/simulated/wall))
+				var/turf/simulated/wall/Wa = A
+				if(checkResource(wallcost,user) && canRturf)
+					user << "<span class='notice'>You start reinforcing the wall...</span>"
+					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
+					if(do_after(user, walldelay, target = A))
+						if(!useResource(wallcost, user)) return 0
+						activate()
+						Wa.ChangeTurf(/turf/simulated/wall/r_wall)
+						return 1
 
 		if(2)
 			if(istype(A, /turf/simulated/floor))
