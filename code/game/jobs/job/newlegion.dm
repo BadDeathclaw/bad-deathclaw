@@ -35,7 +35,7 @@ Legion
 	head = /obj/item/clothing/head/helmet/f13/legrecruit
 	glasses = /obj/item/clothing/glasses/sunglasses/legion
 	mask = /obj/item/clothing/mask/bandana/legrecruit
-	suit_store = /obj/item/weapon/gun/projectile/revolver/m29/police
+	suit_store = /obj/item/weapon/gun/projectile/revolver/police
 	back = /obj/item/weapon/storage/backpack
 	backpack = /obj/item/weapon/storage/backpack
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm

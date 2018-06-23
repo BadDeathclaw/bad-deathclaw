@@ -159,7 +159,7 @@ obj
 									lb.loc=src.loc
 									del src
 								if(7)
-									var/obj/item/weapon/gun/projectile/revolver/m29/police/lb = new
+									var/obj/item/weapon/gun/projectile/revolver/police/lb = new
 									lb.loc=src.loc
 									del src
 								if(8)

@@ -19,6 +19,13 @@
 	max_ammo = 6
 	multiple_sprites = 1
 
+/obj/item/ammo_box/c357/lowpower
+	name = "speed loader (.357)"
+	icon_state = "38"
+	ammo_type = /obj/item/ammo_casing/c357
+	max_ammo = 6
+	multiple_sprites = 1
+
 /obj/item/ammo_box/c4570
 	name = "speed loader (.45-70 Gov't)"
 	icon_state = "4570"
@@ -90,6 +97,12 @@
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart/riot
 
 /obj/item/ammo_box/a556
+	name = "ammo box (5.56x45mm)"
+	icon_state = "556box"
+	ammo_type = /obj/item/ammo_casing/a556
+	max_ammo = 20
+
+/obj/item/ammo_box/a556/surplus
 	name = "ammo box (5.56x45mm)"
 	icon_state = "556box"
 	ammo_type = /obj/item/ammo_casing/a556
