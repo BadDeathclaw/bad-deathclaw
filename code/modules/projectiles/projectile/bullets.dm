@@ -44,11 +44,11 @@
 	damage = 24 //5 hit crit
 
 /obj/item/projectile/bullet/weakbullet3 //9mm
-	damage = 20
-	armour_penetration = 5
+	damage = 30
+	armour_penetration = 10
 
 /obj/item/projectile/bullet/weakbullet3/surplus //9mm surplus
-	damage = 15
+	damage = 20
 	armour_penetration = 0
 
 /obj/item/projectile/bullet/weakbullet4 //22lr
@@ -67,8 +67,8 @@
 	damage = 10
 
 /obj/item/projectile/bullet/armourpiercing //9mmap
-	damage = 15
-	armour_penetration = 25
+	damage = 25
+	armour_penetration = 10
 
 /obj/item/projectile/bullet/pellet //shotgunpellet
 	name = "pellet"

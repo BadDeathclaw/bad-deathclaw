@@ -163,7 +163,6 @@
 	var/poison_amount = 5
 	slot = "stomach"
 	origin_tech = "materials=5;programming=3;biotech=4"
-	var/isupgraded = 0
 
 /obj/item/organ/internal/cyberimp/chest/nutriment/on_life()
 	if(synthesizing)
@@ -173,12 +172,6 @@
 		synthesizing = 1
 		owner << "<span class='notice'>You feel less hungry...</span>"
 		owner.nutrition += 50
-		spawn(50)
-			synthesizing = 0
-	if(owner.water && isupgraded && owner.water <= 350)
-		synthesizing = 1
-		owner << "<span class='notice'>You feel less dry in the mouth...</span>"
-		owner.water += 50
 		spawn(50)
 			synthesizing = 0
 
@@ -191,13 +184,12 @@
 
 /obj/item/organ/internal/cyberimp/chest/nutriment/plus
 	name = "Nutriment pump implant PLUS"
-	desc = "This implant will synthesize and pump into your bloodstream a small amount of nutriment when you are hungry as well as synthesizes water."
+	desc = "This implant will synthesize and pump into your bloodstream a small amount of nutriment when you are hungry."
 	icon_state = "chest_implant"
 	implant_color = "#006607"
 	hunger_threshold = NUTRITION_LEVEL_HUNGRY
 	poison_amount = 10
 	origin_tech = "materials=5;programming=3;biotech=5"
-	isupgraded = 1
 
 
 
