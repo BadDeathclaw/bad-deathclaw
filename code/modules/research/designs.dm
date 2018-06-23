@@ -448,6 +448,15 @@ datum/design/diagnostic_hud_night
 	build_path = /obj/item/clothing/glasses/science
 	category = list("Equipment")
 
+/datum/design/combatrcd
+	name = "Combat RCD"
+	id = "combatrcd"
+	req_tech = list("materials" = 3, "magnets" = 3, "engineering" = 2)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 20000, MAT_GLASS = 20000)
+	build_path = /obj/item/weapon/rcd/combat
+	category = list("Equipment")
+
 /////////////////////////////////////////
 ////////////Janitor Designs//////////////
 /////////////////////////////////////////
