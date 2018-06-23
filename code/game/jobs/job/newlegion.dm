@@ -50,56 +50,6 @@ Legion
 /datum/outfit/job/legrecruit/post_equip(mob/living/carbon/human/H)
 	H.faction = "Legion"
 
-datum/job/legprime
-	title = "Prime legionary"
-	flag = PRIME
-	department_head = list("Centurion")
-	department_flag = LEGION
-	faction = "Legion"
-	total_positions = 4
-	spawn_positions = 4
-	supervisors = "Legion Decanus"
-	selection_color = "#ffeeee"
-	minimal_player_age = 7
-
-	outfit = /datum/outfit/job/legprime
-
-	access = list()
-	minimal_access = list()
-	late_join = 1
-
-/datum/outfit/job/legprime
-	name = "Prime legionary"
-	id = null
-	ears = null
-	belt = null
-
-/datum/outfit/job/legprime/pre_equip(mob/living/carbon/human/H)
-	..()
-	uniform = pick(/obj/item/clothing/under/pants/f13/caravan)
-	shoes = /obj/item/clothing/shoes/legionmetal
-	gloves = /obj/item/clothing/gloves/f13/legion
-	suit = /obj/item/clothing/suit/armor/f13/legrecruit/vet
-	head = /obj/item/clothing/head/helmet/f13/legveteran
-	glasses = /obj/item/clothing/glasses/sunglasses/legion
-	mask = /obj/item/clothing/mask/bandana/legvet
-	suit_store = /obj/item/weapon/gun/projectile/revolver/m29/police
-	back = /obj/item/weapon/storage/backpack
-	backpack = /obj/item/weapon/storage/backpack
-	satchel = /obj/item/weapon/storage/backpack/satchel_norm
-	backpack_contents = list(/obj/item/weapon/restraints/legcuffs/bola=1, \
-	/obj/item/stack/spear/bundle=1, \
-	/obj/item/stack/coin/random/low = 2, \
-	/obj/item/ammo_box/m44=1, \
-	/obj/item/weapon/machete = 1, \
-	/obj/item/weapon/reagent_containers/pill/patch/healpowder=1, \
-	/obj/item/device/flashlight/flare/torch=1)
-
-/datum/outfit/job/legrecruit/post_equip(mob/living/carbon/human/H)
-	H.faction = "Legion"
-
-
-
 //decan
 /datum/job/legdecan
 	title = "Legion Decanus"
