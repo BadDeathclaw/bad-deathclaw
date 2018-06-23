@@ -62,6 +62,15 @@
 	construction_time = 200
 	category = list("Cyborg")
 
+/datum/design/borg_complete
+	name = "Cyborg Complete"
+	id = "borg_complete"
+	build_type = MECHFAB
+	build_path = /obj/item/robot_parts/robot_suit/complete
+	materials = list(MAT_METAL=100000)
+	construction_time = 1900
+	category = list("Cyborg")
+
 //Ripley
 /datum/design/ripley_chassis
 	name = "Exosuit Chassis (APLU \"Ripley\")"
