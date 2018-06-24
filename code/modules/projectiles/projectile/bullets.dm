@@ -52,7 +52,7 @@
 
 /obj/item/projectile/bullet/armourpiercing //unused
 	damage = 25
-	armour_penetration = 10
+	armour_penetration = 0
 
 /obj/item/projectile/bullet/pellet //shotgunpellet
 	name = "pellet"
