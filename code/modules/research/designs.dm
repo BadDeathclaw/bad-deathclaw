@@ -523,3 +523,12 @@ datum/design/diagnostic_hud_night
 	materials = list(MAT_METAL = 20000, MAT_GLASS = 1000, MAT_PLASMA = 10000, MAT_URANIUM = 10000)
 	build_path = /obj/item/weapon/circuitboardthing
 	category = list("Equipment")
+
+/datum/design/portaturretconstruct
+	name = "Portable Turret Constructor"
+	id = "portaturretconstruct"
+	req_tech = list("materials" = 4, "engineering" = 4, "bluespace" = 3, "plasmatech" = 3)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 20000, MAT_GLASS = 1000, MAT_PLASMA = 10000, MAT_URANIUM = 10000)
+	build_path = /obj/item/weapon/portaturretconstruct
+	category = list("Equipment")

@@ -51,16 +51,6 @@
 	build_path = /obj/item/weapon/gun/projectile/automatic/wt550
 	category = list("Weapons")
 
-/datum/design/assaultrifle
-	name = "Advanced Assault Rifle"
-	desc = "An advanced assault rifle that uses 556."
-	id = "assaultrifle"
-	req_tech = list("combat" = 6, "materials" = 7, "syndicate" = 5)
-	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 75000, MAT_SILVER = 20000, MAT_GOLD = 20000, MAT_URANIUM = 20000)
-	build_path = /obj/item/weapon/gun/projectile/automatic/ar
-	category = list("Weapons")
-
 /datum/design/tele_shield
 	name = "Telescopic Riot Shield"
 	desc = "An advanced riot shield made of lightweight materials that collapses for easy storage."

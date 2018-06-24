@@ -31,7 +31,7 @@
 	var/lasercolor = ""		//Something to do with lasertag turrets, blame Sieve for not adding a comment.
 	var/raised = 0			//if the turret cover is "open" and the turret is raised
 	var/raising= 0			//if the turret is currently opening or closing its cover
-	var/health = 80			//the turret's health
+	var/health = 120			//the turret's health
 	var/locked = 1			//if the turret's behaviour control access is locked
 	var/controllock = 0		//if the turret responds to control panels
 
@@ -288,6 +288,13 @@
 			else
 				user << "<span class='notice'>You remove the turret but did not manage to salvage anything.</span>"
 			qdel(src)
+	else if(istype(I, /obj/item/weapon/weldingtool) && user.a_intent != "harm")
+		user.changeNext_move(CLICK_CD_MELEE)
+		var/obj/item/weapon/weldingtool/WT = I
+		if(src.health<initial(src.health))
+			if (WT.remove_fuel(0,user))
+				user << "<span class='notice'>You repair the damaged gas tank.</span>"
+				health = max(initial(health), health + 10)
 
 	else if((istype(I, /obj/item/weapon/wrench)) && (!on))
 		if(raised) return

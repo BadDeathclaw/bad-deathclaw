@@ -242,7 +242,7 @@
 	item_state = "syringe_0"
 	icon_state = "0"
 	w_class = 2
-	var/obj/item/organ/storedorgan
+	var/obj/item/organ/internal/storedorgan
 	var/organ_type = /obj/item/organ
 	var/uses = INFINITE
 	var/starting_organ
@@ -267,7 +267,7 @@
 	organtoimplant.Insert(user)//insert stored organ into the user
 	user << "<span class='notice'>[user] presses a button on [src], and you hear a short mechanical noise.</span>"
 	playsound(user.loc, 'sound/weapons/circsawhit.ogg', 50, 1, -1)
-	qdel(storedorgan)
+	storedorgan.Insert(user)
 	storedorgan = null
 	name = initial(name)
 	if(uses != INFINITE)
@@ -286,7 +286,8 @@
 		else if(!uses)
 			user << "<span class='notice'>[src] has already been used up.</span>"
 			return
-		storedorgan = I
+		storedorgan = new I.type(src)
+		qdel(I)
 		user << "<span class='notice'>You insert the [I] into [src].</span>"
 	else if(istype(I, /obj/item/weapon/screwdriver))
 		if(!storedorgan)

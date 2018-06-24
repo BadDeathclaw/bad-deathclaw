@@ -214,7 +214,7 @@
 	id = "odysseus_whole"
 	build_type = MECHFAB
 	build_path = /obj/mecha/medical/odysseus
-	materials = list(MAT_MEETAL=64000,MAT_GLASS=12000)
+	materials = list(MAT_METAL=64000,MAT_GLASS=12000)
 	construction_time = 880
 	category = list("Odysseus")
 
