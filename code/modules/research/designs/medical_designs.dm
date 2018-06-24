@@ -106,8 +106,8 @@
 	reliability = 76
 	build_path = /obj/item/bodybag/bluespace
 	category = list("Medical Designs")
-
-//datum/design/plasmarefiller
+/*
+/datum/design/plasmarefiller
 	name = "Plasma-man jumpsuit refill"
 	desc = "A refill pack for the auto-extinguisher on Plasma-man suits."
 	id = "plasmarefiller"
@@ -117,7 +117,7 @@
 	reliability = 76
 	build_path = /obj/item/device/extinguisher_refill
 	category = list("Medical Designs")
-
+*/
 /datum/design/medibeam
 	name = "Medical Beamgun"
 	desc = "Delivers medical nanites in a focused beam."
@@ -126,6 +126,15 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 5000, MAT_GLASS = 4000, MAT_URANIUM = 8000, MAT_DIAMOND = 2000)
 	build_path = /obj/item/weapon/gun/medbeam
+	category = list("Medical Designs")
+
+/datum/design/combathypo
+	name = "Combat Hypospray"
+	id = "combathypo"
+	req_tech = list("combat" = 6, "materials" = 7, "powerstorage" = 8, "programming" = 6, "biotech" = 6)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 2000, MAT_GLASS = 2000, MAT_URANIUM = 2000)
+	build_path = /obj/item/weapon/reagent_containers/hypospray/combat/nanites
 	category = list("Medical Designs")
 
 /////////////////////////////////////////
@@ -242,6 +251,15 @@
 	build_path = /obj/item/organ/internal/cyberimp/chest/reviver
 	category = list("Misc", "Medical Designs")
 
+/datum/design/autoimplant
+	name = "Auto Implanter"
+	id = "autoimplant"
+	req_tech = list("materials" = 6, "programming" = 4, "biotech" = 7, "syndicate" = 4)
+	build_type = PROTOLATHE | MECHFAB
+	construction_time = 60
+	materials = list(MAT_METAL = 20000, MAT_GLASS = 20000, MAT_GOLD = 10000, MAT_URANIUM = 10000, MAT_DIAMOND = 5000)
+	build_path = /obj/item/device/autosurgeon
+	category = list("Misc", "Medical Designs")
 
 /////////////////////////////////////////
 ////////////Regular Implants/////////////
@@ -257,6 +275,16 @@
 	build_path = /obj/item/weapon/implanter
 	category = list("Medical Designs")
 
+/datum/design/bruteaid
+	name = "Brute Aid Kit"
+	desc = "A first aid kit containing various brute patches.."
+	id = "bruteaid"
+	req_tech = list("materials" = 1, "programming" = 2, "biotech" = 3)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 600, MAT_GLASS = 200)
+	build_path = /obj/item/weapon/storage/firstaid/brute
+	category = list("Medical Designs")
+
 /datum/design/implantcase
 	name = "Implant Case"
 	desc = "A glass case containing an implant."
@@ -267,6 +295,52 @@
 	build_path = /obj/item/weapon/implantcase
 	category = list("Medical Designs")
 
+/datum/design/trackerbox
+	name = "Boxed Tracking Implants"
+	desc = "A boxed kit containing various tracking implants and a implanter"
+	id = "implantbox"
+	build_type = PROTOLATHE
+	materials = list(MAT_GLASS = 20000)
+	build_path = /obj/item/weapon/storage/box/trackimp
+	category = list("Medical Designs")
+
+/datum/design/trackerplant
+	name = "Tracking Implant Case"
+	desc = "A glass case containing a tracking implant."
+	id = "implanttracker"
+	build_type = PROTOLATHE
+	materials = list(MAT_GLASS = 4000)
+	build_path = /obj/item/weapon/implantcase/tracking
+	category = list("Medical Designs")
+
+/datum/design/chemimplanter
+	name = "Chemical Implant Case"
+	desc = "A glass case containing a chemical implant."
+	id = "implantchemical"
+	build_type = PROTOLATHE
+	materials = list(MAT_GLASS = 4000)
+	build_path = /obj/item/weapon/implantcase/chem
+	category = list("Medical Designs")
+
+/datum/design/trackerplant
+	name = "Boxed Chemical Implants"
+	desc = "A glass case containing a tracking implant."
+	id = "implanttracker"
+	build_type = PROTOLATHE
+	materials = list(MAT_GLASS = 20000)
+	build_path = /obj/item/weapon/storage/box/chemimp
+	category = list("Medical Designs")
+
+/datum/design/weaponauth
+	name = "Weapon Authorization Implant Case"
+	desc = "A glass case containing a Weapon Authorization implant case."
+	id = "weaponauth"
+	build_type = PROTOLATHE
+	materials = list(MAT_GLASS = 4000)
+	build_path = /obj/item/weapon/implantcase/weapons_auth
+	category = list("Medical Designs")
+
+/*
 /datum/design/implant_freedom
 	name = "Freedom Implant Case"
 	desc = "A glass case containing an implant."
@@ -286,3 +360,4 @@
 	materials = list(MAT_METAL = 50, MAT_GLASS = 500, MAT_GOLD = 500, MAT_URANIUM = 100, MAT_DIAMOND = 200)
 	build_path = /obj/item/weapon/implantcase/adrenaline
 	category = list("Medical Designs")
+*/
