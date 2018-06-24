@@ -1,6 +1,6 @@
 /obj/item/device/firing_pin
 	name = "electronic firing pin"
-	desc = "A small authentication device, to be inserted into a firearm receiver to allow operation. NT safety regulations require all new designs to incorporate one."
+	desc = "A small authentication device, to be inserted into a firearm receiver to allow operation."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "firing_pin"
 	item_state = "pen"
@@ -105,7 +105,7 @@
 	req_implant = /obj/item/weapon/implant/loyalty
 
 /obj/item/device/firing_pin/implant/pindicate
-	name = "syndicate firing pin"
+	name = "Weapon Authorization firing pin"
 	icon_state = "firing_pin_pindi"
 	req_implant = /obj/item/weapon/implant/weapons_auth
 

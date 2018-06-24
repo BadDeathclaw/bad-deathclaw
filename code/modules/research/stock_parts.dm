@@ -75,7 +75,7 @@
 	src.pixel_x = rand(-5, 5)
 	src.pixel_y = rand(-5, 5)
 
-//Rating 1
+//Tier 1
 
 /obj/item/weapon/stock_parts/console_screen
 	name = "console screen"
@@ -119,7 +119,7 @@
 	origin_tech = "materials=1"
 	materials = list(MAT_METAL=80)
 
-//Rating 2
+//Tier 2
 
 /obj/item/weapon/stock_parts/capacitor/adv
 	name = "advanced capacitor"
@@ -161,14 +161,14 @@
 	rating = 2
 	materials = list(MAT_METAL=80)
 
-//Rating 3
+//Tier 3
 
 /obj/item/weapon/stock_parts/capacitor/super
 	name = "super capacitor"
 	desc = "A super-high capacity capacitor used in the construction of a variety of devices."
 	icon_state = "super_capacitor"
 	origin_tech = "powerstorage=5;materials=4"
-	rating = 3
+	rating = 4
 	materials = list(MAT_METAL=50, MAT_GLASS=50)
 
 /obj/item/weapon/stock_parts/scanning_module/phasic
@@ -176,7 +176,7 @@
 	desc = "A compact, high resolution phasic scanning module used in the construction of certain devices."
 	icon_state = "super_scan_module"
 	origin_tech = "magnets=5"
-	rating = 3
+	rating = 4
 	materials = list(MAT_METAL=50, MAT_GLASS=20)
 
 /obj/item/weapon/stock_parts/manipulator/pico
@@ -184,7 +184,7 @@
 	desc = "A tiny little manipulator used in the construction of certain devices."
 	icon_state = "pico_mani"
 	origin_tech = "materials=5;programming=2"
-	rating = 3
+	rating = 4
 	materials = list(MAT_METAL=30)
 
 /obj/item/weapon/stock_parts/micro_laser/ultra
@@ -192,7 +192,7 @@
 	icon_state = "ultra_high_micro_laser"
 	desc = "A tiny laser used in certain devices."
 	origin_tech = "magnets=5"
-	rating = 3
+	rating = 4
 	materials = list(MAT_METAL=10, MAT_GLASS=20)
 
 /obj/item/weapon/stock_parts/matter_bin/super
@@ -203,14 +203,14 @@
 	rating = 3
 	materials = list(MAT_METAL=80)
 
-//Rating 4
+//Tier 4
 
 /obj/item/weapon/stock_parts/capacitor/quadratic
 	name = "quadratic capacitor"
 	desc = "An capacity capacitor used in the construction of a variety of devices."
 	icon_state = "quadratic_capacitor"
 	origin_tech = "powerstorage=6;materials=5"
-	rating = 4
+	rating = 8
 	materials = list(MAT_METAL=50, MAT_GLASS=50)
 
 /obj/item/weapon/stock_parts/scanning_module/triphasic
@@ -218,7 +218,7 @@
 	desc = "A compact, ultra resolution triphasic scanning module used in the construction of certain devices."
 	icon_state = "triphasic_scan_module"
 	origin_tech = "magnets=6"
-	rating = 4
+	rating = 8
 	materials = list(MAT_METAL=50, MAT_GLASS=20)
 
 /obj/item/weapon/stock_parts/manipulator/femto
@@ -226,7 +226,7 @@
 	desc = "A tiny little manipulator used in the construction of certain devices."
 	icon_state = "femto_mani"
 	origin_tech = "materials=6;programming=3"
-	rating = 4
+	rating = 8
 	materials = list(MAT_METAL=30)
 
 /obj/item/weapon/stock_parts/micro_laser/quadultra
@@ -234,7 +234,7 @@
 	icon_state = "quadultra_micro_laser"
 	desc = "A tiny laser used in certain devices."
 	origin_tech = "magnets=6"
-	rating = 4
+	rating = 8
 	materials = list(MAT_METAL=10, MAT_GLASS=20)
 
 /obj/item/weapon/stock_parts/matter_bin/bluespace
@@ -242,7 +242,7 @@
 	desc = "A container for hold compressed matter awaiting re-construction."
 	icon_state = "bluespace_matter_bin"
 	origin_tech = "materials=6"
-	rating = 4
+	rating = 8
 	materials = list(MAT_METAL=80)
 
 // Subspace stock parts
