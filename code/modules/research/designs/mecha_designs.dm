@@ -101,7 +101,7 @@
 	materials = list(MAT_GLASS = 1000, "sacid" = 20)
 	build_path = /obj/item/weapon/circuitboard/mecha/durand/targeting
 	category = list("Exosuit Modules")
-
+/*
 /datum/design/honker_main
 	name = "Exosuit Module (\"H.O.N.K\" Central Control module)"
 	desc = "Allows for the construction of a \"H.O.N.K\" Central Control module."
@@ -161,7 +161,7 @@
 	materials = list(MAT_GLASS = 1000, "sacid" = 20)
 	build_path = /obj/item/weapon/circuitboard/mecha/phazon/targeting
 	category = list("Exosuit Modules")
-
+*/
 ////////////////////////////////////////
 /////////// Mecha Equpment /////////////
 ////////////////////////////////////////
@@ -226,12 +226,13 @@
 	desc = "Allows for the construction of SGL-6 Grenade Launcher."
 	id = "mech_grenade_launcher"
 	build_type = MECHFAB
-	req_tech = list("combat" = 3)
+	req_tech = list("combat" = 10)
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/flashbang
 	materials = list(MAT_METAL=22000,MAT_GOLD=6000,MAT_SILVER=8000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
 
+/*
 /datum/design/mech_missile_rack
 	name = "Exosuit Weapon (SRM-8 Missile Rack)"
 	desc = "Allows for the construction of SRM-8 Missile Rack."
@@ -242,13 +243,14 @@
 	materials = list(MAT_METAL=22000,MAT_GOLD=6000,MAT_SILVER=8000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
+*/
 
 /datum/design/clusterbang_launcher
 	name = "Exosuit Module (SOB-3 Clusterbang Launcher)"
 	desc = "A weapon that violates the Geneva Convention at 3 rounds per minute"
 	id = "clusterbang_launcher"
 	build_type = MECHFAB
-	req_tech = list("combat"= 5, "materials" = 5, "syndicate" = 3)
+	req_tech = list("combat"= 10, "materials" = 5, "syndicate" = 3)
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/flashbang/clusterbang
 	materials = list(MAT_METAL=20000,MAT_GOLD=10000,MAT_URANIUM=10000)
 	construction_time = 100
@@ -259,7 +261,7 @@
 	desc = "An exosuit module that allows generating of small quasi-stable wormholes."
 	id = "mech_wormhole_gen"
 	build_type = MECHFAB
-	req_tech = list("bluespace" = 3, "magnets" = 2)
+	req_tech = list("bluespace" = 10, "magnets" = 2)
 	build_path = /obj/item/mecha_parts/mecha_equipment/wormhole_generator
 	materials = list(MAT_METAL=10000)
 	construction_time = 100
@@ -292,7 +294,7 @@
 	desc = "An exosuit mounted Gravitational Catapult."
 	id = "mech_gravcatapult"
 	build_type = MECHFAB
-	req_tech = list("bluespace" = 2, "magnets" = 3, "engineering" = 3)
+	req_tech = list("bluespace" = 10, "magnets" = 3, "engineering" = 3)
 	build_path = /obj/item/mecha_parts/mecha_equipment/gravcatapult
 	materials = list(MAT_METAL=10000)
 	construction_time = 100
@@ -380,7 +382,7 @@
 	desc = "A weapon for combat exosuits. Shoots non-lethal stunning electrodes."
 	id = "mech_taser"
 	build_type = MECHFAB
-	req_tech = list("combat" = 2)
+	req_tech = list("combat" = 10)
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/taser
 	materials = list(MAT_METAL=10000)
 	construction_time = 100
@@ -394,6 +396,17 @@
 	req_tech = list("combat" = 2)
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg
 	materials = list(MAT_METAL=10000)
+	construction_time = 100
+	category = list("Exosuit Equipment")
+
+/datum/design/mech_pulse
+	name = "Exosuit Weapon (\"Pulse\" Laser)"
+	desc = "A weapon for combat exosuits. Shoots a heavy pulse laser."
+	id = "mech_pulse"
+	build_type = MECHFAB
+	req_tech = list("combat" = 7)
+	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/pulse
+	materials = list(MAT_METAL=30000,MAT_GOLD=20000,MAT_PLASMA=25000,MAT_SILVER=20000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
 

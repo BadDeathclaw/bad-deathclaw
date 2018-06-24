@@ -399,7 +399,7 @@ proc/CallMaterialName(ID)
 
 					var/P = being_built.build_path //lets save these values before the spawn() just in case. Nobody likes runtimes.
 					var/R = being_built.reliability
-					spawn(30*amount/coeff)
+					spawn(15*amount/coeff)
 						if(g2g) //And if we only fail the material requirements, we still spend time and power
 							var/already_logged = 0
 							for(var/i = 0, i<amount, i++)
