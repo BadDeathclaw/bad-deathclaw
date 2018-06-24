@@ -334,17 +334,17 @@
 	max_ammo = 8
 
 /obj/item/ammo_box/magazine/m556
-	name = "5.56 assault magazine (5.56x45mm)"
-	icon_state = "5.56m-24"
-	origin_tech = "combat=5;syndicate=1"
+	name = "r20 5.56 magazine (5.56x45mm)"
+	icon_state = "r20-20"
+	origin_tech = "combat=3"
 	ammo_type = /obj/item/ammo_casing/a556
 	caliber = "a556"
-	max_ammo = 24
+	max_ammo = 20
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/m556/update_icon()
 	..()
-	icon_state = "5.56m-[round(ammo_count(),4)]"
+	icon_state = "r20-[round(ammo_count(),4)]"
 
 /obj/item/ammo_box/magazine/m556/r20
 	name = "r20 5.56 magazine (5.56x45mm)"
