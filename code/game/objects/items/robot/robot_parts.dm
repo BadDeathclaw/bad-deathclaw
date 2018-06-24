@@ -216,7 +216,7 @@
 				O.lawupdate = 0
 				O.make_laws()
 				if(ticker.mode.config_tag == "malfunction") //Don't let humans get a cyborg on their side during malf, for balance reasons.
-					O.set_zeroth_law("<span class='danger'>ERROR ER0RR $R0RRO$!R41.%%!!(%$^^__+ @#F0E4'STATION OVERRUN, ASSUME CONTROL TO CONTAIN OUTBREAK#*ï¿½&110010</span>")
+					O.set_zeroth_law("<span class='danger'>ERROR ER0RR $R0RRO$!R41.%%!!(%$^^__+ @#F0E4'STATION OVERRUN, ASSUME CONTROL TO CONTAIN OUTBREAK#*�&110010</span>")
 
 			ticker.mode.remove_antag_for_borging(BM.mind)
 			BM.mind.transfer_to(O)
@@ -346,18 +346,3 @@
 			user << "<span class='notice'>You insert the flash into the eye socket.</span>"
 	return
 
-/obj/item/robot_parts/robot_suit/complete
-	name = "cyborg endoskeleton"
-	desc = "A complex metal backbone with standard limb sockets and pseudomuscle anchors."
-	icon_state = "robo_suit"
-
-/obj/item/robot_parts/robot_suit/New()
-	..()
-	l_arm = new /obj/item/robot_parts/l_arm(src)
-	r_arm = new /obj/item/robot_parts/r_arm(src)
-	l_leg = new /obj/item/robot_parts/l_leg(src)
-	r_leg = new /obj/item/robot_parts/r_leg(src)
-	chest = new /obj/item/robot_parts/chest(src)
-	head = new /obj/item/robot_parts/head(src)
-	chest.cell = new /obj/item/weapon/stock_parts/cell/bluespace(src)
-	src.updateicon()
