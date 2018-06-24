@@ -56,10 +56,10 @@
 	icon_state = ".50"
 
 /obj/item/projectile/bullet/sniper
-	damage = 70
+	damage = 60
 	stun = 5
 	weaken = 5
-	armour_penetration = 50
+	armour_penetration = 0
 	var/breakthings = TRUE
 
 /obj/item/projectile/bullet/sniper/on_hit(atom/target, blocked = 0, hit_zone)
@@ -157,8 +157,8 @@
 
 /obj/item/projectile/bullet/sniper/gauss
 	icon_state = "ion"
-	damage = 80
-	armour_penetration = 60
+	damage = 60
+	armour_penetration = 0
 	forcedodge = 1
 	breakthings = FALSE
 	range = 20

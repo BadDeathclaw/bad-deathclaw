@@ -206,7 +206,7 @@
 	name = "shamebrero"
 	icon_state = "shamebrero"
 	item_state = "shamebrero"
-	desc = "Once it's on, it never comes off."
+	desc = "Forced to live on your shameful acting as a fake Mexican, you and your poncho have grown inseperable. Literally.."
 	flags = NODROP
 
 /obj/item/clothing/head/cone
@@ -280,7 +280,7 @@
 	desc = "There's only one man who can sniff out the dirty stench of crime, and he's likely wearing this black hat."
 	icon_state = "detectivealt"
 	item_state = "fedora"
-	armor = list(melee = 30, bullet = 25, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 20, bullet = 16, laser = 0, energy = 0, bomb = 16, bio = 0, rad = 0)
 
 /obj/item/clothing/head/fluff/trilby
 	name = "feather trilby"
@@ -320,7 +320,7 @@
 	icon_state = "battlecruiser"
 	item_state = "battlecruiser"
 	desc = "The Yamato is loaded. And so am I."
-	armor = list(melee = 30, bullet = 25, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 20, bullet = 16, laser = 0, energy = 0, bomb = 16, bio = 0, rad = 0)
 
 //Fallout 13
 
@@ -329,6 +329,7 @@
 	desc = "It's the police hat of dark blue in color with a silver colored badge on the frontside.<br>The badge is inscripted with the words SPECIAL and POLICE."
 	icon_state = "retropolice"
 	item_state = "fedora"
+	armor = list(melee = 20, bullet = 16, laser = 0, energy = 0, bomb = 25, bio = 0, rad = 0)
 
 /obj/item/clothing/head/f13/safari //Referencing the Jebediah from Mad Max III
 	name = "pith helmet"

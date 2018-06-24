@@ -1,7 +1,7 @@
-/obj/item/ammo_box/c22/surplus
-	name = "Ammo box (.22 Surplus)"
+/obj/item/ammo_box/c22
+	name = "Ammo box (.22)"
 	icon_state = "44"
-	ammo_type = /obj/item/ammo_casing/c22/surplus
+	ammo_type = /obj/item/ammo_casing/c22
 	max_ammo = 20
 	multiple_sprites = 1
 
@@ -12,20 +12,6 @@
 	max_ammo = 6
 	multiple_sprites = 1
 
-/obj/item/ammo_box/m44/surplus
-	name = "speed loader (.44 Surplus)"
-	icon_state = "44"
-	ammo_type = /obj/item/ammo_casing/m44/surplus
-	max_ammo = 6
-	multiple_sprites = 1
-
-/obj/item/ammo_box/c357/surplus
-	name = "speed loader (.357 Surplus)"
-	icon_state = "38"
-	ammo_type = /obj/item/ammo_casing/c357/surplus
-	max_ammo = 6
-	multiple_sprites = 1
-
 /obj/item/ammo_box/c357
 	name = "speed loader (.357)"
 	icon_state = "38"
@@ -33,15 +19,12 @@
 	max_ammo = 6
 	multiple_sprites = 1
 
-/obj/item/ammo_box/c357/c38
-	name = "speed loader (.38)"
+/obj/item/ammo_box/c357/lowpower
+	name = "speed loader (.357)"
 	icon_state = "38"
-	ammo_type = /obj/item/ammo_casing/c357/lowpower
-
-/obj/item/ammo_box/c357/c38/surplus
-	name = "speed loader (.38 Surplus)"
-	icon_state = "38"
-	ammo_type = /obj/item/ammo_casing/c357/lowpower/surplus
+	ammo_type = /obj/item/ammo_casing/c357
+	max_ammo = 6
+	multiple_sprites = 1
 
 /obj/item/ammo_box/c4570
 	name = "speed loader (.45-70 Gov't)"
@@ -57,18 +40,11 @@
 	ammo_type = /obj/item/ammo_casing/c9mm
 	max_ammo = 30
 
-/obj/item/ammo_box/c9mm/surplus
-	name = "ammo box (9mm Surplus)"
-	icon_state = "9mmbox"
-	origin_tech = "combat=2"
-	ammo_type = /obj/item/ammo_casing/c9mm/surplus
-	max_ammo = 30
-
-/obj/item/ammo_box/c10mm/surplus
-	name = "ammo box (10mm Surplus)"
+/obj/item/ammo_box/c10mm
+	name = "ammo box (10mm)"
 	icon_state = "10mmbox"
 	origin_tech = "combat=2"
-	ammo_type = /obj/item/ammo_casing/c10mm/surplus
+	ammo_type = /obj/item/ammo_casing/c10mm
 	max_ammo = 20
 
 /obj/item/ammo_box/c45
@@ -76,13 +52,6 @@
 	icon_state = "45box"
 	origin_tech = "combat=2"
 	ammo_type = /obj/item/ammo_casing/c45
-	max_ammo = 20
-
-/obj/item/ammo_box/c45/surplus
-	name = "ammo box (.45 Surplus)"
-	icon_state = "45box"
-	origin_tech = "combat=2"
-	ammo_type = /obj/item/ammo_casing/c45/surplus
 	max_ammo = 20
 
 /obj/item/ammo_box/a40mm
@@ -100,12 +69,12 @@
 	max_ammo = 5
 	multiple_sprites = 1
 
-/obj/item/ammo_box/a762/surplus
-	name = "stripper clip (7.62mm Surplus)"
-	desc = "A stripper clip."
-	icon_state = "762"
-	ammo_type = /obj/item/ammo_casing/a762/surplus
-	max_ammo = 5
+/obj/item/ammo_box/a762a
+	name = "double stacked stripper clip (7.62mm)"
+	desc = "A double stacked stripper clip."
+	icon_state = "762a"
+	ammo_type = /obj/item/ammo_casing/a762
+	max_ammo = 10
 	multiple_sprites = 1
 
 /obj/item/ammo_box/needler
@@ -133,6 +102,12 @@
 	ammo_type = /obj/item/ammo_casing/a556
 	max_ammo = 20
 
+/obj/item/ammo_box/a556/surplus
+	name = "ammo box (5.56x45mm)"
+	icon_state = "556box"
+	ammo_type = /obj/item/ammo_casing/a556
+	max_ammo = 20
+
 /obj/item/ammo_box/a556/ap
 	name = "ammo box (5.56x45mm Armour Piercing)"
 	ammo_type = /obj/item/ammo_casing/a556/ap
@@ -144,10 +119,6 @@
 /obj/item/ammo_box/a556/tox
 	name = "ammo box (5.56x45mm Uranium Tipped)"
 	ammo_type = /obj/item/ammo_casing/a556/tox
-
-/obj/item/ammo_box/a556/surplus
-	name = "ammo box (5.56x45mm Surplus)"
-	ammo_type = /obj/item/ammo_casing/a556/surplus
 
 /obj/item/ammo_box/a556/bleed
 	name = "ammo box (experimental 5.56x45mm bleeding)"

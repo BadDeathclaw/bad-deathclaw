@@ -437,7 +437,7 @@
 	desc = "A semi automatic Colt Rangemaster semi-automatic rifle chambered in .308."
 	icon_state = "rangemaster"
 	origin_tech = "combat=2;materials=2"
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/rangemaster
 	w_class = 4
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 

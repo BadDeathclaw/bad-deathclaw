@@ -64,12 +64,7 @@
 
 
 /obj/item/projectile/bullet/saw
-	damage = 45
-	armour_penetration = 10
-
-/obj/item/projectile/bullet/saw/surplus
-	damage = 33
-	armour_penetration = 10
+	damage = 25
 
 /obj/item/projectile/bullet/saw/bleeding
 	damage = 15
@@ -81,12 +76,12 @@
 		H.drip(25)
 
 /obj/item/projectile/bullet/saw/hollow
-	damage = 45
-	armour_penetration = 0
+	damage = 34
+	armour_penetration = -9
 
 /obj/item/projectile/bullet/saw/ap
-	damage = 30
-	armour_penetration = 35
+	damage = 26
+	armour_penetration = 20
 
 /obj/item/projectile/bullet/saw/incen
 	damage = 5
@@ -143,13 +138,7 @@
 	desc = "A 7.62mm bullet casing."
 	icon_state = "762-casing"
 	caliber = "a762"
-	projectile_type = /obj/item/projectile/bullet/saw
-	
-/obj/item/ammo_casing/a762/surplus
-	desc = "A Surplus 7.62mm bullet casing."
-	icon_state = "762-casing"
-	caliber = "a762"
-	projectile_type = /obj/item/projectile/bullet/saw/surplus
+	projectile_type = /obj/item/projectile/bullet/midbullet2
 
 /obj/item/ammo_casing/a762/bleeding
 	desc = "A 7.62mm bullet casing with specialized inner-casing, that when it makes contact with a target, release tiny shrapnel to induce internal bleeding."

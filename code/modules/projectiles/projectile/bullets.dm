@@ -9,66 +9,50 @@
 	var/gundamageapplied=0
 
 
+/obj/item/projectile/bullet/deagleAE //heavy - .50 deagle
+	damage = 60
 
-/obj/item/projectile/bullet/deagleAE //50ae
-	damage = 50
-
-/obj/item/projectile/bullet/magnum //44
-	damage = 40
-	armour_penetration = -10
-
-/obj/item/projectile/bullet/magnum/surplus //44 surplus
-	damage = 30
-	armour_penetration = -10
-
-/obj/item/projectile/bullet/mag357 //357
-	damage = 42
-	armour_penetration = -10
-
-/obj/item/projectile/bullet/mag357/surplus //357 surplus
+/obj/item/projectile/bullet/magnum //m29
 	damage = 34
-	armour_penetration = -10
+	armour_penetration = -9
+
+/obj/item/projectile/bullet/mag357 //unused
+	damage = 34
+	armour_penetration = -9
 
 /obj/item/projectile/bullet/slug //slug
-	damage = 65
-	armour_penetration = -10
+	damage = 60
+	armour_penetration = -18
 
 /obj/item/projectile/bullet/weakbullet //beanbag
 	damage = 5
 	stamina = 80
 
-/obj/item/projectile/bullet/weakbullet2 //38
+/obj/item/projectile/bullet/weakbullet2 //unused
 	damage = 33 //4 hit crit
 
-/obj/item/projectile/bullet/weakbullet2/surplus //38 surplus
-	damage = 24 //5 hit crit
-
-/obj/item/projectile/bullet/weakbullet3 //9mm
-	damage = 30
-	armour_penetration = 10
-
-/obj/item/projectile/bullet/weakbullet3/surplus //9mm surplus
-	damage = 20
+/obj/item/projectile/bullet/weakbullet3 //soft
+	damage = 25
 	armour_penetration = 0
 
-/obj/item/projectile/bullet/weakbullet4 //22lr
+/obj/item/projectile/bullet/weakbullet4 //unused
 	damage = 10
 	armour_penetration = -10
 
-/obj/item/projectile/bullet/c22surplus //22lr surplus
-	damage = 7
+/obj/item/projectile/bullet/c22surplus //super soft
+	damage = 20
 	armour_penetration = -10
 
-/obj/item/projectile/bullet/toxinbullet //9mmtox
+/obj/item/projectile/bullet/toxinbullet //unused
 	damage = 15
 	damage_type = TOX
 
-/obj/item/projectile/bullet/incendiary/firebullet //9mmincid
+/obj/item/projectile/bullet/incendiary/firebullet //unused
 	damage = 10
 
-/obj/item/projectile/bullet/armourpiercing //9mmap
+/obj/item/projectile/bullet/armourpiercing //unused
 	damage = 25
-	armour_penetration = 10
+	armour_penetration = 0
 
 /obj/item/projectile/bullet/pellet //shotgunpellet
 	name = "pellet"
@@ -82,41 +66,33 @@
 /obj/item/projectile/bullet/pellet/random/New()
 	damage = rand(10)
 
-/obj/item/projectile/bullet/midbullet //45
-	damage = 33
-	
-/obj/item/projectile/bullet/midbullet/surplus //45 surplus
-	damage = 24
+/obj/item/projectile/bullet/midbullet //med sp
+	damage = 34
+	armour_penetration = -9
 
-/obj/item/projectile/bullet/midbullet2 //unused
-	damage = 25
+/obj/item/projectile/bullet/midbullet2 //med ap
+	damage = 26
+	armour_penetration =20
 
-/obj/item/projectile/bullet/midbullet3 //10mm
+/obj/item/projectile/bullet/midbullet3 //unused
 	damage = 30
 	armour_penetration = -10
-	
-/obj/item/projectile/bullet/midbullet3/surplus
-	damage = 20
-	armour_penetration = -15
 
-/obj/item/projectile/bullet/heavybullet //5.56
-	damage = 35
+/obj/item/projectile/bullet/heavybullet //heavy sp
+	damage = 60
+	armour_penetration = -18
 
-/obj/item/projectile/bullet/heavybullet/ap //5.56ap
-	damage = 30
-	armour_penetration = 10
+/obj/item/projectile/bullet/heavybullet/ap //heavy ap
+	damage = 60
 
-/obj/item/projectile/bullet/heavybullet/tox //5.56tox
+/obj/item/projectile/bullet/heavybullet/tox //unused
 	damage = 25
 	damage_type = TOX
 
-/obj/item/projectile/bullet/incendiary/heavybullet //5.56incid
+/obj/item/projectile/bullet/incendiary/heavybullet //unused
 	damage = 25
 
-/obj/item/projectile/bullet/heavybullet/surplus //5.56surplus
-	damage = 20
-
-/obj/item/projectile/bullet/heavybullet/bleed //5.56bleed
+/obj/item/projectile/bullet/heavybullet/bleed //unused
 	damage = 10
 	armour_penetration = 15
 
@@ -127,11 +103,11 @@
 
 	return ..()
 
-/obj/item/projectile/bullet/heavybullet/penetrator //5.56penet
+/obj/item/projectile/bullet/heavybullet/penetrator //unused
 	damage = 30
 	forcedodge = 1
 
-/obj/item/projectile/bullet/heavybullet/sopoforic //5.56sleep
+/obj/item/projectile/bullet/heavybullet/sopoforic //unused
 	armour_penetration = 0
 	nodamage = 1
 	stun = 0
@@ -277,12 +253,13 @@
 /obj/item/projectile/bullet/sequoia //45-70
 	name = "bullet"
 	damage = 60
-	armour_penetration = 10
+	armour_penetration = -18
 
 /obj/item/projectile/needle
 	name = "needler dart"
 	icon_state = "cbbolt"
-	damage = 32
+	damage = 26
+	armour_penetration = 20
 
 /obj/item/projectile/needle/ap
 	name = "needler dart"

@@ -30,9 +30,9 @@ Trooper
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	head = /obj/item/clothing/head/beret/ncr
 	glasses = /obj/item/clothing/glasses/sunglasses/swat
-	suit_store = /obj/item/weapon/gun/projectile/automatic/marksman
+	suit_store = /obj/item/weapon/gun/projectile/shotgun/automatic/hunting
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
-		/obj/item/ammo_box/magazine/m556=3, \
+		/obj/item/ammo_box/a762a=3, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1, \
 		/obj/item/weapon/melee/classic_baton/telescopic=1, \
@@ -169,9 +169,9 @@ Sergeant
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	head = /obj/item/clothing/head/f13/ncr
 	glasses = /obj/item/clothing/glasses/sunglasses/swat
-	suit_store = /obj/item/weapon/gun/projectile/automatic/marksman/servicerifle
+	suit_store = /obj/item/weapon/gun/projectile/automatic/greasegun
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
-		/obj/item/ammo_box/magazine/m556/r20=2, \
+		/obj/item/ammo_box/magazine/stick45=3, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1, \
 		/obj/item/stack/caps/random/med, \
@@ -312,7 +312,7 @@ Veteran Ranger
 	suit = /obj/item/clothing/suit/armor/f13/rangercombat
 	head = /obj/item/clothing/head/helmet/f13/rangercombat
 	glasses = /obj/item/clothing/glasses/night
-	suit_store = /obj/item/weapon/gun/projectile/automatic/assault_rifle
+	suit_store = /obj/item/weapon/gun/projectile/automatic/marksman
 	backpack_contents = list(/obj/item/weapon/gun/projectile/revolver/sequoia=1, \
 		/obj/item/ammo_box/c4570=2, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
@@ -363,11 +363,12 @@ NCR Ranger
 	suit = /obj/item/clothing/suit/armor/f13/combat/ncr
 	head = /obj/item/clothing/head/f13/ranger
 	glasses = /obj/item/clothing/glasses/sunglasses
-	suit_store = /obj/item/weapon/gun/projectile/automatic/shotgun/riot
-	backpack_contents = list(/obj/item/weapon/gun/projectile/automatic/pistol/deagle=1, \
+	suit_store = /obj/item/weapon/gun/projectile/shotgun/automatic/hunting
+	backpack_contents = list(/obj/item/weapon/gun/projectile/revolver/m29=1, \
 		/obj/item/weapon/restraints/handcuffs=2, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
-		/obj/item/ammo_box/magazine/d12g=2, \
+		/obj/item/ammo_box/m44=2, \
+		/obj/item/ammo_box/a762a=3, \
 		/obj/item/weapon/melee/classic_baton=1, \
 		/obj/item/weapon/storage/wallet/random=1)
 /datum/outfit/job/ncrranger/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)

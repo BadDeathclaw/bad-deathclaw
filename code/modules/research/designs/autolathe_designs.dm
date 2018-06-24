@@ -290,14 +290,6 @@
 	build_path = /obj/item/ammo_casing/shotgun/rubbershot
 	category = list("initial", "Security")
 
-/datum/design/c38
-	name = "Speed loader (.38)"
-	id = "c38"
-	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 30000)
-	build_path = /obj/item/ammo_box/c357/c38
-	category = list("initial", "Security")
-
 /datum/design/recorder
 	name = "Universal recorder"
 	id = "recorder"
@@ -516,51 +508,59 @@
 	category = list("hacked", "Security")
 
 /datum/design/m44
-	name = "Speedloader (.44 Magnum Surplus)"
+	name = "Speedloader (.44 Magnum)"
 	id = "m44"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 3500)
-	build_path = /obj/item/ammo_box/m44/surplus
+	build_path = /obj/item/ammo_box/m44
 	category = list("hacked", "Security")
 
 /datum/design/c10mm
-	name = "Ammo box (10mm Surplus)"
+	name = "Ammo box (10mm)"
 	id = "c10mm"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 10000)
-	build_path = /obj/item/ammo_box/c10mm/surplus
+	build_path = /obj/item/ammo_box/c10mm
 	category = list("hacked", "Security")
 
 /datum/design/c45
-	name = "Ammo box (.45 Surplus)"
+	name = "Ammo box (.45)"
 	id = "c45"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 10000)
-	build_path = /obj/item/ammo_box/c45/surplus
+	build_path = /obj/item/ammo_box/c45
 	category = list("hacked", "Security")
 
 /datum/design/c9mm
-	name = "Ammo box (9mm Surplus)"
+	name = "Ammo box (9mm Parabellum)"
 	id = "c9mm"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 10000)
-	build_path = /obj/item/ammo_box/c9mm/surplus
+	build_path = /obj/item/ammo_box/c9mm
 	category = list("hacked", "Security")
 
 /datum/design/a762
-	name = "Stripper clip (7.62 Surplus)"
+	name = "Stripper clip (7.62mm)"
 	id = "a762"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 2500)
-	build_path = /obj/item/ammo_box/a762/surplus
+	build_path = /obj/item/ammo_box/a762
+	category = list("hacked", "Security")
+
+/datum/design/a762a
+	name = "Rangermaster stripper clip (7.62mm)"
+	id = "a762a"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 5500)
+	build_path = /obj/item/ammo_box/a762a
 	category = list("hacked", "Security")
 
 /datum/design/a357
-	name = "speed loader (.357 Surplus)"
+	name = "speed loader (.357)"
 	id = "a357"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 3500)
-	build_path = /obj/item/ammo_box/c357/surplus
+	build_path = /obj/item/ammo_box/c357
 	category = list("hacked", "Security")
 
 /datum/design/aneedle
@@ -572,11 +572,11 @@
 	category = list("hacked", "Security")
 
 /datum/design/a556
-	name = "ammo box (5.56x45mm Surplus)"
+	name = "ammo box (5.56x45mm)"
 	id = "a556"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 10000)
-	build_path = /obj/item/ammo_box/a556/surplus
+	build_path = /obj/item/ammo_box/a556
 	category = list("hacked", "Security")
 
 

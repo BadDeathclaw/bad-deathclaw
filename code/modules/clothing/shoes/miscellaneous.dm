@@ -54,7 +54,7 @@
 	desc = "High speed, low drag combat boots."
 	icon_state = "jackboots"
 	item_state = "jackboots"
-	armor = list(melee = 25, bullet = 25, laser = 25, energy = 25, bomb = 50, bio = 10, rad = 0)
+	armor = list(melee = 20, bullet = 16, laser = 0, energy = 0, bomb = 16, bio = 30, rad = 30)
 	strip_delay = 70
 	burn_state = FIRE_PROOF
 	can_insert_knife = TRUE
@@ -64,12 +64,12 @@
 	desc = "High speed, no drag combat boots."
 	permeability_coefficient = 0.01
 	flags = NOSLIP
-	armor = list(melee = 40, bullet = 30, laser = 25, energy = 25, bomb = 50, bio = 30, rad = 30)
+	armor = list(melee = 65, bullet = 39, laser = 25, energy = 25, bomb = 65, bio = 30, rad = 30)
 
 /obj/item/clothing/shoes/combat/plate
 	name = "plated combat boots"
 	desc = "A pair of boots with armored plates on them"
-	armor = list(melee = 40, bullet = 30, laser = 25, energy = 25, bomb = 50, bio = 30, rad = 30)
+	armor = list(melee = 40, bullet = 25, laser = 16, energy = 16, bomb = 25, bio = 30, rad = 30)
 	icon_state = "legionmetal"
 	item_state = "legionmetal"
 	item_color = "cult"
@@ -174,7 +174,7 @@
 	icon_state = "legionleather"
 	item_state = "legionleather"
 	item_color = "cult"
-	armor = list(melee = 15, bullet = 10, laser = 5, energy = 0, bomb = 20, bio = 0, rad = 0)
+	armor = list(melee = 20, bullet = 16, laser = 0, energy = 0, bomb = 16, bio = 0, rad = 0)
 	can_insert_knife = TRUE
 
 /obj/item/clothing/shoes/legionmetal
@@ -183,16 +183,16 @@
 	icon_state = "legionmetal"
 	item_state = "legionmetal"
 	item_color = "cult"
-	armor = list(melee = 25, bullet = 20, laser = 25, energy = 10, bomb = 30, bio = 0, rad = 15)
+	armor = list(melee = 40, bullet = 25, laser = 16, energy = 16, bomb = 25, bio = 0, rad = 0)
 	can_insert_knife = TRUE
 
 /obj/item/clothing/shoes/legionlegat
-	name = "legion legat boots"
-	desc = "A pair of boots worn by the Legion legats."
+	name = "legion legate boots"
+	desc = "A pair of boots worn by the Legion legates."
 	icon_state = "legionlegat"
 	item_state = "legionlegat"
 	item_color = "cult"
-	armor = list(melee = 35, bullet = 25, laser = 30, energy = 10, bomb = 30, bio = 0, rad = 15)
+	armor = list(melee = 85, bullet = 25, laser = 25, energy = 25, bomb = 85, bio = 0, rad = 60)
 	can_insert_knife = TRUE
 
 /obj/item/clothing/shoes/cult/alt
@@ -240,7 +240,7 @@
 	desc = "Fancy female knee high platform boots with shiny steel clasps."
 	icon_state = "diesel"
 	item_state = "diesel"
-	armor = list(melee = 20, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0)
+	armor = list(melee = 20, bullet = 16, laser = 0, energy = 0, bomb = 16, bio = 0, rad = 0)
 	cold_protection = FEET
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 	can_insert_knife = TRUE
@@ -250,7 +250,7 @@
 	desc = "These boots are constructed with a thin rubber outsole and cellular rubber midsole covered by colorful Nylon fabrics and using polyurethane foams.<br>To the Moon!"
 	icon_state = "moonboots"
 	item_state = "moonboots"
-	armor = list(melee = 40, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 10, rad = 40)
+	armor = list(melee = 40, bullet = 25, laser = 16, energy = 16, bomb = 25, bio = 0, rad = 40)
 	cold_protection = FEET
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 	heat_protection = FEET
@@ -269,7 +269,7 @@
 	desc = "A heavy-duty work boots with steel reinforced toes and some fluffy wool for extra warmth."
 	icon_state = "miner"
 	item_state = "miner"
-	armor = list(melee = 40, bullet = 0, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0)
+	armor = list(melee = 20, bullet = 16, laser = 0, energy = 0, bomb = 16, bio = 0, rad = 0)
 	cold_protection = FEET
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 	can_insert_knife = TRUE

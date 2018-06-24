@@ -155,6 +155,7 @@ var/list/legion_positions = list(
 	"Legion Vexillarius",
 	"Legion Decanus",
 	"Veteran Legionnaire",
+	"Prime Legionnaire",
 	"Legionnaire Recruit"
 )
 

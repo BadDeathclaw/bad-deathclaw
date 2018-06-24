@@ -44,7 +44,7 @@ Legion
 	/obj/item/stack/coin/random/low = 2, \
 	/obj/item/weapon/machete = 1, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder=1, \
-	/obj/item/ammo_box/c357/c38=2, \
+	/obj/item/ammo_box/m44=2, \
 	/obj/item/device/flashlight/flare/torch=1)
 
 /datum/outfit/job/legrecruit/post_equip(mob/living/carbon/human/H)

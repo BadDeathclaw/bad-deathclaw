@@ -117,6 +117,20 @@
 /obj/item/weapon/gun/projectile/revolver/m29
 	name = "\improper S&W Model 29"
 	desc = "Being that this is the most powerful handgun in the world, and can blow your head clean-off, you've got to ask yourself one question. Do I feel lucky? Well, do ya punk? "
+	item_state = "model29"
+	icon_state = "m29"
+	origin_tech = "combat=4;materials=2"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
+	fire_sound = 'sound/f13weapons/44mag.ogg'
+
+/obj/item/weapon/gun/projectile/revolver/m29/alt
+	item_state = "44magnum"
+	icon_state = "mysterious_m29"
+
+/obj/item/weapon/gun/projectile/revolver/police
+	name = "S&W Model 29 Stubby"
+	desc = "The 4inch short barrel alternative to the regular M29."
+	item_state = "model29"
 	icon_state = "m29"
 	origin_tech = "combat=4;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
@@ -131,7 +145,7 @@
 
 /obj/item/weapon/gun/projectile/revolver/m29/bigiron
 	name = "Big Iron"
-	desc = "There before them lay the body of the outlaw on the ground. Oh, he might have went on livin' but he made one fatal slip, when he tried to match the ranger with the big iron on his hip"
+	desc = "There before them lay the body of the outlaw on the ground. Oh, he might have went on livin' but he made one fatal slip, when he tried to match the man with the big iron on his hip"
 	icon_state = "mysterious_m29"
 	damageG=9999
 	damageA=9999
@@ -166,14 +180,6 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 	origin_tech = "combat=2;materials=2"
 	fire_sound = 'sound/f13weapons/sequoia.ogg'
-
-/obj/item/weapon/gun/projectile/revolver/police
-	name = "S&W Model 36"
-	desc = "A .38 caliber police pistol which can also accept .357 rounds."
-	icon_state = "police"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
-	origin_tech = "combat=2;materials=2"
-	fire_sound = 'sound/f13weapons/policepistol.ogg'
 
 /obj/item/weapon/gun/projectile/revolver/needler
 	name = "needler pistol"
