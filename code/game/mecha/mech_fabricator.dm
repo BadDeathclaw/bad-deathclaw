@@ -144,11 +144,15 @@
 	return output
 
 /obj/machinery/mecha_part_fabricator/proc/remove_resources(datum/design/D)
+	if(istype(D, /obj/mecha))
+		return
 	for(var/resource in D.materials)
 		if(resource in resources)
 			resources[resource] -= get_resource_cost_w_coeff(D,resource)
 
 /obj/machinery/mecha_part_fabricator/proc/check_resources(datum/design/D)
+	if(istype(D, /obj/mecha))
+		return
 	for(var/R in D.materials)
 		if(R in resources)
 			if(resources[R] < get_resource_cost_w_coeff(D, R))
@@ -291,6 +295,8 @@
 	return
 
 /obj/machinery/mecha_part_fabricator/proc/get_resource_cost_w_coeff(datum/design/D, resource, roundto = 1)
+	if(istype(D, /obj/mecha))
+		return
 	return round(D.materials[resource]*resource_coeff*resource_coeff_tech, roundto)
 
 /obj/machinery/mecha_part_fabricator/proc/get_construction_time_w_coeff(datum/design/D, roundto = 1) //aran
