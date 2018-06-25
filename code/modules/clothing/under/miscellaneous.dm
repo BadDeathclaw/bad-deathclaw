@@ -1059,7 +1059,7 @@
 	name = "great khan uniform"
 	desc = "The uniform of the organized raider group the Great Khans."
 	icon_state = "khan"
-	item_state = "khan"
+	item_state = "khan_s"
 	item_color = "khan"
 	can_adjust = 0
 
@@ -1084,7 +1084,7 @@
     desc = "A set of standard issue New California Republic officer fatigues, offers slight protection."
     icon_state = "ncrofficer"
     item_state = "lb_suit"
-    item_color = "ncrofficer"
+    item_color = "ncrofficer_s"
     body_parts_covered = CHEST|GROIN|LEGS|ARMS
     can_adjust = 0
 

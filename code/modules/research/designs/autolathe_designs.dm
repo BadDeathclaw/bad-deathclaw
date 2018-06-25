@@ -162,6 +162,14 @@
 	build_path = /obj/item/stack/sheet/metal
 	category = list("initial","Construction")
 
+/datum/design/metal
+	name = "Cable Coil"
+	id = "cable_coil"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 500)
+	build_path = /obj/item/stack/cable_coil/yellow
+	category = list("initial","Construction")
+
 /datum/design/glass
 	name = "Glass"
 	id = "glass"
