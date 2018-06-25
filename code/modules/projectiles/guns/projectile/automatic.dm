@@ -11,8 +11,18 @@
 	mag_unload_sound = 'sound/effects/wep_magazines/smg_unload.ogg'
 	chamber_sound = 'sound/effects/wep_magazines/smg_chamber.ogg'
 
+//Syndicate sub-machine guns.
+/obj/item/weapon/gun/projectile/automatic/c20r/sc_c20r
+
+/obj/item/weapon/gun/projectile/automatic/c20r/sc_c20r/New()
+	..()
+	for(var/ammo in magazine.stored_ammo)
+		if(prob(95)) //95% chance
+			magazine.stored_ammo -= ammo
+//over here
+
 /obj/item/weapon/gun/projectile/automatic/proto
-	name = "SABR SG-T"
+	name = "\improper SABR SG-T"
 	desc = "A prototype three-round burst 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors."
 	icon_state = "saber"
 	mag_type = /obj/item/ammo_box/magazine/smgm9mm
@@ -117,8 +127,8 @@
 	return
 
 /obj/item/weapon/gun/projectile/automatic/wt550
-	name = "Advanced SMG"
-	desc = "A light weight tactical SMG. Uses 4.6x30mm rounds and is designated as a self defense weapon. Seems to be of a very advanced design."
+	name = "/improper General Arms SDW"
+	desc = "A light weight tactical SMG. Uses 4.6x30mm rounds and is designated as a self defense weapon. Has a GA logo stamped into the reciever."
 	icon_state = "wt550"
 	item_state = "arg"
 	mag_type = /obj/item/ammo_box/magazine/wt550m9
@@ -138,9 +148,10 @@
 	name = "Uzi"
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "mini-uzi"
+	item_state = "smg9mm"
 	origin_tech = "combat=5;materials=2;syndicate=8"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
-	burst_size = 2
+	burst_size = 3
 
 /obj/item/weapon/gun/projectile/automatic/m90
 	name = "\improper M-90gl Carbine"
@@ -220,7 +231,7 @@
 	name = "Thompson M1A1"
 	desc = "Based on the classic 'Chicago Typewriter'."
 	icon_state = "tommygun"
-	item_state = "shotgun"
+	item_state = "tommygun"
 	w_class = 4
 	slot_flags = 0
 	origin_tech = "combat=5;materials=1;syndicate=2"
@@ -231,8 +242,8 @@
 	fire_delay = 1
 
 /obj/item/weapon/gun/projectile/automatic/ar
-	name = "Advanced Assault Rifle"
-	desc = "An advanced assault rile that uses 556 caliber ammunition."
+	name = "\improper NT-ARG 'Boarder'"
+	desc = "A robust assault rile used by Nanotrasen fighting forces."
 	icon_state = "arg"
 	item_state = "arg"
 	slot_flags = 0
@@ -247,7 +258,7 @@
 	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
 
 /obj/item/weapon/gun/projectile/automatic/smg10mm
-	name = "10mm submarine gun"
+	name = "10mm submachine gun"
 	desc = "A select fire open bolt 10mm submachine gun. The serial number and manufactuer markings have been scratched off."
 	icon_state = "smg10mm"
 	item_state = "smg10mm"
@@ -266,7 +277,7 @@
 	item_state = "assault_rifle"
 	slot_flags = 0
 	origin_tech = "combat=6;materials=1"
-	mag_type = /obj/item/ammo_box/magazine/m556
+	mag_type = /obj/item/ammo_box/magazine/m556/r20
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	can_suppress = 0
 	burst_size = 3
@@ -303,11 +314,11 @@
 	name = "R94 marksman carbine"
 	desc = "A R94 marksman carbine, chambered in 5.56x45. Seen heavy usage in pre-war conflicts. This one isn't a select fire variant."
 	icon_state = "marksman_rifle"
-	item_state = "arg"
+	item_state = "marksman"
 	slot_flags = 0
 	w_class = 4
 	origin_tech = "combat=6;materials=1"
-	mag_type = /obj/item/ammo_box/magazine/m556
+	mag_type = /obj/item/ammo_box/magazine/m556/r20
 	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
 	can_suppress = 0
 	burst_size = 1//Setting it to 0 is dumb. Just set it to one.
@@ -333,8 +344,9 @@
 	name = "R81 service rifle"
 	desc = "A 5.56x45 semi-automatic service rifle manufcatured by the NCR and issued to all combat personnel."
 	icon_state = "service_rifle"
-	item_state = "assault_rifle"
+	item_state = "servicerifle"
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
+	mag_type = /obj/item/ammo_box/magazine/m556/r20
 	zoomable = FALSE
 	heavy_weapon = 1
 
@@ -412,7 +424,7 @@
 	name = "American 180"
 	desc = "A select fire, open bolt, rotary fed, submachine gun."
 	icon_state = "american180"
-	item_state = "shotgun"
+	item_state = "huntsman"
 	suppressed = 1
 	can_unsuppress = 0
 	fire_delay = 1
@@ -430,10 +442,10 @@
 	return
 
 /obj/item/weapon/gun/projectile/automatic/greasegun
-	name = "M3A1 grease gun"
-	desc = "A mass-produced .45 caliber sub machine gun used in World War II. Slow fire rate means less waste of ammo and controllable bursts."
+	name = "9mm submachine gun"
+	desc = "A mass-produced 9mm sub machine gun. Slow fire rate means less waste of ammo and controllable bursts."
 	icon_state = "grease_gun"
-	item_state = "arg"
+	item_state = "smg9mm"
 	slot_flags = 0
 	origin_tech = "combat=3;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/stick45

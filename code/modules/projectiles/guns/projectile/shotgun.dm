@@ -94,12 +94,14 @@
 // RIOT SHOTGUN //
 
 /obj/item/weapon/gun/projectile/shotgun/riot //for spawn in the armory
-	name = "M590"
-	desc = "A sturdy shotgun with a longer magazine and a fixed tactical stock designed for tactical use tactically."
+	name = "BHS M1"
+	desc = "A Big Heavy Shotgun Model 1, the staple of pre-war riot controll grade shotguns with a longer magazine and a fixed heavy reinforced tactical stock designed for tactical use when tactically bashing heads."
 	icon_state = "riotshotgun"
+	item_state = "shotgunriot"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/riot
 	fire_sound = 'sound/f13weapons/riot_shotgun.ogg'
 	sawn_desc = "Come with me if you want to live."
+	force = 30
 	damageG=15
 	damageA=0
 	damageS=0

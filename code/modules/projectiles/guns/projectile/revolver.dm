@@ -130,8 +130,8 @@
 /obj/item/weapon/gun/projectile/revolver/police
 	name = "S&W Model 29 Stubby"
 	desc = "The 4inch short barrel alternative to the regular M29."
-	item_state = "p38"
-	icon_state = "police"
+	item_state = "police"
+	icon_state = "p38"
 	origin_tech = "combat=4;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	fire_sound = 'sound/f13weapons/44mag.ogg'
@@ -177,6 +177,7 @@
 	name = "Ranger Sequoia"
 	desc = "This large, double-action revolver is a rare, scopeless variant of the hunting revolver. It is used exclusively by the New California Republic Rangers. This revolver features a dark finish with intricate engravings etched all around the weapon. Engraved along the barrel are the words 'For Honorable Service,' and 'Against All Tyrants.' The hand grip bears the symbol of the NCR Rangers, a bear, and a brass plate attached to the bottom that reads '20 Years.' "
 	icon_state = "sequoia"
+	item_state = "sequoia"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 	origin_tech = "combat=2;materials=2"
 	fire_sound = 'sound/f13weapons/sequoia.ogg'
