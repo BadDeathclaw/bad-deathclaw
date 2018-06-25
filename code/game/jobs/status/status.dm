@@ -188,3 +188,19 @@ mob/proc/set_status(var/status)
 	can_invite_to = list("Member")
 	purge_faction = "Vault"
 	color = "#00491A"
+
+/datum/status/remnants/remnantsmedic
+	name = "US Medic"
+	color = "#DD2D00"
+/datum/status/remnants/remnantsprivate
+	name = "US Private"
+	color = "#DD2D00"
+/datum/status/remnants/remnantsscientist
+	name = "US Scientist"
+	color = "#DD2D00"
+/datum/status/remnants/remnantsengineer
+	name = "US Engineer"
+	color = "#DD2D00"
+/datum/status/remnants/remnantscommander
+	name = "US Commander"
+	color = "#DD2D00"
