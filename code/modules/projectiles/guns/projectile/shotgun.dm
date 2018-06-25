@@ -2,7 +2,7 @@
 	name = "Ithaca Model 37"
 	desc = "A traditional hunting shotgun with wood furniture and a four-shell capacity underneath."
 	icon_state = "shotgun"
-	item_state = "shotgun"
+	item_state = "huntingshotgun"
 	w_class = 4
 	force = 10
 	flags =  CONDUCT
@@ -70,6 +70,13 @@
 	if (chambered)
 		user << "A [chambered.BB ? "live" : "spent"] one is in the chamber."
 
+//Trenchgun
+/obj/item/weapon/gun/projectile/shotgun/trench
+	name = "Winchester M97"
+	desc = "A pre-war military grade shotgun with wood furniture and a five-shell capacity underneath plus one in chamber."
+	icon_state = "trenchgun"
+	item_state = "trenchgun"
+
 // Hunting Shotgun
 /obj/item/weapon/gun/projectile/shotgun/hunting
 	sawn_desc = "Blast 'em."
@@ -130,7 +137,7 @@
 	name = "Remington 700"
 	desc = "A sturdy hunting rifle, chambered in 308. and in use before the war."
 	icon_state = "308"
-	item_state = "assault_rifle"
+	item_state = "rifle"
 	//slot_flags = 0 //no SLOT_BACK sprite, alas
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
@@ -164,7 +171,7 @@
 	name = "Scoped Remington 700"
 	desc = "A sturdy hunting rifle, chambered in 308. and in use before the war. This one has a 8x scope mounted to it."
 	icon_state = "rifle308_scope"
-	item_state = "assault_rifle"
+	item_state = "rifle"
 	//slot_flags = 0 //no SLOT_BACK sprite, alas
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
@@ -181,7 +188,7 @@
 	name = "double-barreled shotgun"
 	desc = "A true classic."
 	icon_state = "dshotgun"
-	item_state = "shotgun"
+	item_state = "dshotgun1"
 	w_class = 4
 	force = 10
 	flags = CONDUCT
@@ -234,7 +241,7 @@
 	name = "worn sawn off"
 	desc = "Someone took the time to chop the last few inches off the barrel and stock of this shotgun. You see word 'Max' engraved on grip"
 	icon_state = "max_sawn_off"
-	item_state = "shotgun"
+	item_state = "sawnshotgun"
 	w_class = 3
 	force = 12
 	unique_reskin = 0
@@ -256,7 +263,7 @@
 	name = "caravan shotgun"
 	desc = "An common over under double barreled shotgun."
 	icon_state = "caravan_shotgun"
-	item_state = "shotgun"
+	item_state = "dshotgun1"
 	w_class = 4
 	force = 15
 	unique_reskin = 0
@@ -269,7 +276,7 @@
 	name = "single shotgun"
 	desc = "A dirt cheap single shot shotgun."
 	icon_state = "single_shotgun"
-	item_state = "shotgun"
+	item_state = "singleshot"
 	w_class = 3
 	force = 15
 	unique_reskin = 0
@@ -292,7 +299,7 @@
 	name = "pipe rifle"
 	desc = "A crudely made single shot 10mm rifle."
 	icon_state = "pipe_rifle"
-	item_state = "shotgun"
+	item_state = "improvshotgun"
 	w_class = 4
 	origin_tech = "combat=2;materials=2"
 	fire_sound = 'sound/weapons/Gunshot.ogg'
@@ -304,7 +311,7 @@
 	name = "improvised shotgun"
 	desc = "Essentially a tube that aims shotgun shells."
 	icon_state = "ishotgun"
-	item_state = "shotgun"
+	item_state = "improvshotgun"
 	w_class = 4
 	force = 10
 	slot_flags = null
@@ -428,6 +435,7 @@
 	name = "M1014 Tactical"
 	desc = "A semi automatic shotgun with tactical furniture and a six-shell capacity underneath."
 	icon_state = "cshotgun"
+	item_state = "cshotgun1"
 	origin_tech = "combat=5;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/com
 	w_class = 5
@@ -436,6 +444,7 @@
 	name = "Colt Rangemaster"
 	desc = "A semi automatic Colt Rangemaster semi-automatic rifle chambered in .308."
 	icon_state = "rangemaster"
+	item_state = "fnfal"
 	origin_tech = "combat=2;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/rangemaster
 	w_class = 4
