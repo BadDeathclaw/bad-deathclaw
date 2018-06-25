@@ -180,6 +180,7 @@
 
 
 /mob/living/simple_animal/handle_environment(datum/gas_mixture/environment)
+/*
 	var/atmos_suitable = 1
 
 	var/atom/A = src.loc
@@ -234,6 +235,7 @@
 			adjustBruteLoss(unsuitable_atmos_damage)
 
 	handle_temperature_damage()
+*/
 
 /mob/living/simple_animal/proc/handle_temperature_damage()
 	if(bodytemperature < minbodytemp)
