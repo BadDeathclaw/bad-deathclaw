@@ -144,8 +144,6 @@
 	return output
 
 /obj/machinery/mecha_part_fabricator/proc/remove_resources(datum/design/D)
-	if(istype(D, /obj/mecha))
-		return
 	for(var/resource in D.materials)
 		if(resource in resources)
 			resources[resource] -= get_resource_cost_w_coeff(D,resource)
