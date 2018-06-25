@@ -69,7 +69,6 @@ Raider
 		/obj/item/clothing/suit/det_suit,\
 		/obj/item/clothing/suit/chickensuit,\
 		/obj/item/clothing/suit/bomb_suit,\
-		/obj/item/clothing/suit/bomb_suit/security,\
 		/obj/item/clothing/suit/bio_suit/security,\
 		/obj/item/clothing/suit/apron/chef,\
 		/obj/item/clothing/suit/apron/overalls,\
