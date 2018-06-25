@@ -645,7 +645,7 @@ var/list/preferences_datums = list()
 
 		return 1
 
-	else if (job.department_flag == REMNANTS)
+	else if (job.department_flag == ENCLAVE)
 		job_enclave_low &= ~job.flag
 		job_enclave_med &= ~job.flag
 		job_enclave_high &= ~job.flag
@@ -789,7 +789,7 @@ var/list/preferences_datums = list()
 				if(3)
 					return job_vault_low
 
-		if(REMNANTS)
+		if(ENCLAVE)
 			switch(level)
 				if(1)
 					return job_enclave_high

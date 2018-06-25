@@ -844,15 +844,6 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	can_adjust = 1
 
-/obj/item/clothing/under/f13/obdu
-	name = "Enclave officer BDU"
-	desc = "It's a military officer's Battle Dress Uniform."
-	icon_state = "obdu"
-	item_state = "xenos_suit"
-	item_color = "obdu"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	can_adjust = 0
-
 /obj/item/clothing/under/f13/shiny //Firefly, yay!
 	name = "shiny outfit"
 	desc = "Perfect outfit for a brave and reckless space cowboy. Shiny!"

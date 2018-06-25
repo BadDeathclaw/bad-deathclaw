@@ -344,17 +344,3 @@
 	item_state = "fedora"
 	desc = "Home, home on the wastes,<br>Where the mole rat and the fire gecko play.<br>Where seldom is heard a discouraging word,<br>And my skin is not glowing all day."
 	flags = BLOCKHAIR
-
-/obj/item/clothing/head/f13/utilityo
-	name = "Enclave officer cap"
-	icon_state = "utilityo"
-	item_state = "fedora"
-	armor = list(melee = 20, bullet = 16, laser = 0, energy = 0, bomb = 25, bio = 0, rad = 0)
-	flags = BLOCKHAIR
-
-/obj/item/clothing/head/f13/utilityp
-	name = "Enclave private cap"
-	icon_state = "utilityp"
-	item_state = "fedora"
-	armor = list(melee = 10, bullet = 5, laser = 0, energy = 0, bomb = 5, bio = 0, rad = 0)
-	flags = BLOCKHAIR
