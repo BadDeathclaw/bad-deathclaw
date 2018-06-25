@@ -49,6 +49,8 @@
 /mob/living/simple_animal/hostile/proc/humantrigger()
 	triggerduration = 10
 	triggeredbyhuman = 1
+	if(health > 0)
+		handle_automated_action() //Immedietely trigger so hostile mobs can instantly come over
 
 /mob/living/simple_animal/hostile/handle_automated_action()
 	if(AIStatus == AI_OFF)
