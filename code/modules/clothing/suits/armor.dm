@@ -346,7 +346,6 @@
 	slowdown = 0.5
 	put_on_delay = 30
 	strip_delay = 10
-	flags_inv = HIDEJUMPSUIT
 
 /obj/item/clothing/suit/armor/fluff/chestplate/mk2
 	name = "reflective metal chestplate"
@@ -421,7 +420,6 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 40, bullet = 25, laser = 16, energy = 16, bomb = 25, bio = 0, rad = 0)
 	slowdown = 1
-	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 60
 	strip_delay = 60
 
@@ -433,7 +431,6 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 40, bullet = 25, laser = 48, energy = 48, bomb = 25, bio = 0, rad = 0)
 	slowdown = 1
-	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 60
 	strip_delay = 60
 
