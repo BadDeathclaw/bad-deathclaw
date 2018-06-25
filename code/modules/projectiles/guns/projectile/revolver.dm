@@ -130,8 +130,8 @@
 /obj/item/weapon/gun/projectile/revolver/police
 	name = "S&W Model 29 Stubby"
 	desc = "The 4inch short barrel alternative to the regular M29."
-	item_state = "police"
-	icon_state = "p38"
+	item_state = "p38"
+	icon_state = "police"
 	origin_tech = "combat=4;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	fire_sound = 'sound/f13weapons/44mag.ogg'

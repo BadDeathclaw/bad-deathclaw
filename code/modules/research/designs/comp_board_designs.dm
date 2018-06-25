@@ -320,3 +320,13 @@
 	materials = list(MAT_GLASS = 1000, "sacid" = 20)
 	build_path = /obj/item/weapon/circuitboard/libraryconsole
 	category = list("Computer Boards")
+
+/datum/design/virusmaker
+	name = "Computer Design (Virus Maker)"
+	desc = "Allows for the construction of circuit boards used to build a new virus maker console."
+	id = "virusmaker"
+	req_tech = list("programming" = 1)
+	build_type = IMPRINTER
+	materials = list(MAT_GLASS = 1000, "sacid" = 20)
+	build_path = /obj/item/weapon/circuitboard/virusmaker
+	category = list("Computer Boards")
