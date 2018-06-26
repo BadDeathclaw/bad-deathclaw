@@ -9,6 +9,7 @@
 		return
 	if(!loc)
 		return
+	update_canmove()
 
 	if(stat != DEAD)
 		if(client)
@@ -35,8 +36,6 @@
 
 			//Blud
 			handle_blood()
-
-			update_canmove()
 
 		. = 1
 	var/datum/gas_mixture/environment = loc.return_air()
