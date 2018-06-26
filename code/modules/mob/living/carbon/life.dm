@@ -267,6 +267,8 @@
 
 
 /mob/living/carbon/handle_chemicals_in_body()
+	if(stat == DEAD)
+		return
 	if(reagents)
 		reagents.metabolize(src)
 
@@ -291,7 +293,7 @@
 //This updates the health and status of the mob (conscious, unconscious, dead)
 /mob/living/carbon/handle_regular_status_updates()
 
-	if(..()) //alive
+	if(stat != DEAD)
 
 		if(health <= config.health_threshold_dead || !getorgan(/obj/item/organ/internal/brain))
 			death()

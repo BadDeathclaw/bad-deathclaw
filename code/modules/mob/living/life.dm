@@ -26,9 +26,17 @@
 			update_gravity(mob_has_gravity())
 
 			update_pulling()
-			
+
 			for(var/obj/item/weapon/grab/G in src)
 				G.process()
+
+			//Chemicals in the body
+			handle_chemicals_in_body()
+
+			//Blud
+			handle_blood()
+
+			update_canmove()
 
 		. = 1
 	var/datum/gas_mixture/environment = loc.return_air()
@@ -40,9 +48,9 @@
 	handle_chemicals_in_body()
 
 	//Blud
-	handle_blood()
+	//handle_blood()
 
-	handle_fire()
+	//handle_fire()
 
 	//stuff in the stomach
 	//handle_stomach()
@@ -56,14 +64,14 @@
 
 	handle_actions()
 
-	update_canmove()
+	//update_canmove()
 
 	if(client)
 		handle_regular_hud_updates()
 
+	if((istype(src, /mob/living/simple_animal/hostile)) && !client)
+		return
 	if(handle_regular_status_updates()) // Status & health update, are we dead or alive etc.
-		if((istype(src, /mob/living/simple_animal/hostile)) && !client)
-			return
 		handle_disabilities() // eye, ear, brain damages
 		handle_status_effects() //all special effects, stunned, weakened, jitteryness, hallucination, sleeping, etc
 
@@ -106,7 +114,7 @@
 //This updates the health and status of the mob (conscious, unconscious, dead)
 /mob/living/proc/handle_regular_status_updates()
 
-	updatehealth()
+	//updatehealth()
 
 	if(stat != DEAD)
 

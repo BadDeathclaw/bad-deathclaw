@@ -688,6 +688,18 @@ var/global/list/g_fancy_list_of_types = null
 	if(!holder)	return
 	debug_variables(huds[i])
 
+/client/proc/cleancasings()
+	set category = "Debug"
+	set name = "Clear all spent casings"
+	set desc = "Clears all spent casings from the world."
+	var/ticker = 0
+	for(var/obj/item/ammo_casing/B in world)
+		if (istype(B, /obj/item/ammo_casing))
+			if(!B.BB)
+				qdel(B)
+				ticker += 1
+	world << ticker
+
 /*/client/proc/library_debug_cat() //Easy to use library debug tool. Doesn't work yet. Shame.
 	set category = "Debug"
 	set name = "Library: Catalog"
