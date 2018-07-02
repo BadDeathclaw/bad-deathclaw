@@ -18,8 +18,7 @@
 	var/ranged_cooldown_cap = 3 //What ranged attacks, after being used are set to, to go back on cooldown, defaults to 3 life() ticks
 	var/retreat_distance = null //If our mob runs from players when they're too close, set in tile distance. By default, mobs do not retreat.
 	var/minimum_distance = 1 //Minimum approach distance, so ranged mobs chase targets down, but still keep their distance set in tiles to the target, set higher to make mobs keep distance
-	var/triggeredbyhuman = 0 //If the thing is triggered by a nearby human mob
-	var/triggerduration = 0 //How long it stays trigger in life()
+
 
 //These vars are related to how mobs locate and target
 	var/robust_searching = 0 //By default, mobs have a simple searching method, set this to 1 for the more scrutinous searching (stat_attack, stat_exclusive, etc), should be disabled on most mobs
@@ -38,25 +37,13 @@
 	. = ..()
 	if(ranged)
 		ranged_cooldown--
-	if(triggerduration > 0)
-		triggerduration = triggerduration - 1
-	else
-		triggeredbyhuman = 0
 	if(!.) //dead
 		walk(src, 0) //stops walking
 		return 0
 
-/mob/living/simple_animal/hostile/proc/humantrigger()
-	if((health > 0) && !triggeredbyhuman)
-		handle_automated_action() //Immedietely trigger so hostile mobs can instantly come over
-	triggerduration = 10
-	triggeredbyhuman = 1
-
 /mob/living/simple_animal/hostile/handle_automated_action()
 	if(AIStatus == AI_OFF)
 		return 0
-	if(!triggeredbyhuman)
-		return
 	var/list/possible_targets = ListTargets() //we look around for potential targets and make it a list for later use.
 
 	if(environment_smash)

@@ -232,8 +232,6 @@ var/const/INJECT = 5 //injection
 */
 
 /datum/reagents/proc/metabolize(mob/M, can_overdose = 0)
-	if(istype(src, /mob/living/simple_animal/hostile))
-		return
 	if(M)
 		chem_temp = M.bodytemperature
 		handle_reactions()
@@ -290,29 +288,21 @@ var/const/INJECT = 5 //injection
 	update_total()
 
 /datum/reagents/process()
-	if(istype(src, /mob/living/simple_animal/hostile))
-		return
 	for(var/datum/reagent/R in reagent_list)
 		R.on_tick()
 	return
 
 /datum/reagents/proc/conditional_update_move(atom/A, Running = 0)
-	if(istype(src, /mob/living/simple_animal/hostile))
-		return
 	for(var/datum/reagent/R in reagent_list)
 		R.on_move (A, Running)
 	update_total()
 
 /datum/reagents/proc/conditional_update(atom/A)
-	if(istype(src, /mob/living/simple_animal/hostile))
-		return
 	for(var/datum/reagent/R in reagent_list)
 		R.on_update (A)
 	update_total()
 
 /datum/reagents/proc/handle_reactions()
-	if(istype(src, /mob/living/simple_animal/hostile))
-		return
 	if(my_atom.flags & NOREACT) return //Yup, no reactions here. No siree.
 
 	var/reaction_occured = 0
