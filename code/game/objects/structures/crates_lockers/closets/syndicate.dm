@@ -1,6 +1,6 @@
 /obj/structure/closet/syndicate
-	name = "armory closet"
-	desc = "Why is this here?"
+	name = "Storage closet"
+	desc = "A closet that usually holds something inside of it."
 	icon_state = "syndicate"
 
 /obj/structure/closet/syndicate/personal
@@ -115,9 +115,7 @@
 	/obj/item/stack/sheet/mineral/plasma,
 	/obj/item/stack/sheet/mineral/uranium,
 	/obj/item/stack/sheet/mineral/diamond,
-	/obj/item/stack/sheet/mineral/bananium,
-	/obj/item/stack/sheet/plasteel,
-	/obj/item/stack/rods
+	/obj/item/stack/sheet/plasteel
 	)
 
 	for(var/i = 0, i<2, i++)
