@@ -65,24 +65,10 @@
 	..()
 	return
 
-/*
 /datum/reagent/medicine/adminordrazine/nanites
 	name = "Nanites"
 	id = "nanites"
 	description = "Tiny nanomachines capable of rapid cellular regeneration."
-*/
-
-/datum/reagent/medicine/nanites
-	name = "Nanites"
-	id = "nanites"
-	description = "Tiny nanomachines capable of rapid cellular regeneration."
-	metabolization_rate = 0.2
-
-/datum/reagent/medicine/nanites/on_mob_life(mob/living/carbon/M)
-	M.heal_organ_damage(5,5)
-	M.adjustToxLoss(-5)
-	..()
-	return
 
 /datum/reagent/medicine/synaptizine
 	name = "Synaptizine"
