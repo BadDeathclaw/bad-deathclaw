@@ -1,5 +1,7 @@
 <!-- Most valid html will work in here, excluding images. -->
 
+<h1>Welcome to Bad Deathclaw!</h1>
+
 <b>THIS IS AN 18+ SERVER, LEAVE NOW IF YOU ARE NOT OLD ENOUGH (also leave if you like to act under 18)</b>
 
 <i>
