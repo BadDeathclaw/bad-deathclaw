@@ -35,11 +35,11 @@
 	if(istype(loc, /obj/machinery/atmospherics/components/unary/cryo_cell))
 		return
 
-	//var/datum/gas_mixture/environment
-	//if(loc)
-	//	environment = loc.return_air()
+	var/datum/gas_mixture/environment
+	if(loc)
+		environment = loc.return_air()
 
-	//var/datum/gas_mixture/breath
+	var/datum/gas_mixture/breath
 
 	if(health <= config.health_threshold_crit)
 		losebreath++
@@ -52,31 +52,31 @@
 		if(istype(loc, /obj/))
 			var/obj/loc_as_obj = loc
 			loc_as_obj.handle_internal_lifeform(src,0)
-	//else
+	else
 		//Breathe from internal
-		//breath = get_breath_from_internal(BREATH_VOLUME)
+		breath = get_breath_from_internal(BREATH_VOLUME)
 
-		//if(!breath)
+		if(!breath)
 
-			//if(isobj(loc)) //Breathe from loc as object
-				//var/obj/loc_as_obj = loc
-				//breath = loc_as_obj.handle_internal_lifeform(src, BREATH_VOLUME)
+			if(isobj(loc)) //Breathe from loc as object
+				var/obj/loc_as_obj = loc
+				breath = loc_as_obj.handle_internal_lifeform(src, BREATH_VOLUME)
 
-			//else if(isturf(loc)) //Breathe from loc as turf
-				//var/breath_moles = 0
-				//if(environment)
-					//breath_moles = environment.total_moles()*BREATH_PERCENTAGE
+			else if(isturf(loc)) //Breathe from loc as turf
+				var/breath_moles = 0
+				if(environment)
+					breath_moles = environment.total_moles()*BREATH_PERCENTAGE
 
-				//breath = loc.remove_air(breath_moles)
-		//else //Breathe from loc as obj again
-			//if(istype(loc, /obj/))
-				//var/obj/loc_as_obj = loc
-				//loc_as_obj.handle_internal_lifeform(src,0)
+				breath = loc.remove_air(breath_moles)
+		else //Breathe from loc as obj again
+			if(istype(loc, /obj/))
+				var/obj/loc_as_obj = loc
+				loc_as_obj.handle_internal_lifeform(src,0)
 
-	//check_breath(breath)
+	check_breath(breath)
 
-	//if(breath)
-		//loc.assume_air(breath)
+	if(breath)
+		loc.assume_air(breath)
 
 /mob/living/carbon/proc/has_smoke_protection()
 	return 0
@@ -86,15 +86,7 @@
 /mob/living/carbon/proc/check_breath(datum/gas_mixture/breath)
 	if((status_flags & GODMODE))
 		return
-	//NEW CRIT
-	if(health <= config.health_threshold_crit)
-		if(reagents.has_reagent("epinephrine"))
-			return
-		adjustOxyLoss(1)
-		failed_last_breath = 1
-		throw_alert("oxy", /obj/screen/alert/oxy)
 
-/*
 	//CRIT
 	if(!breath || (breath.total_moles() == 0))
 		if(reagents.has_reagent("epinephrine"))
@@ -180,7 +172,7 @@
 
 	//BREATH TEMPERATURE
 	handle_breath_temperature(breath)
-	*/
+
 	return 1
 
 //Fourth and final link in a breath chain
