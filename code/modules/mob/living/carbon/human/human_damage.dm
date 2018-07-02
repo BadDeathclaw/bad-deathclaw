@@ -38,16 +38,12 @@
 		take_overall_damage(amount, 0)
 	else
 		heal_overall_damage(-amount, 0)
-	update_canmove()
-	handle_hud_icons_health()
 
 /mob/living/carbon/human/adjustFireLoss(amount)
 	if(amount > 0)
 		take_overall_damage(0, amount)
 	else
 		heal_overall_damage(0, -amount)
-	update_canmove()
-	handle_hud_icons_health()
 
 /mob/living/carbon/human/proc/hat_fall_prob()
 	var/multiplier = 1
@@ -99,8 +95,6 @@
 	if(picked.heal_damage(brute,burn,0))
 		update_damage_overlays(0)
 	updatehealth()
-	update_canmove()
-	handle_hud_icons_health()
 
 //Damages ONE external organ, organ gets randomly selected from damagable ones.
 //It automatically updates damage overlays if necesary
@@ -113,8 +107,7 @@
 		update_damage_overlays(0)
 
 	updatehealth()
-	update_canmove()
-	handle_hud_icons_health()
+
 
 //Heal MANY external organs, in random order
 /mob/living/carbon/human/heal_overall_damage(brute, burn)
@@ -135,8 +128,6 @@
 		parts -= picked
 	updatehealth()
 	if(update)	update_damage_overlays(0)
-	update_canmove()
-	handle_hud_icons_health()
 
 // damage MANY external organs, in random order
 /mob/living/carbon/human/take_overall_damage(brute, burn)
@@ -163,8 +154,6 @@
 	updatehealth()
 
 	if(update)	update_damage_overlays(0)
-	update_canmove()
-	handle_hud_icons_health()
 
 /mob/living/carbon/human/proc/restore_blood()
 	if(!(NOBLOOD in dna.species.specflags))

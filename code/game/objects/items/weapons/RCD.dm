@@ -30,7 +30,7 @@ RCD
 	var/airlock_type = /obj/machinery/door/airlock
 	var/advanced_airlock_setting = 1 //Set to 1 if you want more paintjobs available
 	var/sheetmultiplier	= 4			 //Controls the amount of matter added for each glass/metal sheet, triple for plasteel
-	var/plasteelmultiplier = 12 //Plasteel is worth 3 times more than glass or metal
+	var/plasteelmultiplier = 3 //Plasteel is worth 3 times more than glass or metal
 
 	var/list/conf_access = null
 	var/use_one_access = 0 //If the airlock should require ALL or only ONE of the listed accesses.
@@ -311,16 +311,7 @@ RCD
 					S.ChangeTurf(/turf/simulated/floor/plating)
 					return 1
 				return 0
-			if(istype(A, /turf/simulated/wall))
-				var/turf/simulated/wall/Wa = A
-				if(checkResource(wallcost,user) && canRturf)
-					user << "<span class='notice'>You start reinforcing the wall...</span>"
-					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if(do_after(user, walldelay, target = A))
-						if(!useResource(wallcost, user)) return 0
-						activate()
-						Wa.ChangeTurf(/turf/simulated/wall/r_wall)
-						return 1
+
 			if(istype(A, /turf/simulated/floor))
 				var/turf/simulated/floor/F = A
 				if(checkResource(wallcost, user))
@@ -332,6 +323,7 @@ RCD
 						F.ChangeTurf(/turf/simulated/wall)
 						return 1
 				return 0
+
 		if(2)
 			if(istype(A, /turf/simulated/floor))
 				if(checkResource(airlockcost, user))
@@ -518,55 +510,3 @@ RCD
 	origin_tech = "materials=4"
 	materials = list(MAT_METAL=12000, MAT_GLASS=8000)
 	ammoamt = 160
-
-/obj/item/weapon/circuitboardthing
-	name = "Advanced Machine Builder"
-	desc = "Takes circuit boards and makes machines out of them quickly."
-	icon = 'icons/obj/items.dmi'
-	icon_state = "rcd"
-	var/circuit = 0
-
-/obj/item/weapon/circuitboardthing/attackby(obj/item/weapon/W, mob/user, params)
-	if(istype(W, /obj/item/weapon/circuitboard))
-		if(!circuit)
-			user << "You insert the [W.name] into the [src]."
-			circuit = new W.type(loc)
-			qdel(W)
-
-/obj/item/weapon/circuitboardthing/afterattack(atom/A, mob/user, proximity)
-	if(!proximity)
-		return 0
-	if(circuit)
-		var/obj/item/weapon/circuitboard/circuitthing = src.circuit
-		var/obj/item/weapon/circuitboard/thingtospawn = circuitthing.build_path
-		new thingtospawn(A)
-		qdel(circuit)
-		circuit = 0
-
-/obj/item/weapon/portaturretconstruct
-	name = "Advanced Turret Constructor"
-	desc = "Takes energy weapons and quickly constructs portable turrets out of them. Use a screwdriver to take the gun out."
-	icon = 'icons/obj/items.dmi'
-	icon_state = "rcd"
-	var/obj/item/weapon/gun/energy/gun = null
-
-/obj/item/weapon/portaturretconstruct/attackby(obj/item/W, mob/user, params)
-	if(istype(W, /obj/item/weapon/gun/energy))
-		if(!gun)
-			user << "You insert the [W.name] into the [src]."
-			src.gun = new W.type(src)
-			qdel(W)
-	if(istype(W, /obj/item/weapon/screwdriver))
-		if(gun)
-			user << "You remove the [gun.name] from the [src]."
-			var/obj/item/weapon/gun/energy/tempgun = new gun.type(src)
-			user.put_in_hands(tempgun)
-			gun = null
-
-/obj/item/weapon/portaturretconstruct/afterattack(atom/A, mob/user, proximity)
-	if(gun)
-		var/obj/machinery/porta_turret/Turret = new/obj/machinery/porta_turret(A)
-		Turret.installation = gun.type
-		Turret.gun_charge = gun.power_supply.charge
-		Turret.setup()
-		gun = null
