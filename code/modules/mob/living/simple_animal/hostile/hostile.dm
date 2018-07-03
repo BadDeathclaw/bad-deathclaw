@@ -69,7 +69,10 @@
 				AIStatus = AI_IDLE				// otherwise we go idle
 	return 1
 
-
+/mob/living/simple_animal/hostile/handle_automated_movement()
+	if(!triggeredbyhuman)
+		return
+	..()
 
 
 //////////////HOSTILE MOB TARGETTING AND AGGRESSION////////////

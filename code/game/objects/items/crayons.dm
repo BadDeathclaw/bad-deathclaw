@@ -300,3 +300,23 @@
 				uses--
 			if(!uses)
 				desc = "[initial(desc)] Looks like it's been used up."
+
+/obj/item/device/autosurgeon/afterattack(atom/A, mob/user, proximity)
+	if(!uses)
+		user << "<span class='warning'>[src] has already been used. The tools are dull and won't reactivate.</span>"
+		return
+	else if(!storedorgan)
+		user << "<span class='notice'>[src] currently has no implant stored.</span>"
+		return
+	if(!proximity) return 0
+	var/obj/item/organ/internal/organtoimplant = storedorgan
+	organtoimplant.Insert(A)//insert stored organ into the user
+	user << "<span class='notice'>[user] presses a button on [src], and you implant the implant into the [A].</span>"
+	playsound(user.loc, 'sound/weapons/circsawhit.ogg', 50, 1, -1)
+	storedorgan.Insert(A)
+	storedorgan = null
+	name = initial(name)
+	if(uses != INFINITE)
+		uses--
+	if(!uses)
+		desc = "[initial(desc)] Looks like it's been used up."
