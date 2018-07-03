@@ -62,6 +62,15 @@
 	construction_time = 200
 	category = list("Cyborg")
 
+/datum/design/borg_complete
+	name = "Cyborg Complete"
+	id = "borg_complete"
+	build_type = MECHFAB
+	build_path = /obj/item/robot_parts/robot_suit/complete
+	materials = list(MAT_METAL=100000)
+	construction_time = 1900
+	category = list("Cyborg")
+
 //Ripley
 /datum/design/ripley_chassis
 	name = "Exosuit Chassis (APLU \"Ripley\")"
@@ -127,6 +136,15 @@
 	construction_time = 150
 	category = list("Ripley","Firefighter")
 
+/datum/design/ripley_Whole
+	name = "APLU (\"Ripley\") Completed"
+	id = "ripley_whole"
+	build_type = MECHFAB
+	build_path = /obj/mecha/working/ripley
+	materials = list(MAT_METAL=100000,MAT_GLASS=7500)
+	construction_time = 900
+	category = list("Ripley","Firefighter")
+
 //Odysseus
 /datum/design/odysseus_chassis
 	name = "Exosuit Chassis (\"Odysseus\")"
@@ -189,6 +207,15 @@
 	build_path = /obj/item/mecha_parts/part/odysseus_right_leg
 	materials = list(MAT_METAL=7000)
 	construction_time = 130
+	category = list("Odysseus")
+
+/datum/design/odysseus_whole
+	name = "(\"Odysseus\") Completed"
+	id = "odysseus_whole"
+	build_type = MECHFAB
+	build_path = /obj/mecha/medical/odysseus
+	materials = list(MAT_METAL=64000,MAT_GLASS=12000)
+	construction_time = 880
 	category = list("Odysseus")
 
 /*/datum/design/odysseus_armor
@@ -274,6 +301,15 @@
 	construction_time = 600
 	category = list("Gygax")
 
+/datum/design/gygax_whole
+	name = "(\"Gygax\") Whole"
+	id = "gygax_whole"
+	build_type = MECHFAB
+	build_path = /obj/mecha/combat/gygax
+	materials = list(MAT_METAL=135000,MAT_GLASS=15000,MAT_DIAMOND=20000)
+	construction_time = 2000
+	category = list("Gygax")
+
 //Durand
 /datum/design/durand_chassis
 	name = "Exosuit Chassis (\"Durand\")"
@@ -347,6 +383,16 @@
 	construction_time = 600
 	category = list("Durand")
 
+/datum/design/durand_whole
+	name = "(\"Durand\") Whole"
+	id = "durand_whole"
+	build_type = MECHFAB
+	build_path = /obj/mecha/combat/durand
+	materials = list(MAT_METAL=160000,MAT_URANIUM=30000,MAT_GLASS=25000,MAT_SILVER=28000)
+	construction_time = 2000
+	category = list("Durand")
+
+/*
 //H.O.N.K
 /datum/design/honk_chassis
 	name = "Exosuit Chassis (\"H.O.N.K\")"
@@ -410,7 +456,7 @@
 	materials = list(MAT_METAL=20000,MAT_BANANIUM=5000)
 	construction_time = 200
 	category = list("H.O.N.K")
-
+*/
 
 //Phazon
 /datum/design/phazon_chassis

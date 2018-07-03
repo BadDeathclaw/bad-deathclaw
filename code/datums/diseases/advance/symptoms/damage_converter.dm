@@ -20,7 +20,7 @@ Bonus
 	name = "Toxic Compensation"
 	stealth = 1
 	resistance = -4
-	stage_speed = -4
+	stage_speed = 0
 	transmittable = -2
 	level = 4
 
