@@ -35,7 +35,7 @@ Sorry Giacom. Please don't be mad :(
 			qdel(I)
 	staticOverlays.len = 0
 
-	return QDEL_HINT_HARDDEL_NOW
+	return QDEL_HINT_HARDDEL
 
 
 /mob/living/proc/generateStaticOverlay()

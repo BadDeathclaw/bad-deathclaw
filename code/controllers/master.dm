@@ -81,11 +81,11 @@ var/global/datum/controller/master/Master = new()
 	if (zlevel && zlevel > 0 && zlevel <= world.maxz)
 		for(var/datum/subsystem/SS in subsystems)
 			SS.Initialize(world.timeofday, zlevel)
-			sleep(-1)
+			sleep(0)
 	else
 		for(var/datum/subsystem/SS in subsystems)
 			SS.Initialize(world.timeofday, zlevel)
-			sleep(-1)
+			sleep(0)
 
 	sortTim(subsystems, /proc/cmp_subsystem_display)
 
@@ -95,7 +95,7 @@ var/global/datum/controller/master/Master = new()
 	world.log << "Setup complete."
 	diary << "Setup complete."
 
-	sleep(-1)
+	sleep(0)
 	// Loop.
 	Master.process()
 
@@ -148,7 +148,7 @@ var/global/datum/controller/master/Master = new()
 							// If we caused BYOND to miss a tick, stop processing for a bit...
 							if(startingtick < world.time || start_time + 1 < world.timeofday)
 								break
-							sleep(-1)
+							sleep(0)
 
 				cost = MC_AVERAGE(cost, world.timeofday - start_time)
 				if(ran_subsystems)
