@@ -180,7 +180,7 @@
 
 			if(!is_stack && (multiplier > 1))
 				return
-			if (!(multiplier in list(1,10,25,max_multiplier))) //"enough materials ?" is checked further down
+			if (!(multiplier in list(1,5,10,25,max_multiplier))) //"enough materials ?" is checked further down
 				return
 			/////////////////
 
@@ -256,10 +256,10 @@
 		tot_rating += MB.rating
 	tot_rating *= 25000
 	materials.max_amount = tot_rating * 3
-	var/T=1.2
+	var/T=1
 	for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
 		T -= M.rating*0.2
-	prod_coeff = min(1,max(0,T)) // Coeff going 1 -> 0,8 -> 0,6 -> 0,4
+	prod_coeff = max(T, 0.1) // Coeff going 1 -> 0,8 -> 0,6 -> 0,4
 
 /obj/machinery/autolathe/proc/main_win(mob/user)
 	var/dat = "<div class='statusDisplay'><h3>Autolathe Menu:</h3><br>"

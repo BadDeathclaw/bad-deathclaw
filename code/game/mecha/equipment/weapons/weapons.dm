@@ -4,10 +4,11 @@
 	origin_tech = "materials=3;combat=3"
 	var/projectile
 	var/fire_sound
-	var/projectiles_per_shot = 1
-	var/variance = 0
 	var/randomspread = 0 //use random spread for machineguns, instead of shotgun scatter
 	var/projectile_delay = 0
+	var/projectiles_per_shot = 1
+	var/deviation = 0
+	var/shot_delay = 0
 
 /obj/item/mecha_parts/mecha_equipment/weapon/can_attach(obj/mecha/combat/M)
 	if(..())
@@ -16,38 +17,38 @@
 	return 0
 
 /obj/item/mecha_parts/mecha_equipment/weapon/proc/get_shot_amount()
-	return projectiles_per_shot
+	return 1
 
 /obj/item/mecha_parts/mecha_equipment/weapon/action(atom/target, params)
 	if(!action_checks(target))
 		return 0
+	set_ready_state(0)
 
 	var/turf/curloc = get_turf(chassis)
-	var/atom/targloc = get_turf(target)
+	var/turf/targloc = get_turf(target)
 	if (!targloc || !istype(targloc) || !curloc)
 		return 0
 	if (targloc == curloc)
 		return 0
 
-	set_ready_state(0)
 	for(var/i=1 to get_shot_amount())
 		var/obj/item/projectile/A = new projectile(curloc)
 		A.firer = chassis.occupant
 		A.original = target
 		A.current = curloc
 
-		var/spread = 0
-		if(variance)
-			if(randomspread)
-				spread = round((rand() - 0.5) * variance)
-			else
-				spread = round((i / projectiles_per_shot - 0.5) * variance)
-		A.preparePixelProjectile(targloc, chassis.occupant, params, spread)
+		if(deviation)
+			A.yo = (targloc.y + round(gaussian(0,deviation),1)) - curloc.y
+			A.xo = (targloc.x + round(gaussian(0,deviation),1)) - curloc.x
+		else
+			A.yo = targloc.y - curloc.y
+			A.xo = targloc.x - curloc.x
 
 		A.fire()
 		playsound(chassis, fire_sound, 50, 1)
 
-		sleep(max(0, projectile_delay))
+		if(shot_delay)
+			sleep(shot_delay)
 
 	chassis.log_message("Fired from [src.name], targeting [target].")
 	return 1
@@ -260,7 +261,7 @@
 	projectiles = 40
 	projectile_energy_cost = 25
 	projectiles_per_shot = 4
-	variance = 25
+	deviation = 0.7
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg
 	name = "\improper Ultra AC 2"
@@ -271,9 +272,9 @@
 	projectiles = 300
 	projectile_energy_cost = 20
 	projectiles_per_shot = 3
-	variance = 6
+	deviation = 0.3
 	randomspread = 1
-	projectile_delay = 2
+	shot_delay = 2
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher
 	var/missile_speed = 2
