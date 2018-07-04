@@ -3,6 +3,7 @@
 		////////////////
 		//ADMIN THINGS//
 		////////////////
+	var/prefclicker = 0
 	var/datum/admins/holder = null
 	var/buildmode		= 0
 
