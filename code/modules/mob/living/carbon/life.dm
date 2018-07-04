@@ -306,6 +306,9 @@
 		if(sleeping)
 			stat = UNCONSCIOUS
 
+		if(health >= config.health_threshold_crit && !sleeping && !getOxyLoss())
+			stat = CONSCIOUS
+
 		return 1
 
 /mob/living/carbon/proc/CheckStamina()
