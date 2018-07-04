@@ -53,7 +53,7 @@
 			if(inprefs)
 				return
 			inprefs = 1
-			result = prefs.process_link(user,href_list)
+			var/result = prefs.process_link(user,href_list)
 			if(result)
 				inprefs = 0
 			inprefs = 0 //Don't question this
