@@ -14,6 +14,9 @@
 		ChangeToHusk()
 		if(on_fire)
 			shred_clothing()
+	if((health < config.health_threshold_dead) && stat == UNCONSCIOUS)
+		stat = CONSCIOUS
+		updatehealth()
 	med_hud_set_health()
 	med_hud_set_status()
 	return

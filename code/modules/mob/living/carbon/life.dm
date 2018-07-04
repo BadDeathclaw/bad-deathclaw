@@ -11,6 +11,7 @@
 		. = 1
 		for(var/obj/item/organ/internal/O in internal_organs)
 			O.on_life()
+	updatehealth()
 
 	//Updates the number of stored chemicals for powers
 	handle_changeling()
