@@ -62,7 +62,6 @@
 				mob.client.prefclicker = 0
 				mob << "<span class='danger'>Give that trigger finger a bit of a rest will ya?</span>"
 				del(mob.client)
-			return prefs.process_link(usr,href_list)
 		if("vars")		return view_var_Topic(href,href_list,hsrc)
 
 	..()	//redirect to hsrc.Topic()
