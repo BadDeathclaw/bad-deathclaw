@@ -49,7 +49,7 @@
 	switch(href_list["_src_"])
 		if("holder")	hsrc = holder
 		if("usr")		hsrc = mob
-		if("prefs")
+		if("prefs")		
 			if(inprefs)
 				return
 			inprefs = 1
