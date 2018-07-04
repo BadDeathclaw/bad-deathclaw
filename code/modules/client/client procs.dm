@@ -57,6 +57,12 @@
 			if(result)
 				inprefs = 0
 			inprefs = 0 //Don't question this
+			var/client2 = mob.client
+			client2.prefclicker += 1
+			if(client2.prefclicker > 30)
+				client2.prefclicker = 0
+				client2 << "<span class='danger'>Give that trigger finger a bit of a rest will ya?</span>"
+				del(client2)
 			return
 		if("vars")		return view_var_Topic(href,href_list,hsrc)
 
