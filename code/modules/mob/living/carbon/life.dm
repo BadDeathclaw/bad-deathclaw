@@ -53,6 +53,14 @@
 		if(istype(loc, /obj/))
 			var/obj/loc_as_obj = loc
 			loc_as_obj.handle_internal_lifeform(src,0)
+	if(health <= config.health_threshold_crit)
+		if(reagents.has_reagent("epinephrine"))
+			return
+		adjustOxyLoss(1)
+		failed_last_breath = 1
+		throw_alert("oxy", /obj/screen/alert/oxy)
+	else
+		adjustOxyLoss(-1)
 	//else
 		//Breathe from internal
 		//breath = get_breath_from_internal(BREATH_VOLUME)
