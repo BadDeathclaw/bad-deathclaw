@@ -88,5 +88,5 @@
 
 	preview_icon.Scale(preview_icon.Width() * 2, preview_icon.Height() * 2) // Scaling here to prevent blurring in the browser.
 	qdel(mannequin)
-	sleep(15)
+	sleep(5)
 	is_updating_icon = 0
