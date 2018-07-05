@@ -22,7 +22,7 @@
 
 /obj/item/clothing/head/canada
 	name = "striped red top hat"
-	desc = " It feels sticky, like maple syrup - <i>il se sent collante, comme le sirop d'érable</i>"
+	desc = " It feels sticky, like maple syrup - <i>il se sent collante, comme le sirop d'Ã©rable</i>"
 	icon_state = "canada"
 	item_state = "canada"
 
@@ -53,6 +53,13 @@
 	name = "nurse's hat"
 	desc = "It allows quick identification of trained medical personnel."
 	icon_state = "nursehat"
+
+/obj/item/clothing/head/maidhat
+	name = "maid headband"
+	desc = "Do these even do anything besides look cute?"
+	icon_state = "maidhat"
+	item_state = "maidhat"
+	flags = FPRINT
 
 /obj/item/clothing/head/syndicatefake
 	name = "black space-helmet replica"
