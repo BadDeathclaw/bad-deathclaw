@@ -274,7 +274,7 @@
 	materials = list(MAT_METAL = 600, MAT_GLASS = 200)
 	build_path = /obj/item/weapon/implanter
 	category = list("Medical Designs")
-
+/*
 /datum/design/bruteaid
 	name = "Brute Aid Kit"
 	desc = "A first aid kit containing various brute patches.."
@@ -284,7 +284,7 @@
 	materials = list(MAT_METAL = 600, MAT_GLASS = 200)
 	build_path = /obj/item/weapon/storage/firstaid/brute
 	category = list("Medical Designs")
-
+*/
 /datum/design/implantcase
 	name = "Implant Case"
 	desc = "A glass case containing an implant."
