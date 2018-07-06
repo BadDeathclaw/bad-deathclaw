@@ -115,7 +115,6 @@
 	slowdown = 0.5
 	put_on_delay = 30
 	strip_delay = 10
-	flags_inv = HIDEJUMPSUIT
 
 /obj/item/clothing/suit/armor/laserproof/IsReflect(def_zone)
 	if(!(def_zone in list("chest", "groin", "feet", "hands"))) //If not shot where ablative is covering you, you don't get the reflection bonus!
@@ -626,4 +625,4 @@
 	desc = "An NCR protective vest with a hide mantle over one shoulder. Commonly issued to NCOs and COs as well."
 	icon_state = "ncr_mantle"
 	item_state = "ncr_mantle"
-	armor = list(melee = 40, bullet = 25, laser = 16, energy = 16, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 25, laser = 16, energy = 16, bomb = fallout13misc.dm25, bio = 0, rad = 0)
