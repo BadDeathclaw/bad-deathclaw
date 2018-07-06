@@ -26,7 +26,7 @@ Bonus
 
 /datum/symptom/damage_converter/Activate(datum/disease/advance/A)
 	..()
-	if(prob(SYMPTOM_ACTIVATION_PROB * 10))
+	if(prob(SYMPTOM_ACTIVATION_PROB * 50))
 		var/mob/living/M = A.affected_mob
 		switch(A.stage)
 			if(4, 5)
@@ -35,7 +35,7 @@ Bonus
 
 /datum/symptom/damage_converter/proc/Convert(mob/living/M)
 
-	var/get_damage = rand(1, 2)
+	var/get_damage = 2
 
 	if(istype(M, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
