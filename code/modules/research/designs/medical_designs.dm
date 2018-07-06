@@ -127,7 +127,7 @@
 	materials = list(MAT_METAL = 5000, MAT_GLASS = 4000, MAT_URANIUM = 8000, MAT_DIAMOND = 2000)
 	build_path = /obj/item/weapon/gun/medbeam
 	category = list("Medical Designs")
-
+/*
 /datum/design/combathypo
 	name = "Combat Hypospray"
 	id = "combathypo"
@@ -136,7 +136,7 @@
 	materials = list(MAT_METAL = 2000, MAT_GLASS = 2000, MAT_URANIUM = 2000)
 	build_path = /obj/item/weapon/reagent_containers/hypospray/combat/nanites
 	category = list("Medical Designs")
-
+*/
 /////////////////////////////////////////
 //////////Cybernetic Implants////////////
 /////////////////////////////////////////
@@ -173,7 +173,7 @@
 	materials = list(MAT_METAL = 200, MAT_GLASS = 200, MAT_SILVER = 750, MAT_GOLD = 750)
 	build_path = /obj/item/organ/internal/cyberimp/eyes/hud/security
 	category = list("Misc", "Medical Designs")
-
+/*
 /datum/design/cyberimp_xray
 	name = "X-Ray implant"
 	desc = "These cybernetic eyes will give you X-ray vision. Blinking is futile."
@@ -184,7 +184,7 @@
 	materials = list(MAT_METAL = 200, MAT_GLASS = 200, MAT_SILVER = 600, MAT_GOLD = 600, MAT_PLASMA = 1000, MAT_URANIUM = 1000, MAT_DIAMOND = 2000)
 	build_path = /obj/item/organ/internal/cyberimp/eyes/xray
 	category = list("Misc", "Medical Designs")
-
+*/
 /datum/design/cyberimp_thermals
 	name = "Thermals implant"
 	desc = "These cybernetic eyes will give you Thermal vision. Vertical slit pupil included."
@@ -338,6 +338,7 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_GLASS = 4000)
 	build_path = /obj/item/weapon/implantcase/weapons_auth
+	req_tech = list("materials" = 2, "biotech" = 3, "magnets" = 3, "syndicate" = 6)
 	category = list("Medical Designs")
 
 /*
