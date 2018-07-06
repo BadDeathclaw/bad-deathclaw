@@ -35,7 +35,7 @@ Bonus
 
 /datum/symptom/damage_converter/proc/Convert(mob/living/M)
 
-	var/get_damage = 2
+	var/get_damage = 1.5
 
 	if(istype(M, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
