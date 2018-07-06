@@ -315,7 +315,7 @@
 		if(sleeping)
 			stat = UNCONSCIOUS
 
-		if(health >= config.health_threshold_crit && !sleeping && !getOxyLoss())
+		if(health >= config.health_threshold_crit && !sleeping)
 			stat = CONSCIOUS
 
 		return 1
