@@ -308,14 +308,14 @@
 			death()
 			return
 
-		if(getOxyLoss() > 50 || health <= config.health_threshold_crit)
+		if(getOxyLoss() > 50 && health <= config.health_threshold_crit)
 			Paralyse(3)
 			stat = UNCONSCIOUS
 
 		if(sleeping)
 			stat = UNCONSCIOUS
 
-		if(health >= config.health_threshold_crit && !sleeping && !getOxyLoss())
+		if(health >= config.health_threshold_crit && !sleeping)
 			stat = CONSCIOUS
 
 		return 1
