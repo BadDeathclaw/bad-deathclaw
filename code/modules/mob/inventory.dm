@@ -93,6 +93,8 @@
 
 //Drops the item in our left hand
 /mob/proc/drop_l_hand()
+	if(!loc) //Hopefully prevents runtimes
+		return
 	if(!loc.allow_drop())
 		return
 	return unEquip(l_hand) //All needed checks are in unEquip
@@ -100,6 +102,8 @@
 
 //Drops the item in our right hand
 /mob/proc/drop_r_hand()
+	if(!loc) //Hopefully prevents runtimes 2.0
+		return
 	if(!loc.allow_drop())
 		return
 	return unEquip(r_hand)

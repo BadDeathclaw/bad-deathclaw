@@ -11,6 +11,7 @@
 		. = 1
 		for(var/obj/item/organ/internal/O in internal_organs)
 			O.on_life()
+	updatehealth()
 
 	//Updates the number of stored chemicals for powers
 	handle_changeling()
@@ -52,6 +53,14 @@
 		if(istype(loc, /obj/))
 			var/obj/loc_as_obj = loc
 			loc_as_obj.handle_internal_lifeform(src,0)
+	if(health <= config.health_threshold_crit)
+		if(reagents.has_reagent("epinephrine"))
+			return
+		adjustOxyLoss(1)
+		failed_last_breath = 1
+		throw_alert("oxy", /obj/screen/alert/oxy)
+	else
+		adjustOxyLoss(-1)
 	//else
 		//Breathe from internal
 		//breath = get_breath_from_internal(BREATH_VOLUME)
@@ -267,6 +276,8 @@
 
 
 /mob/living/carbon/handle_chemicals_in_body()
+	if(stat == DEAD)
+		return
 	if(reagents)
 		reagents.metabolize(src)
 
@@ -291,18 +302,21 @@
 //This updates the health and status of the mob (conscious, unconscious, dead)
 /mob/living/carbon/handle_regular_status_updates()
 
-	if(..()) //alive
+	if(stat != DEAD)
 
 		if(health <= config.health_threshold_dead || !getorgan(/obj/item/organ/internal/brain))
 			death()
 			return
 
-		if(getOxyLoss() > 50 || health <= config.health_threshold_crit)
+		if(getOxyLoss() > 50 && health <= config.health_threshold_crit)
 			Paralyse(3)
 			stat = UNCONSCIOUS
 
 		if(sleeping)
 			stat = UNCONSCIOUS
+
+		if(health >= config.health_threshold_crit && !sleeping)
+			stat = CONSCIOUS
 
 		return 1
 

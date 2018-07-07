@@ -115,7 +115,6 @@
 	slowdown = 0.5
 	put_on_delay = 30
 	strip_delay = 10
-	flags_inv = HIDEJUMPSUIT
 
 /obj/item/clothing/suit/armor/laserproof/IsReflect(def_zone)
 	if(!(def_zone in list("chest", "groin", "feet", "hands"))) //If not shot where ablative is covering you, you don't get the reflection bonus!

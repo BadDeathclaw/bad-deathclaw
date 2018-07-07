@@ -20,6 +20,7 @@
 	If you have any  questions about this stuff feel free to ask. ~Carn
 	*/
 /client/Topic(href, href_list, hsrc)
+	//var/static/inprefs = 0
 	if(!usr || usr != mob)	//stops us calling Topic for somebody else's client. Also helps prevent usr=null
 		return
 	// asset_cache
@@ -48,7 +49,19 @@
 	switch(href_list["_src_"])
 		if("holder")	hsrc = holder
 		if("usr")		hsrc = mob
-		if("prefs")		return prefs.process_link(usr,href_list)
+		if("prefs")
+			//if(inprefs)
+			//	return
+			//inprefs = 1
+			return prefs.process_link(usr,href_list)
+			//if(result)
+				//inprefs = 0
+			//inprefs = 0 //Don't question this
+			//usr.client.prefclicker += 1
+			//if(usr.client.prefclicker > 40)
+				//usr.client.prefclicker = 0
+				//usr << "<span class='danger'>Kicked from game for clicking the preferences button a bit too many times, if you were doing this without malicious intent, just rejoin the game.</span>"
+				//del(usr.client)
 		if("vars")		return view_var_Topic(href,href_list,hsrc)
 
 	..()	//redirect to hsrc.Topic()
