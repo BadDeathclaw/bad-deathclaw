@@ -26,13 +26,13 @@
 	default_hatmask = /obj/item/clothing/head/helmet/space/hardsuit/syndi
 	seeStatic = 0 //Our programming is superior.
 
-
+/*
 /mob/living/simple_animal/drone/syndrone/New()
 	..()
 	if(internal_storage && internal_storage.hidden_uplink)
 		internal_storage.hidden_uplink.uses = (initial(internal_storage.hidden_uplink.uses) / 2)
 		internal_storage.name = "Eyebot uplink"
-
+*/
 
 /mob/living/simple_animal/drone/syndrone/Login()
 	..()

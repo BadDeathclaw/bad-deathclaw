@@ -14,6 +14,7 @@ var/list/preferences_datums = list()
 	var/muted = 0
 	var/last_ip
 	var/last_id
+	var/is_updating_icon = 0 //probably works
 
 	//game-preferences
 	var/lastchangelog = ""				//Saved changlog filesize to detect if there was a change

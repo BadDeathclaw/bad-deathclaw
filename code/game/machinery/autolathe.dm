@@ -178,8 +178,8 @@
 			var/max_multiplier = min(50, being_built.materials[MAT_METAL] ?round(materials.amount(MAT_METAL)/being_built.materials[MAT_METAL]):INFINITY,being_built.materials[MAT_GLASS]?round(materials.amount(MAT_GLASS)/being_built.materials[MAT_GLASS]):INFINITY)
 			var/is_stack = ispath(being_built.build_path, /obj/item/stack)
 
-			if(!is_stack && (multiplier > 1))
-				return
+			//if(!is_stack && (multiplier > 1))
+				//return
 			if (!(multiplier in list(1,5,10,25,max_multiplier))) //"enough materials ?" is checked further down
 				return
 			/////////////////
@@ -195,7 +195,7 @@
 				use_power(power)
 				icon_state = "autolathe"
 				flick("autolathe_n",src)
-				spawn(32/coeff)
+				spawn(16/coeff)
 					use_power(power)
 					if(is_stack)
 						var/list/materials_used = list(MAT_METAL=metal_cost*multiplier, MAT_GLASS=glass_cost*multiplier)
@@ -256,7 +256,7 @@
 		tot_rating += MB.rating
 	tot_rating *= 25000
 	materials.max_amount = tot_rating * 3
-	var/T=1
+	var/T=1.2
 	for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
 		T -= M.rating*0.2
 	prod_coeff = max(T, 0.1) // Coeff going 1 -> 0,8 -> 0,6 -> 0,4
