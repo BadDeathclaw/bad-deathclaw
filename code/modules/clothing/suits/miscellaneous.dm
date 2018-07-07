@@ -430,7 +430,7 @@
 
 /obj/item/clothing/suit/f13/scribe
 	name = "Brotherhood Scribe's robe"
-	desc = "A blue cloth robe worn by the Brotherhood of Steel Scribes."
+	desc = "A red  cloth robe worn by the Brotherhood of Steel Scribes."
 	icon_state = "scribe"
 	item_state = "suit-command"
 	body_parts_covered = CHEST|ARMS|LEGS
