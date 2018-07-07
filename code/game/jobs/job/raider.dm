@@ -44,8 +44,6 @@ Raider
 		/obj/item/clothing/under/f13/combat,\
 		/obj/item/clothing/under/f13/greatkhan,\
 		/obj/item/clothing/under/f13/ranger,\
-		/obj/item/clothing/under/f13/tribalwearf,\
-		/obj/item/clothing/under/f13/tribalwear,\
 		/obj/item/clothing/under/f13/enclaveo,\
 		/obj/item/clothing/under/f13/settler,\
 		/obj/item/clothing/under/f13/roving,\

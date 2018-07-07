@@ -625,4 +625,4 @@
 	desc = "An NCR protective vest with a hide mantle over one shoulder. Commonly issued to NCOs and COs as well."
 	icon_state = "ncr_mantle"
 	item_state = "ncr_mantle"
-	armor = list(melee = 40, bullet = 25, laser = 16, energy = 16, bomb = fallout13misc.dm25, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 25, laser = 16, energy = 16, bomb = 25, bio = 0, rad = 0)
