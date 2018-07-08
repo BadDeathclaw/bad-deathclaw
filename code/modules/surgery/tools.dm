@@ -78,7 +78,7 @@
 	hitsound = 'sound/weapons/circsawhit.ogg'
 	throwhitsound =  'sound/weapons/pierce.ogg'
 	flags = CONDUCT
-	force = 15
+	force = 25
 	w_class = 3
 	throwforce = 9
 	throw_speed = 2

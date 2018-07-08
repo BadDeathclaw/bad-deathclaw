@@ -477,7 +477,7 @@
 	w_class = 4
 	slot_flags = SLOT_BACK
 	force_unwielded = 10
-	force_wielded = 24
+	force_wielded = 25
 	throwforce = 20
 	throw_speed = 2
 	attack_verb = list("smashed", "slammed", "whacked", "thwacked")
@@ -551,12 +551,12 @@
 /obj/item/weapon/twohanded/sledgehammer
 	name = "Sledgehammer"
 	desc = "Big hammer with massive grip. Very popular weapon among muscular types."
-	force = 15
+	force = 20
 	w_class = 4
 	slot_flags = SLOT_BACK
-	force_unwielded = 15
-	force_wielded = 30
-	throwforce = 20
+	force_unwielded = 20
+	force_wielded = 56
+	throwforce = 25
 	throw_speed = 2
 	attack_verb = list("smashed", "slammed", "whacked", "thwacked")
 	icon = 'icons/obj/weapons.dmi'

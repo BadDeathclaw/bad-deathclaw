@@ -667,8 +667,6 @@
 	new /obj/item/stack/medical/ointment(src)
 	new /obj/item/weapon/reagent_containers/hypospray/medipen(src)
 
-/obj/item/ammo_casing/shotgun/rubbershot
-
 /obj/item/weapon/storage/box/rubbershot
 	name = "box of rubber shots"
 	desc = "A box full of rubber shots, designed for riot shotguns."

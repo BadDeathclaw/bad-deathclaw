@@ -136,6 +136,15 @@
 	can_adjust = 0
 	burn_state = FIRE_PROOF
 
+/obj/item/clothing/under/legskirt
+	name = "legionary fatigues"
+	desc = "A black learthery skirt and a thick long sleeve cotton shirt."
+	icon_state = "legskirt"
+	item_color = "legskirt"
+	item_state = "legskirt"
+	body_parts_covered = CHEST|GROIN|ARMS
+	can_adjust = 0
+
 /obj/item/clothing/under/owl
 	name = "owl uniform"
 	desc = "A soft brown jumpsuit made of synthetic feathers and strong conviction."

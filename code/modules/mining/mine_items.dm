@@ -62,7 +62,7 @@
 	icon_state = "pickaxe"
 	flags = CONDUCT
 	slot_flags = SLOT_BELT
-	force = 15
+	force = 20
 	throwforce = 10
 	item_state = "pickaxe"
 	w_class = 4
@@ -79,7 +79,7 @@
 	name = "rusty pickaxe"
 	desc = "This pickaxe has seen better days."
 	icon_state = "pickaxe_rust"
-	force = 12
+	force = 10
 	throwforce = 8
 	digspeed = 45
 
@@ -95,7 +95,7 @@
 	name = "diamond-tipped pickaxe"
 	icon_state = "dpickaxe"
 	item_state = "dpickaxe"
-	digspeed = 20
+	digspeed = 25
 	origin_tech = "materials=4;engineering=3"
 	desc = "A pickaxe with a diamond pick head. Extremely robust at cracking rock walls and digging up dirt."
 

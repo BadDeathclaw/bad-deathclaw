@@ -7,7 +7,7 @@
 	desc = "Order, order! No bombs in my courthouse."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "gavelhammer"
-	force = 5
+	force = 10
 	throwforce = 6
 	slot_flags = SLOT_BELT
 	w_class = 2

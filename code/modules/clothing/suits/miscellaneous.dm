@@ -351,7 +351,7 @@
 	icon_state = "tanleather"
 	item_state = "det_suit"
 	body_parts_covered = CHEST
-	armor = list(melee = 20, bullet = 16, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 10, bullet = 16, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/suit/fluff/battlecruiser //Do we have Star Craft here as well?!
 	name = "captain's coat"
@@ -359,7 +359,7 @@
 	icon_state = "battlecruiser"
 	item_state = "hostrench"
 	body_parts_covered = CHEST|ARMS
-	armor = list(melee = 20, bullet = 16, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 10, bullet = 16, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun/energy,/obj/item/weapon/gun/projectile,/obj/item/ammo_box,/obj/item/ammo_casing)
 
 /obj/item/clothing/suit/fluff/cowboybvest //Originally cowboy stuff by Nienhaus
@@ -368,7 +368,7 @@
 	icon_state = "cowboybvest"
 	item_state = "lb_suit"
 	body_parts_covered = CHEST|GROIN
-	armor = list(melee = 20, bullet = 16, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 10, bullet = 16, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/scalpel,/obj/item/weapon/surgical_drapes,/obj/item/weapon/cautery,/obj/item/weapon/hemostat,/obj/item/weapon/retractor,/obj/item/weapon/storage/pill_bottle/dice,/obj/item/weapon/dice)
 
 /obj/item/clothing/suit/fluff/cowboygvest
@@ -377,7 +377,7 @@
 	icon_state = "cowboygvest"
 	item_state = "gy_suit"
 	body_parts_covered = CHEST|GROIN
-	armor = list(melee = 20, bullet = 16, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 10, bullet = 16, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/scalpel,/obj/item/weapon/surgical_drapes,/obj/item/weapon/cautery,/obj/item/weapon/hemostat,/obj/item/weapon/retractor,/obj/item/weapon/storage/pill_bottle/dice,/obj/item/weapon/dice)
 
 //Fallout 13
@@ -388,7 +388,7 @@
 	icon_state = "wornmfp"
 	item_state = "hostrench"
 	body_parts_covered = CHEST|ARMS|LEGS
-	armor = list(melee = 20, bullet = 16, laser = 0,energy = 0, bomb = 10, bio = 0, rad = 40)
+	armor = list(melee = 10, bullet = 16, laser = 0,energy = 0, bomb = 10, bio = 0, rad = 40)
 	flags_inv = HIDEJUMPSUIT
 	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/restraints/handcuffs,/obj/item/device/flashlight/seclite,/obj/item/weapon/melee/classic_baton/telescopic)
 
@@ -398,7 +398,7 @@
 	icon_state = "veteran"
 	item_state = "suit-command"
 	body_parts_covered = CHEST|GROIN
-	armor = list(melee = 20, bullet = 16, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 10, bullet = 16, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun/energy,/obj/item/weapon/gun/projectile,/obj/item/ammo_box,/obj/item/ammo_casing)
 
 /obj/item/clothing/suit/f13/duster
@@ -407,7 +407,7 @@
 	icon_state = "duster"
 	item_state = "det_suit"
 	body_parts_covered = CHEST|LEGS|FEET|ARMS
-	armor = list(melee = 20, bullet = 16, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 10, bullet = 16, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	allowed = list(/obj/item/weapon/gun/projectile/shotgun/boltaction/scoped)
 
 /obj/item/clothing/suit/f13/autumn //Based of Colonel Autumn's uniform.
@@ -416,7 +416,7 @@
 	icon_state = "autumn"
 	item_state = "autumn"
 	body_parts_covered = CHEST|LEGS|ARMS
-	armor = list(melee = 20, bullet = 16, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 80) //Reference to colonel not dying from radiation where anyone else dies.
+	armor = list(melee = 10, bullet = 16, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 80) //Reference to colonel not dying from radiation where anyone else dies.
 	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun/energy,/obj/item/weapon/gun/projectile,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/scalpel,/obj/item/weapon/surgical_drapes,/obj/item/weapon/cautery,/obj/item/weapon/hemostat,/obj/item/weapon/retractor)
 
 /obj/item/clothing/suit/f13/elder //Robes are made of finest cloth, so you won't be able to put sharp objects but pens in.
@@ -425,16 +425,16 @@
 	icon_state = "elder"
 	item_state = "suit-command"
 	body_parts_covered = CHEST|ARMS|LEGS
-	armor = list(melee = 40, bullet = 25, laser = 16,energy = 16, bomb = 16, bio = 0, rad = 0)
+	armor = list(melee = 25, bullet = 25, laser = 16,energy = 16, bomb = 16, bio = 0, rad = 0)
 	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun,/obj/item/weapon/storage/pill_bottle/dice,/obj/item/weapon/dice)
 
 /obj/item/clothing/suit/f13/scribe
 	name = "Brotherhood Scribe's robe"
-	desc = "A blue cloth robe worn by the Brotherhood of Steel Scribes."
+	desc = "A red  cloth robe worn by the Brotherhood of Steel Scribes."
 	icon_state = "scribe"
 	item_state = "suit-command"
 	body_parts_covered = CHEST|ARMS|LEGS
-	armor = list(melee = 20, bullet = 16, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 10, bullet = 16, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun,/obj/item/weapon/storage/pill_bottle/dice,/obj/item/weapon/dice)
 
 // WINTER COATS

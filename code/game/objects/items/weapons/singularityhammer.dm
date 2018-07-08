@@ -6,8 +6,8 @@
 	slot_flags = SLOT_BACK
 	force = 5
 	force_unwielded = 5
-	force_wielded = 20
-	throwforce = 15
+	force_wielded = 72
+	throwforce = 56
 	throw_range = 1
 	w_class = 5
 	var/charged = 5
@@ -76,10 +76,10 @@
 	icon_state = "mjollnir0"
 	flags = CONDUCT
 	slot_flags = SLOT_BACK
-	force = 5
-	force_unwielded = 5
-	force_wielded = 25
-	throwforce = 30
+	force = 20
+	force_unwielded = 20
+	force_wielded = 72
+	throwforce = 56
 	throw_range = 7
 	w_class = 5
 	//var/charged = 5
@@ -124,13 +124,13 @@
 /obj/item/weapon/twohanded/superhammer
 	name = "Superhammer"
 	desc = "Superkuvalda, BOS produced using the most modern weapons technology. Equipped with storage of kinetic energy to enhance impact."
-	icon_state = "SuperSledgeHammer"
+	icon_state = "SuperSledgeHammer0"
 	flags = CONDUCT
 	slot_flags = SLOT_BACK
-	force = 5
+	force = 10
 	force_unwielded = 10
-	force_wielded = 45
-	throwforce = 30
+	force_wielded = 72
+	throwforce = 56
 	throw_range = 7
 	w_class = 5
 	//var/charged = 5

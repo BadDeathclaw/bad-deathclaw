@@ -48,11 +48,11 @@
 
 //Security biosuit, grey with red stripe across the chest
 /obj/item/clothing/head/bio_hood/security
-	armor = list(melee = 20, bullet = 16, laser = 16, energy = 16, bomb = 16, bio = 100, rad = 20)
+	armor = list(melee = 25, bullet = 16, laser = 16, energy = 16, bomb = 16, bio = 100, rad = 20)
 	icon_state = "bio_security"
 
 /obj/item/clothing/suit/bio_suit/security
-	armor = list(melee = 20, bullet = 16, laser = 16, energy = 16, bomb = 16, bio = 100, rad = 20)
+	armor = list(melee = 25, bullet = 16, laser = 16, energy = 16, bomb = 16, bio = 100, rad = 20)
 	icon_state = "bio_security"
 
 
