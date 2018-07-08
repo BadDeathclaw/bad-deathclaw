@@ -36,7 +36,7 @@ Bonus
 /datum/symptom/damage_converter/proc/Convert(mob/living/M)
 
 	var/get_damage = 1.5
-
+/*
 	if(istype(M, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
 
@@ -47,13 +47,12 @@ Bonus
 
 		for(var/obj/item/organ/limb/L in parts)
 			L.heal_damage(get_damage, get_damage, 0)
-
+*/
+	if(M.getFireLoss() > 0 || M.getBruteLoss() > 0)
+		M.adjustFireLoss(-get_damage)
+		M.adjustBruteLoss(-get_damage)
 	else
-		if(M.getFireLoss() > 0 || M.getBruteLoss() > 0)
-			M.adjustFireLoss(-get_damage)
-			M.adjustBruteLoss(-get_damage)
-		else
-			return
+		return
 
 	M.adjustToxLoss(get_damage)
 	return 1
