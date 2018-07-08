@@ -56,7 +56,7 @@
 
 /obj/item/projectile/bullet/pellet //shotgunpellet
 	name = "pellet"
-	damage = 15
+	damage = 12
 	armour_penetration = -20
 	range = 7
 

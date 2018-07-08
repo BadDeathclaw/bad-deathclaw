@@ -4,7 +4,7 @@
 	desc = "A katana infused with strong energy."
 	icon_state = "energy_katana"
 	item_state = "energy_katana"
-	force = 40
+	force = 25
 	throwforce = 20
 	armour_penetration = 15
 	var/datum/effect_system/spark_spread/spark_system

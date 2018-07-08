@@ -47,7 +47,7 @@
 	desc = "A well balanced hard wood shield, fashioned together with long iron bands. It has a legion emblem charred into the inside."
 	icon_state = "roman_shield"
 	item_state = "roman_shield"
-	block_chance = 35
+	block_chance = 30
 	w_class = 3
 	force = 15
 	burn_state = FLAMMABLE

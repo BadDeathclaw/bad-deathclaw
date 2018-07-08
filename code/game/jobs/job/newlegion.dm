@@ -28,14 +28,13 @@ Legion
 
 /datum/outfit/job/legrecruit/pre_equip(mob/living/carbon/human/H)
 	..()
-	uniform = pick(/obj/item/clothing/under/pants/f13/caravan)
+	uniform = /obj/item/clothing/under/legskirt
 	shoes = /obj/item/clothing/shoes/legionleather
 	gloves = /obj/item/clothing/gloves/f13/legion
 	suit = /obj/item/clothing/suit/armor/f13/legrecruit
 	head = /obj/item/clothing/head/helmet/f13/legrecruit
 	glasses = /obj/item/clothing/glasses/sunglasses/legion
-	mask = /obj/item/clothing/mask/bandana/legrecruit
-	suit_store = /obj/item/weapon/gun/projectile/revolver/police
+	mask = /obj/item/clothing/mask/facewrap/red
 	back = /obj/item/weapon/storage/backpack
 	backpack = /obj/item/weapon/storage/backpack
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
@@ -43,6 +42,7 @@ Legion
 	/obj/item/stack/spear/bundle=1, \
 	/obj/item/stack/coin/random/low = 2, \
 	/obj/item/weapon/machete = 1, \
+	/obj/item/weapon/gun/projectile/revolver/m29, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder=1, \
 	/obj/item/ammo_box/m44=2, \
 	/obj/item/device/flashlight/flare/torch=1)
@@ -75,24 +75,25 @@ Legion
 
 /datum/outfit/job/legdecan/pre_equip(mob/living/carbon/human/H)
 	..()
-	uniform = pick(/obj/item/clothing/under/pants/f13/caravan)
+	uniform = /obj/item/clothing/under/legskirt
 	shoes = /obj/item/clothing/shoes/legionleather
 	gloves = /obj/item/clothing/gloves/f13/legion
 	suit = /obj/item/clothing/suit/armor/f13/legrecruit
 	head = /obj/item/clothing/head/helmet/f13/legdecan
 	glasses = /obj/item/clothing/glasses/sunglasses/legion
-	mask = /obj/item/clothing/mask/bandana/legdecan
-	suit_store = /obj/item/weapon/gun/projectile/automatic/shotgun/riot
+	mask = /obj/item/clothing/mask/facewrap/red
+	suit_store = /obj/item/weapon/gun/projectile/revolver/m29
 	back = /obj/item/weapon/storage/backpack
-	r_hand = /obj/item/weapon/twohanded/fireaxe
+	r_hand = pick(/obj/item/weapon/twohanded/fireaxe,\
+		/obj/item/weapon/twohanded/fireaxe/bumper,\
+		/obj/item/weapon/twohanded/sledgehammer)
 	backpack = /obj/item/weapon/storage/backpack
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/restraints/legcuffs/bola/raider=1, \
 	/obj/item/stack/spear/bundle=1, \
 	/obj/item/stack/coin/random/med = 3, \
-	/obj/item/weapon/machete = 1, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder=1, \
-	/obj/item/ammo_box/magazine/d12g=2, \
+	/obj/item/ammo_box/m44=3, \
 	/obj/item/device/flashlight/flare/torch=1)
 
 /datum/outfit/job/legdecan/post_equip(mob/living/carbon/human/H)
@@ -123,7 +124,7 @@ Legion
 
 /datum/outfit/job/legvex/pre_equip(mob/living/carbon/human/H)
 	..()
-	uniform = pick(/obj/item/clothing/under/pants/f13/caravan)
+	uniform = /obj/item/clothing/under/legskirt
 	shoes = /obj/item/clothing/shoes/legionmetal
 	gloves = /obj/item/clothing/gloves/f13/legion
 	suit = /obj/item/clothing/suit/armor/f13/legvexil
@@ -173,21 +174,25 @@ Legion
 
 /datum/outfit/job/legcenturion/pre_equip(mob/living/carbon/human/H)
 	..()
-	uniform = pick(/obj/item/clothing/under/pants/f13/caravan)
+	uniform = /obj/item/clothing/under/legskirt
 	shoes = /obj/item/clothing/shoes/legionmetal
 	gloves = /obj/item/clothing/gloves/f13/legion
 	suit = /obj/item/clothing/suit/armor/f13/legcenturion
 	head = /obj/item/clothing/head/helmet/f13/legcenturion
+	mask = /obj/item/clothing/mask/facewrap/black
 	glasses = /obj/item/clothing/glasses/sunglasses/legion
-	suit_store = /obj/item/weapon/gun/projectile/automatic/marksman
+	suit_store = /obj/item/weapon/gun/projectile/shotgun
 	back = /obj/item/weapon/storage/backpack
-	r_hand = /obj/item/weapon/claymore/hog
+	r_hand = pick(
+		/obj/item/weapon/twohanded/superhammer,\
+		/obj/item/weapon/twohanded/required/thermic,\
+		/obj/item/weapon/twohanded/required/chainsaw,\
+		/obj/item/weapon/powergauntlet)
 	backpack = /obj/item/weapon/storage/backpack
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1, \
 	/obj/item/stack/spear/bundle=1, \
 	/obj/item/stack/coin/random/high = 2, \
-	/obj/item/weapon/powergauntlet = 1, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 2, \
 	/obj/item/weapon/sleeping_carp_scroll= 2, \
 	/obj/item/device/flashlight/flare/torch=1)
@@ -226,7 +231,7 @@ Legion
 
 /datum/outfit/job/leglegat/pre_equip(mob/living/carbon/human/H)
 	..()
-	uniform = pick(/obj/item/clothing/under/pants/f13/caravan)
+	uniform = /obj/item/clothing/under/legskirt
 	shoes = /obj/item/clothing/shoes/legionlegat
 	gloves = /obj/item/clothing/gloves/f13/legionlegat
 	suit = /obj/item/clothing/suit/armor/f13/leglegat
@@ -235,11 +240,10 @@ Legion
 	suit_store = /obj/item/weapon/gun/projectile/automatic/marksman
 	back = /obj/item/weapon/storage/backpack
 	backpack = /obj/item/weapon/storage/backpack
-	r_hand = /obj/item/weapon/claymore/hog
+	r_hand = /obj/item/weapon/powergauntlet
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/stack/spear/bundle=1, \
 	/obj/item/stack/coin/random/high = 2, \
-	/obj/item/weapon/powergauntlet = 1,\
 	/obj/item/ammo_box/magazine/m556=3, \
 	/obj/item/weapon/restraints/legcuffs/bola/tribal=2, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 2, \
@@ -273,14 +277,14 @@ Legion
 
 /datum/outfit/job/legvet/pre_equip(mob/living/carbon/human/H)
 	..()
-	uniform = pick(/obj/item/clothing/under/pants/f13/caravan)
+	uniform = /obj/item/clothing/under/legskirt
 	shoes = /obj/item/clothing/shoes/legionmetal
 	gloves = /obj/item/clothing/gloves/f13/legion
 	suit = /obj/item/clothing/suit/armor/f13/legrecruit/vet
 	head = /obj/item/clothing/head/helmet/f13/legveteran
 	glasses = /obj/item/clothing/glasses/sunglasses/legion
-	mask = /obj/item/clothing/mask/bandana/legvet
-	suit_store = /obj/item/weapon/gun/projectile/shotgun/riot
+	mask = /obj/item/clothing/mask/facewrap/red
+	suit_store = /obj/item/weapon/gun/projectile/shotgun
 	back = /obj/item/weapon/storage/backpack
 	backpack = /obj/item/weapon/storage/backpack
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm

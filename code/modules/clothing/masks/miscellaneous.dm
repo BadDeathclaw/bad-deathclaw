@@ -180,3 +180,15 @@
 	flags_inv = HIDEFACE
 	visor_flags_inv = HIDEFACE
 	ignore_maskadjust = 1
+
+/obj/item/clothing/mask/facewrap/red
+	icon_state = "red_facewrap"
+	item_state = "red_facewrap"
+/obj/item/clothing/mask/facewrap/black
+	icon_state = "black_facewrap"
+	item_state = "black_facewrap"
+/obj/item/clothing/mask/facewrap/blue
+	icon_state = "blue_facewrap"
+	item_state = "blue_facewrap"
+
+

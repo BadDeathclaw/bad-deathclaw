@@ -180,13 +180,11 @@ var/list/sec_departments = list("engineering", "supply", "medical", "science")
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/jackboots
 	l_pocket = /obj/item/device/assembly/flash/handheld
-	suit_store = /obj/item/weapon/gun/projectile/automatic/pistol/n99
 	backpack_contents = list(/obj/item/weapon/melee/classic_baton/telescopic=1,\
 		/obj/item/weapon/restraints/handcuffs=1)
 
 	backpack = /obj/item/weapon/storage/backpack/security
 	satchel = /obj/item/weapon/storage/backpack/satchel_sec
-	box = /obj/item/weapon/storage/box/security
 
 	var/department = null
 	var/tie = null

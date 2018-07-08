@@ -6,11 +6,11 @@
 	item_state = "fire_extinguisher"
 	hitsound = 'sound/weapons/smash.ogg'
 	flags = CONDUCT
-	throwforce = 10
+	throwforce = 20
 	w_class = 3
 	throw_speed = 2
 	throw_range = 7
-	force = 10
+	force = 20
 	slot_flags = SLOT_BELT
 	materials = list(MAT_METAL=90)
 	attack_verb = list("slammed", "whacked", "bashed", "thunked", "battered", "bludgeoned", "thrashed")

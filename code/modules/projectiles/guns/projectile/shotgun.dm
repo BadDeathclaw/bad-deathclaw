@@ -76,6 +76,7 @@
 	desc = "A pre-war military grade shotgun with wood furniture and a five-shell capacity underneath plus one in chamber."
 	icon_state = "trenchgun"
 	item_state = "trenchgun"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/trench
 
 // Hunting Shotgun
 /obj/item/weapon/gun/projectile/shotgun/hunting
@@ -101,7 +102,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/riot
 	fire_sound = 'sound/f13weapons/riot_shotgun.ogg'
 	sawn_desc = "Come with me if you want to live."
-	force = 30
+	force = 25
 	damageG=15
 	damageA=0
 	damageS=0

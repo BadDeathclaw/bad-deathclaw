@@ -67,7 +67,7 @@
 	damage = 25
 
 /obj/item/projectile/bullet/saw/bleeding
-	damage = 15
+	damage = 10
 	armour_penetration = 0
 
 /obj/item/projectile/bullet/saw/bleeding/on_hit(atom/target, blocked = 0, hit_zone)

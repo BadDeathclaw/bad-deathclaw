@@ -134,7 +134,7 @@
 	mag_type = /obj/item/ammo_box/magazine/wt550m9
 	fire_delay = 1.5
 	can_suppress = 1
-	burst_size = 3
+	burst_size = 1
 
 /obj/item/weapon/gun/projectile/automatic/wt550/ui_action_click()
 	return

@@ -110,6 +110,9 @@
 	max_ammo = 5
 	multiload = 0
 
+/obj/item/ammo_box/magazine/internal/shot/trench
+	ammo_type = /obj/item/ammo_casing/shotgun/rubbershot
+
 /obj/item/ammo_box/magazine/internal/shot/ammo_count(countempties = 1)
 	if (!countempties)
 		var/boolets = 0

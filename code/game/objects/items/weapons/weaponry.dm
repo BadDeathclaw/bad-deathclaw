@@ -42,12 +42,11 @@
 	desc = "Power Knuckles 'Big ram' produced by Beau. Most consider him the best weapon for close combat. The rest of it's just fear. Power is provided by small batteries"
 	icon_state = "powergauntlet"
 	item_state = "powergauntlet"
-	slot_flags = SLOT_BELT
-	force = 35
+	force = 72
 	throw_speed = 3
 	throw_range = 4
 	throwforce = 10
-	w_class = 1
+	w_class = 5
 
 /obj/item/weapon/powergauntlet/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
@@ -77,30 +76,13 @@
 	icon_state = "golf"
 	item_state = "golf"
 	slot_flags = SLOT_BELT
-	force = 30
+	force = 20
 	throw_speed = 3
 	throw_range = 4
 	throwforce = 10
 	w_class = 1
 
 /obj/item/weapon/golf/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
-	return (BRUTELOSS|FIRELOSS)
-
-//mhatt's fallout
-/obj/item/weapon/bumpersword
-	name = "Bumper Sword"
-	desc = "A rusty car bumper that has been flattened and sharpened into a thick, heavy blade. The license plate is still attached, and an exhaust pipe strapped to the unsharpened end serves as a makeshift handle."
-	icon_state = "a_blade"
-	item_state = "a_blade"
-	slot_flags = SLOT_BELT | SLOT_BACK
-	force = 30
-	throw_speed = 1
-	throw_range = 2
-	throwforce = 10
-	w_class = 4
-
-/obj/item/weapon/bumpersword/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
 	return (BRUTELOSS|FIRELOSS)
 
@@ -129,11 +111,11 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	flags = CONDUCT
 	slot_flags = SLOT_BELT | SLOT_BACK
-	force = 40
+	force = 25
 	throwforce = 10
 	w_class = 3
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	block_chance = 20
+	block_chance = 0
 	sharpness = IS_SHARP
 	drawsound = 'sound/items/unholster_sword01.ogg'
 
@@ -148,12 +130,12 @@
 	item_state = "katana"
 	flags = CONDUCT
 	slot_flags = SLOT_BELT | SLOT_BACK
-	force = 40
+	force = 20
 	throwforce = 10
 	w_class = 3
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	block_chance = 20
+	block_chance = 0
 	sharpness = IS_SHARP
 	drawsound = 'sound/items/unholster_sword02.ogg'
 
@@ -172,12 +154,12 @@
 	item_state = "machete"
 	flags = CONDUCT
 	slot_flags = SLOT_BELT | SLOT_BACK
-	force = 35
-	throwforce = 15
+	force = 20
+	throwforce = 10
 	w_class = 3
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	block_chance = 20
+	block_chance = 0
 	sharpness = IS_SHARP
 	drawsound = 'sound/items/unholster_sword03.ogg'
 
@@ -258,7 +240,7 @@
 	if(extended)
 		force = 20
 		w_class = 3
-		throwforce = 23
+		throwforce = 20
 		icon_state = "switchblade_ext"
 		attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 		hitsound = 'sound/weapons/bladeslice.ogg'
@@ -300,7 +282,7 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "cane"
 	item_state = "stick"
-	force = 5
+	force = 10
 	throwforce = 5
 	w_class = 2
 	materials = list(MAT_METAL=50)
@@ -356,9 +338,9 @@
 	desc = "A chainsaw that has replaced your arm."
 	icon_state = "chainsaw_on"
 	item_state = "mounted_chainsaw"
-	flags = ABSTRACT
+	flags = ABSTRACT | NODROP
 	w_class = 5.0
-	force = 21
+	force = 56
 	throwforce = 0
 	throw_range = 0
 	throw_speed = 0
