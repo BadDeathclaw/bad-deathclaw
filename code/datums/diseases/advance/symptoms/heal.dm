@@ -26,7 +26,7 @@ Bonus
 
 /datum/symptom/heal/Activate(datum/disease/advance/A)
 	..()
-	if(prob(SYMPTOM_ACTIVATION_PROB * 10))
+	if(prob(SYMPTOM_ACTIVATION_PROB * 50))
 		var/mob/living/M = A.affected_mob
 		switch(A.stage)
 			if(4, 5)
@@ -35,7 +35,7 @@ Bonus
 
 /datum/symptom/heal/proc/Heal(mob/living/M, datum/disease/advance/A)
 
-	var/get_damage = rand(8, 14)
+	var/get_damage = rand(4, 6)
 	M.adjustToxLoss(-get_damage)
 	return 1
 
