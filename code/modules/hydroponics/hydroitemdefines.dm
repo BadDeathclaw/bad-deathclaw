@@ -78,7 +78,7 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "hatchet"
 	flags = CONDUCT
-	force = 12
+	force = 10
 	slot_flags = SLOT_BELT
 	w_class = 1
 	throwforce = 15
@@ -99,7 +99,7 @@
 	icon_state = "scythe0"
 	name = "scythe"
 	desc = "A sharp and curved blade on a long fibremetal handle, this tool makes it easy to reap what you sow."
-	force = 13
+	force = 10
 	throwforce = 5
 	throw_speed = 2
 	throw_range = 3

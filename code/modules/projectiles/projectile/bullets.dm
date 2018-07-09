@@ -56,7 +56,7 @@
 
 /obj/item/projectile/bullet/pellet //shotgunpellet
 	name = "pellet"
-	damage = 15
+	damage = 12
 	armour_penetration = -20
 	range = 7
 
@@ -121,8 +121,8 @@
 	return ..()
 
 /obj/item/projectile/bullet/rpellet //shotgunrubber
-	damage = 3
-	stamina = 25
+	damage = 2
+	stamina = 40
 	range = 7
 
 /obj/item/projectile/bullet/stunshot //taserslug

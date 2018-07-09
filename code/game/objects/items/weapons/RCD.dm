@@ -42,6 +42,7 @@ RCD
 	var/grillecost = 4
 	var/windowcost = 8
 	var/airlockcost = 16
+	var/windoorcost = 16
 	var/deconwallcost = 26
 	var/deconfloorcost = 33
 	var/decongrillecost = 4
@@ -55,6 +56,7 @@ RCD
 	var/grilledelay = 40
 	var/windowdelay = 40
 	var/airlockdelay = 50
+	var/windoordelay = 50
 	var/deconwalldelay = 40
 	var/deconfloordelay = 50
 	var/decongrilledelay = null //as rapid as wirecutters
@@ -283,6 +285,9 @@ RCD
 			mode = 4
 			user << "<span class='notice'>You change RCD's mode to 'Grilles & Windows'.</span>"
 		if(4)
+			mode = 5
+			user << "<span class='notice'>You change RCD's mode to 'Windoors'.</span>"
+		if(5)
 			mode = 1
 			user << "<span class='notice'>You change RCD's mode to 'Floor & Walls'.</span>"
 
@@ -321,6 +326,7 @@ RCD
 						activate()
 						Wa.ChangeTurf(/turf/simulated/wall/r_wall)
 						return 1
+				return 0
 			if(istype(A, /turf/simulated/floor))
 				var/turf/simulated/floor/F = A
 				if(checkResource(wallcost, user))
@@ -436,6 +442,15 @@ RCD
 						qdel(A)
 						return 1
 					return 0
+			if(istype(A, /obj/machinery/door/window))
+				var/obj/machinery/door/window/WD = A
+				if(useResource(deconairlockcost, user))
+					user << "<span class='notice'>You start deconstructing the windoor...</span>"
+					activate()
+					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
+					qdel(WD)
+					return 1
+				return 0
 
 		if (4)
 			if(istype(A, /turf/simulated/floor))
@@ -466,7 +481,33 @@ RCD
 						return 1
 					return 0
 				return 0
-
+		if (5)
+			if(istype(A, /turf/simulated/floor))
+				if(checkResource(windoorcost, user))
+					user << "<span class='notice'>You start building a windoor...</span>"
+					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
+					if(do_after(user, airlockdelay, target = A))
+						var/counter = 0
+						for(var/obj/machinery/door/window/WD in A)
+							counter += 1
+							if(counter > 2) //So you can have two windoors in one location
+								return 0
+						if(!useResource(windoorcost, user)) return 0
+						activate()
+						var/obj/machinery/door/window/brigdoor/Wa = new/obj/machinery/door/window/brigdoor(A)
+						Wa.icon_state = "leftsecureopen"
+						Wa.base_state = "leftsecure"
+						switch(user.dir)
+							if(SOUTH)
+								Wa.dir = NORTH
+							if(EAST)
+								Wa.dir = WEST
+							if(WEST)
+								Wa.dir = EAST
+							else //If the user is facing northeast. northwest, southeast, southwest or north, default to north
+								Wa.dir = SOUTH
+						if(conf_access)
+							Wa.electronics.accesses = conf_access.Copy()
 		else
 			user << "ERROR: RCD in MODE: [mode] attempted use by [user]. Send this text #coderbus or an admin."
 			return 0

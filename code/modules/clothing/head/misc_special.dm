@@ -21,7 +21,7 @@
 //	var/up = 0
 	flash_protect = 2
 	tint = 2
-	armor = list(melee = 20, bullet = 16, laser = 0,energy = 0, bomb = 16, bio = 0, rad = 0)
+	armor = list(melee = 25, bullet = 16, laser = 0,energy = 0, bomb = 16, bio = 0, rad = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	action_button_name = "Toggle Welding Helmet"
 	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
@@ -43,14 +43,14 @@
 	desc = "A welding helmet with burning flame painted over it.<br>It sure is creepy but nevertheless badass."
 	icon_state = "welding_fire"
 	item_state = "welding"
-	armor = list(melee = 20, bullet = 16, laser = 0,energy = 0, bomb = 16, bio = 0, rad = 0)
+	armor = list(melee = 25, bullet = 16, laser = 0,energy = 0, bomb = 16, bio = 0, rad = 0)
 
 /obj/item/clothing/head/welding/fluff/japan
 	name = "nippon welding helmet"
 	desc = "Kojin no ato wo motomezu, kojin no motometaru no tokoro wo motome yo."
 	icon_state = "welding_japan"
 	item_state = "welding"
-	armor = list(melee = 20, bullet = 16, laser = 0,energy = 0, bomb = 16, bio = 0, rad = 0)
+	armor = list(melee = 25, bullet = 16, laser = 0,energy = 0, bomb = 16, bio = 0, rad = 0)
 
 /*
  * Cakehat

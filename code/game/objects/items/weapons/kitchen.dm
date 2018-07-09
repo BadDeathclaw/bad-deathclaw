@@ -82,7 +82,7 @@
 	icon_state = "butch"
 	desc = "A huge thing used for chopping and chopping up meat. This includes clowns and clown-by-products."
 	flags = CONDUCT
-	force = 15
+	force = 25
 	throwforce = 8
 	attack_verb = list("cleaved", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	w_class = 3
@@ -98,7 +98,7 @@
 	name = "rolling pin"
 	desc = "Used to knock out the Bartender."
 	icon_state = "rolling_pin"
-	force = 8
+	force = 10
 	throwforce = 5
 	throw_speed = 3
 	throw_range = 7

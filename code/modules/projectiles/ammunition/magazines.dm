@@ -110,6 +110,9 @@
 	max_ammo = 5
 	multiload = 0
 
+/obj/item/ammo_box/magazine/internal/shot/trench
+	ammo_type = /obj/item/ammo_casing/shotgun/rubbershot
+
 /obj/item/ammo_box/magazine/internal/shot/ammo_count(countempties = 1)
 	if (!countempties)
 		var/boolets = 0
@@ -141,8 +144,8 @@
 
 /obj/item/ammo_box/magazine/internal/shot/riot
 	name = "riot shotgun internal magazine"
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
-	max_ammo = 6
+	ammo_type = /obj/item/ammo_casing/shotgun/beanbag
+	max_ammo = 7
 
 /obj/item/ammo_box/magazine/internal/shot/grenade
 	name = "china lake internal magazine"

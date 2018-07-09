@@ -160,12 +160,12 @@
 	icon_state = "fireaxe0"
 	name = "fire axe"
 	desc = "Truly, the weapon of a madman. Who would think to fight fire with an axe?"
-	force = 5
-	throwforce = 15
+	force = 20
+	throwforce = 25
 	w_class = 4
 	slot_flags = SLOT_BACK
-	force_unwielded = 5
-	force_wielded = 24 // Was 18, Buffed - RobRichards/RR
+	force_unwielded = 20
+	force_wielded = 56
 	attack_verb = list("attacked", "chopped", "cleaved", "torn", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharpness = IS_SHARP
@@ -189,6 +189,34 @@
 			G.health = -6
 			G.destroyed += prob(25) // If this is set, healthcheck will completely remove the grille
 			G.healthcheck()
+
+
+/obj/item/weapon/twohanded/fireaxe/bumper
+	icon_state = "bumper0"
+	name = "bumper sword"
+	desc = "A improvised sword made out of a sharpened bumper, it can be wielded."
+	lefthand_file = 'icons/mob/inhands/items_leftbig.dmi'
+	righthand_file = 'icons/mob/inhands/items_rightbig.dmi'
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
+
+
+/obj/item/weapon/twohanded/fireaxe/bumper/update_icon()  //Currently only here to fuck with the on-mob icons.
+	icon_state = "bumper[wielded]"
+	return
+
+/obj/item/weapon/twohanded/fireaxe/bumper/afterattack(atom/A as mob|obj|turf|area, mob/user, proximity)
+	if(!proximity) return
+	if(wielded) //destroys windows and grilles in one hit
+		if(istype(A,/obj/structure/window))
+			var/obj/structure/window/W = A
+			W.spawnfragments() // this will qdel and spawn shards
+		else if(istype(A,/obj/structure/grille))
+			var/obj/structure/grille/G = A
+			G.health = -6
+			G.destroyed += prob(25) // If this is set, healthcheck will completely remove the grille
+			G.healthcheck()
+
 
 
 /*
@@ -295,13 +323,13 @@
 //spears
 /obj/item/weapon/twohanded/spear
 	icon_state = "spearglass0"
-	name = "spear"
-	desc = "A haphazardly-constructed yet still deadly weapon of ancient design."
+	name = "Improvised Metal Glaive"
+	desc = "A improvised metal glaive that can be wielded."
 	force = 10
 	w_class = 4
 	slot_flags = SLOT_BACK
 	force_unwielded = 10
-	force_wielded = 18
+	force_wielded = 25
 	throwforce = 20
 	throw_speed = 4
 	embedded_impact_pain_multiplier = 3
@@ -383,9 +411,9 @@
 	desc = "A versatile power tool. Useful for limbing trees and delimbing humans."
 	icon_state = "chainsaw_off"
 	flags = CONDUCT
-	force = 13
+	force = 20
 	w_class = 5
-	throwforce = 13
+	throwforce = 20
 	throw_speed = 2
 	throw_range = 4
 	materials = list(MAT_METAL=13000)
@@ -399,8 +427,8 @@
 /obj/item/weapon/twohanded/required/chainsaw/attack_self(mob/user)
 	on = !on
 	user << "As you pull the starting cord dangling from \the [src], [on ? "it begins to whirr." : "the chain stops moving."]"
-	force = on ? 21 : 13
-	throwforce = on ? 21 : 13
+	force = on ? 72 : 20
+	throwforce = on ? 72 : 20
 	icon_state = "chainsaw_[on ? "on" : "off"]"
 
 	if(hitsound == "swing_hit")
@@ -412,13 +440,57 @@
 		user.update_inv_l_hand()
 		user.update_inv_r_hand()
 
+//Thermic Lance
+
+/obj/item/weapon/twohanded/required/thermic
+	name = "thermic lance"
+	desc = "A versatile power-welding tool. Useful for cutting apart metal and limbs."
+	icon_state = "thermic_off"
+	lefthand_file = 'icons/mob/inhands/items_leftbig.dmi'
+	righthand_file = 'icons/mob/inhands/items_rightbig.dmi'
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
+	flags = CONDUCT
+	force = 20
+	w_class = 5
+	throwforce = 20
+	throw_speed = 2
+	throw_range = 4
+	materials = list(MAT_METAL=13000)
+	origin_tech = "materials=2;engineering=2;combat=2"
+	attack_verb = list("burned", "welded", "cut", "melted", "splashed")
+	hitsound = "swing_hit"
+	sharpness = IS_SHARP
+	action_button_name = "Turn the lever"
+	var/on = 0
+
+/obj/item/weapon/twohanded/required/thermic/attack_self(mob/user)
+	on = !on
+	user << "As you turn the lever from \the [src], [on ? "it begins to heat." : "the flame goes off."]"
+	force = on ? 72 : 20
+	throwforce = on ? 72 : 20
+	icon_state = "thermic_[on ? "on" : "off"]"
+	item_state = "thermic_[on ? "on" : "off"]"
+
+	if(hitsound == "swing_hit")
+		hitsound = 'sound/items/Welder.ogg'
+	else
+		hitsound = "swing_hit"
+
+	if(src == user.get_active_hand()) //update inhands
+		user.update_inv_l_hand()
+		user.update_inv_r_hand()
+
+
+
+
 
 //GREY TIDE
 /obj/item/weapon/twohanded/spear/grey_tide
 	icon_state = "spearglass0"
-	name = "\improper Grey Tide"
-	desc = "Recovered from the aftermath of a revolt aboard Defense Outpost Theta Aegis, in which a seemingly endless tide of Assistants caused heavy casualities among Nanotrasen military forces."
-	force_unwielded = 15
+	name = "\improper Improvised Metal Glaive"
+	desc = "a improvised metal glaive that can be wielded."
+	force_unwielded = 10
 	force_wielded = 25
 	throwforce = 20
 	throw_speed = 4

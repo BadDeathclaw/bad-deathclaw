@@ -8,7 +8,7 @@
 	flags = CONDUCT
 	w_class = 3
 	force = 20
-	throwforce = 40		//I need to add armor pen eventually.
+	throwforce = 20		//I need to add armor pen eventually.
 	throw_speed = 2
 	throw_range = 7
 	materials = list(MAT_METAL=1000)

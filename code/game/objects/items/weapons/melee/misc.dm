@@ -2,7 +2,7 @@
 	needs_permit = 1
 
 /obj/item/weapon/melee/chainofcommand
-	name = "chain of command"
+	name = "metal wip"
 	desc = "A tool used by great men to placate the frothing masses."
 	icon_state = "chain"
 	item_state = "chain"
@@ -29,7 +29,7 @@
 	icon_state = "baton"
 	item_state = "classic_baton"
 	slot_flags = SLOT_BELT
-	force = 12 //9 hit crit
+	force = 10 //10 hit crit
 	w_class = 3
 	var/cooldown = 0
 	var/on = 1
