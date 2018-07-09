@@ -35,6 +35,7 @@ Legion
 	head = /obj/item/clothing/head/helmet/f13/legrecruit
 	glasses = /obj/item/clothing/glasses/sunglasses/legion
 	mask = /obj/item/clothing/mask/facewrap/red
+	suit_store = /obj/item/weapon/gun/projectile/revolver/m29
 	back = /obj/item/weapon/storage/backpack
 	backpack = /obj/item/weapon/storage/backpack
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
@@ -42,7 +43,6 @@ Legion
 	/obj/item/stack/spear/bundle=1, \
 	/obj/item/stack/coin/random/low = 2, \
 	/obj/item/weapon/machete = 1, \
-	/obj/item/weapon/gun/projectile/revolver/m29, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder=1, \
 	/obj/item/ammo_box/m44=2, \
 	/obj/item/device/flashlight/flare/torch=1)
