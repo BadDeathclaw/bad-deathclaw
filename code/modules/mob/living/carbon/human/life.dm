@@ -32,8 +32,8 @@
 	set invisibility = 0
 	set background = BACKGROUND_ENABLED
 
-	var/list/Mobs = hearers(9, src) - src //Remove self, so we don't suicide
 	if(stat != DEAD)
+		var/list/Mobs = hearers(9, src) - src //Remove self, so we don't suicide
 		for(var/mob/living/simple_animal/hostile/A in Mobs)
 			if(istype(A, /mob/living/simple_animal/hostile))
 				A.humantrigger()
