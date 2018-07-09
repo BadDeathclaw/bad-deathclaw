@@ -144,3 +144,64 @@ Code:
 	user << browse(dat, "window=radio")
 	onclose(user, "radio")
 	return
+//F13 EDIT
+/obj/item/device/electropack/slavecollar
+	name = "slave collar"
+	desc = "A reinforced metal collar. It seems to have some form of wiring near the front. Strange.."
+	icon = 'icons/obj/clothing/ties.dmi'
+	slot_flags = SLOT_MASK | SLOT_DENYPOCKET //CEASE THE POCKET SHOCKER MEMES
+	icon_state = "slavecollar_ico"
+	item_color = "slavecolar"
+	w_class = 3
+	
+/obj/item/device/electropack/slavecollar/attack_hand(mob/user)
+	if(iscarbon(user))
+		var/mob/living/carbon/C = user
+		if(src == C.back)
+			user << "<span class='warning'>The collar is fastened tight! You'll need help taking this off!</span>"
+			return
+	..()
+	
+/obj/item/device/electropack/slavecollar/receive_signal(datum/signal/signal)
+	if(!signal || signal.encryption != code)
+		return
+	if(ismob(loc))
+		if(shock_cooldown != 0)
+			return
+		shock_cooldown = 1
+		spawn(100)
+			shock_cooldown = 0
+		var/mob/M = loc
+		step(M, pick(cardinal))
+
+		M << "<span class='danger'>You feel a sharp shock!</span>"
+		var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
+		s.set_up(3, 1, M)
+		s.start()
+		M.Weaken(5)
+	if(master)
+		master.receive_signal()
+	return
+
+/obj/item/device/electropack/slavecollar/attack_self(mob/user)
+	if(!istype(user, /mob/living/carbon/human))
+		return
+	user.set_machine(src)
+	var/dat = {"
+<A href='?src=\ref[src];power=1'>Toggle</A><BR>
+<B>Frequency/Code</B> for slave collar:<BR>
+Frequency:
+<A href='byond://?src=\ref[src];freq=-10'>-</A>
+<A href='byond://?src=\ref[src];freq=-2'>-</A> [format_frequency(frequency)]
+<A href='byond://?src=\ref[src];freq=2'>+</A>
+<A href='byond://?src=\ref[src];freq=10'>+</A><BR>
+
+Code:
+<A href='byond://?src=\ref[src];code=-5'>-</A>
+<A href='byond://?src=\ref[src];code=-1'>-</A> [code]
+<A href='byond://?src=\ref[src];code=1'>+</A>
+<A href='byond://?src=\ref[src];code=5'>+</A><BR>
+</TT>"}
+	user << browse(dat, "window=radio")
+	onclose(user, "radio")
+	return
