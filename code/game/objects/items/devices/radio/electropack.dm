@@ -163,7 +163,7 @@ Code:
 			return
 	..()
 	
-/obj/item/device/electropack/receive_signal(datum/signal/signal)
+/obj/item/device/electropack/slavecollar/receive_signal(datum/signal/signal)
 	if(!signal || signal.encryption != code)
 		return
 	if(ismob(loc))
