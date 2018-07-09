@@ -127,8 +127,8 @@
 	return
 
 /obj/item/weapon/gun/projectile/automatic/wt550
-	name = "/improper General Arms SDW"
-	desc = "A light weight tactical SMG. Uses 4.6x30mm rounds and is designated as a self defense weapon. Has a GA logo stamped into the reciever."
+	name = "Advanced SMG"
+	desc = "A light weight tactical SMG. Uses 4.6x30mm rounds and is designated as a self defense weapon. Seems to be of advanced origin."
 	icon_state = "wt550"
 	item_state = "arg"
 	mag_type = /obj/item/ammo_box/magazine/wt550m9

@@ -81,6 +81,13 @@
 
 	alert_drones(DRONE_NET_CONNECT)
 
+/mob/living/simple_animal/drone/Life()
+	..()
+	if(stat != DEAD)
+		var/list/Mobs = hearers(9, src) - src //Remove self, so we don't suicide 
+		for(var/mob/living/simple_animal/hostile/A in Mobs) 
+			if(istype(A, /mob/living/simple_animal/hostile)) 
+				A.humantrigger()
 
 /mob/living/simple_animal/drone/Destroy()
 	qdel(access_card) //Otherwise it ends up on the floor!

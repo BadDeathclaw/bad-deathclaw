@@ -46,7 +46,7 @@
 		handle_environment(environment)
 
 	//Chemicals in the body
-	handle_chemicals_in_body()
+	//handle_chemicals_in_body()
 
 	//Blud
 	//handle_blood()
