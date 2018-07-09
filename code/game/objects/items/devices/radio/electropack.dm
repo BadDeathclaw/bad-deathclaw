@@ -144,3 +144,44 @@ Code:
 	user << browse(dat, "window=radio")
 	onclose(user, "radio")
 	return
+//F13 EDIT
+/obj/item/device/electropack/slavecollar
+	name = "slave collar"
+	desc = "A reinforced metal collar. It seems to have some form of wiring near the front. Strange.."
+	icon = 'icons/obj/clothing/ties.dmi'
+	slot_flags = SLOT_MASK | SLOT_DENYPOCKET //CEASE THE POCKET SHOCKER MEMES
+	icon_state = "petcollar"
+	item_color = "petcollar"
+	w_class = 3
+	icon = 'icons/obj/radio.dmi'
+	
+/obj/item/device/electropack/slavecollar/attack_hand(mob/user)
+	if(iscarbon(user))
+		var/mob/living/carbon/C = user
+		if(src == C.back)
+			user << "<span class='warning'>The collar is fastened tight! You'll need help taking this off!</span>"
+			return
+	..()
+
+/obj/item/device/electropack/slavecollar/attack_self(mob/user)
+	if(!istype(user, /mob/living/carbon/human))
+		return
+	user.set_machine(src)
+	var/dat = {"
+<A href='?src=\ref[src];power=1'>Toggle</A><BR>
+<B>Frequency/Code</B> for slave collar:<BR>
+Frequency:
+<A href='byond://?src=\ref[src];freq=-10'>-</A>
+<A href='byond://?src=\ref[src];freq=-2'>-</A> [format_frequency(frequency)]
+<A href='byond://?src=\ref[src];freq=2'>+</A>
+<A href='byond://?src=\ref[src];freq=10'>+</A><BR>
+
+Code:
+<A href='byond://?src=\ref[src];code=-5'>-</A>
+<A href='byond://?src=\ref[src];code=-1'>-</A> [code]
+<A href='byond://?src=\ref[src];code=1'>+</A>
+<A href='byond://?src=\ref[src];code=5'>+</A><BR>
+</TT>"}
+	user << browse(dat, "window=radio")
+	onclose(user, "radio")
+	return
