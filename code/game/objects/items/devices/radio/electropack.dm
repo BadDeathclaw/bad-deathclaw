@@ -162,6 +162,27 @@ Code:
 			user << "<span class='warning'>The collar is fastened tight! You'll need help taking this off!</span>"
 			return
 	..()
+	
+/obj/item/device/electropack/receive_signal(datum/signal/signal)
+	if(!signal || signal.encryption != code)
+		return
+	if(ismob(loc))
+		if(shock_cooldown != 0)
+			return
+		shock_cooldown = 1
+		spawn(100)
+			shock_cooldown = 0
+		var/mob/M = loc
+		step(M, pick(cardinal))
+
+		M << "<span class='danger'>You feel a sharp shock!</span>"
+		var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
+		s.set_up(3, 1, M)
+		s.start()
+		M.Weaken(5)
+	if(master)
+		master.receive_signal()
+	return
 
 /obj/item/device/electropack/slavecollar/attack_self(mob/user)
 	if(!istype(user, /mob/living/carbon/human))
