@@ -150,10 +150,9 @@ Code:
 	desc = "A reinforced metal collar. It seems to have some form of wiring near the front. Strange.."
 	icon = 'icons/obj/clothing/ties.dmi'
 	slot_flags = SLOT_MASK | SLOT_DENYPOCKET //CEASE THE POCKET SHOCKER MEMES
-	icon_state = "petcollar"
-	item_color = "petcollar"
+	icon_state = "slavecollar_ico"
+	item_color = "slavecolar"
 	w_class = 3
-	icon = 'icons/obj/radio.dmi'
 	
 /obj/item/device/electropack/slavecollar/attack_hand(mob/user)
 	if(iscarbon(user))
