@@ -1106,20 +1106,22 @@ obj
 								lb2.loc=src.loc
 								del src
 							if(5)
+								var/obj/item/clothing/suit/armor/f13/rangercombat/eliteriot/lb = new
+								var/obj/item/clothing/head/helmet/f13/rangercombat/eliteriot/lb2 = new
+								lb.loc=src.loc
+								lb2.loc=src.loc
+								del src
+							if(6)
 								var/obj/item/clothing/suit/armor/f13/rangercombat/desert/lb = new
 								var/obj/item/clothing/head/helmet/f13/rangercombat/desert/lb2 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
 								del src
-							if(6)
+							if(7)
 								var/obj/item/clothing/suit/armor/fluff/chestplate/mk2/lb = new
 								var/obj/item/clothing/head/helmet/f13/metalmask/mk2/lb2 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
-								del src
-							if(7)
-								var/obj/item/clothing/suit/armor/f13/ibmetalarmor/lb = new
-								lb.loc=src.loc
 								del src
 							if(8)
 								var/obj/item/clothing/head/helmet/f13/brokenpa/t45b/lb = new
