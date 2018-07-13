@@ -465,7 +465,7 @@
 	addiction_threshold = 30
 
 /datum/reagent/medicine/ephedrine/on_mob_life(mob/living/M)
-	M.status_flags |= GOTTAGOFAST
+	//M.status_flags |= GOTTAGOFAST
 	M.AdjustParalysis(-1)
 	M.AdjustStunned(-1)
 	M.AdjustWeakened(-1)
