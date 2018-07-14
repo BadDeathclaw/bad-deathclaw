@@ -421,7 +421,7 @@
 	back = /obj/item/weapon/storage/backpack/satchel
 	backpack_contents = list(/obj/item/weapon/storage/box/lethalshot = 2, \
 		/obj/item/ammo_box/c4570=2, \
-		/obj/item/ammo_box/magazine/m556=3, \
+		/obj/item/ammo_box/magazine/m556/r20=3, \
 		/obj/item/weapon/gun/projectile/revolver/sequoia/scoped=1, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/storage/firstaid/tactical=1)
@@ -553,7 +553,7 @@
 	belt = /obj/item/weapon/storage/belt/military
 	back = /obj/item/weapon/storage/backpack/satchel
 	glasses = /obj/item/clothing/glasses/night
-	backpack_contents = list(/obj/item/ammo_box/magazine/m556 = 3, \
+	backpack_contents = list(/obj/item/ammo_box/magazine/m556/r20 = 3, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/energy/laser/pistol=1)
 
