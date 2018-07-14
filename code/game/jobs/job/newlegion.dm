@@ -139,7 +139,7 @@ Legion
 	/obj/item/stack/coin/random/med = 1, \
 	/obj/item/weapon/machete = 1, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder=1, \
-	/obj/item/ammo_box/magazine/m556=1, \
+	/obj/item/ammo_box/magazine/m556/r20=1, \
 	/obj/item/device/flashlight/flare/torch=1)
 
 /datum/outfit/job/legvex/post_equip(mob/living/carbon/human/H)
@@ -244,7 +244,7 @@ Legion
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/stack/spear/bundle=1, \
 	/obj/item/stack/coin/random/high = 2, \
-	/obj/item/ammo_box/magazine/m556=3, \
+	/obj/item/ammo_box/magazine/m556/r20=3, \
 	/obj/item/weapon/restraints/legcuffs/bola/tribal=2, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 2, \
 	/obj/item/device/flashlight/flare/torch=1)
