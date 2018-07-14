@@ -680,7 +680,7 @@ obj
 									del src
 								if(9)
 									var/obj/item/weapon/gun/projectile/automatic/bozar/lb = new
-									var/obj/item/ammo_box/magazine/m556/lb2 = new
+									var/obj/item/ammo_box/magazine/m556/r20/lb2 = new
 									lb.loc=src.loc
 									lb2.loc=src.loc
 									del src
