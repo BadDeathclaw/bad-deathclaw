@@ -545,3 +545,11 @@
 
 /obj/item/clothing/head/winterhood/miner
 	icon_state = "winterhood_miner"
+	
+/obj/item/clothing/suit/armor/f13/ghostechoe
+	name = "Tattered Peace Jacket"
+	desc = "A tattered jacket of what the Desert Rangers wear, this one has seen many fights and lacks the protection of normal jackets. A white peace symbol has been painted on the back."
+	icon_state = "peace_jacket"
+	item_state = "peace_jacket"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
