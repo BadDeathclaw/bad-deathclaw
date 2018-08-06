@@ -37,6 +37,8 @@
 	user_not_tired = 1
 	require_target_naked = 1
 	max_distance = 0
+	write_log_user = "sucked"
+	write_log_target = "was sucked by"
 
 /datum/interaction/lewd/oral/display_interaction(var/mob/user, var/mob/target)
 	user.do_oral(target)
@@ -47,6 +49,8 @@
 	require_target_vagina = 0
 	require_target_penis = 1
 	target_not_tired = 1
+	write_log_user = "sucked"
+	write_log_target = "was sucked by"
 
 /datum/interaction/lewd/fuck
 	command = "fuckvag"
@@ -60,6 +64,8 @@
 	require_user_naked = 1
 	require_target_naked = 1
 	max_distance = 0
+	write_log_user = "fucked"
+	write_log_target = "was fucked by"
 
 /datum/interaction/lewd/fuck/display_interaction(var/mob/user, var/mob/target)
 	user.do_vaginal(target)
@@ -70,6 +76,8 @@
 	require_target_vagina = 0
 	require_target_anus = 1
 	user_not_tired = 1
+	write_log_user = "ass-fucked"
+	write_log_target = "was ass-fucked by"
 
 /datum/interaction/lewd/fuck/anal/display_interaction(var/mob/user, var/mob/target)
 	user.do_anal(target)
@@ -83,6 +91,8 @@
 	user_not_tired = 1
 	require_target_naked = 1
 	max_distance = 0
+	write_log_user = "fingered"
+	write_log_target = "was fingered by"
 
 /datum/interaction/lewd/finger/display_interaction(var/mob/user, var/mob/target)
 	user.do_fingering(target)
@@ -96,6 +106,8 @@
 	user_not_tired = 1
 	require_target_naked = 1
 	max_distance = 0
+	write_log_user = "fingered"
+	write_log_target = "was fingered by"
 
 /datum/interaction/lewd/fingerass/display_interaction(var/mob/user, var/mob/target)
 	user.do_fingerass(target)
@@ -109,6 +121,8 @@
 	user_not_tired = 1
 	require_user_naked = 1
 	max_distance = 0
+	write_log_user = "face-fucked"
+	write_log_target = "was face-fucked by"
 
 /datum/interaction/lewd/facefuck/display_interaction(var/mob/user, var/mob/target)
 	user.do_facefuck(target)
@@ -122,6 +136,8 @@
 	user_not_tired = 1
 	require_user_naked = 1
 	max_distance = 0
+	write_log_user = "throat-fucked"
+	write_log_target = "was throat-fucked by"
 
 /datum/interaction/lewd/throatfuck/display_interaction(var/mob/user, var/mob/target)
 	user.do_throatfuck(target)
@@ -135,6 +151,8 @@
 	target_not_tired = 1
 	require_target_naked = 1
 	max_distance = 1
+	write_log_user = "jerked-off"
+	write_log_target = "was jerked-off by"
 
 /datum/interaction/lewd/handjob/display_interaction(var/mob/user, var/mob/target)
 	user.do_handjob(target)
@@ -149,6 +167,8 @@
 	require_target_naked = 1
 	require_target_vagina = 1
 	max_distance = 0
+	write_log_user = "breast-fucked"
+	write_log_target = "was breast-fucked by"
 
 /datum/interaction/lewd/breastfuck/display_interaction(var/mob/user, var/mob/target)
 	user.do_breastfuck(target)
@@ -164,6 +184,8 @@
 	require_user_naked = 1
 	require_target_naked = 1
 	max_distance = 0
+	write_log_user = "rode"
+	write_log_target = "was rode by"
 
 /datum/interaction/lewd/mount/display_interaction(var/mob/user, var/mob/target)
 	user.do_mount(target)
@@ -180,6 +202,8 @@
 	require_user_naked = 1
 	require_target_naked = 1
 	max_distance = 0
+	write_log_user = "rode"
+	write_log_target = "was rode by"
 
 /datum/interaction/lewd/mountass/display_interaction(var/mob/user, var/mob/target)
 	user.do_mountass(target)
@@ -193,6 +217,8 @@
 	user_not_tired = 1
 	require_target_naked = 1
 	max_distance = 0
+	write_log_user = "rimmed"
+	write_log_target = "was rimmed by"
 
 /datum/interaction/lewd/rimjob/display_interaction(var/mob/user, var/mob/target)
 	user.do_rimjob(target)
@@ -206,6 +232,8 @@
 	user_not_tired = 1
 	require_user_naked = 1
 	max_distance = 0
+	write_log_user = "made-them-rim"
+	write_log_target = "was made-to-rim by"
 
 /datum/interaction/lewd/mountface/display_interaction(var/mob/user, var/mob/target)
 	user.do_mountface(target)
@@ -216,6 +244,8 @@
 	interaction_sound = null
 	require_user_mouth = 1
 	max_distance = 1
+	write_log_user = "licked-feet"
+	write_log_target = "had their feet licked by"
 
 /datum/interaction/lewd/lickfeet/display_interaction(var/mob/user, var/mob/target)
 	user.do_lickfeet(target)
@@ -226,6 +256,8 @@
 	interaction_sound = null
 	require_target_mouth = 1
 	max_distance = 0
+	write_log_user = "feet-faced"
+	write_log_target = "had feet grinded against their face by"
 
 /datum/interaction/lewd/grindface/display_interaction(var/mob/user, var/mob/target)
 	user.do_grindface(target)
@@ -236,6 +268,35 @@
 	interaction_sound = null
 	require_target_mouth = 1
 	max_distance = 0
+	write_log_user = "feet-mouthed"
+	write_log_target = "had feet grinding against their tongue by"
 
 /datum/interaction/lewd/grindmouth/display_interaction(var/mob/user, var/mob/target)
 	user.do_grindmouth(target)
+
+/datum/interaction/lewd/nuts
+	command = "nuts"
+	description = "Nuts to face."
+	interaction_sound = null
+	require_user_naked = 1
+	require_user_penis = 1
+	require_target_mouth = 1
+	max_distance = 0
+	write_log_user = "make-them-suck-their-nuts"
+	write_log_target = "was made to suck nuts by"
+
+/datum/interaction/lewd/nuts/display_interaction(var/mob/user, var/mob/target)
+	user.do_nuts(target)
+
+/datum/interaction/lewd/thighs
+	command = "thighs"
+	description = "Smother them."
+	interaction_sound = null
+	max_distance = 0
+	require_user_naked = 1
+	require_target_mouth = 1
+	write_log_user = "thigh-trapped"
+	write_log_target = "was smothered by"
+
+/datum/interaction/lewd/thighs/display_interaction(var/mob/user, var/mob/target)
+	user.do_thighs(target)
