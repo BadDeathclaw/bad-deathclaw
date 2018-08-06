@@ -293,6 +293,8 @@
 	description = "Smother them."
 	interaction_sound = null
 	max_distance = 0
+	require_user_naked = 1
+	require_target_mouth = 1
 	write_log_user = "thigh-trapped"
 	write_log_target = "was smothered by"
 
