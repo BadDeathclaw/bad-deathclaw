@@ -20,6 +20,9 @@
 
 /mob/proc/cum(var/mob/partner, var/target_orifice)
 
+	//if(rand(250))
+	//	playsound(loc, "honk/sound/interactions/oof.ogg", 70, 1, -1)
+
 	var/message
 	if(has_penis())
 
@@ -30,25 +33,25 @@
 			if(CUM_TARGET_MOUTH)
 				if(partner.has_mouth() && partner.mouth_is_free())
 					message = "cums right in \the [partner]'s mouth."
-					partner.reagents.add_reagent("cum", 10)
+					//partner.reagents.add_reagent("cum", 10)
 				else
 					message = "cums on \the [partner]'s face."
 			if(CUM_TARGET_THROAT)
 				if(partner.has_mouth() && partner.mouth_is_free())
 					message = "shoves deep into \the [partner]'s throat and cums."
-					partner.reagents.add_reagent("cum", 10)
+					//partner.reagents.add_reagent("cum", 10)
 				else
 					message = "cums on \the [partner]'s face."
 			if(CUM_TARGET_VAGINA)
 				if(partner.is_nude() && partner.has_vagina())
 					message = "cums in \the [partner]'s pussy."
-					partner.reagents.add_reagent("cum", 10)
+					//partner.reagents.add_reagent("cum", 10)
 				else
 					message = "cums on \the [partner]'s belly."
 			if(CUM_TARGET_ANUS)
 				if(partner.is_nude() && partner.has_anus())
 					message = "cums in \the [partner]'s asshole."
-					partner.reagents.add_reagent("cum", 10)
+					//partner.reagents.add_reagent("cum", 10)
 				else
 					message = "cums on \the [partner]'s backside."
 			if(CUM_TARGET_HAND)
@@ -61,6 +64,14 @@
 					message = "cums onto \the [partner]'s breasts."
 				else
 					message = "cums on \the [partner]'s chest and neck."
+			if(NUTS_TO_FACE)
+				if(partner.has_mouth() && partner.mouth_is_free())
+					message = "vigorously ruts their hairy nutsack into \the [partner]'s mouth before shooting their thick, sticky jizz all over their eyes and hair."
+			if(THIGH_SMOTHERING)
+				if(src.has_penis())
+					message = "keeps \the [partner] locked in their thighs as their cock throbs, dumping its heavy load all over their face."
+				else
+					message = "reaches their peak, locking their legs around \the [partner]'s head extra hard as they cum straight onto the head stuck between their thighs"
 			else
 				message = "cums on the floor!"
 
@@ -83,10 +94,10 @@
 		add_logs(partner, src, "came on")
 
 	if(multiorgasms > (sexual_potency/3))
-		refactory_period = 1 //sex cooldown
+		refactory_period = 100 //sex cooldown
 		druggy = 30
 	else
-		refactory_period = 1
+		refactory_period = 100
 		druggy = 6
 
 /mob/living/carbon/human/cum(var/mob/partner, var/target_orifice)
@@ -112,9 +123,6 @@
 
 	if(partner.is_fucking(src, CUM_TARGET_MOUTH))
 		if(prob(partner.sexual_potency))
-			if(istype(src, /mob/living/carbon/human)) // Argh.
-				var/mob/living/carbon/human/H = src
-				H.adjustOxyLoss(3)
 			message = "goes in deep on \the [partner]."
 			lust_increase += 5
 		else
@@ -417,6 +425,51 @@
 	visible_message("<b>\The [src]</b> [message]")
 	partner.handle_post_sex(lust_increase, null, src)
 	partner.dir = get_dir(src, partner)
+	do_fucking_animation(get_dir(src, partner))
+
+/mob/proc/do_nuts(var/mob/partner)
+	var/message
+	var/lust_increase = 1
+
+	if(is_fucking(partner, NUTS_TO_FACE))
+		message = pick(list("grabs the back of [partner]'s head and pulls it into their crotch.", "jams their nutsack right into [partner]'s face.", "roughly grinds their fat nutsack into [partner]'s mouth.", "pulls out their saliva-covered nuts from [partner]'s violated mouth and then wipes off the slime onto their face."))
+	else
+		message = pick(list("wedges a digit into the side of [partner]'s jaw and pries it open before using their other hand to shove their whole nutsack inside!", "stands with their groin inches away from [partner]'s face, then thrusting their hips forward and smothering [partner]'s whole face with their heavy ballsack."))
+		set_is_fucking(partner , NUTS_TO_FACE)
+
+	playsound(loc, "honk/sound/interactions/nuts[rand(1, 4)].ogg", 70, 1, -1)
+	visible_message("<b>\The [src]</b> [message]")
+	handle_post_sex(lust_increase, CUM_TARGET_MOUTH, partner)
+	partner.dir = get_dir(partner,src)
+	do_fucking_animation(get_dir(src, partner))
+
+/mob/proc/do_thighs(var/mob/partner)
+	var/message
+	var/lust_increase = 1
+
+	if(is_fucking(partner, THIGH_SMOTHERING))
+		if(has_vagina())
+			message = pick(list("presses their weight down onto \the [partner]'s face, blocking their vision completely.", "rides \the [partner]'s face, grinding their wet pussy all over it."))
+		else if(has_penis())
+			message = pick(list("presses their weight down onto \the [partner]'s face, blocking their vision completely.", "forces their dick and nutsack into \the [partner]'s face as they're stuck locked inbetween their thighs.", "slips their cock into \the [partner]'s helpless mouth, keeping their groin pressed hard into their face."))
+		else
+			message = "rubs their groin up and down \the [partner]'s face."
+	else
+		if(has_vagina())
+			message = pick(list("clambers over \the [partner]'s face and pins them down with their meaty thighs, their moist slit rubbing all over \the [partner]'s mouth and nose.", "locks their legs around \the [partner]'s head before pulling it into their taint."))
+		else if(has_penis())
+			message = pick(list("clambers over \the [partner]'s face and pins them down with their thick thighs, then slowly inching closer and covering their eyes and nose with their leaking erection.", "locks their legs around \the [partner]'s head before pulling it into their fat package, smothering them."))
+		else
+			message = "deviously locks their legs around \the [partner]'s head and smothers it in their thick meaty thighs."
+		set_is_fucking(partner , THIGH_SMOTHERING)
+
+	if(rand(3))
+		partner.losebreath = 5
+	var file = pick(list("bj10", "bj3", "foot_wet1", "foot_dry3"))
+	playsound(loc, "honk/sound/interactions/[file].ogg", 70, 1, -1)
+	visible_message("<b>\The [src]</b> [message]")
+	handle_post_sex(lust_increase, THIGH_SMOTHERING, partner)
+	partner.dir = get_dir(partner,src)
 	do_fucking_animation(get_dir(src, partner))
 
 /mob/proc/get_shoes()

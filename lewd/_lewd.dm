@@ -22,6 +22,12 @@
 		dat += "<br>...are clothed."
 	return dat
 
+/mob/living/Life()
+
+	if(refactory_period)
+		refactory_period--
+	return ..()
+
 // If I could have gotten away with using a tilde in the type path, I would have.
 /datum/interaction/lewd
 	command = "assslap"
@@ -110,3 +116,5 @@
 #define GRINDING_FACE_WITH_ANUS "faceanus"
 #define GRINDING_FACE_WITH_FEET "facefeet"
 #define GRINDING_MOUTH_WITH_FEET "mouthfeet"
+#define NUTS_TO_FACE "nuts"
+#define THIGH_SMOTHERING "thighs"
