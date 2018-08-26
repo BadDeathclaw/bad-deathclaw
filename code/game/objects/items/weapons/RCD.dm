@@ -288,8 +288,11 @@ RCD
 			mode = 5
 			user << "<span class='notice'>You change RCD's mode to 'Windoors'.</span>"
 		if(5)
+			mode = 6
+			user << "<span class='notice'>You change RCD's mode to 'Tables'.</span>"
+		if(6)
 			mode = 1
-			user << "<span class='notice'>You change RCD's mode to 'Floor & Walls'.</span>"
+			user << "<span class='notice'>You change RCD's mode to 'Walls and floors.</span>"
 
 	if(prob(20))
 		src.spark_system.start()
@@ -450,6 +453,14 @@ RCD
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
 					qdel(WD)
 					return 1
+			if(istype(A, /obj/structure/table))
+				var/obj/structure/table/table = A
+				if(useResource(deconwindowcost, user))
+					user << "<span class='notice'>You start deconstructing the table...</span>"
+					activate()
+					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
+					qdel(table)
+					return 1
 				return 0
 
 		if (4)
@@ -508,6 +519,16 @@ RCD
 								Wa.dir = SOUTH
 						if(conf_access)
 							Wa.electronics.accesses = conf_access.Copy()
+		if (6)
+			if(istype(A, /turf/simulated/floor))
+				if(checkResource(windoorcost, user))
+					user << "<span class='notice'>You start building a table...</span>"
+					if(do_after(user, windowdelay, target = A))
+						if(locate(/obj/structure/table) in A.loc) return 0
+						if(!useResource(windowcost, user)) return 0
+						var/obj/structure/table/table2 = new/obj/structure/table(A.loc)
+						table2.anchored = 1
+						return 1
 		else
 			user << "ERROR: RCD in MODE: [mode] attempted use by [user]. Send this text #coderbus or an admin."
 			return 0
