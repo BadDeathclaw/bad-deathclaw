@@ -235,6 +235,7 @@
 							new_item.autolathe_crafted(src)
 						busy = 0
 						updateUsrDialog()
+			busy = 0
 
 		if(href_list["search"])
 			matching_designs.Cut()
