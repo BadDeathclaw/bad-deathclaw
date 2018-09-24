@@ -18,7 +18,7 @@ var/time_last_changed_position = 0
 	var/printing = null
 	var/list/region_access = null
 	var/list/head_subordinates = null
-	var/target_dept = VAULT //Which department this computer has access to. 0=all departments
+	var/target_dept = 0 //Which department this computer has access to. 0=all departments
 
 	//Cooldown for closing positions in seconds
 	//if set to -1: No cooldown... probably a bad idea
@@ -26,16 +26,31 @@ var/time_last_changed_position = 0
 	var/change_position_cooldown = 60
 	//Jobs you cannot open new positions for
 	var/list/blacklisted = list(
-		"AI",
 		"Assistant",
-		"Cyborg",
-		"Captain",
-		"Head of Personnel",
-		"Head of Security",
-		"Chief Engineer",
-		"Research Director",
-		"Chief Medical Officer",
-		"Chaplain")
+		"Sheriff", 
+		"Settler", 
+		"Legionnaire Recruit",
+		"Legion Decanus", 
+		"Legion Vexillarius", 
+		"Legion Centurion", 
+		"Legion Legate", 
+		"Veteran Legionnaire", 
+		"NCR Colonel", 
+		"NCR Major", 
+		"NCR Lieutenant", 
+		"NCR Trooper", 
+		"NCR Veteran Ranger",
+		"NCR Recruit Ranger", 
+		"NCR Ranger", 
+		"NCR Sergeant", 
+		"NCR Recruit", 
+		"Raider", 
+		"Wastelander", 
+		"BOS Initiate", 
+		"BOS Scribe", 
+		"BOS Knight", 
+		"BOS Paladin"
+	)
 
 	//The scaling factor of max total positions in relation to the total amount of people on board the station in %
 	var/max_relative_positions = 30 //30%: Seems reasonable, limit of 6 @ 20 players
