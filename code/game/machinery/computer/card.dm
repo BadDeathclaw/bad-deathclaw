@@ -49,7 +49,17 @@ var/time_last_changed_position = 0
 		"BOS Initiate", 
 		"BOS Scribe", 
 		"BOS Knight", 
-		"BOS Paladin"
+		"BOS Paladin",
+		"AI",
+		"Assistant",
+		"Cyborg",
+		"Captain",
+		"Head of Personnel",
+		"Head of Security",
+		"Chief Engineer",
+		"Research Director",
+		"Chief Medical Officer",
+		"Chaplain"
 	)
 
 	//The scaling factor of max total positions in relation to the total amount of people on board the station in %
