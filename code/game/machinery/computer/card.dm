@@ -18,7 +18,7 @@ var/time_last_changed_position = 0
 	var/printing = null
 	var/list/region_access = null
 	var/list/head_subordinates = null
-	var/target_dept = 0 //Which department this computer has access to. 0=all departments
+	var/target_dept = VAULT //Which department this computer has access to. 0=all departments
 
 	//Cooldown for closing positions in seconds
 	//if set to -1: No cooldown... probably a bad idea
