@@ -466,10 +466,10 @@
 
 /datum/reagent/medicine/ephedrine/on_mob_life(mob/living/M)
 	//M.status_flags |= GOTTAGOFAST
-	M.AdjustParalysis(-1)
-	M.AdjustStunned(-1)
-	M.AdjustWeakened(-1)
-	M.adjustStaminaLoss(-1*REM)
+	M.AdjustParalysis(-2)
+	M.AdjustStunned(-2)
+	M.AdjustWeakened(-2)
+	M.adjustStaminaLoss(-5*REM)
 	..()
 	return
 
