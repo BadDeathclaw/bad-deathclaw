@@ -31,7 +31,7 @@
 	var/lasercolor = ""		//Something to do with lasertag turrets, blame Sieve for not adding a comment.
 	var/raised = 0			//if the turret cover is "open" and the turret is raised
 	var/raising= 0			//if the turret is currently opening or closing its cover
-	var/health = 120			//the turret's health
+	var/health = 200			//the turret's health
 	var/locked = 0			//if the turret's behaviour control access is locked
 	var/controllock = 0		//if the turret responds to control panels
 
@@ -295,11 +295,12 @@
 		if(src.health<initial(src.health))
 			if (WT.remove_fuel(0,user))
 				user << "<span class='notice'>You repair the damaged gas tank.</span>"
-				health = max(initial(health), health + 10)
+				health = min(initial(health), health + 50)
 
 	else if((istype(I, /obj/item/weapon/wrench)) && (!on))
-		if(raised) return
+		//if(raised) return
 		//This code handles moving the turret around. After all, it's a portable turret!
+		//Now it's truely portable!
 		if(!anchored && !isinspace())
 			anchored = 1
 			invisibility = INVISIBILITY_LEVEL_TWO
@@ -338,6 +339,27 @@
 					attacked = 0
 		..()
 
+/obj/machinery/porta_turret/AltClick(mob/user)
+	if(!shootnonfaction)
+		var/safety = alert(user, "Enable shooting people not in the same faction as you?", "Turret Faction Control", "Proceed", "Abort")
+		if(safety == "Abort" || !in_range(src, user) || !src || !W || user.incapacitated())
+			return
+		if(safety == "Proceed")
+			shootnonfaction = 1
+			for(var/factionsss in user.faction)
+				faction += factionsss
+			user << "Targetting by non members of the faction set, members of the faction can still be shot by other settings."
+	else
+		var/safety2 = alert(use, "Do you want to disable faction control or add another faction?", "Turret Faction Control", "Disable Control", "Add A Faction")
+			if(safety2 = "Disable Control")
+				shootnonfaction = 0
+				faction = initial(faction)
+				user << "You disable the shooting of non faction members. Now only normal settings may apply."
+			if(safety2 = "Add A Faction")
+				var/factiontoadd = stripped_input(user, "What faction would you like to add? Valid faction tags are: Vault, BOS, Den, NCR, Legion, wasteland", "Turret Faction Control" , null , 10)
+				faction += factiontoadd
+				user << "You add the [factiontoadd] to the list of factions."
+		
 /obj/machinery/porta_turret/attack_animal(mob/living/simple_animal/M)
 	M.changeNext_move(CLICK_CD_MELEE)
 	M.do_attack_animation(src)
@@ -569,7 +591,7 @@
 /obj/machinery/porta_turret/proc/assess_perp(mob/living/carbon/human/perp)
 	var/threatcount = 0	//the integer returned
 
-	if(shootnonfaction && !faction in perp.faction) //Shoot all people not in the faction if setting is enabled
+	if(shootnonfaction && !(faction in perp.faction)) //Shoot all people not in the faction if setting is enabled
 		return 10
 
 	if(emagged)
