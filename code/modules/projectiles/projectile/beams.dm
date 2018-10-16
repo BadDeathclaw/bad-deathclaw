@@ -32,7 +32,7 @@
 /obj/item/projectile/beam/xray
 	name = "xray beam"
 	icon_state = "xray"
-	damage = 60
+	damage = 15
 	irradiate = 30
 	range = 15
 	forcedodge = 1
