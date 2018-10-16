@@ -414,9 +414,9 @@ RCD
 						return 1
 				return 0
 
-			if(istype(A, /obj/machinery/door/airlock))
+			if(istype(A, /obj/machinery/door))
 				if(checkResource(deconairlockcost, user))
-					user << "<span class='notice'>You start deconstructing airlock...</span>"
+					user << "<span class='notice'>You start deconstructing the door...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
 					if(do_after(user, deconairlockdelay, target = A))
 						if(!useResource(deconairlockcost, user)) return 0

@@ -63,7 +63,7 @@
 	var/shot_sound 			//what sound should play when the turret fires
 	var/eshot_sound			//what sound should play when the emagged turret fires
 
-	var/faction = list("neutral")
+	var/faction = ("neutral")
 	var/shootnonfaction = 0 //If it shoots at people that don't have the same faction
 
 	var/datum/effect_system/spark_spread/spark_system	//the spark system, used for generating... sparks?
@@ -341,25 +341,25 @@
 
 /obj/machinery/porta_turret/AltClick(mob/user)
 	if(!shootnonfaction)
-		var/safety = alert(user, "Enable shooting people not in the same faction as you?", "Turret Faction Control", "Proceed", "Abort")
-		if(safety == "Abort" || !in_range(src, user) || !src || !W || user.incapacitated())
+		var/safety1 = alert(user, "Enable shooting people not in the same faction as you?", "Turret Faction Control", "Proceed", "Abort")
+		if(safety1 == "Abort" || !in_range(src, user) || !src || user.incapacitated())
 			return
-		if(safety == "Proceed")
+		if(safety1 == "Proceed")
 			shootnonfaction = 1
 			for(var/factionsss in user.faction)
 				faction += factionsss
 			user << "Targetting by non members of the faction set, members of the faction can still be shot by other settings."
 	else
-		var/safety2 = alert(use, "Do you want to disable faction control or add another faction?", "Turret Faction Control", "Disable Control", "Add A Faction")
-			if(safety2 = "Disable Control")
-				shootnonfaction = 0
-				faction = initial(faction)
-				user << "You disable the shooting of non faction members. Now only normal settings may apply."
-			if(safety2 = "Add A Faction")
-				var/factiontoadd = stripped_input(user, "What faction would you like to add? Valid faction tags are: Vault, BOS, Den, NCR, Legion, wasteland", "Turret Faction Control" , null , 10)
-				faction += factiontoadd
-				user << "You add the [factiontoadd] to the list of factions."
-		
+		var/safety2 = alert(user, "Do you want to disable faction control or add another faction?", "Turret Faction Control", "Disable Control", "Add A Faction")
+		if(safety2 == "Disable Control")
+			shootnonfaction = 0
+			faction = initial(faction)
+			user << "You disable the shooting of non faction members. Now only normal settings may apply."
+		if(safety2 == "Add A Faction")
+			var/factiontoadd = stripped_input(user, "What faction would you like to add? Valid faction tags are: Vault, BOS, Den, NCR, Legion, wasteland", "Turret Faction Control" , null , 10)
+			faction += factiontoadd
+			user << "You add the [factiontoadd] to the list of factions."
+
 /obj/machinery/porta_turret/attack_animal(mob/living/simple_animal/M)
 	M.changeNext_move(CLICK_CD_MELEE)
 	M.do_attack_animation(src)
@@ -538,7 +538,6 @@
 		if(!always_up)
 			spawn()
 				popDown() // no valid targets, close the cover
-
 
 /obj/machinery/porta_turret/proc/tryToShootAt(list/atom/movable/targets)
 	while(targets.len > 0)

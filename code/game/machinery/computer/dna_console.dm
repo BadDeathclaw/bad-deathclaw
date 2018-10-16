@@ -352,11 +352,11 @@
 				num = Clamp(num, 1, NUMBER_OF_BUFFERS)
 				var/list/buffer_slot = buffer[num]
 				if(istype(buffer_slot))
-					var/obj/item/weapon/dnainjector/timed/I
+					var/obj/item/weapon/dnainjector/I
 					switch(href_list["text"])
 						if("se")
 							if(buffer_slot["SE"])
-								I = new /obj/item/weapon/dnainjector/timed(loc)
+								I = new /obj/item/weapon/dnainjector(loc)
 								for(var/datum/mutation/human/HM in good_mutations + bad_mutations + not_good_mutations)
 									if(HM.check_block_string(buffer_slot["SE"]))
 										I.add_mutations.Add(HM)
@@ -368,27 +368,18 @@
 										time_coeff = HM.time_coeff
 										continue
 									time_coeff = min(time_coeff,HM.time_coeff)
-								if(connected)
-									I.duration = I.duration * time_coeff * connected.damage_coeff
-									I.damage_coeff  = connected.damage_coeff
 						if("ui")
 							if(buffer_slot["UI"])
-								I = new /obj/item/weapon/dnainjector/timed(loc)
+								I = new /obj/item/weapon/dnainjector(loc)
 								I.fields = list("UI"=buffer_slot["UI"])
-								if(connected)
-									I.damage_coeff = connected.damage_coeff
 						if("ue")
 							if(buffer_slot["name"] && buffer_slot["UE"] && buffer_slot["blood_type"])
-								I = new /obj/item/weapon/dnainjector/timed(loc)
+								I = new /obj/item/weapon/dnainjector(loc)
 								I.fields = list("name"=buffer_slot["name"], "UE"=buffer_slot["UE"], "blood_type"=buffer_slot["blood_type"])
-								if(connected)
-									I.damage_coeff  = connected.damage_coeff
 						if("mixed")
 							if(buffer_slot["UI"] && buffer_slot["name"] && buffer_slot["UE"] && buffer_slot["blood_type"])
-								I = new /obj/item/weapon/dnainjector/timed(loc)
+								I = new /obj/item/weapon/dnainjector(loc)
 								I.fields = list("UI"=buffer_slot["UI"],"name"=buffer_slot["name"], "UE"=buffer_slot["UE"], "blood_type"=buffer_slot["blood_type"])
-								if(connected)
-									I.damage_coeff = connected.damage_coeff
 					if(I)
 						injectorready = 0
 						spawn(INJECTOR_TIMEOUT)
@@ -492,7 +483,7 @@
 	var/list/buffer_slot = buffer[buffer_num]
 	var/mob/living/carbon/viable_occupant = get_viable_occupant()
 	if(istype(buffer_slot))
-		viable_occupant.radiation += rand(10/(connected.damage_coeff ** 2),25/(connected.damage_coeff ** 2)) 
+		viable_occupant.radiation += rand(10/(connected.damage_coeff ** 2),25/(connected.damage_coeff ** 2))
 		//15 and 40 are just magic numbers that were here before so i didnt touch them, they are initial boundaries of damage
 		//Each laser level reduces damage by lvl^2, so no effect on 1 lvl, 4 times less damage on 2 and 9 times less damage on 3
 		//Numbers are this high because other way upgrading laser is just not worth the hassle, and i cant think of anything better to inmrove
