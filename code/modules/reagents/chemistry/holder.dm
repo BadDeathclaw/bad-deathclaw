@@ -260,7 +260,7 @@ var/const/INJECT = 5 //injection
 					if(is_type_in_list(R,addiction_list))
 						for(var/datum/reagent/addicted_reagent in addiction_list)
 							if(istype(R, addicted_reagent))
-								addicted_reagent.addiction_stage = max(0, addicted_reagent.addiction_stage -= 15) // you're satisfied for a good while.
+								addicted_reagent.addiction_stage = max(0, addicted_reagent.addiction_stage -= 5) // you're satisfied for a good while.
 				R.on_mob_life(M)
 
 	if(can_overdose)
@@ -269,21 +269,21 @@ var/const/INJECT = 5 //injection
 			for(var/A in addiction_list)
 				var/datum/reagent/R = A
 				if(M && R)
-					if(R.addiction_stage <= 0)
+					if(R.addiction_stage <= 40) //Even consuming some units of the drug heavily satisifes you
 						R.addiction_stage++
-					if(R.addiction_stage > 0 && R.addiction_stage <= 10)
+					if(R.addiction_stage > 40 && R.addiction_stage <= 50)
 						R.addiction_act_stage1(M)
 						R.addiction_stage++
-					if(R.addiction_stage > 10 && R.addiction_stage <= 20)
+					if(R.addiction_stage > 50 && R.addiction_stage <= 60)
 						R.addiction_act_stage2(M)
 						R.addiction_stage++
-					if(R.addiction_stage > 20 && R.addiction_stage <= 30)
+					if(R.addiction_stage > 60 && R.addiction_stage <= 70)
 						R.addiction_act_stage3(M)
 						R.addiction_stage++
-					if(R.addiction_stage > 30 && R.addiction_stage <= 40)
+					if(R.addiction_stage > 70 && R.addiction_stage <= 80)
 						R.addiction_act_stage4(M)
 						R.addiction_stage++
-					if(R.addiction_stage > 40)
+					if(R.addiction_stage > 80)
 						M << "<span class='notice'>You feel like you've gotten over your need for [R.name].</span>"
 						addiction_list.Remove(R)
 		addiction_tick++
