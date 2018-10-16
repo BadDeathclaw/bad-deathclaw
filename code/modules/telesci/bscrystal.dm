@@ -8,7 +8,7 @@
 	w_class = 1
 	origin_tech = "bluespace=4;materials=3"
 	points = 50
-	var/blink_range = 8 // The teleport range when crushed/thrown at someone.
+	var/blink_range = 0 // The teleport range when crushed/thrown at someone.
 
 
 /obj/item/weapon/ore/bluespace_crystal/New()
@@ -44,5 +44,5 @@
 	name = "artificial bluespace crystal"
 	desc = "An artificially made bluespace crystal, it looks delicate."
 	origin_tech = "bluespace=2"
-	blink_range = 4 // Not as good as the organic stuff!
+	blink_range = 0 // Not as good as the organic stuff!
 	points = 0 // nice try
