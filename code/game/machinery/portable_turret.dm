@@ -63,7 +63,7 @@
 	var/shot_sound 			//what sound should play when the turret fires
 	var/eshot_sound			//what sound should play when the emagged turret fires
 
-	var/faction = ("neutral")
+	var/faction = list("neutral")
 	var/shootnonfaction = 0 //If it shoots at people that don't have the same faction
 
 	var/datum/effect_system/spark_spread/spark_system	//the spark system, used for generating... sparks?
