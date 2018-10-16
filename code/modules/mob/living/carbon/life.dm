@@ -250,6 +250,7 @@
 				HM = mutations_list[mut]
 				HM.force_lose(src)
 				dna.temporary_mutations.Remove(mut)
+		updateappearance(mutations_overlay_update=1) //Fixes a bug of hair overlays being duplicated
 
 	if(radiation)
 
