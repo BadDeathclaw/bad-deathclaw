@@ -82,7 +82,7 @@
 /obj/item/projectile/beam/emitter
 	name = "emitter beam"
 	icon_state = "emitter"
-	damage = 30
+	damage = 53
 	legacy = 1
 	animate_movement = SLIDE_STEPS
 
