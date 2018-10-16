@@ -260,7 +260,7 @@ var/const/INJECT = 5 //injection
 					if(is_type_in_list(R,addiction_list))
 						for(var/datum/reagent/addicted_reagent in addiction_list)
 							if(istype(R, addicted_reagent))
-								addicted_reagent.addiction_stage = -15 // you're satisfied for a good while.
+								addicted_reagent.addiction_stage = max(0, addicted_reagent.addiction_stage -= 15) // you're satisfied for a good while.
 				R.on_mob_life(M)
 
 	if(can_overdose)
