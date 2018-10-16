@@ -303,6 +303,7 @@ RCD
 
 
 /obj/item/weapon/rcd/afterattack(atom/A, mob/user, proximity)
+	user.changeNext_move(0)
 	if(!proximity) return 0
 	if(istype(A,/area/shuttle)||istype(A,/turf/space/transit))
 		return 0
