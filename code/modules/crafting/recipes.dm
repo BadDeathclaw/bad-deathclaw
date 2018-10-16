@@ -88,7 +88,7 @@
 	time = 40
 	parts = list(/obj/item/weapon/stock_parts/cell = 1)
 	category = CAT_WEAPON
-
+/*
 /datum/table_recipe/teleprod
 	name = "Teleprod"
 	result = /obj/item/weapon/melee/baton/cattleprod/teleprod
@@ -100,7 +100,7 @@
 	time = 60
 	parts = list(/obj/item/weapon/stock_parts/cell = 1)
 	category = CAT_WEAPON
-
+*/
 //datum/table_recipe/tailclub
 //	name = "Tail Club"
 //	result = /obj/item/weapon/tailclub
