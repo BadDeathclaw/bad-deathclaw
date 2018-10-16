@@ -63,7 +63,8 @@
 	var/shot_sound 			//what sound should play when the turret fires
 	var/eshot_sound			//what sound should play when the emagged turret fires
 
-	var/faction = "neutral"
+	var/faction = list("neutral")
+	var/shootnonfaction = 0 //If it shoots at people that don't have the same faction
 
 	var/datum/effect_system/spark_spread/spark_system	//the spark system, used for generating... sparks?
 
@@ -567,6 +568,9 @@
 
 /obj/machinery/porta_turret/proc/assess_perp(mob/living/carbon/human/perp)
 	var/threatcount = 0	//the integer returned
+
+	if(shootnonfaction && !faction in perp.faction) //Shoot all people not in the faction if setting is enabled
+		return 10
 
 	if(emagged)
 		return 10	//if emagged, always return 10.
