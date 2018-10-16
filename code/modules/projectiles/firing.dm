@@ -1,4 +1,5 @@
 /obj/item/ammo_casing/proc/fire(atom/target as mob|obj|turf, mob/living/user as mob|obj, params, quiet, zone_override = "", spread)
+	user.attack_log += text("\[[time_stamp()]\] <font color='orange'>name [user.name] ckey [user.ckey] shot the [src].</font>")
 	var/distro = variance //Caution, may cause wierd effects. Original line: distro += variance
 	for (var/i = max(1, pellets), i > 0, i--)
 		var/targloc = get_turf(target)
