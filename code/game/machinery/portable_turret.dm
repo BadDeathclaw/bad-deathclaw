@@ -14,7 +14,7 @@
 	use_power = 1				//this turret uses and requires power
 	idle_power_usage = 50		//when inactive, this turret takes up constant 50 Equipment power
 	active_power_usage = 300	//when active, this turret takes up constant 300 Equipment power
-	req_access = list(access_security)
+	req_access = list()
 	power_channel = EQUIP	//drains power from the EQUIPMENT channel
 
 	var/turret_open = 'sound/f13machines/turret_open.ogg'
@@ -32,7 +32,7 @@
 	var/raised = 0			//if the turret cover is "open" and the turret is raised
 	var/raising= 0			//if the turret is currently opening or closing its cover
 	var/health = 120			//the turret's health
-	var/locked = 1			//if the turret's behaviour control access is locked
+	var/locked = 0			//if the turret's behaviour control access is locked
 	var/controllock = 0		//if the turret responds to control panels
 
 	var/installation = /obj/item/weapon/gun/energy/gun/turret		//the type of weapon installed
@@ -42,7 +42,7 @@
 	var/reqpower = 500		//holder for power needed
 	var/egun = null			//holder to handle certain guns switching bullettypes
 	var/always_up = 0		//Will stay active
-	var/has_cover = 1		//Hides the cover
+	var/has_cover = 0		//Hides the cover
 
 	var/obj/machinery/porta_turret_cover/cover = null	//the cover that is covering this turret
 	var/last_fired = 0		//1: if the turret is cooling down from a shot, 0: turret is ready to fire
