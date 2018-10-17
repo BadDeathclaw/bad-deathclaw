@@ -4,7 +4,7 @@
 	id = "nitroglycerin"
 	result = "nitroglycerin"
 	required_reagents = list("glycerol" = 1, "facid" = 1, "sacid" = 1)
-	result_amount = 6
+	result_amount = 12
 
 /datum/chemical_reaction/nitroglycerin/on_reaction(datum/reagents/holder, created_volume)
 	if(holder.has_reagent("stabilizing_agent"))
