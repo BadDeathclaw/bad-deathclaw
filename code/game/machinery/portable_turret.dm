@@ -63,7 +63,8 @@
 	var/shot_sound 			//what sound should play when the turret fires
 	var/eshot_sound			//what sound should play when the emagged turret fires
 
-	var/faction = list("neutral")
+	var/faction = "neutral"
+	var/list/factiontarget = list()
 	var/shootnonfaction = 0 //If it shoots at people that don't have the same faction
 
 	var/datum/effect_system/spark_spread/spark_system	//the spark system, used for generating... sparks?
@@ -347,17 +348,17 @@
 		if(safety1 == "Proceed")
 			shootnonfaction = 1
 			for(var/factionsss in user.faction)
-				faction += factionsss
+				factiontarget += factionsss
 			user << "Targetting by non members of the faction set, members of the faction can still be shot by other settings."
 	else
 		var/safety2 = alert(user, "Do you want to disable faction control or add another faction?", "Turret Faction Control", "Disable Control", "Add A Faction")
 		if(safety2 == "Disable Control")
 			shootnonfaction = 0
-			faction = initial(faction)
+			factiontarget = initial(factiontarget)
 			user << "You disable the shooting of non faction members. Now only normal settings may apply."
 		if(safety2 == "Add A Faction")
 			var/factiontoadd = stripped_input(user, "What faction would you like to add? Valid faction tags are: Vault, BOS, Den, NCR, Legion, wasteland", "Turret Faction Control" , null , 10)
-			faction += factiontoadd
+			factiontarget += factiontoadd
 			user << "You add the [factiontoadd] to the list of factions."
 
 /obj/machinery/porta_turret/attack_animal(mob/living/simple_animal/M)
@@ -590,8 +591,13 @@
 /obj/machinery/porta_turret/proc/assess_perp(mob/living/carbon/human/perp)
 	var/threatcount = 0	//the integer returned
 
-	if(shootnonfaction && !(faction in perp.faction)) //Shoot all people not in the faction if setting is enabled
-		return 10
+	if(shootnonfaction) //Shoot all people not in the faction if setting is enabled
+		var/passcheck = 0
+		for(var/factions in perp.faction)
+			if !(factions in factiontarget)
+				continue
+		if (passcheck == 0)
+			return 10 //Not a member of the faction; is a valid target
 
 	if(emagged)
 		return 10	//if emagged, always return 10.
