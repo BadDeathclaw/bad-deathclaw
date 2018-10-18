@@ -54,18 +54,8 @@
 	L.imp_in = H
 	L.implanted = 1
 	H.sec_hud_set_implants()
-	H << "Being a vault employee, you have certain rules to abide by, please take the time to read the following. \
-	I. The Vault Rules \
-	0. The vault has no knowledge of the outside world, including if it is safe or not to open their doors which must stay closed. \
-	1. The way they act, depends on the Overseer and his directives. \
-	2. The Wasteland is a big scary place for the Vault Dwellers, so expect to roleplay as a character completely scared of the Wasteland and biased to the Vault as years of /Vault propaganda/ and listen to the Overseer. \
-	Dwellers shouldnt rebel, unless if something/certain someone (i.e Overseer and his decisions) threatens their precious lives. \
-	3. Officers are supposed to keep the Dwellers safe, and only neutralize those that pose an actual threat. Those who don’t and are convicted of minor crimes, are to head to the Brig to serve time. \
-	4. Leaving the Vault is not allowed unless you have absolutely no other option. \
-	J. Lowpop, Continuity and Cloning.\
-	4. When cloned, the time you were scanned is the point you remember from. You will not recall who killed you, or even current information. \
-	When cloned via pod-people means, you are functionally a new person, having only the personality and traits of the person recreated, \
-	without their memory. Roleplay Appropriately!"
+	H << "Vault has a special set of rules as well as cloning based rules, be sure to follow them!"
+	H << "Being the overseer, you have special privilege to run experiments, if your not sure about this, contact an admin."
 
 /datum/job/engineer
 	title = "Engineer"
@@ -103,18 +93,7 @@
 
 /datum/outfit/job/engineer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
-	H << "Being a vault employee, you have certain rules to abide by, please take the time to read the following. \
-	I. The Vault Rules \
-	0. The vault has no knowledge of the outside world, including if it is safe or not to open their doors which must stay closed. \
-	1. The way they act, depends on the Overseer and his directives. \
-	2. The Wasteland is a big scary place for the Vault Dwellers, so expect to roleplay as a character completely scared of the Wasteland and biased to the Vault as years of /Vault propaganda/ and listen to the Overseer. \
-	Dwellers shouldnt rebel, unless if something/certain someone (i.e Overseer and his decisions) threatens their precious lives. \
-	3. Officers are supposed to keep the Dwellers safe, and only neutralize those that pose an actual threat. Those who don’t and are convicted of minor crimes, are to head to the Brig to serve time. \
-	4. Leaving the Vault is not allowed unless you have absolutely no other option. \
-	J. Lowpop, Continuity and Cloning.\
-	4. When cloned, the time you were scanned is the point you remember from. You will not recall who killed you, or even current information. \
-	When cloned via pod-people means, you are functionally a new person, having only the personality and traits of the person recreated, \
-	without their memory. Roleplay Appropriately!"
+	H << "Vault has a special set of rules as well as cloning based rules, be sure to follow them!"
 
 /datum/job/doctor
 	title = "Doctor"
@@ -149,18 +128,7 @@
 
 /datum/outfit/job/doctor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
-	H << "Being a vault employee, you have certain rules to abide by, please take the time to read the following. \
-	I. The Vault Rules \
-	0. The vault has no knowledge of the outside world, including if it is safe or not to open their doors which must stay closed. \
-	1. The way they act, depends on the Overseer and his directives. \
-	2. The Wasteland is a big scary place for the Vault Dwellers, so expect to roleplay as a character completely scared of the Wasteland and biased to the Vault as years of /Vault propaganda/ and listen to the Overseer. \
-	Dwellers shouldnt rebel, unless if something/certain someone (i.e Overseer and his decisions) threatens their precious lives. \
-	3. Officers are supposed to keep the Dwellers safe, and only neutralize those that pose an actual threat. Those who don’t and are convicted of minor crimes, are to head to the Brig to serve time. \
-	4. Leaving the Vault is not allowed unless you have absolutely no other option. \
-	J. Lowpop, Continuity and Cloning.\
-	4. When cloned, the time you were scanned is the point you remember from. You will not recall who killed you, or even current information. \
-	When cloned via pod-people means, you are functionally a new person, having only the personality and traits of the person recreated, \
-	without their memory. Roleplay Appropriately!"
+	H << "Vault has a special set of rules as well as cloning based rules, be sure to follow them!"
 
 /datum/job/scientist
 	title = "Scientist"
@@ -190,18 +158,7 @@
 
 /datum/outfit/job/scientist/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
-	H << "Being a vault employee, you have certain rules to abide by, please take the time to read the following. \
-	I. The Vault Rules \
-	0. The vault has no knowledge of the outside world, including if it is safe or not to open their doors which must stay closed. \
-	1. The way they act, depends on the Overseer and his directives. \
-	2. The Wasteland is a big scary place for the Vault Dwellers, so expect to roleplay as a character completely scared of the Wasteland and biased to the Vault as years of /Vault propaganda/ and listen to the Overseer. \
-	Dwellers shouldnt rebel, unless if something/certain someone (i.e Overseer and his decisions) threatens their precious lives. \
-	3. Officers are supposed to keep the Dwellers safe, and only neutralize those that pose an actual threat. Those who don’t and are convicted of minor crimes, are to head to the Brig to serve time. \
-	4. Leaving the Vault is not allowed unless you have absolutely no other option. \
-	J. Lowpop, Continuity and Cloning.\
-	4. When cloned, the time you were scanned is the point you remember from. You will not recall who killed you, or even current information. \
-	When cloned via pod-people means, you are functionally a new person, having only the personality and traits of the person recreated, \
-	without their memory. Roleplay Appropriately!"
+	H << "Vault has a special set of rules as well as cloning based rules, be sure to follow them!"
 
 /datum/job/officer
 	title = "Officer"
@@ -228,18 +185,7 @@
 
 /datum/outfit/job/officer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
-	H << "Being a vault employee, you have certain rules to abide by, please take the time to read the following. \
-	I. The Vault Rules \
-	0. The vault has no knowledge of the outside world, including if it is safe or not to open their doors which must stay closed. \
-	1. The way they act, depends on the Overseer and his directives. \
-	2. The Wasteland is a big scary place for the Vault Dwellers, so expect to roleplay as a character completely scared of the Wasteland and biased to the Vault as years of /Vault propaganda/ and listen to the Overseer. \
-	Dwellers shouldnt rebel, unless if something/certain someone (i.e Overseer and his decisions) threatens their precious lives. \
-	3. Officers are supposed to keep the Dwellers safe, and only neutralize those that pose an actual threat. Those who don’t and are convicted of minor crimes, are to head to the Brig to serve time. \
-	4. Leaving the Vault is not allowed unless you have absolutely no other option. \
-	J. Lowpop, Continuity and Cloning.\
-	4. When cloned, the time you were scanned is the point you remember from. You will not recall who killed you, or even current information. \
-	When cloned via pod-people means, you are functionally a new person, having only the personality and traits of the person recreated, \
-	without their memory. Roleplay Appropriately!"
+	H << "Vault has a special set of rules as well as cloning based rules, be sure to follow them!"
 
 var/list/sec_departments = list("engineering", "supply", "medical", "science")
 
@@ -336,18 +282,7 @@ var/list/sec_departments = list("engineering", "supply", "medical", "science")
 				else
 					break
 	H << "<b>You have been assigned to [department]!</b>"
-	H << "Being a vault employee, you have certain rules to abide by, please take the time to read the following. \
-	I. The Vault Rules \
-	0. The vault has no knowledge of the outside world, including if it is safe or not to open their doors which must stay closed. \
-	1. The way they act, depends on the Overseer and his directives. \
-	2. The Wasteland is a big scary place for the Vault Dwellers, so expect to roleplay as a character completely scared of the Wasteland and biased to the Vault as years of /Vault propaganda/ and listen to the Overseer. \
-	Dwellers shouldnt rebel, unless if something/certain someone (i.e Overseer and his decisions) threatens their precious lives. \
-	3. Officers are supposed to keep the Dwellers safe, and only neutralize those that pose an actual threat. Those who don’t and are convicted of minor crimes, are to head to the Brig to serve time. \
-	4. Leaving the Vault is not allowed unless you have absolutely no other option. \
-	J. Lowpop, Continuity and Cloning.\
-	4. When cloned, the time you were scanned is the point you remember from. You will not recall who killed you, or even current information. \
-	When cloned via pod-people means, you are functionally a new person, having only the personality and traits of the person recreated, \
-	without their memory. Roleplay Appropriately!"
+	H << "Vault has a special set of rules as well as cloning based rules, be sure to follow them!"
 
 /obj/item/device/radio/headset/headset_sec/department/New()
 	wires = new(src)
@@ -404,18 +339,7 @@ var/list/sec_departments = list("engineering", "supply", "medical", "science")
 
 /datum/outfit/job/assistant/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
-	H << "Being a vault employee, you have certain rules to abide by, please take the time to read the following. \
-	I. The Vault Rules \
-	0. The vault has no knowledge of the outside world, including if it is safe or not to open their doors which must stay closed. \
-	1. The way they act, depends on the Overseer and his directives. \
-	2. The Wasteland is a big scary place for the Vault Dwellers, so expect to roleplay as a character completely scared of the Wasteland and biased to the Vault as years of /Vault propaganda/ and listen to the Overseer. \
-	Dwellers shouldnt rebel, unless if something/certain someone (i.e Overseer and his decisions) threatens their precious lives. \
-	3. Officers are supposed to keep the Dwellers safe, and only neutralize those that pose an actual threat. Those who don’t and are convicted of minor crimes, are to head to the Brig to serve time. \
-	4. Leaving the Vault is not allowed unless you have absolutely no other option. \
-	J. Lowpop, Continuity and Cloning.\
-	4. When cloned, the time you were scanned is the point you remember from. You will not recall who killed you, or even current information. \
-	When cloned via pod-people means, you are functionally a new person, having only the personality and traits of the person recreated, \
-	without their memory. Roleplay Appropriately!"
+	H << "Vault has a special set of rules as well as cloning based rules, be sure to follow them!"
 
 /datum/outfit/job/assistant
 	name = "Dweller"

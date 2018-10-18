@@ -64,7 +64,7 @@
 	var/eshot_sound			//what sound should play when the emagged turret fires
 
 	var/faction = "neutral"
-	var/list/factiontarget = list()
+	var/factiontarget = list()
 	var/shootnonfaction = 0 //If it shoots at people that don't have the same faction
 
 	var/datum/effect_system/spark_spread/spark_system	//the spark system, used for generating... sparks?
@@ -347,17 +347,20 @@
 			return
 		if(safety1 == "Proceed")
 			shootnonfaction = 1
-			for(var/factionsss in user.faction)
-				factiontarget += factionsss
-			user << "Targetting by non members of the faction set, members of the faction can still be shot by other settings."
+			if(islist(user.faction))
+				for(var/factionss in user.faction)
+					factiontarget += factionss
+			else
+				factiontarget += user.faction
+			user << "Targeting by non members of the faction set, members of the faction can still be shot by other settings."
 	else
 		var/safety2 = alert(user, "Do you want to disable faction control or add another faction?", "Turret Faction Control", "Disable Control", "Add A Faction")
 		if(safety2 == "Disable Control")
 			shootnonfaction = 0
-			factiontarget = initial(factiontarget)
+			factiontarget = list()
 			user << "You disable the shooting of non faction members. Now only normal settings may apply."
 		if(safety2 == "Add A Faction")
-			var/factiontoadd = stripped_input(user, "What faction would you like to add? Valid faction tags are: Vault, BOS, Den, NCR, Legion, wasteland", "Turret Faction Control" , null , 10)
+			var/factiontoadd = stripped_input(user, "What faction would you like to add? Valid faction tags are: Vault, BOS, Den, NCR, Legion, wasteland and Wasteland for raiders.", "Turret Faction Control" , null , 10)
 			factiontarget += factiontoadd
 			user << "You add the [factiontoadd] to the list of factions."
 
@@ -593,9 +596,15 @@
 
 	if(shootnonfaction) //Shoot all people not in the faction if setting is enabled
 		var/passcheck = 0
-		for(var/factions in perp.faction)
-			if !(factions in factiontarget)
-				continue
+		if(islist(perp.faction))
+			for(var/factions in perp.faction)
+				if (factions in factiontarget)
+					passcheck = 1
+				else
+					continue
+		else
+			if(perp.faction in factiontarget)
+				passcheck = 1
 		if (passcheck == 0)
 			return 10 //Not a member of the faction; is a valid target
 
