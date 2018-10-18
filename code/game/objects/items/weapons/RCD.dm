@@ -527,7 +527,7 @@ RCD
 					if(do_after(user, windowdelay, target = A))
 						if(locate(/obj/structure/table) in A.loc) return 0
 						if(!useResource(windowcost, user)) return 0
-						var/obj/structure/table/table2 = new/obj/structure/table(A.loc)
+						var/obj/structure/table/reinforced/table2 = new/obj/structure/table/reinforced(A.loc)
 						table2.anchored = 1
 						return 1
 		else
