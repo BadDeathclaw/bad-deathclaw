@@ -14,7 +14,7 @@
 	use_power = 1				//this turret uses and requires power
 	idle_power_usage = 50		//when inactive, this turret takes up constant 50 Equipment power
 	active_power_usage = 300	//when active, this turret takes up constant 300 Equipment power
-	req_access = list(access_security)
+	req_access = list()
 	power_channel = EQUIP	//drains power from the EQUIPMENT channel
 
 	var/turret_open = 'sound/f13machines/turret_open.ogg'
@@ -31,8 +31,8 @@
 	var/lasercolor = ""		//Something to do with lasertag turrets, blame Sieve for not adding a comment.
 	var/raised = 0			//if the turret cover is "open" and the turret is raised
 	var/raising= 0			//if the turret is currently opening or closing its cover
-	var/health = 120			//the turret's health
-	var/locked = 1			//if the turret's behaviour control access is locked
+	var/health = 200			//the turret's health
+	var/locked = 0			//if the turret's behaviour control access is locked
 	var/controllock = 0		//if the turret responds to control panels
 
 	var/installation = /obj/item/weapon/gun/energy/gun/turret		//the type of weapon installed
@@ -42,7 +42,7 @@
 	var/reqpower = 500		//holder for power needed
 	var/egun = null			//holder to handle certain guns switching bullettypes
 	var/always_up = 0		//Will stay active
-	var/has_cover = 1		//Hides the cover
+	var/has_cover = 0		//Hides the cover
 
 	var/obj/machinery/porta_turret_cover/cover = null	//the cover that is covering this turret
 	var/last_fired = 0		//1: if the turret is cooling down from a shot, 0: turret is ready to fire
@@ -64,6 +64,8 @@
 	var/eshot_sound			//what sound should play when the emagged turret fires
 
 	var/faction = "neutral"
+	var/factiontarget = list()
+	var/shootnonfaction = 0 //If it shoots at people that don't have the same faction
 
 	var/datum/effect_system/spark_spread/spark_system	//the spark system, used for generating... sparks?
 
@@ -294,11 +296,12 @@
 		if(src.health<initial(src.health))
 			if (WT.remove_fuel(0,user))
 				user << "<span class='notice'>You repair the damaged gas tank.</span>"
-				health = max(initial(health), health + 10)
+				health = min(initial(health), health + 50)
 
 	else if((istype(I, /obj/item/weapon/wrench)) && (!on))
-		if(raised) return
+		//if(raised) return
 		//This code handles moving the turret around. After all, it's a portable turret!
+		//Now it's truely portable!
 		if(!anchored && !isinspace())
 			anchored = 1
 			invisibility = INVISIBILITY_LEVEL_TWO
@@ -336,6 +339,32 @@
 					sleep(60)
 					attacked = 0
 		..()
+
+/obj/machinery/porta_turret/AltClick(mob/user)
+	if(!in_range(src, user) || user.incapacitated() || locked)
+		return
+	if(!shootnonfaction)
+		var/safety1 = alert(user, "Enable shooting people not in the same faction as you?", "Turret Faction Control", "Proceed", "Abort")
+		if(safety1 == "Abort")
+			return
+		if(safety1 == "Proceed")
+			shootnonfaction = 1
+			if(islist(user.faction))
+				for(var/factionss in user.faction)
+					factiontarget += factionss
+			else
+				factiontarget += user.faction
+			user << "Targeting by non members of the faction set, members of the faction can still be shot by other settings."
+	else
+		var/safety2 = alert(user, "Do you want to disable faction control or add another faction?", "Turret Faction Control", "Disable Control", "Add A Faction")
+		if(safety2 == "Disable Control")
+			shootnonfaction = 0
+			factiontarget = list()
+			user << "You disable the shooting of non faction members. Now only normal settings may apply."
+		if(safety2 == "Add A Faction")
+			var/factiontoadd = stripped_input(user, "What faction would you like to add? Valid faction tags are: Vault, BOS, Den, NCR, Legion, wasteland and Wasteland for raiders.", "Turret Faction Control" , null , 10)
+			factiontarget += factiontoadd
+			user << "You add the [factiontoadd] to the list of factions."
 
 /obj/machinery/porta_turret/attack_animal(mob/living/simple_animal/M)
 	M.changeNext_move(CLICK_CD_MELEE)
@@ -516,7 +545,6 @@
 			spawn()
 				popDown() // no valid targets, close the cover
 
-
 /obj/machinery/porta_turret/proc/tryToShootAt(list/atom/movable/targets)
 	while(targets.len > 0)
 		var/atom/movable/M = pick(targets)
@@ -567,6 +595,20 @@
 
 /obj/machinery/porta_turret/proc/assess_perp(mob/living/carbon/human/perp)
 	var/threatcount = 0	//the integer returned
+
+	if(shootnonfaction) //Shoot all people not in the faction if setting is enabled
+		var/passcheck = 0
+		if(islist(perp.faction))
+			for(var/factions in perp.faction)
+				if (factions in factiontarget)
+					passcheck = 1
+				else
+					continue
+		else
+			if(perp.faction in factiontarget)
+				passcheck = 1
+		if (passcheck == 0)
+			return 10 //Not a member of the faction; is a valid target
 
 	if(emagged)
 		return 10	//if emagged, always return 10.

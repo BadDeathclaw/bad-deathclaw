@@ -411,6 +411,16 @@
 	name = "shotgun magazine (12g bioterror)"
 	icon_state = "m12gt"
 	ammo_type = /obj/item/ammo_casing/shotgun/dart/bioterror
+	
+/obj/item/ammo_box/magazine/m12g/rubbershot
+	name = "shotgun magazine (12g rubbershot)"
+	icon_state = "m12gb"
+	ammo_type = /obj/item/ammo_casing/shotgun/rubbershot
+
+/obj/item/ammo_box/magazine/m12g/beanslug
+	name = "shotgun magazine (12g beanbag slug)"
+	icon_state = "m12gb"
+	ammo_type = /obj/item/ammo_casing/shotgun/beanbag
 
 /obj/item/ammo_box/magazine/toy
 	name = "foam force META magazine"

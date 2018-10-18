@@ -240,8 +240,8 @@
 	var/list/known_reagents
 	var/list/processed_reagents
 	var/max_syringes = 10
-	var/max_volume = 75 //max reagent volume
-	var/synth_speed = 5 //[num] reagent units per cycle
+	var/max_volume = 150 //max reagent volume
+	var/synth_speed = 150 //[num] reagent units per cycle
 	energy_drain = 10
 	var/mode = 0 //0 - fire syringe, 1 - analyze reagents.
 	range = MELEE|RANGED

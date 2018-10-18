@@ -303,6 +303,7 @@ RCD
 
 
 /obj/item/weapon/rcd/afterattack(atom/A, mob/user, proximity)
+	user.changeNext_move(0)
 	if(!proximity) return 0
 	if(istype(A,/area/shuttle)||istype(A,/turf/space/transit))
 		return 0
@@ -413,9 +414,9 @@ RCD
 						return 1
 				return 0
 
-			if(istype(A, /obj/machinery/door/airlock))
+			if(istype(A, /obj/machinery/door))
 				if(checkResource(deconairlockcost, user))
-					user << "<span class='notice'>You start deconstructing airlock...</span>"
+					user << "<span class='notice'>You start deconstructing the door...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
 					if(do_after(user, deconairlockdelay, target = A))
 						if(!useResource(deconairlockcost, user)) return 0
@@ -526,7 +527,7 @@ RCD
 					if(do_after(user, windowdelay, target = A))
 						if(locate(/obj/structure/table) in A.loc) return 0
 						if(!useResource(windowcost, user)) return 0
-						var/obj/structure/table/table2 = new/obj/structure/table(A.loc)
+						var/obj/structure/table/reinforced/table2 = new/obj/structure/table/reinforced(A.loc)
 						table2.anchored = 1
 						return 1
 		else

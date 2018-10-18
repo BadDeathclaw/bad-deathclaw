@@ -4,7 +4,7 @@
 	id = "nitroglycerin"
 	result = "nitroglycerin"
 	required_reagents = list("glycerol" = 1, "facid" = 1, "sacid" = 1)
-	result_amount = 2
+	result_amount = 12
 
 /datum/chemical_reaction/nitroglycerin/on_reaction(datum/reagents/holder, created_volume)
 	if(holder.has_reagent("stabilizing_agent"))
@@ -12,7 +12,7 @@
 	holder.remove_reagent("nitroglycerin", created_volume)
 	var/location = get_turf(holder.my_atom)
 	var/datum/effect_system/reagents_explosion/e = new()
-	e.set_up(round (created_volume/2, 1), location, 0, 0)
+	e.set_up(round (created_volume, 1), location, 0, 0)
 	e.start()
 	holder.clear_reagents()
 
@@ -27,7 +27,7 @@
 /datum/chemical_reaction/nitroglycerin_explosion/on_reaction(datum/reagents/holder, created_volume)
 	var/location = get_turf(holder.my_atom)
 	var/datum/effect_system/reagents_explosion/e = new()
-	e.set_up(round(created_volume/2, 1), location, 0, 0)
+	e.set_up(round(created_volume, 1), location, 0, 0)
 	e.start()
 	holder.clear_reagents()
 
@@ -42,7 +42,7 @@
 /datum/chemical_reaction/potassium_explosion/on_reaction(datum/reagents/holder, created_volume)
 	var/location = get_turf(holder.my_atom)
 	var/datum/effect_system/reagents_explosion/e = new()
-	e.set_up(round (created_volume/100, 1), location, 0, 0)
+	e.set_up(round (created_volume/12, 1), location, 0, 0)
 	e.start()
 	holder.clear_reagents()
 

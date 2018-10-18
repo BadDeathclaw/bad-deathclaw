@@ -253,12 +253,32 @@
 
 /datum/design/m12buckshotmag
 	name = "Advanced shotgun 8 round buckshot magazine"
-	desc = "A 8 round drum consisting of buckshot rounds for the advanced shotgun."
+	desc = "A 8 round drum consisting of buckshot shells for the advanced shotgun."
 	id = "m12buckshotmag"
 	req_tech = list("combat" = 6, "materials" = 7, "syndicate" = 5)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 15000)
 	build_path = /obj/item/ammo_box/magazine/m12g/buckshot
+	category = list("Ammo")
+	
+/datum/design/m12rubber
+	name = "Advanced shotgun 8 round rubbershot magazine"
+	desc = "A 8 round drum consisting of rubbershot shell for the advanced shotgun."
+	id = "m12rubber"
+	req_tech = list("combat" = 6, "materials" = 7, "syndicate" = 5)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 15000)
+	build_path = /obj/item/ammo_box/magazine/m12g/rubbershot
+	category = list("Ammo")
+	
+/datum/design/m12beanslug
+	name = "Advanced shotgun 8 round slug magazine"
+	desc = "A 8 round drum consisting of slug rounds for the advanced shotgun."
+	id = "m12slug"
+	req_tech = list("combat" = 6, "materials" = 7, "syndicate" = 5)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 15000)
+	build_path = /obj/item/ammo_box/magazine/m12g/beanslug
 	category = list("Ammo")
 
 //WT550 Mags

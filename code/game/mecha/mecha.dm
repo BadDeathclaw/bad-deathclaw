@@ -697,7 +697,7 @@
 
 	visible_message("[user] starts to climb into [src.name].")
 
-	if(do_after(user, 40, target = src))
+	if(do_after(user, 10, target = src))
 		if(health <= 0)
 			user << "<span class='warning'>You cannot get in the [src.name], it has been destroyed!</span>"
 		else if(occupant)

@@ -234,7 +234,9 @@
 			"acetone",
 			"saltpetre",
 			"ammonia",
-			"diethylamine"
+			"diethylamine",
+			"facid",
+			"uranium"
 		)
 	)
 

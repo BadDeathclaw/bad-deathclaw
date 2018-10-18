@@ -32,7 +32,7 @@
 /obj/item/projectile/beam/xray
 	name = "xray beam"
 	icon_state = "xray"
-	damage = 60
+	damage = 15
 	irradiate = 30
 	range = 15
 	forcedodge = 1
@@ -82,7 +82,7 @@
 /obj/item/projectile/beam/emitter
 	name = "emitter beam"
 	icon_state = "emitter"
-	damage = 30
+	damage = 53
 	legacy = 1
 	animate_movement = SLIDE_STEPS
 

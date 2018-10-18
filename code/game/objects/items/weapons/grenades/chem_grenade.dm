@@ -211,7 +211,8 @@
 	for(var/obj/item/weapon/reagent_containers/glass/G in beakers)
 		G.reagents.trans_to(src, G.reagents.total_volume)
 		total_temp += G.reagents.chem_temp
-	reagents.chem_temp = total_temp
+	//reagents.chem_temp = total_temp
+	reagents.chem_temp = 1000 //Very hot; can cause certain reactions to happen for extra !!FUN!!
 
 /obj/item/weapon/grenade/chem_grenade/proc/can_flood_from(myloc, maxrange)
 	var/turf/myturf = get_turf(myloc)

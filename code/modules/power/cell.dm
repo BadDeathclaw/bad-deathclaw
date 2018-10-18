@@ -221,7 +221,7 @@
 	icon_state = "hpcell"
 	maxcharge = 30000
 	materials = list(MAT_GLASS=80)
-	rating = 5
+	rating = 6
 	chargerate = 3000
 
 /obj/item/weapon/stock_parts/cell/hyper/empty/New()
@@ -234,7 +234,7 @@
 	icon_state = "bscell"
 	maxcharge = 40000
 	materials = list(MAT_GLASS=80)
-	rating = 6
+	rating = 8
 	chargerate = 4000
 
 /obj/item/weapon/stock_parts/cell/bluespace/empty/New()

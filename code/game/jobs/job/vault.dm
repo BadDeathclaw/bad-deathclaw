@@ -54,6 +54,8 @@
 	L.imp_in = H
 	L.implanted = 1
 	H.sec_hud_set_implants()
+	H << "Vault has a special set of rules as well as cloning based rules, be sure to follow them!"
+	H << "Being the overseer, you have special privilege to run experiments, if your not sure about this, contact an admin."
 
 /datum/job/engineer
 	title = "Engineer"
@@ -88,6 +90,11 @@
 	satchel = /obj/item/weapon/storage/backpack/satchel_eng
 	box = /obj/item/weapon/storage/box/engineer
 	pda_slot = slot_l_store
+
+/datum/outfit/job/engineer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	H << "Vault has a special set of rules as well as cloning based rules, be sure to follow them!"
+
 /datum/job/doctor
 	title = "Doctor"
 	flag = DOCTOR
@@ -119,6 +126,10 @@
 	backpack = /obj/item/weapon/storage/backpack/medic
 	satchel = /obj/item/weapon/storage/backpack/satchel_med
 
+/datum/outfit/job/doctor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	H << "Vault has a special set of rules as well as cloning based rules, be sure to follow them!"
+
 /datum/job/scientist
 	title = "Scientist"
 	flag = SCIENTIST
@@ -144,6 +155,11 @@
 	uniform = /obj/item/clothing/under/f13/vault/v13
 	shoes = /obj/item/clothing/shoes/jackboots
 	suit = /obj/item/clothing/suit/toggle/labcoat/science
+
+/datum/outfit/job/scientist/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	H << "Vault has a special set of rules as well as cloning based rules, be sure to follow them!"
+
 /datum/job/officer
 	title = "Officer"
 	flag = OFFICER
@@ -166,6 +182,10 @@
 	var/list/L = list()
 	L |= ..() | check_config_for_sec_maint()
 	return L
+
+/datum/outfit/job/officer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	H << "Vault has a special set of rules as well as cloning based rules, be sure to follow them!"
 
 var/list/sec_departments = list("engineering", "supply", "medical", "science")
 
@@ -262,6 +282,7 @@ var/list/sec_departments = list("engineering", "supply", "medical", "science")
 				else
 					break
 	H << "<b>You have been assigned to [department]!</b>"
+	H << "Vault has a special set of rules as well as cloning based rules, be sure to follow them!"
 
 /obj/item/device/radio/headset/headset_sec/department/New()
 	wires = new(src)
@@ -292,7 +313,7 @@ var/list/sec_departments = list("engineering", "supply", "medical", "science")
 	department_flag = VAULT
 	faction = "Vault"
 	status = "Dweller"
-	total_positions = -1
+	total_positions = 8
 	spawn_positions = -1
 	supervisors = "Overseer"
 	selection_color = "#005A20"
@@ -315,6 +336,10 @@ var/list/sec_departments = list("engineering", "supply", "medical", "science")
 		return 1
 	return 0
 
+
+/datum/outfit/job/assistant/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	H << "Vault has a special set of rules as well as cloning based rules, be sure to follow them!"
 
 /datum/outfit/job/assistant
 	name = "Dweller"
