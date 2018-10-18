@@ -306,6 +306,7 @@
 		storedorgan = new A.type(src)
 		qdel(A)
 		user << "<span class='notice'>You inser the [A] into the [src].</span>"
+		return
 	if(!uses)
 		user << "<span class='warning'>[src] has already been used. The tools are dull and won't reactivate.</span>"
 		return
