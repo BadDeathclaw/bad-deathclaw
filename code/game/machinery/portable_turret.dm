@@ -341,9 +341,11 @@
 		..()
 
 /obj/machinery/porta_turret/AltClick(mob/user)
+	if(!in_range(src, user) || user.incapacitated() || locked)
+		return
 	if(!shootnonfaction)
 		var/safety1 = alert(user, "Enable shooting people not in the same faction as you?", "Turret Faction Control", "Proceed", "Abort")
-		if(safety1 == "Abort" || !in_range(src, user) || !src || user.incapacitated())
+		if(safety1 == "Abort")
 			return
 		if(safety1 == "Proceed")
 			shootnonfaction = 1
