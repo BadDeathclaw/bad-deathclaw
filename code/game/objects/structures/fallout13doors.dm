@@ -17,6 +17,8 @@
 	density = 1
 	anchored = 1
 	layer = 4.2
+	var/uid
+	var/lock = 0
 	var/opaque = 1
 	var/manual_opened = 0
 	var/material_count = 10
@@ -70,6 +72,36 @@
 		for(var/obj/structure/barricade/wooden/planks/P in src.loc)
 			P.attackby(I, user, params)
 			return
+	if(istype(I, /obj/item/weapon/lock) && do_after(user, 5, target = src))
+		if(lock == 1)
+			user << "<span class='notice'>You key the lock to be the same.</span>"
+			uid = src.uid
+		return
+		if(lock == 2)
+			user << "<span class='notice'>This door already has a lock on it!</span>"
+	src.uid = uid
+	spawn(/obj/item/weapon/key)
+		uid = src.uid
+	qdel(/obj/item/weapon/lock)
+	user.visible_message("[user] adds a lock to the door.")
+	return
+	if(istype(I, /obj/item/weapon/key))
+		if(lock == 0)
+			user << "<span class='notice'>This door doesn't have a lock.</span>"
+			return
+		if((src.lock > 1) && (uid != src.uid))
+			user << "<span class='notice'>This is the wrong key!</span>"
+			return
+		if((src.lock == 1) && (uid == src.uid))
+			lock = 2
+			user.visible_message("[user] locks the door.")
+			return
+		if((src.lock == 2) && (uid == src.uid))
+			lock = 1
+			user.visible_message("[user] unlocks the door.")
+			return
+		user.visible_message("This is an error with applying key to doors. Please adminhelp.")
+		return
 	if(istype(I, /obj/item/weapon/screwdriver) && do_after(user, 5, target = src))
 		for(var/i = 1, i <= material_count, i++)
 			new material_type(get_turf(src))
@@ -82,7 +114,7 @@
 /obj/structure/simple_door/proc/TryToSwitchState(atom/user, animate)
 	if(isliving(user))
 		var/mob/living/M = user
-		if(/obj/structure/barricade in src.loc)
+		if((/obj/structure/barricade in src.loc)||(lock == 2))
 			M << "It won't budge!"
 			return 0
 		if(M.client)
@@ -95,6 +127,9 @@
 				SwitchState(animate)
 				return 1
 	else if(istype(user, /obj/mecha))
+		if(lock == 2)
+			lock = 0
+			user.visible_message("The lock breaks!")
 		SwitchState(animate)
 		return 1
 	return 0
